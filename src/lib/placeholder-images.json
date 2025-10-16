@@ -1,3 +1,94 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-background",
+      "description": "A modern office setting with professionals collaborating.",
+      "imageUrl": "https://picsum.photos/seed/hero/1920/1080",
+      "imageHint": "office collaboration"
+    },
+    {
+      "id": "service-healthcare",
+      "description": "Icon representing healthcare solutions.",
+      "imageUrl": "https://picsum.photos/seed/health/500/300",
+      "imageHint": "medical technology"
+    },
+    {
+      "id": "service-accreditation",
+      "description": "Icon representing project accreditation.",
+      "imageUrl": "https://picsum.photos/seed/accredit/500/300",
+      "imageHint": "certificate document"
+    },
+    {
+      "id": "service-it",
+      "description": "Icon representing IT consultation.",
+      "imageUrl": "https://picsum.photos/seed/it/500/300",
+      "imageHint": "server code"
+    },
+    {
+      "id": "blog-post-1",
+      "description": "Image for a blog post about digital transformation in healthcare.",
+      "imageUrl": "https://picsum.photos/seed/blog1/600/400",
+      "imageHint": "digital health"
+    },
+    {
+      "id": "blog-post-2",
+      "description": "Image for a blog post about navigating project accreditation.",
+      "imageUrl": "https://picsum.photos/seed/blog2/600/400",
+      "imageHint": "project planning"
+    },
+    {
+      "id": "blog-post-3",
+      "description": "Image for a blog post about cloud solutions for business.",
+      "imageUrl": "https://picsum.photos/seed/blog3/600/400",
+      "imageHint": "cloud computing"
+    },
+    {
+      "id": "team-member-1",
+      "description": "Professional headshot of Jane Doe.",
+      "imageUrl": "https://picsum.photos/seed/team1/400/400",
+      "imageHint": "professional woman"
+    },
+    {
+      "id": "team-member-2",
+      "description": "Professional headshot of John Smith.",
+      "imageUrl": "https://picsum.photos/seed/team2/400/400",
+      "imageHint": "professional man"
+    },
+    {
+      "id": "team-member-3",
+      "description": "Professional headshot of Sarah Brown.",
+      "imageUrl": "https://picsum.photos/seed/team3/400/400",
+      "imageHint": "business woman"
+    },
+    {
+      "id": "team-member-4",
+      "description": "Professional headshot of Michael Johnson.",
+      "imageUrl": "https://picsum.photos/seed/team4/400/400",
+      "imageHint": "business man"
+    },
+    {
+      "id": "client-logo-1",
+      "description": "Logo for client 'Innovate Corp'.",
+      "imageUrl": "https://picsum.photos/seed/logo1/200/100",
+      "imageHint": "abstract logo"
+    },
+    {
+      "id": "client-logo-2",
+      "description": "Logo for client 'HealthForward'.",
+      "imageUrl": "https://picsum.photos/seed/logo2/200/100",
+      "imageHint": "minimalist logo"
+    },
+    {
+      "id": "client-logo-3",
+      "description": "Logo for client 'TechSolutions'.",
+      "imageUrl": "https://picsum.photos/seed/logo3/200/100",
+      "imageHint": "geometric logo"
+    },
+    {
+      "id": "contact-us-banner",
+      "description": "A visually appealing image for the contact us section.",
+      "imageUrl": "https://picsum.photos/seed/contact/1200/400",
+      "imageHint": "modern architecture"
+    }
+  ]
 }

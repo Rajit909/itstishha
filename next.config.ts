@@ -30,6 +30,9 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  experimental: {
+    serverComponentsExternalPackages: ['@vercel/analytics'],
+  },
 };
 
 export default nextConfig;
