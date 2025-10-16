@@ -12,21 +12,23 @@ import { cn } from "@/lib/utils";
 
 const navLinks = [
   { href: "/services", label: "Services" },
+  { href: "/case-studies", label: "Case Studies" },
   { href: "/blog", label: "Blog" },
-  { href: "/careers", label: "Careers" },
-  { href: "/about", label: "About Us" },
+  { href: "/about", label: "About" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export default function Header() {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const NavLink = ({ href, label }: { href: string; label: string }) => (
+  const NavLink = ({ href, label, isMobile }: { href: string; label: string; isMobile?: boolean }) => (
     <Link
       href={href}
       className={cn(
-        "text-sm font-medium transition-colors hover:text-primary",
-        pathname.startsWith(href) ? "text-primary" : "text-muted-foreground"
+        "font-medium transition-colors hover:text-primary",
+        pathname.startsWith(href) ? "text-primary" : "text-muted-foreground",
+        isMobile ? "text-lg block py-2" : "text-sm"
       )}
       onClick={() => isMobileMenuOpen && setIsMobileMenuOpen(false)}
     >
@@ -35,46 +37,55 @@ export default function Header() {
   );
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 items-center">
-        <div className="mr-4 flex">
+    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div className="container flex h-16 max-w-screen-2xl items-center">
+        <div className="mr-4 hidden md:flex">
           <Link href="/" className="mr-6 flex items-center space-x-2">
             <Logo className="h-6 w-auto" />
           </Link>
-        </div>
-        <div className="hidden md:flex flex-1 items-center justify-center space-x-6">
-          <nav className="flex items-center space-x-6">
+          <nav className="flex items-center gap-6 text-sm">
             {navLinks.map((link) => (
               <NavLink key={link.href} {...link} />
             ))}
           </nav>
         </div>
-        <div className="flex flex-1 items-center justify-end space-x-4">
-          <Button asChild>
-            <Link href="/contact">Contact Us</Link>
-          </Button>
-          <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
-            <SheetTrigger asChild>
-              <Button variant="ghost" className="md:hidden">
-                <Menu className="h-5 w-5" />
-                <span className="sr-only">Toggle Menu</span>
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="left" className="pr-0">
-              <Link
-                href="/"
-                className="mb-8 flex items-center"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                <Logo className="h-6 w-auto" />
-              </Link>
-              <div className="flex flex-col space-y-4">
-                {navLinks.map((link) => (
-                  <NavLink key={link.href} {...link} />
-                ))}
-              </div>
-            </SheetContent>
-          </Sheet>
+
+        <div className="flex flex-1 items-center justify-between md:justify-end">
+          <Link href="/" className="flex items-center space-x-2 md:hidden">
+            <Logo className="h-6 w-auto" />
+          </Link>
+
+          <div className="flex items-center gap-2">
+            <Button variant="outline" asChild>
+              <Link href="/login">Sign In</Link>
+            </Button>
+            <Button asChild>
+              <Link href="/contact">Get a Quote</Link>
+            </Button>
+
+            <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
+              <SheetTrigger asChild>
+                <Button variant="ghost" className="md:hidden" size="icon">
+                  <Menu className="h-5 w-5" />
+                  <span className="sr-only">Toggle Menu</span>
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="left" className="pr-0">
+                <Link
+                  href="/"
+                  className="mb-8 flex items-center"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  <Logo className="h-6 w-auto" />
+                </Link>
+                <div className="flex flex-col space-y-3">
+                  {navLinks.map((link) => (
+                    <NavLink key={link.href} {...link} isMobile />
+                  ))}
+                </div>
+              </SheetContent>
+            </Sheet>
+          </div>
         </div>
       </div>
     </header>

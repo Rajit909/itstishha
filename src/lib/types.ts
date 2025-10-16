@@ -42,3 +42,19 @@ export type Client = {
   testimonial: string;
   logo: string;
 };
+
+export type CaseStudy = {
+  id: string;
+  slug: string;
+  title: string;
+  client: string;
+  image: string;
+  excerpt: string;
+  challenge: string;
+  solution: string;
+  result: string;
+  testimonial?: {
+    text: string;
+    author: string;
+  };
+};

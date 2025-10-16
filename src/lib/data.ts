@@ -1,5 +1,5 @@
-import type { Service, BlogPost, JobOpening, TeamMember, Client } from './types';
-import { HeartPulse, ShieldCheck, Cpu, Briefcase, Building, Code } from 'lucide-react';
+import type { Service, BlogPost, JobOpening, TeamMember, Client, CaseStudy } from './types';
+import { HeartPulse, ShieldCheck, Cpu } from 'lucide-react';
 
 // Using a mock async function to simulate fetching data
 const simulateFetch = <T,>(data: T): Promise<T> => 
@@ -82,30 +82,30 @@ export const jobOpenings: JobOpening[] = [
 export const teamMembers: TeamMember[] = [
   {
     id: '1',
-    name: 'Jane Doe',
+    name: 'Dr. Alisha Grant',
     title: 'CEO & Lead Healthcare Strategist',
-    bio: 'With over 20 years in the healthcare sector, Jane is a visionary leader dedicated to improving patient outcomes through innovation.',
+    bio: 'With over 20 years in the healthcare sector, Alisha is a visionary leader dedicated to improving patient outcomes through innovation.',
     image: 'team-member-1',
   },
   {
     id: '2',
-    name: 'John Smith',
+    name: 'David Chen',
     title: 'CTO & Head of IT Solutions',
-    bio: 'John is a tech guru with a passion for solving complex problems. He leads our IT division, specializing in cloud architecture and cybersecurity.',
+    bio: 'David is a tech guru with a passion for solving complex problems. He leads our IT division, specializing in cloud architecture and cybersecurity.',
     image: 'team-member-2',
   },
   {
     id: '3',
-    name: 'Sarah Brown',
+    name: 'Maria Rodriguez',
     title: 'Director of Accreditation Services',
-    bio: 'Sarah is an expert in quality management and regulatory compliance, helping organizations achieve excellence and recognition.',
+    bio: 'Maria is an expert in quality management and regulatory compliance, helping organizations achieve excellence and recognition.',
     image: 'team-member-3',
   },
   {
     id: '4',
-    name: 'Michael Johnson',
+    name: 'Kenji Tanaka',
     title: 'Senior Project Manager',
-    bio: 'Michael ensures that all our client projects are delivered on time and on budget, exceeding expectations every step of the way.',
+    bio: 'Kenji ensures that all our client projects are delivered on time and on budget, exceeding expectations every step of the way.',
     image: 'team-member-4',
   },
 ];
@@ -131,6 +131,40 @@ export const clients: Client[] = [
   },
 ];
 
+export const caseStudies: CaseStudy[] = [
+  {
+    id: '1',
+    slug: 'healthforward-accreditation',
+    title: 'Achieving JCAHO Accreditation for HealthForward',
+    client: 'HealthForward',
+    image: 'case-study-1',
+    excerpt: 'How we guided a leading hospital through a complex accreditation process, resulting in a 99.8% compliance score and enhanced operational efficiency.',
+    challenge: 'HealthForward, a major regional hospital, was facing a critical JCAHO accreditation survey. Their internal team was overwhelmed with the documentation requirements, process standardization, and staff training needed to meet the rigorous standards. They needed expert guidance to ensure a successful outcome without disrupting patient care.',
+    solution: 'Synergy Consult deployed a team of accreditation specialists who conducted a thorough gap analysis. We developed a customized roadmap, implemented a digital quality management system, and provided hands-on training for all departments. Our team worked alongside HealthForward staff to streamline workflows and ensure every standard was met and documented correctly.',
+    result: 'HealthForward passed their JCAHO survey with a 99.8% compliance score. The new digital systems reduced administrative overhead by 30%, and the streamlined processes led to a 15% improvement in patient throughput. The hospital is now recognized as a leader in quality and safety in their region.',
+    testimonial: {
+      text: 'Synergy Consult was the partner we needed. Their expertise and hands-on approach were instrumental in our success. We couldn’t have done it without them.',
+      author: 'CEO, HealthForward'
+    }
+  },
+  {
+    id: '2',
+    slug: 'innovate-corp-cloud-migration',
+    title: 'Cloud Migration & Modernization for Innovate Corp',
+    client: 'Innovate Corp',
+    image: 'case-study-2',
+    excerpt: 'A complete overhaul of a legacy IT infrastructure, moving Innovate Corp to a secure, scalable, and cost-effective cloud environment.',
+    challenge: 'Innovate Corp was struggling with an aging on-premise IT infrastructure that was costly to maintain, difficult to scale, and vulnerable to security threats. They needed to migrate to a modern cloud platform to support their rapid growth and digital product innovation.',
+    solution: 'Our IT consultation team designed and executed a phased cloud migration strategy. We selected the optimal cloud provider (AWS) and services, refactored critical applications for the cloud, and implemented a robust CI/CD pipeline for automated deployments. Security was a priority, with a multi-layered approach including identity and access management, network security, and continuous monitoring.',
+    result: 'The migration was completed on time and 10% under budget. Innovate Corp achieved a 40% reduction in IT operational costs, a 3x improvement in application performance, and near-zero downtime. Their new scalable infrastructure allows them to innovate faster and more securely than ever before.',
+    testimonial: {
+      text: 'The cloud migration was a massive undertaking, but Synergy Consult\'s team made it feel effortless. Their technical skill and project management were top-notch.',
+      author: 'CTO, Innovate Corp'
+    }
+  }
+];
+
+
 // Data fetching functions
 export const getServices = async () => simulateFetch(services);
 export const getServiceById = async (id: string) => simulateFetch(services.find(s => s.id === id));
@@ -139,3 +173,5 @@ export const getBlogPostBySlug = async (slug: string) => simulateFetch(blogPosts
 export const getJobOpenings = async () => simulateFetch(jobOpenings);
 export const getTeamMembers = async () => simulateFetch(teamMembers);
 export const getClients = async () => simulateFetch(clients);
+export const getCaseStudies = async () => simulateFetch(caseStudies);
+export const getCaseStudyBySlug = async (slug: string) => simulateFetch(caseStudies.find(p => p.slug === slug));
