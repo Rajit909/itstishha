@@ -61,30 +61,32 @@ export default async function HomePage() {
       {/* Featured Services Section */}
       <section id="services" className="py-16 md:py-24 bg-background">
         <div className="container">
-          <div className="text-center max-w-3xl mx-auto">
+          <div className="text-center max-w-3xl mx-auto animate-fade-in-up">
             <h2 className="text-3xl md:text-4xl font-bold">Our Core Expertise</h2>
             <p className="mt-4 text-lg text-muted-foreground">
               We deliver tailored solutions across key industries to meet your most critical challenges.
             </p>
           </div>
           <div className="mt-12 grid gap-8 md:grid-cols-3">
-            {services.map((service) => (
-              <Card key={service.id} className="group overflow-hidden flex flex-col text-center items-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
-                <CardHeader>
-                  <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
-                    <service.icon className="h-8 w-8" />
-                  </div>
-                  <CardTitle className="mt-4">{service.title}</CardTitle>
-                </CardHeader>
-                <CardContent className="flex-grow">
-                  <p className="text-muted-foreground">{service.description}</p>
-                </CardContent>
-                <CardFooter>
-                  <Button variant="link" asChild>
-                    <Link href="/services">Learn More <ArrowRight className="ml-2 h-4 w-4" /></Link>
-                  </Button>
-                </CardFooter>
-              </Card>
+            {services.map((service, index) => (
+              <div key={service.id} className="animate-fade-in-up" style={{ animationDelay: `${200 * (index + 1)}ms`, animationFillMode: 'backwards' }}>
+                <Card className="group overflow-hidden flex flex-col text-center items-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 h-full">
+                  <CardHeader>
+                    <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
+                      <service.icon className="h-8 w-8" />
+                    </div>
+                    <CardTitle className="mt-4">{service.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="flex-grow">
+                    <p className="text-muted-foreground">{service.description}</p>
+                  </CardContent>
+                  <CardFooter>
+                    <Button variant="link" asChild>
+                      <Link href="/services">Learn More <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                    </Button>
+                  </CardFooter>
+                </Card>
+              </div>
             ))}
           </div>
         </div>
@@ -93,7 +95,7 @@ export default async function HomePage() {
       {/* Why Choose Us Section */}
       <section className="py-16 md:py-24 bg-card">
         <div className="container grid md:grid-cols-2 gap-12 items-center">
-            <div className="relative h-96 md:h-full rounded-lg overflow-hidden shadow-xl">
+            <div className="relative h-96 md:h-full rounded-lg overflow-hidden shadow-xl animate-fade-in-left">
                  <Image
                     src="https://picsum.photos/seed/chooseus/800/600"
                     alt="Team meeting"
@@ -102,7 +104,7 @@ export default async function HomePage() {
                     data-ai-hint="team meeting"
                 />
             </div>
-            <div>
+            <div className="animate-fade-in-right">
                 <h2 className="text-3xl md:text-4xl font-bold">Why Partner with Synergy Consult?</h2>
                 <p className="mt-4 text-lg text-muted-foreground">
                     Our approach is rooted in partnership, deep industry knowledge, and a commitment to delivering measurable results.
@@ -139,7 +141,7 @@ export default async function HomePage() {
 
       {/* Testimonials Section */}
       <section className="py-16 md:py-24 bg-background">
-        <div className="container">
+        <div className="container animate-fade-in-up">
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold">What Our Clients Say</h2>
             <p className="mt-4 text-lg text-muted-foreground">
@@ -180,7 +182,7 @@ export default async function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-primary text-primary-foreground">
+      <section className="py-16 md:py-24 bg-primary text-primary-foreground animate-fade-in">
         <div className="container text-center">
           <h2 className="text-3xl md:text-4xl font-bold">Ready to Transform Your Business?</h2>
           <p className="mt-4 text-lg max-w-2xl mx-auto">
