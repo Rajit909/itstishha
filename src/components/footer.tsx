@@ -11,7 +11,7 @@ export default function Footer() {
           <div className="flex flex-col items-start space-y-4 md:col-span-2">
             <Logo className="h-7 w-auto" />
             <p className="text-sm text-muted-foreground max-w-md">
-              Synergy Consult provides expert solutions in healthcare, project accreditation, and IT to propel your organization forward.
+              tishha provides expert solutions in healthcare, project accreditation, and IT to propel your organization forward.
             </p>
             <div className="flex space-x-1">
               <Button variant="ghost" size="icon" asChild>
@@ -56,7 +56,7 @@ export default function Footer() {
         </div>
         <div className="mt-12 border-t pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-muted-foreground">
-            &copy; {new Date().getFullYear()} Synergy Consult. All rights reserved.
+            &copy; {new Date().getFullYear()} tishha consultancy LLP. All rights reserved.
           </p>
         </div>
       </div>

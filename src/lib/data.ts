@@ -41,7 +41,7 @@ export const blogPosts: BlogPost[] = [
     date: '2024-07-15',
     image: 'blog-post-1',
     excerpt: 'Exploring the impact of technology on patient care and hospital management. How AI and IoT are reshaping the industry.',
-    content: '<p>The healthcare industry is undergoing a seismic shift, driven by rapid advancements in technology. From electronic health records (EHRs) to AI-powered diagnostics, digital transformation is not just a buzzword; it\'s a fundamental change in how healthcare is delivered and managed.</p><p>One of the most significant changes is the adoption of telehealth. The ability to consult with patients remotely has proven invaluable, offering convenience for patients and efficiency for providers. Moreover, wearable devices and IoT sensors are providing continuous health monitoring, enabling proactive care and better management of chronic conditions.</p><p>Artificial intelligence is another game-changer. Machine learning algorithms can analyze medical images with a high degree of accuracy, assist in drug discovery, and predict patient outcomes based on historical data. This not only improves diagnostic speed and accuracy but also personalizes treatment plans for better results.</p><p>However, this transformation is not without its challenges. Data security and privacy are paramount, requiring robust cybersecurity measures. Interoperability between different systems also remains a hurdle that the industry must overcome to realize the full potential of a connected healthcare ecosystem.</p><p>At Synergy Consult, we help healthcare organizations navigate these complexities, implementing tailored IT strategies that enhance patient care while ensuring data integrity and compliance. The future of healthcare is digital, and we are here to help you lead the way.</p>',
+    content: '<p>The healthcare industry is undergoing a seismic shift, driven by rapid advancements in technology. From electronic health records (EHRs) to AI-powered diagnostics, digital transformation is not just a buzzword; it\'s a fundamental change in how healthcare is delivered and managed.</p><p>One of the most significant changes is the adoption of telehealth. The ability to consult with patients remotely has proven invaluable, offering convenience for patients and efficiency for providers. Moreover, wearable devices and IoT sensors are providing continuous health monitoring, enabling proactive care and better management of chronic conditions.</p><p>Artificial intelligence is another game-changer. Machine learning algorithms can analyze medical images with a high degree of accuracy, assist in drug discovery, and predict patient outcomes based on historical data. This not only improves diagnostic speed and accuracy but also personalizes treatment plans for better results.</p><p>However, this transformation is not without its challenges. Data security and privacy are paramount, requiring robust cybersecurity measures. Interoperability between different systems also remains a hurdle that the industry must overcome to realize the full potential of a connected healthcare ecosystem.</p><p>At tishha, we help healthcare organizations navigate these complexities, implementing tailored IT strategies that enhance patient care while ensuring data integrity and compliance. The future of healthcare is digital, and we are here to help you lead the way.</p>',
   },
   {
     id: '2',
@@ -114,13 +114,13 @@ export const clients: Client[] = [
   {
     id: '1',
     name: 'Innovate Corp',
-    testimonial: 'Synergy Consult transformed our approach to IT. Their expertise was invaluable in our recent cloud migration project. Highly recommended!',
+    testimonial: 'tishha transformed our approach to IT. Their expertise was invaluable in our recent cloud migration project. Highly recommended!',
     logo: 'client-logo-1',
   },
   {
     id: '2',
     name: 'HealthForward',
-    testimonial: 'The accreditation process was daunting, but Synergy Consult\'s team made it seamless. We achieved our certification ahead of schedule.',
+    testimonial: 'The accreditation process was daunting, but tishha\'s team made it seamless. We achieved our certification ahead of schedule.',
     logo: 'client-logo-2',
   },
   {
@@ -140,10 +140,10 @@ export const caseStudies: CaseStudy[] = [
     image: 'case-study-1',
     excerpt: 'How we guided a leading hospital through a complex accreditation process, resulting in a 99.8% compliance score and enhanced operational efficiency.',
     challenge: 'HealthForward, a major regional hospital, was facing a critical JCAHO accreditation survey. Their internal team was overwhelmed with the documentation requirements, process standardization, and staff training needed to meet the rigorous standards. They needed expert guidance to ensure a successful outcome without disrupting patient care.',
-    solution: 'Synergy Consult deployed a team of accreditation specialists who conducted a thorough gap analysis. We developed a customized roadmap, implemented a digital quality management system, and provided hands-on training for all departments. Our team worked alongside HealthForward staff to streamline workflows and ensure every standard was met and documented correctly.',
+    solution: 'tishha deployed a team of accreditation specialists who conducted a thorough gap analysis. We developed a customized roadmap, implemented a digital quality management system, and provided hands-on training for all departments. Our team worked alongside HealthForward staff to streamline workflows and ensure every standard was met and documented correctly.',
     result: 'HealthForward passed their JCAHO survey with a 99.8% compliance score. The new digital systems reduced administrative overhead by 30%, and the streamlined processes led to a 15% improvement in patient throughput. The hospital is now recognized as a leader in quality and safety in their region.',
     testimonial: {
-      text: 'Synergy Consult was the partner we needed. Their expertise and hands-on approach were instrumental in our success. We couldn’t have done it without them.',
+      text: 'tishha was the partner we needed. Their expertise and hands-on approach were instrumental in our success. We couldn’t have done it without them.',
       author: 'CEO, HealthForward'
     }
   },
@@ -158,7 +158,7 @@ export const caseStudies: CaseStudy[] = [
     solution: 'Our IT consultation team designed and executed a phased cloud migration strategy. We selected the optimal cloud provider (AWS) and services, refactored critical applications for the cloud, and implemented a robust CI/CD pipeline for automated deployments. Security was a priority, with a multi-layered approach including identity and access management, network security, and continuous monitoring.',
     result: 'The migration was completed on time and 10% under budget. Innovate Corp achieved a 40% reduction in IT operational costs, a 3x improvement in application performance, and near-zero downtime. Their new scalable infrastructure allows them to innovate faster and more securely than ever before.',
     testimonial: {
-      text: 'The cloud migration was a massive undertaking, but Synergy Consult\'s team made it feel effortless. Their technical skill and project management were top-notch.',
+      text: 'The cloud migration was a massive undertaking, but tishha\'s team made it feel effortless. Their technical skill and project management were top-notch.',
       author: 'CTO, Innovate Corp'
     }
   }

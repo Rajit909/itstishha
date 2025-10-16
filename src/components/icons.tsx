@@ -12,10 +12,10 @@ export const Logo = (props: React.SVGProps<SVGSVGElement>) => (
       `}
     </style>
     <text x="0" y="28" fontFamily="PT Sans, sans-serif" fontSize="24" fontWeight="bold" className="synergy-text">
-      Synergy
+      tishha
     </text>
-    <text x="98" y="28" fontFamily="PT Sans, sans-serif" fontSize="24" className="consult-text">
-      Consult
+    <text x="68" y="28" fontFamily="PT Sans, sans-serif" fontSize="24" className="consult-text">
+      consultancy
     </text>
   </svg>
 );

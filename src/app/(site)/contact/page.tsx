@@ -71,11 +71,11 @@ export default function ContactPage() {
                 </div>
                 <div className="flex items-center gap-4">
                   <Mail className="h-5 w-5 text-primary" />
-                  <span className="text-muted-foreground">contact@synergyconsult.com</span>
+                  <span className="text-muted-foreground">contact@tishha.com</span>
                 </div>
                 <div className="flex items-start gap-4">
                   <MapPin className="h-5 w-5 text-primary mt-1" />
-                  <span className="text-muted-foreground">123 Synergy Way, Innovation City, 12345</span>
+                  <span className="text-muted-foreground">123 tishha Way, Innovation City, 12345</span>
                 </div>
               </div>
             </div>

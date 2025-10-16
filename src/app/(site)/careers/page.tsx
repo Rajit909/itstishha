@@ -19,7 +19,7 @@ export default async function CareersPage() {
         <div className="container text-center">
           <h1 className="font-headline text-4xl md:text-5xl font-bold">Join Our Team</h1>
           <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-            We're looking for passionate, talented individuals to help us drive innovation. Explore our open positions and find your future at Synergy Consult.
+            We're looking for passionate, talented individuals to help us drive innovation. Explore our open positions and find your future at tishha.
           </p>
         </div>
       </section>
