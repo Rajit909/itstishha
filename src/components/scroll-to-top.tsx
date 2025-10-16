@@ -13,7 +13,7 @@ export default function ScrollToTop() {
     const handleScroll = () => {
       const scrollY = window.scrollY;
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const scrollPercent = (scrollY / docHeight) * 100;
+      const scrollPercent = docHeight > 0 ? (scrollY / docHeight) * 100 : 0;
       setProgress(scrollPercent);
 
       if (scrollY > 300) {
@@ -34,7 +34,7 @@ export default function ScrollToTop() {
     });
   };
 
-  const circumference = 2 * Math.PI * 20; // 2 * pi * radius
+  const circumference = 2 * Math.PI * 20; // 2 * pi * radius (20) of the circle
   const strokeDashoffset = circumference - (progress / 100) * circumference;
 
   return (
