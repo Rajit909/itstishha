@@ -27,7 +27,7 @@ export default async function HomePage() {
     <div className="flex flex-col">
       {/* Hero Section */}
       <section className="relative h-[80vh] md:h-[90vh] w-full flex items-center justify-center text-center text-white">
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-black/20" />
+        <div className="absolute inset-0 bg-gradient-to-t from-primary/70 via-primary/50 to-transparent" />
         {heroImage && (
             <Image
                 src={heroImage?.imageUrl || ''}
@@ -260,7 +260,7 @@ export default async function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-primary text-primary-foreground animate-fade-in">
+      <section className="py-16 md:py-24 bg-gradient-to-r from-primary to-accent text-primary-foreground animate-fade-in">
         <div className="container text-center">
           <h2 className="text-3xl md:text-4xl font-bold">Ready to Transform Your Business?</h2>
           <p className="mt-4 text-lg max-w-2xl mx-auto">
