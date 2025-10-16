@@ -36,14 +36,14 @@ export default async function HomePage() {
             />
         )}
         <div className="relative z-10 max-w-4xl mx-auto px-4 animate-fade-in-up">
-          <Badge variant="secondary" className="mb-4">Driving Excellence</Badge>
-          <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
+          <Badge variant="secondary" className="mb-4 animate-fade-in-up animation-delay-200">Driving Excellence</Badge>
+          <h1 className="text-4xl md:text-6xl font-bold tracking-tight animate-fade-in-up animation-delay-400">
             Propel Your Organization Forward
           </h1>
-          <p className="mt-6 text-lg md:text-xl max-w-3xl mx-auto text-primary-foreground/90">
+          <p className="mt-6 text-lg md:text-xl max-w-3xl mx-auto text-primary-foreground/90 animate-fade-in-up animation-delay-600">
             Synergy Consult provides expert solutions in healthcare, project accreditation, and IT to help you achieve your strategic goals.
           </p>
-          <div className="mt-8 flex justify-center gap-4">
+          <div className="mt-8 flex justify-center gap-4 animate-fade-in-up animation-delay-800">
             <Button size="lg" asChild>
               <Link href="/services">
                 Explore Our Services <ArrowRight className="ml-2 h-5 w-5" />
@@ -71,7 +71,7 @@ export default async function HomePage() {
             {services.map((service) => (
               <Card key={service.id} className="group overflow-hidden flex flex-col text-center items-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
                 <CardHeader>
-                  <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                  <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
                     <service.icon className="h-8 w-8" />
                   </div>
                   <CardTitle className="mt-4">{service.title}</CardTitle>
@@ -156,7 +156,7 @@ export default async function HomePage() {
                 return (
                   <CarouselItem key={client.id} className="md:basis-1/2 lg:basis-1/3">
                     <div className="p-4">
-                      <Card className="h-full flex flex-col justify-between">
+                      <Card className="h-full flex flex-col justify-between hover:shadow-xl transition-shadow duration-300">
                         <CardContent className="p-8 text-left">
                           <p className="text-lg italic">"{client.testimonial}"</p>
                         </CardContent>
@@ -186,7 +186,7 @@ export default async function HomePage() {
           <p className="mt-4 text-lg max-w-2xl mx-auto">
             Let's discuss how Synergy Consult can help you achieve your goals. Schedule a free consultation with our experts today.
           </p>
-          <Button size="lg" variant="secondary" className="mt-8" asChild>
+          <Button size="lg" variant="secondary" className="mt-8 transform hover:scale-105 transition-transform" asChild>
             <Link href="/contact">
               Get in Touch
             </Link>
