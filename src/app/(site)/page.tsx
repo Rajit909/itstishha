@@ -11,7 +11,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { getServices, getClients } from "@/lib/data";
+import { getServices, getClients, getBlogPosts, getCaseStudies } from "@/lib/data";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Badge } from "@/components/ui/badge";
 
@@ -19,6 +19,9 @@ export default async function HomePage() {
   const services = (await getServices()).slice(0, 3);
   const clients = await getClients();
   const heroImage = PlaceHolderImages.find(p => p.id === 'hero-background');
+  const recentPosts = (await getBlogPosts()).slice(0, 2);
+  const featuredStudy = (await getCaseStudies())[0];
+  const featuredStudyImage = PlaceHolderImages.find(p => p.id === featuredStudy.image);
 
   return (
     <div className="flex flex-col">
@@ -92,10 +95,41 @@ export default async function HomePage() {
         </div>
       </section>
       
-      {/* Why Choose Us Section */}
+      {/* Featured Case Study */}
+      {featuredStudy && (
       <section className="py-16 md:py-24 bg-card">
+        <div className="container">
+            <div className="text-center max-w-3xl mx-auto animate-fade-in-up">
+                <h2 className="text-3xl md:text-4xl font-bold">Success Story</h2>
+                <p className="mt-4 text-lg text-muted-foreground">See how we made a difference. Read our featured case study.</p>
+            </div>
+            <div className="mt-12 grid md:grid-cols-2 gap-12 items-center">
+              <div className="relative h-96 rounded-lg overflow-hidden shadow-xl animate-fade-in-left">
+                  {featuredStudyImage && <Image
+                      src={featuredStudyImage.imageUrl}
+                      alt={featuredStudy.title}
+                      fill
+                      className="object-cover"
+                      data-ai-hint={featuredStudyImage.imageHint}
+                  />}
+              </div>
+              <div className="animate-fade-in-right">
+                  <p className="font-semibold text-primary">{featuredStudy.client}</p>
+                  <h3 className="mt-2 text-2xl md:text-3xl font-bold">{featuredStudy.title}</h3>
+                  <p className="mt-4 text-lg text-muted-foreground">{featuredStudy.excerpt}</p>
+                  <Button asChild className="mt-6" size="lg">
+                      <Link href={`/case-studies/${featuredStudy.slug}`}>Read The Full Story <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                  </Button>
+              </div>
+            </div>
+        </div>
+      </section>
+      )}
+
+      {/* Why Choose Us Section */}
+      <section className="py-16 md:py-24 bg-background">
         <div className="container grid md:grid-cols-2 gap-12 items-center">
-            <div className="relative h-96 md:h-full rounded-lg overflow-hidden shadow-xl animate-fade-in-left">
+            <div className="relative h-96 md:h-full rounded-lg overflow-hidden shadow-xl animate-fade-in-left order-last md:order-first">
                  <Image
                     src="https://picsum.photos/seed/chooseus/800/600"
                     alt="Team meeting"
@@ -140,7 +174,7 @@ export default async function HomePage() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-16 md:py-24 bg-background">
+      <section className="py-16 md:py-24 bg-card">
         <div className="container animate-fade-in-up">
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold">What Our Clients Say</h2>
@@ -178,6 +212,50 @@ export default async function HomePage() {
             <CarouselPrevious />
             <CarouselNext />
           </Carousel>
+        </div>
+      </section>
+
+      {/* Latest Insights Section */}
+      <section className="py-16 md:py-24 bg-background">
+        <div className="container">
+          <div className="text-center max-w-3xl mx-auto animate-fade-in-up">
+            <h2 className="text-3xl md:text-4xl font-bold">Latest Insights</h2>
+            <p className="mt-4 text-lg text-muted-foreground">
+              Explore the latest trends and expert analysis from our team.
+            </p>
+          </div>
+          <div className="mt-12 grid gap-8 md:grid-cols-2 max-w-4xl mx-auto">
+            {recentPosts.map((post, index) => {
+                const postImage = PlaceHolderImages.find(p => p.id === post.image);
+                return (
+                <div key={post.id} className="animate-fade-in-up" style={{ animationDelay: `${200 * (index + 1)}ms`, animationFillMode: 'backwards' }}>
+                    <Card className="group overflow-hidden flex flex-col hover:shadow-xl transition-shadow duration-300 h-full">
+                        {postImage && <div className="relative h-56 w-full overflow-hidden">
+                          <Image src={postImage.imageUrl} alt={post.title} fill className="object-cover group-hover:scale-105 transition-transform duration-300" data-ai-hint={postImage.imageHint} />
+                        </div>}
+                        <CardHeader>
+                            <CardTitle className="text-xl h-14 leading-tight">{post.title}</CardTitle>
+                        </CardHeader>
+                        <CardContent className="flex-grow">
+                            <p className="text-muted-foreground line-clamp-2">{post.excerpt}</p>
+                        </CardContent>
+                        <CardFooter>
+                            <Button variant="link" asChild className="p-0 h-auto">
+                            <Link href={`/blog/${post.slug}`}>
+                                Read More <ArrowRight className="ml-2 h-4 w-4" />
+                            </Link>
+                            </Button>
+                        </CardFooter>
+                    </Card>
+                </div>
+                )
+            })}
+          </div>
+          <div className="text-center mt-12 animate-fade-in-up animation-delay-600">
+              <Button asChild size="lg">
+                  <Link href="/blog">View All Insights</Link>
+              </Button>
+          </div>
         </div>
       </section>
 
