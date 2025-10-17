@@ -1,10 +1,57 @@
+
+import { Layers, PencilRuler, Workflow } from 'lucide-react';
+import Image from 'next/image';
+
 export default function PlanningDesigningPage() {
   return (
-    <div className="container py-16">
-      <h1 className="text-4xl font-bold">Planning & Designing</h1>
-      <p className="mt-4 text-lg text-muted-foreground">
-        We provide expert planning and designing services to help you create efficient and effective solutions for your projects.
-      </p>
+    <div className="bg-background text-foreground">
+      <section className="py-20 md:py-32 bg-card">
+        <div className="container text-center">
+          <h1 className="text-4xl md:text-5xl font-bold">Planning & Designing</h1>
+          <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
+            From blueprint to reality, we provide expert planning and design services to build the foundation for your success.
+          </p>
+        </div>
+      </section>
+
+      <section className="py-16 md:py-24">
+        <div className="container">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="relative h-96 rounded-lg overflow-hidden shadow-xl">
+              <Image src="https://picsum.photos/seed/planning/800/600" alt="Planning and Designing" fill className="object-cover" data-ai-hint="architectural blueprint" />
+            </div>
+            <div>
+              <h2 className="text-3xl font-bold mb-4">Strategic Frameworks for Lasting Infrastructure</h2>
+              <p className="text-lg text-muted-foreground">
+                Our Planning & Designing services are tailored to create efficient, sustainable, and scalable environments. We work with you to translate your vision into a tangible plan, ensuring that every aspect of the design aligns with your strategic objectives, from architectural layouts to operational workflows.
+              </p>
+              <ul className="mt-8 space-y-4">
+                <li className="flex items-start">
+                  <Layers className="h-6 w-6 text-primary mr-4 mt-1 flex-shrink-0" />
+                  <div>
+                    <h3 className="font-semibold">Master Planning</h3>
+                    <p className="text-muted-foreground">Developing long-term strategic plans for facility development and expansion.</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <PencilRuler className="h-6 w-6 text-primary mr-4 mt-1 flex-shrink-0" />
+                  <div>
+                    <h3 className="font-semibold">Architectural & Interior Design</h3>
+                    <p className="text-muted-foreground">Creating functional and aesthetic spaces that enhance user experience and efficiency.</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <Workflow className="h-6 w-6 text-primary mr-4 mt-1 flex-shrink-0" />
+                  <div>
+                    <h3 className="font-semibold">Process Workflow Design</h3>
+                    <p className="text-muted-foreground">Optimizing operational flows to improve productivity and reduce costs.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
