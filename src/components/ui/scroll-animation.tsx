@@ -35,11 +35,11 @@ export function ScrollAnimation({
     <div
       ref={ref}
       className={cn(
-        'opacity-0',
-        inView ? `animate-in ${animationClass}` : '',
+        'transition-opacity opacity-0',
+        inView ? `opacity-100 animate-in ${animationClass}` : 'opacity-0',
         className
       )}
-      style={{ animationDelay: `${delay}ms` }}
+      style={{ animationDuration: '0.8s', animationDelay: `${delay}ms` }}
     >
       {children}
     </div>
