@@ -47,7 +47,7 @@ export default function LoginPage() {
       <Card className="w-full max-w-md shadow-2xl">
         <CardHeader className="text-center">
             <Link href="/" className="mb-6 inline-block">
-                <Logo className="h-8 w-auto mx-auto"/>
+                <Logo className="h-14 w-auto mx-auto"/>
             </Link>
           <CardTitle className="text-2xl">Client Portal</CardTitle>
           <CardDescription>Sign in to access your account</CardDescription>

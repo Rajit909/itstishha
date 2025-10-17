@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="container py-12">
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
           <div className="flex flex-col items-start space-y-4 md:col-span-2">
-            <Logo className="h-7 w-auto" />
+            <Logo className="h-14 w-auto" />
             <p className="text-sm text-muted-foreground max-w-md">
               Tishha provides expert solutions in healthcare, project accreditation, and IT to propel your organization forward.
             </p>

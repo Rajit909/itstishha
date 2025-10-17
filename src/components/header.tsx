@@ -186,7 +186,7 @@ export default function Header() {
       <div className="container flex h-16 max-w-screen-2xl items-center">
         <div className="mr-4 hidden md:flex">
           <Link href="/" className="mr-6 flex items-center space-x-2">
-            <Logo className="h-6 w-auto" />
+            <Logo className="h-10 w-auto" />
           </Link>
           <nav className="flex items-center gap-2 text-sm">
             {navLinks.map((link) => (
@@ -197,7 +197,7 @@ export default function Header() {
 
         <div className="flex flex-1 items-center justify-between md:justify-end">
           <Link href="/" className="flex items-center space-x-2 md:hidden">
-            <Logo className="h-6 w-auto" />
+            <Logo className="h-8 w-auto" />
           </Link>
 
           <div className="flex items-center gap-2">
@@ -218,7 +218,7 @@ export default function Header() {
                   className="mb-8 flex items-center"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  <Logo className="h-6 w-auto" />
+                  <Logo className="h-10 w-auto" />
                 </Link>
                 <div className="flex flex-col space-y-3">
                   {navLinks.map((link) => (

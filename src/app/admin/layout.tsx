@@ -49,7 +49,7 @@ export default function AdminLayout({
           <SidebarHeader>
             <div className="flex items-center justify-between p-2">
                 <Link href="/admin/dashboard">
-                    <Logo className="h-7 w-auto" />
+                    <Logo className="h-10 w-auto" />
                 </Link>
                 <SidebarTrigger asChild>
                   <Button variant="ghost" size="icon" />
