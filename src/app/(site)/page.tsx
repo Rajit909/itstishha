@@ -26,7 +26,7 @@ export default async function HomePage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative h-[80vh] md:h-[90vh] w-full flex items-center justify-center text-center text-white overflow-hidden">
+      <section className="relative h-[60vh] md:h-[90vh] w-full flex items-center justify-center text-center text-white overflow-hidden">
         {heroImage && (
             <Image
                 src={heroImage?.imageUrl || ''}
@@ -256,8 +256,8 @@ export default async function HomePage() {
                 )
               })}
             </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
+            <CarouselPrevious className="absolute left-0 top-1/2 -translate-y-1/2 z-10 md:-left-12" />
+            <CarouselNext className="absolute right-0 top-1/2 -translate-y-1/2 z-10 md:-right-12" />
           </Carousel>
         </div>
       </section>
@@ -323,3 +323,5 @@ export default async function HomePage() {
     </div>
   );
 }
+
+    
