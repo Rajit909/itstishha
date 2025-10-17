@@ -26,8 +26,7 @@ export default async function HomePage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative h-[80vh] md:h-[90vh] w-full flex items-center justify-center text-center text-white">
-        <div className="absolute inset-0 bg-gradient-to-t from-primary/70 via-primary/50 to-transparent" />
+      <section className="relative h-[80vh] md:h-[90vh] w-full flex items-center justify-center text-center text-white overflow-hidden">
         {heroImage && (
             <Image
                 src={heroImage?.imageUrl || ''}
@@ -38,7 +37,8 @@ export default async function HomePage() {
                 data-ai-hint={heroImage?.imageHint}
             />
         )}
-        <div className="relative z-10 max-w-4xl mx-auto px-4 animate-fade-in-up">
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 animate-fade-in-up">
           <Badge variant="secondary" className="mb-4 animate-fade-in-up animation-delay-200">Driving Excellence</Badge>
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight animate-fade-in-up animation-delay-400">
             Propel Your Organization Forward
@@ -46,13 +46,13 @@ export default async function HomePage() {
           <p className="mt-6 text-lg md:text-xl max-w-3xl mx-auto text-primary-foreground/90 animate-fade-in-up animation-delay-600">
             Tishha provides expert solutions in healthcare, project accreditation, and IT to help you achieve your strategic goals.
           </p>
-          <div className="mt-8 flex justify-center gap-4 animate-fade-in-up animation-delay-800">
-            <Button size="lg" asChild>
+          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up animation-delay-800">
+            <Button size="lg" asChild className="w-full sm:w-auto">
               <Link href="/services">
                 Explore Our Services <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-            <Button size="lg" variant="secondary" asChild>
+            <Button size="lg" variant="secondary" asChild className="w-full sm:w-auto">
               <Link href="/contact">
                 Schedule a Consultation
               </Link>
