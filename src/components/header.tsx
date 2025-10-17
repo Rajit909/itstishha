@@ -22,22 +22,22 @@ import {
 } from "@/components/ui/collapsible";
 
 const aboutUsLinks = [
-  { href: "/about", label: "Philosophy" },
-  { href: "/about", label: "Mission, Vision And Commitment" },
-  { href: "/about", label: "Our Objectives" },
-  { href: "/about", label: "Board Of Directors" },
-  { href: "/about", label: "Strategic Leadership" },
+  { href: "/about/philosophy", label: "Philosophy" },
+  { href: "/about/mission-vision-commitment", label: "Mission, Vision And Commitment" },
+  { href: "/about/our-objectives", label: "Our Objectives" },
+  { href: "/about/board-of-directors", label: "Board Of Directors" },
+  { href: "/about/strategic-leadership", label: "Strategic Leadership" },
 ];
 
 const servicesLinks = [
-  { href: "/services", label: "Planning & Designing" },
-  { href: "/services", label: "Financial Consultancy" },
-  { href: "/services", label: "Recruitment Consultancy" },
-  { href: "/services", label: "Quality Accreditation" },
-  { href: "/services", label: "Operational Acquisition" },
-  { href: "/services", label: "Digital Solution" },
-  { href: "/services", label: "Equipment Consultancy" },
-  { href: "/services", label: "Feasibility Study" },
+  { href: "/services/planning-designing", label: "Planning & Designing" },
+  { href: "/services/financial-consultancy", label: "Financial Consultancy" },
+  { href: "/services/recruitment-consultancy", label: "Recruitment Consultancy" },
+  { href: "/services/quality-accreditation", label: "Quality Accreditation" },
+  { href: "/services/operational-acquisition", label: "Operational Acquisition" },
+  { href: "/services/digital-solution", label: "Digital Solution" },
+  { href: "/services/equipment-consultancy", label: "Equipment Consultancy" },
+  { href: "/services/feasibility-study", label: "Feasibility Study" },
 ];
 
 const projectLinks = [
