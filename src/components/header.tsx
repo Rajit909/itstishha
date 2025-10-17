@@ -2,39 +2,167 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { useState } from "react";
 
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import { Logo } from "@/components/icons";
 import { cn } from "@/lib/utils";
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
+
+const aboutUsLinks = [
+  { href: "/about", label: "Philosophy" },
+  { href: "/about", label: "Mission, Vision And Commitment" },
+  { href: "/about", label: "Our Objectives" },
+  { href: "/about", label: "Board Of Directors" },
+  { href: "/about", label: "Strategic Leadership" },
+];
+
+const servicesLinks = [
+  { href: "/services", label: "Planning & Designing" },
+  { href: "/services", label: "Financial Consultancy" },
+  { href: "/services", label: "Recruitment Consultancy" },
+  { href: "/services", label: "Quality Accreditation" },
+  { href: "/services", label: "Operational Acquisition" },
+  { href: "/services", label: "Digital Solution" },
+  { href: "/services", label: "Equipment Consultancy" },
+  { href: "/services", label: "Feasibility Study" },
+];
+
+const projectLinks = [
+    { href: "/case-studies", label: "Quality Accreditation" },
+    { href: "/case-studies", label: "HIMS & Digital Solution" },
+    { href: "/case-studies", label: "Hospital Operations & Empanelment" },
+    { href: "/case-studies", label: "Project Planning & Designing" },
+];
 
 const navLinks = [
-  { href: "/services", label: "Services" },
-  { href: "/case-studies", label: "Case Studies" },
-  { href: "/blog", label: "Blog" },
-  { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
+  {
+    label: "About Us",
+    href: "/about",
+    subLinks: aboutUsLinks,
+  },
+  {
+    label: "Services",
+    href: "/services",
+    subLinks: servicesLinks,
+  },
+  {
+    label: "Project",
+    href: "/case-studies",
+    subLinks: projectLinks,
+  },
+  {
+    label: "Blogs",
+    href: "/blog",
+  },
+  {
+    label: "Contact",
+    href: "/contact",
+  },
 ];
 
 export default function Header() {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const NavLink = ({ href, label, isMobile }: { href: string; label: string; isMobile?: boolean }) => (
-    <Link
-      href={href}
-      className={cn(
-        "font-medium transition-colors hover:text-primary",
-        pathname.startsWith(href) ? "text-primary" : "text-muted-foreground",
-        isMobile ? "text-lg block py-2" : "text-sm"
-      )}
-      onClick={() => isMobileMenuOpen && setIsMobileMenuOpen(false)}
-    >
-      {label}
-    </Link>
-  );
+  const NavLink = ({
+    href,
+    label,
+    subLinks,
+    isMobile,
+  }: {
+    href: string;
+    label: string;
+    subLinks?: { href: string; label: string }[];
+    isMobile?: boolean;
+  }) => {
+    if (isMobile) {
+      if (subLinks) {
+        return (
+          <Collapsible>
+            <CollapsibleTrigger className="flex w-full items-center justify-between py-2 text-lg font-medium">
+              {label}
+              <ChevronDown className="h-4 w-4" />
+            </CollapsibleTrigger>
+            <CollapsibleContent className="pl-4">
+              {subLinks.map((subLink) => (
+                <Link
+                  key={subLink.label}
+                  href={subLink.href}
+                  className="block py-2 text-muted-foreground"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {subLink.label}
+                </Link>
+              ))}
+            </CollapsibleContent>
+          </Collapsible>
+        );
+      }
+      return (
+        <Link
+          href={href}
+          className="block py-2 text-lg font-medium"
+          onClick={() => setIsMobileMenuOpen(false)}
+        >
+          {label}
+        </Link>
+      );
+    }
+
+    if (subLinks) {
+      return (
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <Button
+              variant="ghost"
+              className={cn(
+                "font-medium transition-colors hover:text-primary text-sm",
+                pathname.startsWith(href)
+                  ? "text-primary"
+                  : "text-muted-foreground"
+              )}
+            >
+              {label} <ChevronDown className="ml-2 h-4 w-4" />
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent className="w-56">
+            {subLinks.map((subLink) => (
+              <DropdownMenuItem key={subLink.label} asChild>
+                <Link href={subLink.href}>{subLink.label}</Link>
+              </DropdownMenuItem>
+            ))}
+          </DropdownMenuContent>
+        </DropdownMenu>
+      );
+    }
+
+    return (
+      <Link
+        href={href}
+        className={cn(
+          "font-medium transition-colors hover:text-primary text-sm",
+          pathname.startsWith(href)
+            ? "text-primary"
+            : "text-muted-foreground"
+        )}
+      >
+        {label}
+      </Link>
+    );
+  };
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -43,9 +171,9 @@ export default function Header() {
           <Link href="/" className="mr-6 flex items-center space-x-2">
             <Logo className="h-6 w-auto" />
           </Link>
-          <nav className="flex items-center gap-6 text-sm">
+          <nav className="flex items-center gap-2 text-sm">
             {navLinks.map((link) => (
-              <NavLink key={link.href} {...link} />
+              <NavLink key={link.label} {...link} />
             ))}
           </nav>
         </div>
@@ -80,7 +208,7 @@ export default function Header() {
                 </Link>
                 <div className="flex flex-col space-y-3">
                   {navLinks.map((link) => (
-                    <NavLink key={link.href} {...link} isMobile />
+                    <NavLink key={link.label} {...link} isMobile />
                   ))}
                 </div>
               </SheetContent>
