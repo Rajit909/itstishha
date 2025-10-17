@@ -84,6 +84,10 @@ const navLinks = [
     href: "/impact-zone",
     subLinks: impactZoneLinks,
   },
+  {
+    label: "Careers",
+    href: "/careers",
+  },
 ];
 
 export default function Header() {
