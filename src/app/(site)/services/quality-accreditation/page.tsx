@@ -4,11 +4,11 @@ import Image from 'next/image';
 
 export default function QualityAccreditationPage() {
   return (
-    <div className="bg-background text-foreground">
+    <div className="bg-background text-foreground animate-fade-in">
       <section className="py-20 md:py-32 bg-card">
         <div className="container text-center">
-          <h1 className="text-4xl md:text-5xl font-bold">Quality Accreditation</h1>
-          <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
+          <h1 className="text-4xl md:text-5xl font-bold animate-fade-in-up">Quality Accreditation</h1>
+          <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto animate-fade-in-up animation-delay-200">
             Achieve and maintain the highest standards of quality and excellence with our expert accreditation guidance.
           </p>
         </div>
@@ -17,10 +17,10 @@ export default function QualityAccreditationPage() {
       <section className="py-16 md:py-24">
         <div className="container">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="relative h-96 rounded-lg overflow-hidden shadow-xl">
+            <div className="relative h-96 rounded-lg overflow-hidden shadow-xl animate-fade-in-left">
               <Image src="https://picsum.photos/seed/accreditation/800/600" alt="Quality Accreditation" fill className="object-cover" data-ai-hint="official document" />
             </div>
-            <div>
+            <div className="animate-fade-in-right">
               <h2 className="text-3xl font-bold mb-4">A Mark of Excellence</h2>
               <p className="text-lg text-muted-foreground">
                 We guide organizations through the complexities of achieving and maintaining prestigious quality accreditations (e.g., NABH, NABL, JCI). Our systematic approach ensures you not only meet regulatory requirements but also foster a culture of continuous improvement.

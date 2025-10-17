@@ -44,10 +44,10 @@ export default async function CaseStudyCategoryPage({ params }: CaseStudyCategor
 
   return (
     <>
-      <section className="py-20 md:py-32 bg-card">
+      <section className="py-20 md:py-32 bg-card animate-fade-in">
         <div className="container text-center">
-          <h1 className="text-4xl md:text-5xl font-bold">{category.title}</h1>
-          <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
+          <h1 className="text-4xl md:text-5xl font-bold animate-fade-in-up">{category.title}</h1>
+          <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto animate-fade-in-up animation-delay-200">
             Explore our success stories in {category.title.toLowerCase()}.
           </p>
         </div>
@@ -57,41 +57,43 @@ export default async function CaseStudyCategoryPage({ params }: CaseStudyCategor
         <div className="container">
           {caseStudies.length > 0 ? (
             <div className="grid gap-8 md:grid-cols-1 lg:grid-cols-2">
-              {caseStudies.map((study) => {
+              {caseStudies.map((study, index) => {
                 const studyImage = PlaceHolderImages.find(p => p.id === study.image);
                 return (
-                  <Card key={study.id} className="group flex flex-col overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                    {studyImage && (
-                      <div className="relative h-64 w-full overflow-hidden">
-                        <Image
-                          src={studyImage.imageUrl}
-                          alt={study.title}
-                          fill
-                          className="object-cover group-hover:scale-105 transition-transform duration-300"
-                          data-ai-hint={studyImage.imageHint}
-                        />
-                      </div>
-                    )}
-                    <CardHeader>
-                      <p className="text-sm font-semibold text-primary">{study.client}</p>
-                      <CardTitle className="text-2xl leading-tight">{study.title}</CardTitle>
-                    </CardHeader>
-                    <CardContent className="flex-grow">
-                      <p className="text-muted-foreground line-clamp-3">{study.excerpt}</p>
-                    </CardContent>
-                    <CardFooter>
-                      <Button variant="link" asChild className="p-0 h-auto">
-                        <Link href={`/case-studies/${study.slug}`}>
-                          Read Case Study <ArrowRight className="ml-2 h-4 w-4" />
-                        </Link>
-                      </Button>
-                    </CardFooter>
-                  </Card>
+                  <div key={study.id} className="animate-fade-in-up" style={{ animationDelay: `${200 * index}ms`}}>
+                    <Card className="group flex flex-col overflow-hidden hover:shadow-xl transition-shadow duration-300 h-full">
+                      {studyImage && (
+                        <div className="relative h-64 w-full overflow-hidden">
+                          <Image
+                            src={studyImage.imageUrl}
+                            alt={study.title}
+                            fill
+                            className="object-cover group-hover:scale-105 transition-transform duration-300"
+                            data-ai-hint={studyImage.imageHint}
+                          />
+                        </div>
+                      )}
+                      <CardHeader>
+                        <p className="text-sm font-semibold text-primary">{study.client}</p>
+                        <CardTitle className="text-2xl leading-tight h-16">{study.title}</CardTitle>
+                      </CardHeader>
+                      <CardContent className="flex-grow">
+                        <p className="text-muted-foreground line-clamp-3">{study.excerpt}</p>
+                      </CardContent>
+                      <CardFooter>
+                        <Button variant="link" asChild className="p-0 h-auto">
+                          <Link href={`/case-studies/${study.slug}`}>
+                            Read Case Study <ArrowRight className="ml-2 h-4 w-4" />
+                          </Link>
+                        </Button>
+                      </CardFooter>
+                    </Card>
+                  </div>
                 );
               })}
             </div>
           ) : (
-             <div className="text-center py-12 border rounded-lg bg-card">
+             <div className="text-center py-12 border rounded-lg bg-card animate-fade-in-up">
               <h3 className="font-headline text-2xl font-semibold">No Case Studies Found</h3>
               <p className="mt-2 text-muted-foreground">
                 There are currently no case studies available for this category.

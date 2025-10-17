@@ -4,11 +4,11 @@ import Image from 'next/image';
 
 export default function AcademicEventsPage() {
   return (
-    <div className="bg-background text-foreground">
+    <div className="bg-background text-foreground animate-fade-in">
       <section className="py-20 md:py-32 bg-card">
         <div className="container text-center">
-          <h1 className="text-4xl md:text-5xl font-bold">Academic Events</h1>
-          <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
+          <h1 className="text-4xl md:text-5xl font-bold animate-fade-in-up">Academic Events</h1>
+          <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto animate-fade-in-up animation-delay-200">
             Fostering knowledge and innovation by engaging with the academic community through conferences, seminars, and workshops.
           </p>
         </div>
@@ -17,10 +17,10 @@ export default function AcademicEventsPage() {
       <section className="py-16 md:py-24">
         <div className="container">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="relative h-96 rounded-lg overflow-hidden shadow-xl md:order-last">
+            <div className="relative h-96 rounded-lg overflow-hidden shadow-xl md:order-last animate-fade-in-right">
               <Image src="https://picsum.photos/seed/academic/800/600" alt="Academic Event" fill className="object-cover" data-ai-hint="conference presentation" />
             </div>
-            <div className="md:order-first">
+            <div className="md:order-first animate-fade-in-left">
               <h2 className="text-3xl font-bold mb-4">Bridging Industry and Academia</h2>
               <p className="text-lg text-muted-foreground">
                 We are committed to nurturing the next generation of leaders and innovators. Tishha actively participates in and organizes academic events to share industry insights, foster research, and promote continuous learning.

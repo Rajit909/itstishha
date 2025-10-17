@@ -4,11 +4,11 @@ import Image from "next/image";
 
 export default function MissionPage() {
   return (
-    <div className="bg-background text-foreground">
+    <div className="bg-background text-foreground animate-fade-in">
        <section className="py-20 md:py-32 bg-card">
         <div className="container text-center">
-          <h1 className="text-4xl md:text-5xl font-bold">Mission, Vision & Commitment</h1>
-          <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
+          <h1 className="text-4xl md:text-5xl font-bold animate-fade-in-up">Mission, Vision & Commitment</h1>
+          <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto animate-fade-in-up animation-delay-200">
             Our guiding principles define our purpose and shape our every action.
           </p>
         </div>
@@ -18,10 +18,10 @@ export default function MissionPage() {
         <div className="container space-y-20">
           
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="relative h-80 rounded-lg overflow-hidden shadow-xl">
+            <div className="relative h-80 rounded-lg overflow-hidden shadow-xl animate-fade-in-left">
               <Image src="https://picsum.photos/seed/mission/800/600" alt="Our Mission" fill className="object-cover" data-ai-hint="business strategy" />
             </div>
-            <div>
+            <div className="animate-fade-in-right">
               <div className="flex items-center gap-4 mb-4">
                 <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
                   <Rocket className="h-8 w-8" />
@@ -35,10 +35,10 @@ export default function MissionPage() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="relative h-80 rounded-lg overflow-hidden shadow-xl md:order-last">
+            <div className="relative h-80 rounded-lg overflow-hidden shadow-xl md:order-last animate-fade-in-right">
               <Image src="https://picsum.photos/seed/vision/800/600" alt="Our Vision" fill className="object-cover" data-ai-hint="future cityscape" />
             </div>
-            <div className="md:order-first">
+            <div className="md:order-first animate-fade-in-left">
               <div className="flex items-center gap-4 mb-4">
                 <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
                   <Eye className="h-8 w-8" />
@@ -52,10 +52,10 @@ export default function MissionPage() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="relative h-80 rounded-lg overflow-hidden shadow-xl">
+            <div className="relative h-80 rounded-lg overflow-hidden shadow-xl animate-fade-in-left">
               <Image src="https://picsum.photos/seed/commitment/800/600" alt="Our Commitment" fill className="object-cover" data-ai-hint="team handshake" />
             </div>
-            <div>
+            <div className="animate-fade-in-right">
               <div className="flex items-center gap-4 mb-4">
                 <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
                   <CheckCircle className="h-8 w-8" />

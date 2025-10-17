@@ -4,11 +4,11 @@ import Image from 'next/image';
 
 export default function PlanningDesigningPage() {
   return (
-    <div className="bg-background text-foreground">
+    <div className="bg-background text-foreground animate-fade-in">
       <section className="py-20 md:py-32 bg-card">
         <div className="container text-center">
-          <h1 className="text-4xl md:text-5xl font-bold">Planning & Designing</h1>
-          <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
+          <h1 className="text-4xl md:text-5xl font-bold animate-fade-in-up">Planning & Designing</h1>
+          <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto animate-fade-in-up animation-delay-200">
             From blueprint to reality, we provide expert planning and design services to build the foundation for your success.
           </p>
         </div>
@@ -17,10 +17,10 @@ export default function PlanningDesigningPage() {
       <section className="py-16 md:py-24">
         <div className="container">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="relative h-96 rounded-lg overflow-hidden shadow-xl">
+            <div className="relative h-96 rounded-lg overflow-hidden shadow-xl animate-fade-in-left">
               <Image src="https://picsum.photos/seed/planning/800/600" alt="Planning and Designing" fill className="object-cover" data-ai-hint="architectural blueprint" />
             </div>
-            <div>
+            <div className="animate-fade-in-right">
               <h2 className="text-3xl font-bold mb-4">Strategic Frameworks for Lasting Infrastructure</h2>
               <p className="text-lg text-muted-foreground">
                 Our Planning & Designing services are tailored to create efficient, sustainable, and scalable environments. We work with you to translate your vision into a tangible plan, ensuring that every aspect of the design aligns with your strategic objectives, from architectural layouts to operational workflows.

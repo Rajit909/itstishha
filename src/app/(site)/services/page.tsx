@@ -10,10 +10,10 @@ export default async function ServicesPage() {
 
   return (
     <>
-      <section className="py-16 md:py-24 bg-card">
+      <section className="py-16 md:py-24 bg-card animate-fade-in">
         <div className="container text-center">
-          <h1 className="font-headline text-4xl md:text-5xl font-bold">Our Services</h1>
-          <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
+          <h1 className="font-headline text-4xl md:text-5xl font-bold animate-fade-in-up">Our Services</h1>
+          <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto animate-fade-in-up animation-delay-200">
             We provide strategic consulting across healthcare, accreditation, and technology to help your organization thrive.
           </p>
         </div>
@@ -26,33 +26,35 @@ export default async function ServicesPage() {
               const serviceImage = PlaceHolderImages.find(p => p.id === service.image);
               const isReversed = index % 2 !== 0;
               return (
-                <Card key={service.id} className="overflow-hidden shadow-lg transition-shadow hover:shadow-xl">
-                    <div className={`grid md:grid-cols-2 items-center ${isReversed ? 'md:grid-flow-col-dense' : ''}`}>
-                        <div className={`relative h-64 md:h-full ${isReversed ? 'md:col-start-2' : ''}`}>
-                            {serviceImage && (
-                                <Image 
-                                    src={serviceImage.imageUrl} 
-                                    alt={service.title}
-                                    fill
-                                    className="object-cover"
-                                    data-ai-hint={serviceImage.imageHint}
-                                />
-                            )}
-                        </div>
-                        <div className={`p-8 md:p-12 ${isReversed ? 'md:col-start-1' : ''}`}>
-                            <div className="flex items-center gap-4 mb-4">
-                                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                                    <service.icon className="h-6 w-6" />
-                                </div>
-                                <h2 className="font-headline text-3xl font-bold">{service.title}</h2>
+                <div className="animate-fade-in-up" style={{ animationDelay: `${200 * index}ms`}} key={service.id}>
+                    <Card className="overflow-hidden shadow-lg transition-shadow hover:shadow-xl">
+                        <div className={`grid md:grid-cols-2 items-center ${isReversed ? 'md:grid-flow-col-dense' : ''}`}>
+                            <div className={`relative h-64 md:h-full ${isReversed ? 'md:col-start-2' : ''}`}>
+                                {serviceImage && (
+                                    <Image 
+                                        src={serviceImage.imageUrl} 
+                                        alt={service.title}
+                                        fill
+                                        className="object-cover"
+                                        data-ai-hint={serviceImage.imageHint}
+                                    />
+                                )}
                             </div>
-                            <p className="text-muted-foreground mt-4 text-lg">{service.longDescription}</p>
-                            <Button className="mt-6" asChild>
-                                <Link href="/contact">Request Consultation</Link>
-                            </Button>
+                            <div className={`p-8 md:p-12 ${isReversed ? 'md:col-start-1' : ''}`}>
+                                <div className="flex items-center gap-4 mb-4">
+                                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                                        <service.icon className="h-6 w-6" />
+                                    </div>
+                                    <h2 className="font-headline text-3xl font-bold">{service.title}</h2>
+                                </div>
+                                <p className="text-muted-foreground mt-4 text-lg">{service.longDescription}</p>
+                                <Button className="mt-6" asChild>
+                                    <Link href="/contact">Request Consultation</Link>
+                                </Button>
+                            </div>
                         </div>
-                    </div>
-                </Card>
+                    </Card>
+                </div>
               );
             })}
           </div>

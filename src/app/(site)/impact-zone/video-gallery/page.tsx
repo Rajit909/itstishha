@@ -11,11 +11,11 @@ const videos = [
 
 export default function VideoGalleryPage() {
   return (
-    <div className="bg-background text-foreground">
+    <div className="bg-background text-foreground animate-fade-in">
       <section className="py-20 md:py-32 bg-card">
         <div className="container text-center">
-          <h1 className="text-4xl md:text-5xl font-bold">Video Gallery</h1>
-          <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
+          <h1 className="text-4xl md:text-5xl font-bold animate-fade-in-up">Video Gallery</h1>
+          <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto animate-fade-in-up animation-delay-200">
             Watch our stories. See our impact, hear from our leaders, and learn about our culture through video.
           </p>
         </div>
@@ -24,8 +24,8 @@ export default function VideoGalleryPage() {
       <section className="py-16 md:py-24">
         <div className="container">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-            {videos.map((video) => (
-              <div key={video.id} className="group relative h-72 rounded-lg overflow-hidden shadow-lg cursor-pointer">
+            {videos.map((video, index) => (
+              <div key={video.id} className="group relative h-72 rounded-lg overflow-hidden shadow-lg cursor-pointer animate-fade-in-up" style={{ animationDelay: `${200 * index}ms`}}>
                 <Image
                   src={video.thumbnail}
                   alt={video.title}

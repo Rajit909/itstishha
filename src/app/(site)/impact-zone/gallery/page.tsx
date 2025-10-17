@@ -12,11 +12,11 @@ const galleryImages = [
 
 export default function GalleryPage() {
   return (
-    <div className="bg-background text-foreground">
+    <div className="bg-background text-foreground animate-fade-in">
       <section className="py-20 md:py-32 bg-card">
         <div className="container text-center">
-          <h1 className="text-4xl md:text-5xl font-bold">Gallery</h1>
-          <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
+          <h1 className="text-4xl md:text-5xl font-bold animate-fade-in-up">Gallery</h1>
+          <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto animate-fade-in-up animation-delay-200">
             A glimpse into our world. See our team in action, our events, and our community initiatives.
           </p>
         </div>
@@ -25,8 +25,8 @@ export default function GalleryPage() {
       <section className="py-16 md:py-24">
         <div className="container">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {galleryImages.map((image) => (
-              <div key={image.id} className="group relative h-72 rounded-lg overflow-hidden shadow-lg">
+            {galleryImages.map((image, index) => (
+              <div key={image.id} className="group relative h-72 rounded-lg overflow-hidden shadow-lg animate-fade-in-up" style={{ animationDelay: `${100 * index}ms`}}>
                 <Image
                   src={image.src}
                   alt={image.alt}

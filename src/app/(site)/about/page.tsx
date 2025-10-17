@@ -11,10 +11,10 @@ export default async function AboutPage() {
 
   return (
     <>
-      <section className="py-20 md:py-32 bg-card">
+      <section className="py-20 md:py-32 bg-card animate-fade-in">
         <div className="container text-center">
-          <h1 className="text-4xl md:text-5xl font-bold">About Tishha</h1>
-          <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
+          <h1 className="text-4xl md:text-5xl font-bold animate-fade-in-up">About Tishha</h1>
+          <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto animate-fade-in-up animation-delay-200">
             We are a collective of industry experts passionate about delivering transformative results through collaboration, innovation, and strategic insight.
           </p>
         </div>
@@ -22,7 +22,7 @@ export default async function AboutPage() {
 
       <section className="py-16 md:py-24">
         <div className="container grid md:grid-cols-2 gap-12 items-center">
-          <div>
+          <div className="animate-fade-in-right">
             <h2 className="text-3xl md:text-4xl font-bold">Our Mission & Vision</h2>
             <p className="mt-4 text-lg text-muted-foreground">
               To empower organizations to navigate complexity and achieve sustainable growth by providing unparalleled expertise and fostering a culture of continuous improvement.
@@ -57,7 +57,7 @@ export default async function AboutPage() {
               </li>
             </ul>
           </div>
-          <div className="relative h-96 md:h-full min-h-[400px] rounded-lg overflow-hidden shadow-xl">
+          <div className="relative h-96 md:h-full min-h-[400px] rounded-lg overflow-hidden shadow-xl animate-fade-in-left">
             <Image
               src="https://picsum.photos/seed/aboutus/800/1000"
               alt="Our Mission"
@@ -71,43 +71,45 @@ export default async function AboutPage() {
 
       <section className="py-16 md:py-24 bg-card">
         <div className="container">
-            <div className="text-center max-w-3xl mx-auto">
+            <div className="text-center max-w-3xl mx-auto animate-fade-in-up">
                 <h2 className="text-3xl md:text-4xl font-bold">Meet Our Leadership</h2>
                 <p className="mt-4 text-lg text-muted-foreground">
                     Our team's diverse expertise is the driving force behind our success and the success of our clients.
                 </p>
             </div>
             <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-                {team.map((member) => {
+                {team.map((member, index) => {
                     const memberImage = PlaceHolderImages.find(p => p.id === member.image);
                     return (
-                        <Card key={member.id} className="text-center group overflow-hidden">
-                            <CardContent className="p-0">
-                                {memberImage && (
-                                <div className="relative h-64 w-full">
-                                    <Image
-                                    src={memberImage.imageUrl}
-                                    alt={member.name}
-                                    fill
-                                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                                    data-ai-hint={memberImage.imageHint}
-                                    />
-                                </div>
-                                )}
-                                <div className="p-6">
-                                  <h3 className="text-xl font-semibold">{member.name}</h3>
-                                  <p className="text-primary font-medium">{member.title}</p>
-                                  <p className="mt-2 text-sm text-muted-foreground">{member.bio}</p>
-                                </div>
-                            </CardContent>
-                        </Card>
+                        <div key={member.id} className="animate-fade-in-up" style={{ animationDelay: `${200 * index}ms`}}>
+                          <Card className="text-center group overflow-hidden h-full">
+                              <CardContent className="p-0">
+                                  {memberImage && (
+                                  <div className="relative h-64 w-full">
+                                      <Image
+                                      src={memberImage.imageUrl}
+                                      alt={member.name}
+                                      fill
+                                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                                      data-ai-hint={memberImage.imageHint}
+                                      />
+                                  </div>
+                                  )}
+                                  <div className="p-6">
+                                    <h3 className="text-xl font-semibold">{member.name}</h3>
+                                    <p className="text-primary font-medium">{member.title}</p>
+                                    <p className="mt-2 text-sm text-muted-foreground">{member.bio}</p>
+                                  </div>
+                              </CardContent>
+                          </Card>
+                        </div>
                     )
                 })}
             </div>
         </div>
       </section>
 
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24 animate-fade-in">
         <div className="container text-center">
           <h2 className="text-3xl md:text-4xl font-bold">Join Our Team</h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
