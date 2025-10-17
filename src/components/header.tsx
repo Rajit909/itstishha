@@ -20,6 +20,7 @@ import {
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
+import { projectCategories } from "@/lib/project-categories";
 
 const aboutUsLinks = [
   { href: "/about/philosophy", label: "Philosophy" },
@@ -40,12 +41,10 @@ const servicesLinks = [
   { href: "/services/feasibility-study", label: "Feasibility Study" },
 ];
 
-const projectLinks = [
-    { href: "/case-studies", label: "Quality Accreditation" },
-    { href: "/case-studies", label: "HIMS & Digital Solution" },
-    { href: "/case-studies", label: "Hospital Operations & Empanelment" },
-    { href: "/case-studies", label: "Project Planning & Designing" },
-];
+const projectLinks = projectCategories.map(category => ({
+    href: `/case-studies/category/${category.slug}`,
+    label: category.title
+}));
 
 const blogLinks = [
     { href: "/blog", label: "Latest Blogs" },

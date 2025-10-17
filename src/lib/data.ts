@@ -163,7 +163,19 @@ export const caseStudies: CaseStudy[] = [
       text: 'The cloud migration was a massive undertaking, but Tishha\'s team made it feel effortless. Their technical skill and project management were top-notch.',
       author: 'CTO, Innovate Corp'
     }
-  }
+  },
+  {
+    id: '3',
+    slug: 'greenfield-hospital-planning',
+    title: 'Strategic Planning for a Greenfield Hospital Project',
+    client: 'NewHope Medical',
+    image: 'case-study-1',
+    excerpt: 'From concept to blueprint, we delivered a comprehensive feasibility study and architectural plan for a new 200-bed specialty hospital.',
+    challenge: 'NewHope Medical aimed to build a state-of-the-art hospital but lacked the in-house expertise to conduct a thorough feasibility analysis and develop a functional architectural plan that optimized both patient flow and operational efficiency.',
+    solution: 'Tishha conducted a detailed market analysis, financial projections, and site assessment. We then collaborated with architects and clinicians to design a patient-centric facility, incorporating modern healthcare design principles and scalable infrastructure to accommodate future growth.',
+    result: 'The feasibility study secured board approval and initial funding. The architectural design is now the blueprint for a hospital poised to become a regional leader in specialized care, with workflows designed to reduce staff fatigue and improve patient outcomes.',
+    services: ['Planning & Designing', 'Feasibility Study', 'Healthcare Solutions'],
+  },
 ];
 
 
