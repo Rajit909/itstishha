@@ -47,6 +47,18 @@ const projectLinks = [
     { href: "/case-studies", label: "Project Planning & Designing" },
 ];
 
+const blogLinks = [
+    { href: "/blog", label: "Latest Blogs" },
+    { href: "/blog", label: "Previous Blogs" },
+];
+
+const impactZoneLinks = [
+    { href: "#", label: "CSR Initiative" },
+    { href: "#", label: "Academic Events" },
+    { href: "#", label: "Gallery" },
+    { href: "#", label: "Video Gallery" },
+];
+
 const navLinks = [
   {
     label: "About Us",
@@ -66,6 +78,12 @@ const navLinks = [
   {
     label: "Blogs",
     href: "/blog",
+    subLinks: blogLinks,
+  },
+  {
+    label: "Impact Zone",
+    href: "#",
+    subLinks: impactZoneLinks,
   },
   {
     label: "Contact",
