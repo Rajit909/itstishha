@@ -75,7 +75,7 @@ export default function ContactPage() {
                 </div>
                 <div className="flex items-start gap-4">
                   <MapPin className="h-5 w-5 text-primary mt-1" />
-                  <span className="text-muted-foreground">123 tishha Way, Innovation City, 12345</span>
+                  <span className="text-muted-foreground">123 Tishha Way, Innovation City, 12345</span>
                 </div>
               </div>
             </div>

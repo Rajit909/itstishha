@@ -44,7 +44,7 @@ export default async function HomePage() {
             Propel Your Organization Forward
           </h1>
           <p className="mt-6 text-lg md:text-xl max-w-3xl mx-auto text-primary-foreground/90 animate-fade-in-up animation-delay-600">
-            tishha provides expert solutions in healthcare, project accreditation, and IT to help you achieve your strategic goals.
+            Tishha provides expert solutions in healthcare, project accreditation, and IT to help you achieve your strategic goals.
           </p>
           <div className="mt-8 flex justify-center gap-4 animate-fade-in-up animation-delay-800">
             <Button size="lg" asChild>
@@ -139,7 +139,7 @@ export default async function HomePage() {
                 />
             </div>
             <div className="animate-fade-in-right">
-                <h2 className="text-3xl md:text-4xl font-bold">Why Partner with tishha?</h2>
+                <h2 className="text-3xl md:text-4xl font-bold">Why Partner with Tishha?</h2>
                 <p className="mt-4 text-lg text-muted-foreground">
                     Our approach is rooted in partnership, deep industry knowledge, and a commitment to delivering measurable results.
                 </p>
@@ -264,7 +264,7 @@ export default async function HomePage() {
         <div className="container text-center">
           <h2 className="text-3xl md:text-4xl font-bold">Ready to Transform Your Business?</h2>
           <p className="mt-4 text-lg max-w-2xl mx-auto">
-            Let's discuss how tishha can help you achieve your goals. Schedule a free consultation with our experts today.
+            Let's discuss how Tishha can help you achieve your goals. Schedule a free consultation with our experts today.
           </p>
           <Button size="lg" variant="secondary" className="mt-8 transform hover:scale-105 transition-transform" asChild>
             <Link href="/contact">

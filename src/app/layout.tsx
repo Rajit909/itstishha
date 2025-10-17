@@ -4,7 +4,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { cn } from '@/lib/utils';
 
 export const metadata: Metadata = {
-  title: 'tishha consultancy LLP',
+  title: 'Tishha Consultancy LLP',
   description: 'Professional consultancy for healthcare, accreditation, and IT solutions.',
 };
 

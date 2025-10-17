@@ -15,7 +15,7 @@ export default async function BlogPage() {
         <div className="container text-center">
           <h1 className="text-4xl md:text-5xl font-bold">Our Insights</h1>
           <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-            Stay informed with the latest trends, analysis, and expert opinions from the tishha team.
+            Stay informed with the latest trends, analysis, and expert opinions from the Tishha team.
           </p>
         </div>
       </section>

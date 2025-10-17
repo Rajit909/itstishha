@@ -13,7 +13,7 @@ export default async function AboutPage() {
     <>
       <section className="py-20 md:py-32 bg-card">
         <div className="container text-center">
-          <h1 className="text-4xl md:text-5xl font-bold">About tishha</h1>
+          <h1 className="text-4xl md:text-5xl font-bold">About Tishha</h1>
           <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
             We are a collective of industry experts passionate about delivering transformative results through collaboration, innovation, and strategic insight.
           </p>

@@ -25,7 +25,7 @@ export default async function DashboardPage() {
   return (
     <div>
       <h1 className="text-3xl font-bold tracking-tight font-headline">Dashboard</h1>
-      <p className="text-muted-foreground mt-2">Welcome to the tishha Admin Panel.</p>
+      <p className="text-muted-foreground mt-2">Welcome to the Tishha Admin Panel.</p>
 
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 mt-8">
         {stats.map((stat) => (
