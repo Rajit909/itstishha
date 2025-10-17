@@ -2,18 +2,13 @@
 
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import HeroAnimationClient from "./hero-animation-client";
-
 
 export function HeroSection() {
-
   return (
     <section className="relative h-[70vh] md:h-[90vh] w-full flex items-center justify-center text-center text-white overflow-hidden">
-        <HeroAnimationClient />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
+        <div className="absolute inset-0 -z-10 h-full w-full bg-gradient-to-br from-primary via-accent to-background animate-gradient-xy" />
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 animate-fade-in-up">
           <Badge variant="secondary" className="mb-4 animate-fade-in-up animation-delay-200">Driving Excellence</Badge>
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight animate-fade-in-up animation-delay-400">

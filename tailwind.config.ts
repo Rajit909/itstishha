@@ -129,6 +129,16 @@ export default {
             transform: 'translateX(0)',
           },
         },
+        'gradient-xy': {
+          '0%, 100%': {
+            'background-size': '400% 400%',
+            'background-position': 'center top',
+          },
+          '50%': {
+            'background-size': '200% 200%',
+            'background-position': 'center center',
+          },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -137,6 +147,7 @@ export default {
         'fade-in-up': 'fade-in-up 0.6s ease-in-out forwards',
         'fade-in-left': 'fade-in-left 0.6s ease-in-out forwards',
         'fade-in-right': 'fade-in-right 0.6s ease-in-out forwards',
+        'gradient-xy': 'gradient-xy 15s ease infinite',
       },
     },
   },
