@@ -19,6 +19,8 @@ import { useToast } from "@/hooks/use-toast";
 import { CheckCircle } from "lucide-react";
 import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
+import HeroAnimation from "./hero-animation";
+import { useEffect, useState } from "react";
 
 const formSchema = z.object({
     name: z.string().min(2, { message: "Name must be at least 2 characters." }),
@@ -58,25 +60,22 @@ export function HeroSection() {
     "Project Management",
     "Equipment Planning",
   ];
+  
+  const [isClient, setIsClient] = useState(false)
+
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
 
   return (
-    <section className="relative w-full h-[90vh] min-h-[700px] flex items-center bg-background/80 text-white">
-        {heroImage &&
-            <Image 
-                src={heroImage.imageUrl}
-                alt={heroImage.description}
-                fill
-                className="object-cover -z-10"
-                data-ai-hint={heroImage.imageHint}
-                priority
-            />
-        }
-        <div className="absolute inset-0 bg-black/40 -z-10" />
+    <section className="relative w-full h-[90vh] min-h-[700px] flex items-center bg-background/80 text-foreground">
+        {isClient && <HeroAnimation />}
+        <div className="absolute inset-0 bg-white/40 -z-10" />
 
       <div className="container grid md:grid-cols-2 gap-16 items-center">
         {/* Left Column */}
         <div className="animate-fade-in-up">
-          <span className="inline-block px-4 py-2 text-sm font-semibold rounded-full bg-primary/20 text-primary-foreground border border-primary/50 mb-4">
+          <span className="inline-block px-4 py-2 text-sm font-semibold rounded-full bg-primary/20 text-primary mb-4">
             We Help You Build World-Class Healthcare Facilities
           </span>
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
@@ -90,7 +89,7 @@ export function HeroSection() {
               </li>
             ))}
           </ul>
-          <p className="mt-8 text-lg text-primary-foreground/80">
+          <p className="mt-8 text-lg text-foreground/80">
             Build your dream hospital by making the right decisions at the right time.
           </p>
         </div>
