@@ -13,45 +13,18 @@ import {
 } from "@/components/ui/carousel";
 import { getServices, getClients, getBlogPosts, getCaseStudies } from "@/lib/data";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
-import { Badge } from "@/components/ui/badge";
-import HeroAnimation from "@/components/hero-animation";
+import { HeroSection } from "@/components/hero-section";
 
 export default async function HomePage() {
   const services = (await getServices()).slice(0, 3);
   const clients = await getClients();
-  const heroImage = PlaceHolderImages.find(p => p.id === 'hero-background');
   const recentPosts = (await getBlogPosts()).slice(0, 2);
   const featuredStudy = (await getCaseStudies())[0];
   const featuredStudyImage = PlaceHolderImages.find(p => p.id === featuredStudy.image);
 
   return (
     <div className="flex flex-col">
-      {/* Hero Section */}
-      <section className="relative h-[70vh] md:h-[90vh] w-full flex items-center justify-center text-center text-white overflow-hidden">
-        <HeroAnimation />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 animate-fade-in-up">
-          <Badge variant="secondary" className="mb-4 animate-fade-in-up animation-delay-200">Driving Excellence</Badge>
-          <h1 className="text-4xl md:text-6xl font-bold tracking-tight animate-fade-in-up animation-delay-400">
-            Propel Your Organization Forward
-          </h1>
-          <p className="mt-6 text-lg md:text-xl max-w-3xl mx-auto text-primary-foreground/90 animate-fade-in-up animation-delay-600">
-            Tishha provides expert solutions in healthcare, project accreditation, and IT to help you achieve your strategic goals.
-          </p>
-          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up animation-delay-800">
-            <Button size="lg" asChild className="w-full sm:w-auto">
-              <Link href="/services">
-                Explore Our Services <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
-            <Button size="lg" variant="secondary" asChild className="w-full sm:w-auto">
-              <Link href="/contact">
-                Schedule a Consultation
-              </Link>
-            </Button>
-          </div>
-        </div>
-      </section>
+      <HeroSection />
 
       {/* Featured Services Section */}
       <section id="services" className="py-16 md:py-24 bg-background">
