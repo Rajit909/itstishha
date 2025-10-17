@@ -53,6 +53,7 @@ export type CaseStudy = {
   challenge: string;
   solution: string;
   result: string;
+  services: string[];
   testimonial?: {
     text: string;
     author: string;

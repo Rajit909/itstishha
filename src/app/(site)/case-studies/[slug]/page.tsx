@@ -4,6 +4,7 @@ import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { CheckCircle, Target, Zap } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 
 type CaseStudyPageProps = {
   params: {
@@ -85,7 +86,11 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
                  </div>
                  <div>
                   <h4 className="font-semibold">Services</h4>
-                  <p className="text-muted-foreground">Accreditation, IT Modernization</p>
+                  <div className="flex flex-wrap gap-2 mt-2">
+                    {study.services.map(service => (
+                      <Badge key={service} variant="secondary">{service}</Badge>
+                    ))}
+                  </div>
                  </div>
               </CardContent>
             </Card>
