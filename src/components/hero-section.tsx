@@ -17,6 +17,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
 import { CheckCircle } from "lucide-react";
+import Image from "next/image";
+import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 const formSchema = z.object({
     name: z.string().min(2, { message: "Name must be at least 2 characters." }),
@@ -54,14 +56,26 @@ export function HeroSection() {
     "Project Management",
     "Equipment Planning",
   ];
+  
+  const heroImage = PlaceHolderImages.find(p => p.id === 'hero-background');
 
   return (
     <section className="relative w-full h-screen flex items-center text-foreground overflow-hidden">
-      <div className="absolute inset-0 -z-10 bg-gradient-to-br from-primary via-accent to-secondary animate-gradient-xy" />
+      {heroImage && (
+          <Image
+            src={heroImage.imageUrl}
+            alt={heroImage.description}
+            fill
+            className="object-cover -z-20"
+            data-ai-hint={heroImage.imageHint}
+            priority
+          />
+      )}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/70 via-accent/70 to-secondary/70 -z-10" />
       <div className="container grid md:grid-cols-2 gap-16 items-center">
         {/* Left Column */}
-        <div className="animate-fade-in-up text-foreground">
-          <span className="inline-block px-4 py-2 text-sm font-semibold rounded-full bg-background/20 text-foreground mb-4">
+        <div className="animate-fade-in-up text-primary-foreground">
+          <span className="inline-block px-4 py-2 text-sm font-semibold rounded-full bg-background/20 mb-4">
             We Help You Build World-Class Healthcare Facilities
           </span>
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
@@ -70,12 +84,12 @@ export function HeroSection() {
           <ul className="mt-8 space-y-3">
             {services.map((service, index) => (
               <li key={index} className="flex items-center gap-3">
-                <CheckCircle className="h-6 w-6 text-primary" />
+                <CheckCircle className="h-6 w-6 text-background" />
                 <span className="text-lg">{service}</span>
               </li>
             ))}
           </ul>
-          <p className="mt-8 text-lg text-muted-foreground">
+          <p className="mt-8 text-lg">
             Build your dream hospital by making the right decisions at the right time.
           </p>
         </div>
