@@ -56,7 +56,7 @@ export function HeroSection() {
   ];
 
   return (
-    <section className="relative w-full h-[90vh] min-h-[700px] flex items-center text-foreground overflow-hidden">
+    <section className="relative w-full h-screen flex items-center text-foreground overflow-hidden">
       <div className="absolute inset-0 -z-10 bg-gradient-to-br from-primary via-accent to-secondary animate-gradient-xy" />
       <div className="container grid md:grid-cols-2 gap-16 items-center">
         {/* Left Column */}
