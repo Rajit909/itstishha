@@ -1,0 +1,133 @@
+diff --git a/node_modules/@react-three/fiber/dist/index.js b/node_modules/@react-three/fiber/dist/index.js
+index 923d2110c79c54e7d7041aa2d38515de423c08bf..ec1004a4313f861b53e77f0a8c2d27161b365e64 100644
+--- a/node_modules/@react-three/fiber/dist/index.js
++++ b/node_modules/@react-three/fiber/dist/index.js
+@@ -10,7 +10,7 @@ import * as React from 'react';
+ import { unstable_batchedUpdates, flushSync, __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED as Internals, version } from 'react-dom';
+ import {dey as defaultEventPriority} from './chunk-X5B5B52U.js';
+ 
+-const {
++const { ReactCurrentOwner } = Internals;
+   __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED,
+   ...reconciler
+ } = require("react-reconciler");
+@@ -268,7 +268,7 @@ function createRenderer(fiber) {
+   const {
+     reconciler: reconciler$1
+   } = fiber;
+-  const reconciler = reconciler$1(hostConfig);
++  const reconciler$2 = reconciler$1(hostConfig);
+   const oldReact = {
+     ReactCurrentOwner: Internals.ReactCurrentOwner
+   };
+@@ -282,10 +282,10 @@ function createRenderer(fiber) {
+       key,
+       parent,
+       callback
+-    } = {}) => {
++    } = {}, oldRender) => {
+       let container = roots.get(parent);
+       if (!container) {
+-        container = reconciler.createContainer(parent, 1, null, false, null, "react-three-fiber", "using-latest-renderer", null);
++        container = reconciler$2.createContainer(parent, 1, null, false, null, "react-three-fiber", "using-latest-renderer", null);
+         const root = createRoot(parent);
+         root.container = container;
+         roots.set(parent, root);
+@@ -298,12 +298,12 @@ function createRenderer(fiber) {
+         return;
+       }
+       setReact(newReact);
+-      reconciler.updateContainer(children, container, null, callback);
++      reconciler$2.updateContainer(children, container, null, callback);
+       setReact(oldReact);
+     },
+-    unmount: (parent, sync) => {
++    unmount: (parent, sync, oldUnmount) => {
+       const root = roots.get(parent);
+-      const unmountFn = () => {
++      const unmountFn = () => root ? reconciler.updateContainer(null, root.container, null, () => {
+         roots.delete(parent);
+         if (root.mounted.size) {
+           const {
+@@ -312,12 +312,7 @@ function createRenderer(fiber) {
+             gl
+           } = root.store.getState();
+           gl.renderLists.dispose();
+         }
+-      };
+-      if (root) {
+-        reconciler.updateContainer(null, root.container, null, unmountFn);
+-      }
+       if (sync) {
+         if (typeof flushSync === "function")
+           flushSync(unmountFn);
+@@ -328,10 +323,10 @@ function createRenderer(fiber) {
+     },
+     createPortal: (children, container, implementation, key = null) => {
+       const {
+-        reconciler: reconciler$1
++        reconciler: reconciler$2
+       } = fiber;
+-      return reconciler.createPortal(children, container, implementation, key);
++      return reconciler$2.createPortal(children, container, implementation, key);
+     },
+     extend: (objects) => {
+       Object.entries(objects).forEach(([key, value]) => {
+@@ -342,7 +337,7 @@ function createRenderer(fiber) {
+     },
+     advance: (timestamp, runGlobalEffects = true) => {
+       const {
+-        reconciler: reconciler$1,
++        reconciler: reconciler$2,
+         ...rest
+       } = fiber;
+       rest.options.onAdvance?.(timestamp, runGlobalEffects);
+diff --git a/node_modules/@react-three/fiber/dist/index.mjs b/node_modules/@react-three/fiber/dist/index.mjs
+index 98696d59b20e0ffcd6007e99997e3b97063160a2..08d0e74e64f89d36a32f915993de03b9b4d45d7a 100644
+--- a/node_modules/@react-three/fiber/dist/index.mjs
++++ b/node_modules/@react-three/fiber/dist/index.mjs
+@@ -265,7 +265,7 @@ function createRenderer(fiber) {
+   const {
+     reconciler
+   } = fiber;
+-  const reconciler$1 = reconciler(hostConfig);
++  const reconciler$1 = reconciler(hostConfig(fiber));
+   const oldReact = {
+     ReactCurrentOwner: ReactCurrentOwner$1.ReactCurrentOwner
+   };
+@@ -279,10 +279,10 @@ function createRenderer(fiber) {
+       key,
+       parent,
+       callback
+-    } = {}) => {
++    } = {}, oldRender) => {
+       let container = roots.get(parent);
+       if (!container) {
+-        container = reconciler$1.createContainer(parent, 1, null, false, null, "react-three-fiber", "using-latest-renderer", null);
++        container = reconciler$1.createContainer(parent, 1, null, false, null, "react-three-fiber", "using-latest-renderer", null, oldRender ? oldRender.container.context : null);
+         const root = createRoot(parent);
+         root.container = container;
+         roots.set(parent, root);
+@@ -299,9 +299,9 @@ function createRenderer(fiber) {
+       setReact(oldReact);
+     },
+-    unmount: (parent, sync) => {
++    unmount: (parent, sync, oldUnmount) => {
+       const root = roots.get(parent);
+-      const unmountFn = () => {
++      const unmountFn = () => root ? reconciler$1.updateContainer(null, root.container, null, () => {
+         roots.delete(parent);
+         if (root.mounted.size) {
+           const {
+@@ -310,12 +310,7 @@ function createRenderer(fiber) {
+             gl
+           } = root.store.getState();
+           gl.renderLists.dispose();
+         }
+-      };
+-      if (root) {
+-        reconciler$1.updateContainer(null, root.container, null, unmountFn);
+-      }
+       if (sync) {
+         if (typeof flushSync === "function")
+           flushSync(unmountFn);
