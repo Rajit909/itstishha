@@ -17,8 +17,8 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function BlogPostPage({ params }: BlogPostPageProps) {
-  const post = await getBlogPostBySlug(params.slug);
+export default async function BlogPostPage({ params: { slug } }: BlogPostPageProps) {
+  const post = await getBlogPostBySlug(slug);
 
   if (!post) {
     notFound();

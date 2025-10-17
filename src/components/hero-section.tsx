@@ -17,10 +17,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
 import { CheckCircle } from "lucide-react";
-import Image from "next/image";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
-import HeroAnimation from "./hero-animation";
-import { useEffect, useState } from "react";
 
 const formSchema = z.object({
     name: z.string().min(2, { message: "Name must be at least 2 characters." }),
@@ -28,8 +24,6 @@ const formSchema = z.object({
     phone: z.string().min(10, { message: "Please enter a valid phone number." }),
     message: z.string().min(10, { message: "Message must be at least 10 characters." }),
 });
-
-const heroImage = PlaceHolderImages.find(p => p.id === 'hero-background');
 
 export function HeroSection() {
     const { toast } = useToast();
@@ -60,22 +54,14 @@ export function HeroSection() {
     "Project Management",
     "Equipment Planning",
   ];
-  
-  const [isClient, setIsClient] = useState(false)
-
-  useEffect(() => {
-    setIsClient(true)
-  }, [])
 
   return (
-    <section className="relative w-full h-[90vh] min-h-[700px] flex items-center bg-background/80 text-foreground">
-        {isClient && <HeroAnimation />}
-        <div className="absolute inset-0 bg-white/40 -z-10" />
-
+    <section className="relative w-full h-[90vh] min-h-[700px] flex items-center text-foreground overflow-hidden">
+      <div className="absolute inset-0 -z-10 bg-gradient-to-br from-primary via-accent to-secondary animate-gradient-xy" />
       <div className="container grid md:grid-cols-2 gap-16 items-center">
         {/* Left Column */}
-        <div className="animate-fade-in-up">
-          <span className="inline-block px-4 py-2 text-sm font-semibold rounded-full bg-primary/20 text-primary mb-4">
+        <div className="animate-fade-in-up text-background">
+          <span className="inline-block px-4 py-2 text-sm font-semibold rounded-full bg-background/20 text-background mb-4">
             We Help You Build World-Class Healthcare Facilities
           </span>
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
@@ -84,19 +70,19 @@ export function HeroSection() {
           <ul className="mt-8 space-y-3">
             {services.map((service, index) => (
               <li key={index} className="flex items-center gap-3">
-                <CheckCircle className="h-6 w-6 text-primary" />
+                <CheckCircle className="h-6 w-6 text-background" />
                 <span className="text-lg">{service}</span>
               </li>
             ))}
           </ul>
-          <p className="mt-8 text-lg text-foreground/80">
+          <p className="mt-8 text-lg text-background/80">
             Build your dream hospital by making the right decisions at the right time.
           </p>
         </div>
 
         {/* Right Column */}
         <div className="animate-fade-in-up animation-delay-200">
-          <Card className="bg-card/80 backdrop-blur-sm border-border/50 text-card-foreground">
+          <Card className="bg-background/80 backdrop-blur-sm border-border/50 text-card-foreground">
             <CardHeader>
               <CardTitle className="text-3xl text-center">Get Consultation</CardTitle>
             </CardHeader>

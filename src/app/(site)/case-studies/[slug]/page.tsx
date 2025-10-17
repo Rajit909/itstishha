@@ -19,8 +19,8 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
-  const study = await getCaseStudyBySlug(params.slug);
+export default async function CaseStudyPage({ params: { slug } }: CaseStudyPageProps) {
+  const study = await getCaseStudyBySlug(slug);
 
   if (!study) {
     notFound();
