@@ -52,10 +52,10 @@ const blogLinks = [
 ];
 
 const impactZoneLinks = [
-    { href: "#", label: "CSR Initiative" },
-    { href: "#", label: "Academic Events" },
-    { href: "#", label: "Gallery" },
-    { href: "#", label: "Video Gallery" },
+    { href: "/impact-zone/csr-initiative", label: "CSR Initiative" },
+    { href: "/impact-zone/academic-events", label: "Academic Events" },
+    { href: "/impact-zone/gallery", label: "Gallery" },
+    { href: "/impact-zone/video-gallery", label: "Video Gallery" },
 ];
 
 const navLinks = [
@@ -81,7 +81,7 @@ const navLinks = [
   },
   {
     label: "Impact Zone",
-    href: "#",
+    href: "/impact-zone",
     subLinks: impactZoneLinks,
   },
   {
