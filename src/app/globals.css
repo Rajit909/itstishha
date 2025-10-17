@@ -5,7 +5,7 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: 0 0% 98%;
     --foreground: 222.2 84% 4.9%;
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
@@ -13,11 +13,11 @@
     --popover-foreground: 222.2 84% 4.9%;
     --primary: 202 30% 52%;
     --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96.1%;
+    --secondary: 210 40% 94%;
     --secondary-foreground: 222.2 47.4% 11.2%;
-    --muted: 210 40% 96.1%;
+    --muted: 210 40% 94%;
     --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 210 40% 96.1%;
+    --accent: 210 40% 94%;
     --accent-foreground: 222.2 47.4% 11.2%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
@@ -82,7 +82,7 @@
   }
   body {
     @apply text-foreground;
-    background-image: linear-gradient(to bottom, hsl(0 0% 100%), hsl(210 40% 96.1%));
+    background-image: linear-gradient(to bottom, hsl(var(--background)), hsl(var(--secondary)));
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-headline;
