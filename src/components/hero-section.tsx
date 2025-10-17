@@ -71,7 +71,7 @@ export function HeroSection() {
                 priority
             />
         }
-        <div className="absolute inset-0 bg-black/60 -z-10" />
+        <div className="absolute inset-0 bg-black/40 -z-10" />
 
       <div className="container grid md:grid-cols-2 gap-16 items-center">
         {/* Left Column */}
