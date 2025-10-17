@@ -60,8 +60,8 @@ export function HeroSection() {
       <div className="absolute inset-0 -z-10 bg-gradient-to-br from-primary via-accent to-secondary animate-gradient-xy" />
       <div className="container grid md:grid-cols-2 gap-16 items-center">
         {/* Left Column */}
-        <div className="animate-fade-in-up text-background">
-          <span className="inline-block px-4 py-2 text-sm font-semibold rounded-full bg-background/20 text-background mb-4">
+        <div className="animate-fade-in-up text-foreground">
+          <span className="inline-block px-4 py-2 text-sm font-semibold rounded-full bg-background/20 text-foreground mb-4">
             We Help You Build World-Class Healthcare Facilities
           </span>
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
@@ -70,12 +70,12 @@ export function HeroSection() {
           <ul className="mt-8 space-y-3">
             {services.map((service, index) => (
               <li key={index} className="flex items-center gap-3">
-                <CheckCircle className="h-6 w-6 text-background" />
+                <CheckCircle className="h-6 w-6 text-primary" />
                 <span className="text-lg">{service}</span>
               </li>
             ))}
           </ul>
-          <p className="mt-8 text-lg text-background/80">
+          <p className="mt-8 text-lg text-muted-foreground">
             Build your dream hospital by making the right decisions at the right time.
           </p>
         </div>
