@@ -1,10 +1,45 @@
+
+import { BrainCircuit, Handshake, Lightbulb } from 'lucide-react';
+
 export default function PhilosophyPage() {
   return (
-    <div className="container py-16">
-      <h1 className="text-4xl font-bold">Philosophy</h1>
-      <p className="mt-4 text-lg text-muted-foreground">
-        Our philosophy is rooted in collaboration, innovation, and strategic insight. We believe in building lasting partnerships with our clients to drive transformative results.
-      </p>
+    <div className="bg-background text-foreground">
+      <section className="py-20 md:py-32 bg-card">
+        <div className="container text-center">
+          <h1 className="text-4xl md:text-5xl font-bold">Our Philosophy</h1>
+          <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
+            Our approach is built on a foundation of collaboration, strategic insight, and a relentless pursuit of innovation to drive transformative results for our clients.
+          </p>
+        </div>
+      </section>
+
+      <section className="py-16 md:py-24">
+        <div className="container">
+          <div className="grid md:grid-cols-3 gap-10 text-center">
+            <div className="p-8 border rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
+              <Handshake className="h-12 w-12 mx-auto text-primary mb-4" />
+              <h2 className="text-2xl font-bold mb-2">Collaboration</h2>
+              <p className="text-muted-foreground">
+                We believe in the power of partnership. By working closely with our clients, we become an extension of their team, aligning our goals and strategies to achieve shared success. True breakthroughs come from collective effort.
+              </p>
+            </div>
+            <div className="p-8 border rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
+              <BrainCircuit className="h-12 w-12 mx-auto text-primary mb-4" />
+              <h2 className="text-2xl font-bold mb-2">Strategic Insight</h2>
+              <p className="text-muted-foreground">
+                Data drives our decisions. We combine deep industry knowledge with rigorous analysis to provide clear, actionable insights. Our strategic guidance empowers clients to navigate complexity with confidence and precision.
+              </p>
+            </div>
+            <div className="p-8 border rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
+              <Lightbulb className="h-12 w-12 mx-auto text-primary mb-4" />
+              <h2 className="text-2xl font-bold mb-2">Innovation</h2>
+              <p className="text-muted-foreground">
+                The status quo is our starting point, not our destination. We constantly explore emerging trends and technologies to develop forward-thinking solutions that not only solve today’s challenges but also anticipate tomorrow’s opportunities.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
