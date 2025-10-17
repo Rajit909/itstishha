@@ -14,6 +14,7 @@ import {
 import { getServices, getClients, getBlogPosts, getCaseStudies } from "@/lib/data";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Badge } from "@/components/ui/badge";
+import HeroAnimation from "@/components/hero-animation";
 
 export default async function HomePage() {
   const services = (await getServices()).slice(0, 3);
@@ -26,18 +27,9 @@ export default async function HomePage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative h-[60vh] md:h-[90vh] w-full flex items-center justify-center text-center text-white overflow-hidden">
-        {heroImage && (
-            <Image
-                src={heroImage?.imageUrl || ''}
-                alt={heroImage?.description || 'Hero background'}
-                fill
-                className="object-cover -z-10"
-                priority
-                data-ai-hint={heroImage?.imageHint}
-            />
-        )}
-        <div className="absolute inset-0 bg-black/50" />
+      <section className="relative h-[70vh] md:h-[90vh] w-full flex items-center justify-center text-center text-white overflow-hidden">
+        <HeroAnimation />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 animate-fade-in-up">
           <Badge variant="secondary" className="mb-4 animate-fade-in-up animation-delay-200">Driving Excellence</Badge>
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight animate-fade-in-up animation-delay-400">
@@ -256,8 +248,8 @@ export default async function HomePage() {
                 )
               })}
             </CarouselContent>
-            <CarouselPrevious className="absolute left-0 top-1/2 -translate-y-1/2 z-10 md:-left-12" />
-            <CarouselNext className="absolute right-0 top-1/2 -translate-y-1/2 z-10 md:-right-12" />
+            <CarouselPrevious className="absolute left-0 top-1/2 -translate-y-1/2 z-10 md:-left-4" />
+            <CarouselNext className="absolute right-0 top-1/2 -translate-y-1/2 z-10 md:-right-4" />
           </Carousel>
         </div>
       </section>
@@ -323,5 +315,3 @@ export default async function HomePage() {
     </div>
   );
 }
-
-    

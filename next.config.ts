@@ -31,7 +31,7 @@ const nextConfig: NextConfig = {
     ],
   },
   experimental: {
-    serverComponentsExternalPackages: [],
+    serverComponentsExternalPackages: ['three'],
   },
 };
 
