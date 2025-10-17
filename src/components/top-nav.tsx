@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 export default function TopNav() {
   return (
     <div className="bg-primary text-primary-foreground hidden md:block">
-      <div className="container flex h-10 items-center justify-between text-sm">
+      <div className="container flex h-8 items-center justify-between text-sm">
         <div className="flex items-center gap-6">
           <a href="tel:1234567890" className="flex items-center gap-2 hover:underline">
             <Phone className="h-4 w-4" />
@@ -17,16 +17,16 @@ export default function TopNav() {
           </a>
         </div>
         <div className="flex items-center gap-1">
-            <Button variant="ghost" size="icon" asChild className="h-8 w-8 text-primary-foreground hover:bg-primary/80 hover:text-primary-foreground">
+            <Button variant="ghost" size="icon" asChild className="h-7 w-7 text-primary-foreground hover:bg-primary/80 hover:text-primary-foreground">
                 <Link href="#"><Twitter className="h-4 w-4" /></Link>
             </Button>
-            <Button variant="ghost" size="icon" asChild className="h-8 w-8 text-primary-foreground hover:bg-primary/80 hover:text-primary-foreground">
+            <Button variant="ghost" size="icon" asChild className="h-7 w-7 text-primary-foreground hover:bg-primary/80 hover:text-primary-foreground">
                 <Link href="#"><Linkedin className="h-4 w-4" /></Link>
             </Button>
-            <Button variant="ghost" size="icon" asChild className="h-8 w-8 text-primary-foreground hover:bg-primary/80 hover:text-primary-foreground">
+            <Button variant="ghost" size="icon" asChild className="h-7 w-7 text-primary-foreground hover:bg-primary/80 hover:text-primary-foreground">
                 <Link href="#"><Facebook className="h-4 w-4" /></Link>
             </Button>
-            <Button variant="ghost" size="icon" asChild className="h-8 w-8 text-primary-foreground hover:bg-primary/80 hover:text-primary-foreground">
+            <Button variant="ghost" size="icon" asChild className="h-7 w-7 text-primary-foreground hover:bg-primary/80 hover:text-primary-foreground">
                 <Link href="#"><Instagram className="h-4 w-4" /></Link>
             </Button>
         </div>
