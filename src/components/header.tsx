@@ -201,10 +201,6 @@ export default function Header() {
           </Link>
 
           <div className="flex items-center gap-2">
-            <Button asChild>
-              <Link href="/contact">Get a Quote</Link>
-            </Button>
-
             <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" className="md:hidden" size="icon">
