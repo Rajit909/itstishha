@@ -2,9 +2,9 @@
   "placeholderImages": [
     {
       "id": "hero-background",
-      "description": "A modern office setting with professionals collaborating.",
+      "description": "A modern hospital building at dusk.",
       "imageUrl": "https://picsum.photos/seed/hero/1920/1080",
-      "imageHint": "office collaboration"
+      "imageHint": "modern hospital"
     },
     {
       "id": "service-healthcare",
