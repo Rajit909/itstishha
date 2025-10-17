@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { ArrowRight, CheckCircle2, Building, HeartPulse, Code } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
@@ -126,8 +126,55 @@ export default async function HomePage() {
       </section>
       )}
 
-      {/* Why Choose Us Section */}
+      {/* Industries We Serve Section */}
       <section className="py-16 md:py-24 bg-background">
+        <div className="container">
+          <div className="text-center max-w-3xl mx-auto animate-fade-in-up">
+            <h2 className="text-3xl md:text-4xl font-bold">Industries We Serve</h2>
+            <p className="mt-4 text-lg text-muted-foreground">
+              We provide specialized consulting services for a variety of sectors, leveraging our deep industry knowledge to drive success.
+            </p>
+          </div>
+          <div className="mt-12 grid gap-8 md:grid-cols-3">
+            <Card className="text-center animate-fade-in-up" style={{ animationDelay: '200ms', animationFillMode: 'backwards' }}>
+              <CardHeader>
+                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
+                  <HeartPulse className="h-8 w-8" />
+                </div>
+                <CardTitle>Healthcare</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">Optimizing patient care, streamlining operations, and ensuring regulatory compliance for healthcare providers.</p>
+              </CardContent>
+            </Card>
+            <Card className="text-center animate-fade-in-up" style={{ animationDelay: '400ms', animationFillMode: 'backwards' }}>
+              <CardHeader>
+                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
+                  <Code className="h-8 w-8" />
+                </div>
+                <CardTitle>Technology</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">Driving innovation and growth with cutting-edge IT strategies, cloud solutions, and cybersecurity.</p>
+              </CardContent>
+            </Card>
+            <Card className="text-center animate-fade-in-up" style={{ animationDelay: '600ms', animationFillMode: 'backwards' }}>
+              <CardHeader>
+                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
+                  <Building className="h-8 w-8" />
+                </div>
+                <CardTitle>Public Sector</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">Enhancing efficiency and public trust through project accreditation and IT modernization for government agencies.</p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us Section */}
+      <section className="py-16 md:py-24 bg-card">
         <div className="container grid md:grid-cols-2 gap-12 items-center">
             <div className="relative h-96 md:h-full rounded-lg overflow-hidden shadow-xl animate-fade-in-left order-last md:order-first">
                  <Image
@@ -174,7 +221,7 @@ export default async function HomePage() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-16 md:py-24 bg-card">
+      <section className="py-16 md:py-24 bg-background">
         <div className="container animate-fade-in-up">
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold">What Our Clients Say</h2>
@@ -192,7 +239,7 @@ export default async function HomePage() {
                 return (
                   <CarouselItem key={client.id} className="md:basis-1/2 lg:basis-1/3">
                     <div className="p-4">
-                      <Card className="h-full flex flex-col justify-between hover:shadow-xl transition-shadow duration-300">
+                      <Card className="h-full flex flex-col justify-between hover:shadow-xl transition-shadow duration-300 bg-card">
                         <CardContent className="p-8 text-left">
                           <p className="text-lg italic">"{client.testimonial}"</p>
                         </CardContent>
@@ -216,7 +263,7 @@ export default async function HomePage() {
       </section>
 
       {/* Latest Insights Section */}
-      <section className="py-16 md:py-24 bg-background">
+      <section className="py-16 md:py-24 bg-card">
         <div className="container">
           <div className="text-center max-w-3xl mx-auto animate-fade-in-up">
             <h2 className="text-3xl md:text-4xl font-bold">Latest Insights</h2>
@@ -229,7 +276,7 @@ export default async function HomePage() {
                 const postImage = PlaceHolderImages.find(p => p.id === post.image);
                 return (
                 <div key={post.id} className="animate-fade-in-up" style={{ animationDelay: `${200 * (index + 1)}ms`, animationFillMode: 'backwards' }}>
-                    <Card className="group overflow-hidden flex flex-col hover:shadow-xl transition-shadow duration-300 h-full">
+                    <Card className="group overflow-hidden flex flex-col hover:shadow-xl transition-shadow duration-300 h-full bg-background">
                         {postImage && <div className="relative h-56 w-full overflow-hidden">
                           <Image src={postImage.imageUrl} alt={post.title} fill className="object-cover group-hover:scale-105 transition-transform duration-300" data-ai-hint={postImage.imageHint} />
                         </div>}
