@@ -15,6 +15,7 @@ import { getServices, getClients, getBlogPosts, getCaseStudies } from "@/lib/dat
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { HeroSection } from "@/components/hero-section";
 import { ScrollAnimation } from "@/components/ui/scroll-animation";
+import { ClientLogoCarousel } from "@/components/client-logo-carousel";
 
 export default async function HomePage() {
   const services = (await getServices()).slice(0, 3);
@@ -241,6 +242,8 @@ export default async function HomePage() {
           </Carousel>
         </div>
       </section>
+
+      <ClientLogoCarousel />
 
       {/* Latest Insights Section */}
       <section className="py-16 md:py-24 bg-card">
