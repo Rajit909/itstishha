@@ -4,18 +4,12 @@ import { ArrowRight, CheckCircle2, Building, HeartPulse, Code } from "lucide-rea
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import { getServices, getClients, getBlogPosts, getCaseStudies } from "@/lib/data";
+import { getServices, getClients, getBlogPosts, getCaseStudies, getTeamMembers } from "@/lib/data";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { HeroSection } from "@/components/hero-section";
 import { ScrollAnimation } from "@/components/ui/scroll-animation";
 import { ClientLogoCarousel } from "@/components/client-logo-carousel";
+import { TestimonialsCarousel } from "@/components/testimonials-carousel";
 
 export default async function HomePage() {
   const services = (await getServices()).slice(0, 3);
@@ -23,6 +17,7 @@ export default async function HomePage() {
   const recentPosts = (await getBlogPosts()).slice(0, 2);
   const featuredStudy = (await getCaseStudies())[0];
   const featuredStudyImage = PlaceHolderImages.find(p => p.id === featuredStudy.image);
+  const team = await getTeamMembers();
 
   return (
     <div className="flex flex-col">
@@ -199,8 +194,49 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
+      {/* Team Section */}
       <section className="py-16 md:py-24 bg-background">
+        <div className="container">
+            <div className="text-center max-w-3xl mx-auto animate-fade-in-up">
+                <h2 className="text-3xl md:text-4xl font-bold">Meet Our Leadership</h2>
+                <p className="mt-4 text-lg text-muted-foreground">
+                    Our team's diverse expertise is the driving force behind our success and the success of our clients.
+                </p>
+            </div>
+            <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+                {team.map((member, index) => {
+                    const memberImage = PlaceHolderImages.find(p => p.id === member.image);
+                    return (
+                        <div key={member.id} className="animate-fade-in-up" style={{ animationDelay: `${200 * index}ms`}}>
+                          <Card className="text-center group overflow-hidden h-full">
+                              <CardContent className="p-0">
+                                  {memberImage && (
+                                  <div className="relative h-64 w-full">
+                                      <Image
+                                      src={memberImage.imageUrl}
+                                      alt={member.name}
+                                      fill
+                                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                                      data-ai-hint={memberImage.imageHint}
+                                      />
+                                  </div>
+                                  )}
+                                  <div className="p-6">
+                                    <h3 className="text-xl font-semibold">{member.name}</h3>
+                                    <p className="text-primary font-medium">{member.title}</p>
+                                    <p className="mt-2 text-sm text-muted-foreground">{member.bio}</p>
+                                  </div>
+                              </CardContent>
+                          </Card>
+                        </div>
+                    )
+                })}
+            </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-16 md:py-24 bg-card">
         <div className="container">
           <ScrollAnimation animation="fade-in-up">
             <div className="text-center max-w-3xl mx-auto">
@@ -210,36 +246,7 @@ export default async function HomePage() {
               </p>
             </div>
           </ScrollAnimation>
-          <Carousel
-            opts={{ align: "start", loop: true }}
-            className="w-full max-w-5xl mx-auto mt-12"
-          >
-            <CarouselContent>
-              {clients.map((client) => {
-                const clientLogo = PlaceHolderImages.find(p => p.id === client.logo);
-                return (
-                  <CarouselItem key={client.id} className="md:basis-1/2 lg:basis-1/3">
-                    <div className="p-4">
-                      <Card className="h-full flex flex-col justify-between hover:shadow-xl transition-shadow duration-300 bg-card">
-                        <CardContent className="p-8 text-left">
-                          <p className="text-lg italic">"{client.testimonial}"</p>
-                        </CardContent>
-                        <CardFooter className="p-8 pt-0 flex items-center gap-4 bg-card/50">
-                           {clientLogo && <Image src={clientLogo.imageUrl} alt={`${client.name} logo`} width={48} height={48} className="h-12 w-12 rounded-full object-contain p-1 bg-white" data-ai-hint={clientLogo.imageHint} />}
-                           <div>
-                            <h3 className="font-semibold">{client.name}</h3>
-                            <p className="text-sm text-muted-foreground">CEO, {client.name}</p>
-                           </div>
-                        </CardFooter>
-                      </Card>
-                    </div>
-                  </CarouselItem>
-                )
-              })}
-            </CarouselContent>
-            <CarouselPrevious className="absolute left-0 top-1/2 -translate-y-1/2 z-10 md:-left-4" />
-            <CarouselNext className="absolute right-0 top-1/2 -translate-y-1/2 z-10 md:-right-4" />
-          </Carousel>
+          <TestimonialsCarousel clients={clients} />
         </div>
       </section>
 

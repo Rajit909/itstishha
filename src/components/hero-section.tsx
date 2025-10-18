@@ -70,7 +70,7 @@ export function HeroSection() {
           <span className="inline-block px-4 py-2 text-sm font-semibold rounded-full bg-background/20 mb-4">
             We Help You Build World-Class Healthcare Facilities
           </span>
-          <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
+          <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground">
             Why You Should Choose Tishha For Your World-Class Hospital
           </h1>
           <ul className="mt-8 space-y-3">
@@ -81,7 +81,7 @@ export function HeroSection() {
               </li>
             ))}
           </ul>
-          <p className="mt-8 text-lg">
+          <p className="mt-8 text-lg text-foreground">
             Build your dream hospital by making the right decisions at the right time.
           </p>
         </div>
