@@ -9,7 +9,6 @@ import {
   FormControl,
   FormField,
   FormItem,
-  FormLabel,
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
@@ -17,9 +16,12 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
 import { CheckCircle } from "lucide-react";
-import Image from "next/image";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
-import HeroAnimationClient from "./hero-animation-client";
+import dynamic from "next/dynamic";
+
+const HeroAnimation = dynamic(() => import("./hero-animation"), {
+  ssr: false,
+});
+
 
 const formSchema = z.object({
     name: z.string().min(2, { message: "Name must be at least 2 characters." }),
@@ -58,11 +60,9 @@ export function HeroSection() {
     "Equipment Planning",
   ];
   
-  const heroImage = PlaceHolderImages.find(p => p.id === 'hero-background');
-
   return (
     <section className="relative w-full h-screen flex items-center text-foreground overflow-hidden">
-      <HeroAnimationClient />
+      <HeroAnimation />
       <div className="absolute inset-0 bg-primary/80 -z-10" />
       <div className="container grid md:grid-cols-2 gap-16 items-center">
         {/* Left Column */}

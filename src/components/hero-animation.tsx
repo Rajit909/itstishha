@@ -7,7 +7,7 @@ import { useRef, useState } from 'react';
 
 function Particles({ count = 5000 }) {
   const pointsRef = useRef<THREE.Points>(null);
-  const { size, viewport } = useThree();
+  const { viewport } = useThree();
   const [sphere] = useState(() => {
     const positions = new Float32Array(count * 3);
     for (let i = 0; i < count; i++) {
