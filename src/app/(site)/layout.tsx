@@ -2,6 +2,7 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import ScrollToTop from "@/components/scroll-to-top";
 import TopNav from "@/components/top-nav";
+import { TrendingNewsModal } from "@/components/trending-news-modal";
 
 export default function SiteLayout({
   children,
@@ -15,6 +16,7 @@ export default function SiteLayout({
       <main className="flex-1">{children}</main>
       <Footer />
       <ScrollToTop />
+      <TrendingNewsModal />
     </div>
   );
 }
