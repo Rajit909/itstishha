@@ -16,12 +16,9 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
 import { CheckCircle } from "lucide-react";
-import dynamic from "next/dynamic";
+import dynamic from 'next/dynamic';
 
-const HeroAnimation = dynamic(() => import("./hero-animation"), {
-  ssr: false,
-});
-
+const HeroAnimation = dynamic(() => import('@/components/hero-animation'), { ssr: false });
 
 const formSchema = z.object({
     name: z.string().min(2, { message: "Name must be at least 2 characters." }),
