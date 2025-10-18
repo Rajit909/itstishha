@@ -19,6 +19,7 @@ import { useToast } from "@/hooks/use-toast";
 import { CheckCircle } from "lucide-react";
 import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
+import HeroAnimationClient from "./hero-animation-client";
 
 const formSchema = z.object({
     name: z.string().min(2, { message: "Name must be at least 2 characters." }),
@@ -61,17 +62,8 @@ export function HeroSection() {
 
   return (
     <section className="relative w-full h-screen flex items-center text-foreground overflow-hidden">
-      {heroImage && (
-          <Image
-            src={heroImage.imageUrl}
-            alt={heroImage.description}
-            fill
-            className="object-cover -z-20"
-            data-ai-hint={heroImage.imageHint}
-            priority
-          />
-      )}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/70 via-accent/70 to-secondary/70 -z-10" />
+      <HeroAnimationClient />
+      <div className="absolute inset-0 bg-primary/80 -z-10" />
       <div className="container grid md:grid-cols-2 gap-16 items-center">
         {/* Left Column */}
         <div className="animate-fade-in-up text-primary-foreground">
