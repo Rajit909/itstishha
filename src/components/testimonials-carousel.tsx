@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from "next/image";
@@ -36,6 +37,8 @@ export function TestimonialsCarousel({ clients }: TestimonialsCarouselProps) {
       <CarouselContent>
         {clients.map((client) => {
           const clientLogo = PlaceHolderImages.find((p) => p.id === client.logo);
+          const nameParts = client.name.includes(',') ? client.name.split(',') : [client.name, ''];
+
           return (
             <CarouselItem key={client.id} className="md:basis-1/2 lg:basis-1/3">
               <div className="p-4 h-full">
@@ -55,10 +58,10 @@ export function TestimonialsCarousel({ clients }: TestimonialsCarouselProps) {
                       />
                     )}
                     <div>
-                      <h3 className="font-semibold">{client.name.split(',')[0]}</h3>
-                      <p className="text-sm text-muted-foreground">
-                        {client.name.split(',')[1]}
-                      </p>
+                      <h3 className="font-semibold">{nameParts[0]}</h3>
+                      {nameParts[1] && <p className="text-sm text-muted-foreground">
+                        {nameParts[1]}
+                      </p>}
                     </div>
                   </div>
                 </Card>
