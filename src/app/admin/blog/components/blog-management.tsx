@@ -115,13 +115,19 @@ export function BlogManagement({ initialData }: BlogManagementProps) {
     }
     setIsDialogOpen(true);
   };
+  
+  const handleDialogClose = () => {
+    setIsDialogOpen(false);
+    setEditingPost(null);
+    form.reset();
+  }
 
   const onSubmit = (values: z.infer<typeof formSchema>) => {
     const imageToSave = values.image || PlaceHolderImages.find(p => p.id === 'blog-post-1')?.imageUrl || '';
 
     if (editingPost) {
       const updatedPosts = posts.map((p) =>
-        p.id === editingPost.id ? { ...p, ...values, image: imageToSave } : p
+        p.id === editingPost.id ? { ...p, ...values, image: imageToSave, slug: values.title.toLowerCase().replace(/\s+/g, '-') } : p
       );
       setPosts(updatedPosts);
       toast({ title: "Blog post updated successfully" });
@@ -136,7 +142,7 @@ export function BlogManagement({ initialData }: BlogManagementProps) {
       setPosts([...posts, newPost]);
       toast({ title: "Blog post created successfully" });
     }
-    setIsDialogOpen(false);
+    handleDialogClose();
   };
 
   const handleDelete = (id: string) => {
@@ -153,7 +159,7 @@ export function BlogManagement({ initialData }: BlogManagementProps) {
               <PlusCircle className="mr-2 h-4 w-4" /> New Post
             </Button>
           </DialogTrigger>
-          <DialogContent className="sm:max-w-3xl">
+          <DialogContent className="sm:max-w-2xl">
             <DialogHeader>
               <DialogTitle>{editingPost ? "Edit Post" : "Create New Post"}</DialogTitle>
             </DialogHeader>
@@ -169,31 +175,40 @@ export function BlogManagement({ initialData }: BlogManagementProps) {
                     )} />
                   </div>
                   <div>
-                    <FormLabel>Image</FormLabel>
-                    <FormControl>
-                        <div className="mt-2 flex justify-center rounded-lg border border-dashed border-input px-6 py-10">
-                            <div className="text-center">
-                                {imagePreview || form.getValues("image") ? (
-                                    <div className="relative w-full h-40">
-                                        <Image src={imagePreview || form.getValues("image") || ''} alt="Preview" fill className="object-contain rounded-md" />
-                                    </div>
+                    <FormField
+                      control={form.control}
+                      name="image"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Image</FormLabel>
+                          <FormControl>
+                            <div className="mt-2 flex justify-center rounded-lg border border-dashed border-input px-6 py-10">
+                              <div className="text-center">
+                                {imagePreview || field.value ? (
+                                  <div className="relative w-full h-40">
+                                    <Image src={imagePreview || field.value || ''} alt="Preview" fill className="object-contain rounded-md" />
+                                  </div>
                                 ) : (
-                                    <Upload className="mx-auto h-12 w-12 text-muted-foreground" />
+                                  <Upload className="mx-auto h-12 w-12 text-muted-foreground" />
                                 )}
                                 <div className="mt-4 flex text-sm leading-6 text-muted-foreground">
-                                    <label
-                                        htmlFor="file-upload"
-                                        className="relative cursor-pointer rounded-md bg-background font-semibold text-primary focus-within:outline-none focus-within:ring-2 focus-within:ring-ring focus-within:ring-offset-2 hover:text-primary/80"
-                                    >
-                                        <span>Upload a file</span>
-                                        <input id="file-upload" name="file-upload" type="file" className="sr-only" onChange={handleImageChange} accept="image/*" />
-                                    </label>
-                                    <p className="pl-1">or drag and drop</p>
+                                  <label
+                                    htmlFor="file-upload"
+                                    className="relative cursor-pointer rounded-md bg-background font-semibold text-primary focus-within:outline-none focus-within:ring-2 focus-within:ring-ring focus-within:ring-offset-2 hover:text-primary/80"
+                                  >
+                                    <span>Upload a file</span>
+                                    <input id="file-upload" name="file-upload" type="file" className="sr-only" onChange={handleImageChange} accept="image/*" />
+                                  </label>
+                                  <p className="pl-1">or drag and drop</p>
                                 </div>
                                 <p className="text-xs leading-5 text-muted-foreground">PNG, JPG, GIF up to 10MB</p>
+                              </div>
                             </div>
-                        </div>
-                    </FormControl>
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
                   </div>
                 </div>
 
@@ -223,6 +238,7 @@ export function BlogManagement({ initialData }: BlogManagementProps) {
                 </Tabs>
                 
                 <DialogFooter>
+                    <Button type="button" variant="ghost" onClick={handleDialogClose}>Cancel</Button>
                     <Button type="submit">{editingPost ? "Save Changes" : "Create Post"}</Button>
                 </DialogFooter>
               </form>
