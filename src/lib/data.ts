@@ -113,8 +113,8 @@ export const teamMembers: TeamMember[] = [
 export const clients: Client[] = [
   {
     id: '1',
-    name: 'Innovate Corp',
-    testimonial: 'Tishha transformed our approach to IT. Their expertise was invaluable in our recent cloud migration project. Highly recommended!',
+    name: 'Dr. Neerav Anand Singh, One Spine Clinic',
+    testimonial: 'The team at Tishha Consultants LLP brought a level of insight and strategic thinking that transformed our approach to business.',
     logo: 'client-logo-1',
   },
   {

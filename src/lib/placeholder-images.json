@@ -3,103 +3,103 @@
     {
       "id": "hero-background",
       "description": "A modern hospital building at dusk.",
-      "imageUrl": "https://picsum.photos/seed/hero/1920/1080",
+      "imageUrl": "https://images.unsplash.com/photo-1648501911818-68d67a0fb121?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxtb2Rlcm4lMjBob3NwaXRhbHxlbnwwfHx8fDE3NjA5MzQ0MTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "modern hospital"
     },
     {
       "id": "service-healthcare",
       "description": "Icon representing healthcare solutions.",
-      "imageUrl": "https://picsum.photos/seed/health/500/300",
+      "imageUrl": "https://images.unsplash.com/photo-1655993810480-c15dccf9b3a0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtZWRpY2FsJTIwdGVjaG5vbG9neXxlbnwwfHx8fDE3NjA5ODUxNDR8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "medical technology"
     },
     {
       "id": "service-accreditation",
       "description": "Icon representing project accreditation.",
-      "imageUrl": "https://picsum.photos/seed/accredit/500/300",
+      "imageUrl": "https://images.unsplash.com/photo-1638636241638-aef5120c5153?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y2VydGlmaWNhdGUlMjBkb2N1bWVudHxlbnwwfHx8fDE3NjA5NjE3Njd8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "certificate document"
     },
     {
       "id": "service-it",
       "description": "Icon representing IT consultation.",
-      "imageUrl": "https://picsum.photos/seed/it/500/300",
+      "imageUrl": "https://images.unsplash.com/photo-1667372459607-2cfe842fdc4b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzZXJ2ZXIlMjBjb2RlfGVufDB8fHx8MTc2MTAyMzgwN3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "server code"
     },
     {
       "id": "blog-post-1",
       "description": "Image for a blog post about digital transformation in healthcare.",
-      "imageUrl": "https://picsum.photos/seed/blog1/600/400",
+      "imageUrl": "https://images.unsplash.com/photo-1569396116180-210c182bedb8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxkaWdpdGFsJTIwaGVhbHRofGVufDB8fHx8MTc2MTAyMzgwN3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "digital health"
     },
     {
       "id": "blog-post-2",
       "description": "Image for a blog post about navigating project accreditation.",
-      "imageUrl": "https://picsum.photos/seed/blog2/600/400",
+      "imageUrl": "https://images.unsplash.com/photo-1523289333742-be1143f6b766?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxwcm9qZWN0JTIwcGxhbm5pbmd8ZW58MHx8fHwxNzYxMDIzODA3fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "project planning"
     },
     {
       "id": "blog-post-3",
       "description": "Image for a blog post about cloud solutions for business.",
-      "imageUrl": "https://picsum.photos/seed/blog3/600/400",
+      "imageUrl": "https://images.unsplash.com/photo-1569428034239-f9565e32e224?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y2xvdWQlMjBjb21wdXRpbmd8ZW58MHx8fHwxNzYwOTY2OTM1fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "cloud computing"
     },
     {
       "id": "team-member-1",
       "description": "Professional headshot of Dr. Alisha Grant.",
-      "imageUrl": "https://picsum.photos/seed/team1/400/400",
+      "imageUrl": "https://images.unsplash.com/photo-1610631066894-62452ccb927c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxwcm9mZXNzaW9uYWwlMjB3b21hbnxlbnwwfHx8fDE3NjA5MjYwNjd8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "professional woman"
     },
     {
       "id": "team-member-2",
       "description": "Professional headshot of David Chen.",
-      "imageUrl": "https://picsum.photos/seed/team2/400/400",
+      "imageUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwcm9mZXNzaW9uYWwlMjBtYW58ZW58MHx8fHwxNzYwOTU0NDM0fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "professional man"
     },
     {
       "id": "team-member-3",
       "description": "Professional headshot of Maria Rodriguez.",
-      "imageUrl": "https://picsum.photos/seed/team3/400/400",
+      "imageUrl": "https://images.unsplash.com/photo-1600275669439-14e40452d20b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxidXNpbmVzcyUyMHdvbWFufGVufDB8fHx8MTc2MDk4OTE3NHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "business woman"
     },
     {
       "id": "team-member-4",
       "description": "Professional headshot of Kenji Tanaka.",
-      "imageUrl": "https://picsum.photos/seed/team4/400/400",
+      "imageUrl": "https://images.unsplash.com/photo-1613181013804-1dcba09e6a9d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxidXNpbmVzcyUyMG1hbnxlbnwwfHx8fDE3NjA5MjM0OTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "business man"
     },
     {
       "id": "client-logo-1",
-      "description": "Logo for client 'Innovate Corp'.",
-      "imageUrl": "https://picsum.photos/seed/logo1/200/100",
+      "description": "Logo for client 'One Spine Clinic'.",
+      "imageUrl": "/clients/logos/spine.png",
       "imageHint": "abstract logo"
     },
     {
       "id": "client-logo-2",
       "description": "Logo for client 'HealthForward'.",
-      "imageUrl": "https://picsum.photos/seed/logo2/200/100",
+      "imageUrl": "https://images.unsplash.com/photo-1607203391481-ff5db95e392f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bWluaW1hbGlzdCUyMGxvZ298ZW58MHx8fHwxNzYwOTM0NjUzfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "minimalist logo"
     },
     {
       "id": "client-logo-3",
       "description": "Logo for client 'TechSolutions'.",
-      "imageUrl": "https://picsum.photos/seed/logo3/200/100",
+      "imageUrl": "https://images.unsplash.com/photo-1611488006018-95b79a137ff5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxnZW9tZXRyaWMlMjBsb2dvfGVufDB8fHx8MTc2MTAxMDQ3OXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "geometric logo"
     },
     {
       "id": "contact-us-banner",
       "description": "A visually appealing image for the contact us section.",
-      "imageUrl": "https://picsum.photos/seed/contact/1200/400",
+      "imageUrl": "https://images.unsplash.com/photo-1574848296471-28f79a036f79?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBhcmNoaXRlY3R1cmV8ZW58MHx8fHwxNzYwOTU4Njk3fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "modern architecture"
     },
     {
       "id": "case-study-1",
       "description": "Image for the HealthForward case study.",
-      "imageUrl": "https://picsum.photos/seed/casestudy1/800/600",
+      "imageUrl": "https://images.unsplash.com/photo-1611587266737-cc128ffe2946?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxob3NwaXRhbCUyMGhhbGx3YXl8ZW58MHx8fHwxNzYxMDIzODA3fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "hospital hallway"
     },
     {
       "id": "case-study-2",
       "description": "Image for the Innovate Corp case study.",
-      "imageUrl": "https://picsum.photos/seed/casestudy2/800/600",
+      "imageUrl": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxkYXRhJTIwY2VudGVyfGVufDB8fHx8MTc2MDk4MDg1N3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "data center"
     }
   ]
