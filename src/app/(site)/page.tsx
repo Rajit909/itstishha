@@ -195,7 +195,7 @@ export default async function HomePage() {
       </section>
 
       {/* Team Section */}
-      <section className="py-16 md:py-24 bg-background">
+      <section className="py-16 md:py_24 bg-background">
         <div className="container">
             <div className="text-center max-w-3xl mx-auto animate-fade-in-up">
                 <h2 className="text-3xl md:text-4xl font-bold">Meet Our Leadership</h2>
