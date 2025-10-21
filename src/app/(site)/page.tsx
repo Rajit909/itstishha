@@ -1,3 +1,4 @@
+
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, CheckCircle2, Building, HeartPulse, Code } from "lucide-react";
@@ -266,12 +267,13 @@ export default async function HomePage() {
           </ScrollAnimation>
           <div className="mt-12 grid gap-8 md:grid-cols-2 max-w-4xl mx-auto">
             {recentPosts.map((post, index) => {
-                const postImage = PlaceHolderImages.find(p => p.id === post.image);
+                const postImageSrc = PlaceHolderImages.find(p => p.id === post.image)?.imageUrl || post.image;
+                const imageHint = PlaceHolderImages.find(p => p.id === post.image)?.imageHint;
                 return (
                   <ScrollAnimation key={post.id} animation="fade-in-up" delay={index * 150}>
                     <Card className="group overflow-hidden flex flex-col hover:shadow-xl transition-shadow duration-300 h-full bg-background">
-                        {postImage && <div className="relative h-56 w-full overflow-hidden">
-                          <Image src={postImage.imageUrl} alt={post.title} fill className="object-cover group-hover:scale-105 transition-transform duration-300" data-ai-hint={postImage.imageHint} />
+                        {postImageSrc && <div className="relative h-56 w-full overflow-hidden">
+                          <Image src={postImageSrc} alt={post.title} fill className="object-cover group-hover:scale-105 transition-transform duration-300" data-ai-hint={imageHint || 'blog post'} />
                         </div>}
                         <CardHeader>
                             <CardTitle className="text-xl h-14 leading-tight">{post.title}</CardTitle>
@@ -320,3 +322,5 @@ export default async function HomePage() {
     </div>
   );
 }
+
+    

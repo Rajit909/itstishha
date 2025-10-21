@@ -1,3 +1,4 @@
+
 import { getBlogPostBySlug, getBlogPosts } from "@/lib/data";
 import { notFound } from "next/navigation";
 import Image from "next/image";
@@ -24,7 +25,8 @@ export default async function BlogPostPage({ params: { slug } }: BlogPostPagePro
     notFound();
   }
 
-  const postImage = PlaceHolderImages.find(p => p.id === post.image);
+  const postImage = PlaceHolderImages.find(p => p.id === post.image)?.imageUrl || post.image;
+  const imageHint = PlaceHolderImages.find(p => p.id === post.image)?.imageHint;
 
   return (
     <article className="py-16 md:py-24">
@@ -54,12 +56,12 @@ export default async function BlogPostPage({ params: { slug } }: BlogPostPagePro
         {postImage && (
           <div className="relative h-64 md:h-96 w-full rounded-lg overflow-hidden shadow-lg mb-12">
             <Image
-              src={postImage.imageUrl}
+              src={postImage}
               alt={post.title}
               fill
               className="object-cover"
               priority
-              data-ai-hint={postImage.imageHint}
+              data-ai-hint={imageHint || 'blog post'}
             />
           </div>
         )}
@@ -72,3 +74,5 @@ export default async function BlogPostPage({ params: { slug } }: BlogPostPagePro
     </article>
   );
 }
+
+    

@@ -1,3 +1,4 @@
+
 import Link from "next/link";
 import Image from "next/image";
 import { getBlogPosts } from "@/lib/data";
@@ -24,18 +25,19 @@ export default async function BlogPage() {
         <div className="container">
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {posts.map((post, index) => {
-              const postImage = PlaceHolderImages.find(p => p.id === post.image);
+              const postImageSrc = PlaceHolderImages.find(p => p.id === post.image)?.imageUrl || post.image;
+              const imageHint = PlaceHolderImages.find(p => p.id === post.image)?.imageHint;
               return (
                 <div key={post.id} className="animate-fade-in-up" style={{ animationDelay: `${200 * index}ms`}}>
                     <Card className="group flex flex-col overflow-hidden hover:shadow-xl transition-shadow duration-300 h-full">
-                      {postImage && (
+                      {postImageSrc && (
                         <div className="relative h-56 w-full overflow-hidden">
                           <Image
-                            src={postImage.imageUrl}
+                            src={postImageSrc}
                             alt={post.title}
                             fill
                             className="object-cover group-hover:scale-105 transition-transform duration-300"
-                            data-ai-hint={postImage.imageHint}
+                            data-ai-hint={imageHint || 'blog post'}
                           />
                         </div>
                       )}
@@ -72,3 +74,5 @@ export default async function BlogPage() {
     </>
   );
 }
+
+    
