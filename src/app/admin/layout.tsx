@@ -44,6 +44,7 @@ export default function AdminLayout({
   const pathname = usePathname();
 
   return (
+  
     <SidebarProvider>
         <Sidebar>
           <SidebarHeader>
@@ -82,5 +83,6 @@ export default function AdminLayout({
             </div>
         </SidebarInset>
     </SidebarProvider>
+    
   );
 }
