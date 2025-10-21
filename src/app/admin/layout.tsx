@@ -45,14 +45,16 @@ export default function AdminLayout({
 
   return (
     <SidebarProvider>
-        <Sidebar collapsible="icon">
+        <Sidebar>
           <SidebarHeader>
             <div className="flex items-center justify-between p-2">
                 <Link href="/admin/dashboard">
                     <Logo className="h-10 w-auto" />
                 </Link>
                 <SidebarTrigger asChild>
-                  <Button variant="ghost" size="icon" />
+                  <Button variant="ghost" size="icon">
+                    <PanelLeft />
+                  </Button>
                 </SidebarTrigger>
             </div>
           </SidebarHeader>
