@@ -52,10 +52,8 @@ export default function AdminLayout({
             <Link href="/admin/dashboard">
               <Logo className="h-10 w-auto" />
             </Link>
-            <SidebarTrigger asChild>
-              <Button variant="ghost" size="icon">
+            <SidebarTrigger>
                 <PanelLeft />
-              </Button>
             </SidebarTrigger>
           </div>
         </SidebarHeader>
