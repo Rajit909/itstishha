@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useForm } from "react-hook-form";
@@ -16,6 +17,7 @@ import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { Logo } from "@/components/icons";
 
 const formSchema = z.object({
@@ -25,6 +27,7 @@ const formSchema = z.object({
 
 export default function LoginPage() {
   const { toast } = useToast();
+  const router = useRouter();
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -39,7 +42,7 @@ export default function LoginPage() {
       title: "Logged In",
       description: "Welcome back!",
     });
-    // Here you would typically handle authentication
+    router.push('/admin');
   }
 
   return (
