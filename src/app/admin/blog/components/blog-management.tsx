@@ -166,7 +166,7 @@ export function BlogManagement({ initialData }: BlogManagementProps) {
             <Form {...form}>
                <form onSubmit={form.handleSubmit(onSubmit)}>
                 <ScrollArea className="max-h-[70vh]">
-                  <div className="space-y-4 p-6">
+                  <div className="space-y-1 p-2">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="space-y-4">
                         <FormField name="title" control={form.control} render={({ field }) => (
@@ -184,7 +184,7 @@ export function BlogManagement({ initialData }: BlogManagementProps) {
                             <FormItem>
                               <FormLabel>Image</FormLabel>
                               <FormControl>
-                                <div className="mt-2 flex justify-center rounded-lg border border-dashed border-input px-6 py-10">
+                                <div className="mt-2 flex justify-center rounded-lg border border-dashed border-input px-4 py-8">
                                   <div className="text-center">
                                     {imagePreview || field.value ? (
                                       <div className="relative w-full h-40">
@@ -225,7 +225,7 @@ export function BlogManagement({ initialData }: BlogManagementProps) {
                       </TabsList>
                       <TabsContent value="html">
                         <FormField name="content" control={form.control} render={({ field }) => (
-                          <FormItem><FormLabel>Content (HTML supported)</FormLabel><FormControl><Textarea rows={10} {...field} /></FormControl><FormMessage /></FormItem>
+                          <FormItem><FormLabel>Content (HTML supported)</FormLabel><FormControl><Textarea rows={5} {...field} /></FormControl><FormMessage /></FormItem>
                         )} />
                       </TabsContent>
                       <TabsContent value="pdf">
