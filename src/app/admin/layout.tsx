@@ -45,7 +45,7 @@ export default function AdminLayout({
 
   return (
     <SidebarProvider>
-        <Sidebar>
+        <Sidebar collapsible="icon">
           <SidebarHeader>
             <div className="flex items-center justify-between p-2">
                 <Link href="/admin/dashboard">
