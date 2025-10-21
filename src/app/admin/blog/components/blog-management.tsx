@@ -44,6 +44,7 @@ import { useToast } from "@/hooks/use-toast";
 import type { BlogPost } from "@/lib/types";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const formSchema = z.object({
   title: z.string().min(5, "Title must be at least 5 characters."),
@@ -81,6 +82,24 @@ export function BlogManagement({ initialData }: BlogManagementProps) {
       reader.readAsDataURL(file);
     }
   };
+
+  const handleContentFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+        if (file.type === 'application/pdf') {
+            const reader = new FileReader();
+            reader.onloadend = () => {
+                const result = reader.result as string;
+                form.setValue("content", result);
+                toast({ title: "PDF loaded successfully as content." });
+            };
+            reader.readAsDataURL(file);
+        } else {
+            toast({ title: "Invalid file type", description: "Please upload a PDF.", variant: "destructive" });
+        }
+    }
+  };
+
 
   const handleDialogOpen = (post: BlogPost | null) => {
     setEditingPost(post);
@@ -181,9 +200,28 @@ export function BlogManagement({ initialData }: BlogManagementProps) {
                 <FormField name="excerpt" control={form.control} render={({ field }) => (
                   <FormItem><FormLabel>Excerpt</FormLabel><FormControl><Textarea {...field} /></FormControl><FormMessage /></FormItem>
                 )} />
-                <FormField name="content" control={form.control} render={({ field }) => (
-                  <FormItem><FormLabel>Content (HTML supported)</FormLabel><FormControl><Textarea rows={10} {...field} /></FormControl><FormMessage /></FormItem>
-                )} />
+
+                <Tabs defaultValue="html">
+                  <TabsList>
+                    <TabsTrigger value="html">HTML Content</TabsTrigger>
+                    <TabsTrigger value="pdf">Upload PDF</TabsTrigger>
+                  </TabsList>
+                  <TabsContent value="html">
+                    <FormField name="content" control={form.control} render={({ field }) => (
+                      <FormItem><FormLabel>Content (HTML supported)</FormLabel><FormControl><Textarea rows={10} {...field} /></FormControl><FormMessage /></FormItem>
+                    )} />
+                  </TabsContent>
+                  <TabsContent value="pdf">
+                    <FormItem>
+                      <FormLabel>Upload PDF as Content</FormLabel>
+                      <FormControl>
+                        <Input type="file" onChange={handleContentFileChange} accept="application/pdf" />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  </TabsContent>
+                </Tabs>
+                
                 <DialogFooter>
                     <Button type="submit">{editingPost ? "Save Changes" : "Create Post"}</Button>
                 </DialogFooter>
@@ -245,5 +283,3 @@ export function BlogManagement({ initialData }: BlogManagementProps) {
     </>
   );
 }
-
-    

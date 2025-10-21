@@ -28,6 +28,8 @@ export default async function BlogPostPage({ params: { slug } }: BlogPostPagePro
   const postImage = PlaceHolderImages.find(p => p.id === post.image)?.imageUrl || post.image;
   const imageHint = PlaceHolderImages.find(p => p.id === post.image)?.imageHint;
 
+  const isPdf = post.content.startsWith('data:application/pdf;base64,');
+
   return (
     <article className="py-16 md:py-24">
       <div className="container max-w-4xl">
@@ -66,13 +68,17 @@ export default async function BlogPostPage({ params: { slug } }: BlogPostPagePro
           </div>
         )}
 
-        <div
-          className="prose dark:prose-invert lg:prose-xl max-w-none mx-auto"
-          dangerouslySetInnerHTML={{ __html: post.content }}
-        />
+        {isPdf ? (
+          <div className="aspect-video">
+            <iframe src={post.content} className="w-full h-full" title={post.title} />
+          </div>
+        ) : (
+          <div
+            className="prose dark:prose-invert lg:prose-xl max-w-none mx-auto"
+            dangerouslySetInnerHTML={{ __html: post.content }}
+          />
+        )}
       </div>
     </article>
   );
 }
-
-    
