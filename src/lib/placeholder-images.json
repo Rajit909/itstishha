@@ -44,26 +44,26 @@
     },
     {
       "id": "team-member-1",
-      "description": "Professional headshot of Dr. Alisha Grant.",
-      "imageUrl": "https://images.unsplash.com/photo-1610631066894-62452ccb927c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxwcm9mZXNzaW9uYWwlMjB3b21hbnxlbnwwfHx8fDE3NjA5MjYwNjd8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "professional woman"
-    },
-    {
-      "id": "team-member-2",
-      "description": "Professional headshot of David Chen.",
-      "imageUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwcm9mZXNzaW9uYWwlMjBtYW58ZW58MHx8fHwxNzYwOTU0NDM0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Founder & Chairman",
+      "imageUrl": "/team/manish.png",
       "imageHint": "professional man"
     },
     {
+      "id": "team-member-2",
+      "description": "Co-Founder",
+      "imageUrl": "/team/sugandh.png",
+      "imageHint": "professional woman"
+    },
+    {
       "id": "team-member-3",
-      "description": "Professional headshot of Maria Rodriguez.",
-      "imageUrl": "https://images.unsplash.com/photo-1600275669439-14e40452d20b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxidXNpbmVzcyUyMHdvbWFufGVufDB8fHx8MTc2MDk4OTE3NHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "business woman"
+      "description": "Honorary Advisor",
+      "imageUrl": "/team/DrHemChandra.png",
+      "imageHint": "business man"
     },
     {
       "id": "team-member-4",
-      "description": "Professional headshot of Kenji Tanaka.",
-      "imageUrl": "https://images.unsplash.com/photo-1613181013804-1dcba09e6a9d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxidXNpbmVzcyUyMG1hbnxlbnwwfHx8fDE3NjA5MjM0OTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Associate Director",
+      "imageUrl": "/team/pramod.png",
       "imageHint": "business man"
     },
     {

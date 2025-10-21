@@ -55,9 +55,9 @@ export function TestimonialsCarousel({ clients }: TestimonialsCarouselProps) {
                       />
                     )}
                     <div>
-                      <h3 className="font-semibold">{client.name}</h3>
+                      <h3 className="font-semibold">{client.name.split(',')[0]}</h3>
                       <p className="text-sm text-muted-foreground">
-                        CEO, {client.name.split(',')[1] || client.name}
+                        {client.name.split(',')[1]}
                       </p>
                     </div>
                   </div>

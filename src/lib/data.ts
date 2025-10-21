@@ -82,30 +82,30 @@ export const jobOpenings: JobOpening[] = [
 export const teamMembers: TeamMember[] = [
   {
     id: '1',
-    name: 'Dr. Alisha Grant',
-    title: 'CEO & Lead Healthcare Strategist',
-    bio: 'With over 20 years in the healthcare sector, Alisha is a visionary leader dedicated to improving patient outcomes through innovation.',
+    name: 'Mr. Manish Kumar Vaishnav',
+    title: 'Founder & Chairman',
+    bio: 'A seasoned healthcare leader with over 18 years of experience in hospital management, strategic planning, and operations. An alumnus of IMS, DAVV Indore, and IIM Rohtak, bringing deep expertise in healthcare strategy and execution.',
     image: 'team-member-1',
   },
   {
     id: '2',
-    name: 'David Chen',
-    title: 'CTO & Head of IT Solutions',
-    bio: 'David is a tech guru with a passion for solving complex problems. He leads our IT division, specializing in cloud architecture and cybersecurity.',
+    name: 'Mrs. Sugandh Khandelwal',
+    title: 'Co-Founder',
+    bio: 'A distinguished healthcare professional with degrees from BBD University, Amity University, Apollo Medvarsity, and Symbiosis International University. Brings extensive expertise in hospital administration, clinical research, and medical tourism.',
     image: 'team-member-2',
   },
   {
     id: '3',
-    name: 'Maria Rodriguez',
-    title: 'Director of Accreditation Services',
-    bio: 'Maria is an expert in quality management and regulatory compliance, helping organizations achieve excellence and recognition.',
+    name: 'Prof. (Dr.) Hem Chandra',
+    title: 'Honorary Advisor',
+    bio: 'Prof. (Dr.) Hem Chandra, a nationally acclaimed healthcare leader with over 40 years of experience, excels as an academician, administrator, and public health expert. An alumnus of top institutions, he has shaped medical education and healthcare policy, currently serving as Advisor to the Honerable President and Director of Hospital Services at Swami Ram Himalayan University.',
     image: 'team-member-3',
   },
   {
     id: '4',
-    name: 'Kenji Tanaka',
-    title: 'Senior Project Manager',
-    bio: 'Kenji ensures that all our client projects are delivered on time and on budget, exceeding expectations every step of the way.',
+    name: 'Mr. Pramod Panigrahi',
+    title: 'Associate Director',
+    bio: 'An MICA Ahmedabad alumnus with 20 years of experience in strategic marketing, digital transformation, and healthcare consultancy. Combines academic expertise and practical insight to drive growth, innovation, and future-ready business models across media, technology, and healthcare sectors.',
     image: 'team-member-4',
   },
 ];
@@ -125,7 +125,7 @@ export const clients: Client[] = [
   },
   {
     id: '3',
-    name: 'Dr. Prateek Gangwar, Radhika Super Speciality &amp; Advance Trauma Centre',
+    name: 'Dr. Prateek Gangwar, Radhika Super Speciality & Advance Trauma Centre',
     testimonial: 'Working with Tishha Consultants LLP was an absolute pleasure. Their attention to detail and commitment to providing exceptional service set them apart. They understood our needs perfectly and delivered solutions that exceeded.',
     logo: 'client-logo-3',
   },
@@ -143,8 +143,8 @@ export const clients: Client[] = [
   },
   {
     id: '6',
-    name: 'Dr. Tanveer Ahmad, Dr. Tanveer Skin, Hair &amp; Laser Clinic',
-    testimonial: 'Working with Tishha Consultants LLP has been a game-changer for our organisation. Their team brought deep sector knowledge, razor-sharp insights and hands-on support that genuinely transformed how we plan, execute and scale our services. From initial strategy through to full operational delivery, they were proactive, responsive and results-driven. We have seen measurable improvements in efficiency, quality and stakeholder satisfaction — and we consider them a trusted partner in our growth journey. Highly recommended.',
+    name: 'Dr. Tanveer Ahmad, Dr. Tanveer Skin, Hair & Laser Clinic',
+    testimonial: 'Working with Tishha Consultants LLP has been a game-changer for our organisation. Their team brought deep sector knowledge, razor-sharp insights and hands-on support that genuinely transformed how we plan, execute and scale our services. ',
     logo: 'client-logo-6',
   },
 ];

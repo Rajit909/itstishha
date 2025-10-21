@@ -48,8 +48,8 @@ export function HeroSection() {
   const services = [
     "Feasibility Study",
     "Architectural Designing & Planning",
-    "Interior Designing",
-    "Turnkey Design-Build (EPC)",
+    "Accreditation Support",
+    "Quality Assurance",
     "Project Management",
     "Equipment Planning",
   ];
