@@ -51,7 +51,7 @@ const formSchema = z.object({
   title: z.string().min(5, "Title must be at least 5 characters."),
   author: z.string().min(2, "Author name must be at least 2 characters."),
   excerpt: z.string().min(10, "Excerpt must be at least 10 characters."),
-  content: z.string().min(50, "Content must be at least 50 characters."),
+  content: z.string().min(10, "Content must be at least 10 characters."),
   image: z.string().optional(),
 });
 
@@ -101,10 +101,9 @@ export function BlogManagement({ initialData }: BlogManagementProps) {
     }
   };
 
-
   const handleDialogOpen = (post: BlogPost | null) => {
     setEditingPost(post);
-    setImagePreview(null); // Reset preview
+    setImagePreview(null);
     if (post) {
       const postImage = PlaceHolderImages.find(p => p.id === post.image)?.imageUrl || post.image;
       form.reset({ ...post, image: postImage });
@@ -166,8 +165,8 @@ export function BlogManagement({ initialData }: BlogManagementProps) {
             </DialogHeader>
             <Form {...form}>
                <form onSubmit={form.handleSubmit(onSubmit)}>
-                <ScrollArea className="max-h-[70vh] p-6">
-                  <div className="space-y-4">
+                <ScrollArea className="max-h-[70vh]">
+                  <div className="space-y-4 p-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="space-y-4">
                         <FormField name="title" control={form.control} render={({ field }) => (
@@ -216,7 +215,7 @@ export function BlogManagement({ initialData }: BlogManagementProps) {
                     </div>
 
                     <FormField name="excerpt" control={form.control} render={({ field }) => (
-                      <FormItem><FormLabel>Excerpt</FormLabel><FormControl><Textarea {...field} /></FormControl><FormMessage /></FormItem>
+                      <FormItem><FormLabel>Excerpt</FormLabel><FormControl><Textarea rows={3} {...field} /></FormControl><FormMessage /></FormItem>
                     )} />
 
                     <Tabs defaultValue="html">
@@ -241,7 +240,7 @@ export function BlogManagement({ initialData }: BlogManagementProps) {
                     </Tabs>
                   </div>
                 </ScrollArea>
-                <DialogFooter className="p-6 pt-4">
+                <DialogFooter className="p-6 pt-4 border-t">
                     <Button type="button" variant="ghost" onClick={handleDialogClose}>Cancel</Button>
                     <Button type="submit">{editingPost ? "Save Changes" : "Create Post"}</Button>
                 </DialogFooter>
