@@ -45,6 +45,7 @@ import type { BlogPost } from "@/lib/types";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 const formSchema = z.object({
   title: z.string().min(5, "Title must be at least 5 characters."),
@@ -159,85 +160,88 @@ export function BlogManagement({ initialData }: BlogManagementProps) {
               <PlusCircle className="mr-2 h-4 w-4" /> New Post
             </Button>
           </DialogTrigger>
-          <DialogContent className="sm:max-w-2xl">
-            <DialogHeader>
+          <DialogContent className="sm:max-w-3xl">
+             <DialogHeader>
               <DialogTitle>{editingPost ? "Edit Post" : "Create New Post"}</DialogTitle>
             </DialogHeader>
             <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+               <form onSubmit={form.handleSubmit(onSubmit)}>
+                <ScrollArea className="max-h-[70vh] p-6">
                   <div className="space-y-4">
-                    <FormField name="title" control={form.control} render={({ field }) => (
-                      <FormItem><FormLabel>Title</FormLabel><FormControl><Input {...field} /></FormControl><FormMessage /></FormItem>
-                    )} />
-                    <FormField name="author" control={form.control} render={({ field }) => (
-                      <FormItem><FormLabel>Author</FormLabel><FormControl><Input {...field} /></FormControl><FormMessage /></FormItem>
-                    )} />
-                  </div>
-                  <div>
-                    <FormField
-                      control={form.control}
-                      name="image"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Image</FormLabel>
-                          <FormControl>
-                            <div className="mt-2 flex justify-center rounded-lg border border-dashed border-input px-6 py-10">
-                              <div className="text-center">
-                                {imagePreview || field.value ? (
-                                  <div className="relative w-full h-40">
-                                    <Image src={imagePreview || field.value || ''} alt="Preview" fill className="object-contain rounded-md" />
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div className="space-y-4">
+                        <FormField name="title" control={form.control} render={({ field }) => (
+                          <FormItem><FormLabel>Title</FormLabel><FormControl><Input {...field} /></FormControl><FormMessage /></FormItem>
+                        )} />
+                        <FormField name="author" control={form.control} render={({ field }) => (
+                          <FormItem><FormLabel>Author</FormLabel><FormControl><Input {...field} /></FormControl><FormMessage /></FormItem>
+                        )} />
+                      </div>
+                      <div>
+                        <FormField
+                          control={form.control}
+                          name="image"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>Image</FormLabel>
+                              <FormControl>
+                                <div className="mt-2 flex justify-center rounded-lg border border-dashed border-input px-6 py-10">
+                                  <div className="text-center">
+                                    {imagePreview || field.value ? (
+                                      <div className="relative w-full h-40">
+                                        <Image src={imagePreview || field.value || ''} alt="Preview" fill className="object-contain rounded-md" />
+                                      </div>
+                                    ) : (
+                                      <Upload className="mx-auto h-12 w-12 text-muted-foreground" />
+                                    )}
+                                    <div className="mt-4 flex text-sm leading-6 text-muted-foreground">
+                                      <label
+                                        htmlFor="file-upload"
+                                        className="relative cursor-pointer rounded-md bg-background font-semibold text-primary focus-within:outline-none focus-within:ring-2 focus-within:ring-ring focus-within:ring-offset-2 hover:text-primary/80"
+                                      >
+                                        <span>Upload a file</span>
+                                        <input id="file-upload" name="file-upload" type="file" className="sr-only" onChange={handleImageChange} accept="image/*" />
+                                      </label>
+                                      <p className="pl-1">or drag and drop</p>
+                                    </div>
+                                    <p className="text-xs leading-5 text-muted-foreground">PNG, JPG, GIF up to 10MB</p>
                                   </div>
-                                ) : (
-                                  <Upload className="mx-auto h-12 w-12 text-muted-foreground" />
-                                )}
-                                <div className="mt-4 flex text-sm leading-6 text-muted-foreground">
-                                  <label
-                                    htmlFor="file-upload"
-                                    className="relative cursor-pointer rounded-md bg-background font-semibold text-primary focus-within:outline-none focus-within:ring-2 focus-within:ring-ring focus-within:ring-offset-2 hover:text-primary/80"
-                                  >
-                                    <span>Upload a file</span>
-                                    <input id="file-upload" name="file-upload" type="file" className="sr-only" onChange={handleImageChange} accept="image/*" />
-                                  </label>
-                                  <p className="pl-1">or drag and drop</p>
                                 </div>
-                                <p className="text-xs leading-5 text-muted-foreground">PNG, JPG, GIF up to 10MB</p>
-                              </div>
-                            </div>
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                      </div>
+                    </div>
+
+                    <FormField name="excerpt" control={form.control} render={({ field }) => (
+                      <FormItem><FormLabel>Excerpt</FormLabel><FormControl><Textarea {...field} /></FormControl><FormMessage /></FormItem>
+                    )} />
+
+                    <Tabs defaultValue="html">
+                      <TabsList>
+                        <TabsTrigger value="html">HTML Content</TabsTrigger>
+                        <TabsTrigger value="pdf">Upload PDF</TabsTrigger>
+                      </TabsList>
+                      <TabsContent value="html">
+                        <FormField name="content" control={form.control} render={({ field }) => (
+                          <FormItem><FormLabel>Content (HTML supported)</FormLabel><FormControl><Textarea rows={10} {...field} /></FormControl><FormMessage /></FormItem>
+                        )} />
+                      </TabsContent>
+                      <TabsContent value="pdf">
+                        <FormItem>
+                          <FormLabel>Upload PDF as Content</FormLabel>
+                          <FormControl>
+                            <Input type="file" onChange={handleContentFileChange} accept="application/pdf" />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
-                      )}
-                    />
+                      </TabsContent>
+                    </Tabs>
                   </div>
-                </div>
-
-                <FormField name="excerpt" control={form.control} render={({ field }) => (
-                  <FormItem><FormLabel>Excerpt</FormLabel><FormControl><Textarea {...field} /></FormControl><FormMessage /></FormItem>
-                )} />
-
-                <Tabs defaultValue="html">
-                  <TabsList>
-                    <TabsTrigger value="html">HTML Content</TabsTrigger>
-                    <TabsTrigger value="pdf">Upload PDF</TabsTrigger>
-                  </TabsList>
-                  <TabsContent value="html">
-                    <FormField name="content" control={form.control} render={({ field }) => (
-                      <FormItem><FormLabel>Content (HTML supported)</FormLabel><FormControl><Textarea rows={10} {...field} /></FormControl><FormMessage /></FormItem>
-                    )} />
-                  </TabsContent>
-                  <TabsContent value="pdf">
-                    <FormItem>
-                      <FormLabel>Upload PDF as Content</FormLabel>
-                      <FormControl>
-                        <Input type="file" onChange={handleContentFileChange} accept="application/pdf" />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  </TabsContent>
-                </Tabs>
-                
-                <DialogFooter>
+                </ScrollArea>
+                <DialogFooter className="p-6 pt-4">
                     <Button type="button" variant="ghost" onClick={handleDialogClose}>Cancel</Button>
                     <Button type="submit">{editingPost ? "Save Changes" : "Create Post"}</Button>
                 </DialogFooter>
