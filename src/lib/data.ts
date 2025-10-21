@@ -119,15 +119,33 @@ export const clients: Client[] = [
   },
   {
     id: '2',
-    name: 'HealthForward',
-    testimonial: 'The accreditation process was daunting, but Tishha\'s team made it seamless. We achieved our certification ahead of schedule.',
+    name: 'Dr. G.R. Divakar, Rama Hospital',
+    testimonial: 'Partnering with Tishha Consultants LLP was one of the best decisions we`ve made. Their strategic vision and execution excellence were instrumental in driving our projects forward.',
     logo: 'client-logo-2',
   },
   {
     id: '3',
-    name: 'TechSolutions Inc.',
-    testimonial: 'A truly professional and knowledgeable team. Their healthcare insights helped us develop a market-leading product.',
+    name: 'Dr. Prateek Gangwar, Radhika Super Speciality &amp; Advance Trauma Centre',
+    testimonial: 'Working with Tishha Consultants LLP was an absolute pleasure. Their attention to detail and commitment to providing exceptional service set them apart. They understood our needs perfectly and delivered solutions that exceeded.',
     logo: 'client-logo-3',
+  },
+  {
+    id: '4',
+    name: 'Dr. Ammar Ahmad Khan, Pulse MultiSpeciality Hospital',
+    testimonial: 'Tishha Consultancy LLP has been a vital partner for Pulse Hospital, enhancing our operational efficiency and patient care through tailored solutions and exceptional expertise. Highly recommended for any healthcare organization.',
+    logo: 'client-logo-4',
+  },
+  {
+    id: '5',
+    name: 'Dr. Swapnila Prashad, Devalk Netralaya',
+    testimonial: 'Tishha Consultants LLP stands out for their deep industry knowledge and reliable service. They provided us with actionable strategies that were tailored to our specific needs, helping us achieve measurable growth.',
+    logo: 'client-logo-5',
+  },
+  {
+    id: '6',
+    name: 'Dr. Tanveer Ahmad, Dr. Tanveer Skin, Hair &amp; Laser Clinic',
+    testimonial: 'Working with Tishha Consultants LLP has been a game-changer for our organisation. Their team brought deep sector knowledge, razor-sharp insights and hands-on support that genuinely transformed how we plan, execute and scale our services. From initial strategy through to full operational delivery, they were proactive, responsive and results-driven. We have seen measurable improvements in efficiency, quality and stakeholder satisfaction — and we consider them a trusted partner in our growth journey. Highly recommended.',
+    logo: 'client-logo-6',
   },
 ];
 
