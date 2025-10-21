@@ -10,6 +10,7 @@ import { HeroSection } from "@/components/hero-section";
 import { ScrollAnimation } from "@/components/ui/scroll-animation";
 import { ClientLogoCarousel } from "@/components/client-logo-carousel";
 import { TestimonialsCarousel } from "@/components/testimonials-carousel";
+import { ServiceIcon } from "@/components/service-icon";
 
 export default async function HomePage() {
   const services = (await getServices()).slice(0, 3);
@@ -40,7 +41,7 @@ export default async function HomePage() {
                 <Card className="group overflow-hidden flex flex-col text-center items-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 h-full">
                   <CardHeader>
                     <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
-                      <service.icon className="h-8 w-8" />
+                      <ServiceIcon name={service.icon} className="h-8 w-8" />
                     </div>
                     <CardTitle className="mt-4">{service.title}</CardTitle>
                   </CardHeader>

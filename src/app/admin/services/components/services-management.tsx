@@ -88,7 +88,7 @@ export function ServicesManagement({ initialData }: ServiceManagementProps) {
       const newService: Service = {
         ...values,
         id: (services.length + 1).toString(),
-        icon: services[0]?.icon, // placeholder
+        icon: 'HeartPulse', // placeholder
         image: services[0]?.image, // placeholder
       };
       setServices([...services, newService]);

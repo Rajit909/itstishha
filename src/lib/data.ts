@@ -1,5 +1,4 @@
 import type { Service, BlogPost, JobOpening, TeamMember, Client, CaseStudy } from './types';
-import { HeartPulse, ShieldCheck, Cpu } from 'lucide-react';
 
 // Using a mock async function to simulate fetching data
 const simulateFetch = <T,>(data: T): Promise<T> => 
@@ -11,7 +10,7 @@ export const services: Service[] = [
     title: 'Healthcare Solutions',
     description: 'Innovative strategies to improve patient outcomes and operational efficiency.',
     longDescription: 'Our Healthcare Solutions service provides comprehensive consulting for medical institutions. We focus on digital transformation, patient care optimization, and regulatory compliance to help you navigate the complex healthcare landscape.',
-    icon: HeartPulse,
+    icon: 'HeartPulse',
     image: 'service-healthcare',
   },
   {
@@ -19,7 +18,7 @@ export const services: Service[] = [
     title: 'Project Accreditation',
     description: 'Expert guidance to achieve and maintain industry-standard certifications.',
     longDescription: 'We guide organizations through the entire accreditation process, from readiness assessment to final survey. Our experts ensure you meet all requirements for standards like ISO, JCAHO, and more, securing your reputation for quality and excellence.',
-    icon: ShieldCheck,
+    icon: 'ShieldCheck',
     image: 'service-accreditation',
   },
   {
@@ -27,7 +26,7 @@ export const services: Service[] = [
     title: 'IT Consultation',
     description: 'Cutting-edge IT services to modernize your infrastructure and workflows.',
     longDescription: 'Our IT Consultation services cover everything from cloud strategy and cybersecurity to custom software development. We help you leverage technology to drive growth, enhance security, and streamline operations for a competitive edge.',
-    icon: Cpu,
+    icon: 'Cpu',
     image: 'service-it',
   },
 ];

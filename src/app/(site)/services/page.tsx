@@ -4,6 +4,7 @@ import { getServices } from "@/lib/data";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
+import { ServiceIcon } from "@/components/service-icon";
 
 export default async function ServicesPage() {
   const services = await getServices();
@@ -43,7 +44,7 @@ export default async function ServicesPage() {
                             <div className={`p-8 md:p-12 ${isReversed ? 'md:col-start-1' : ''}`}>
                                 <div className="flex items-center gap-4 mb-4">
                                     <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                                        <service.icon className="h-6 w-6" />
+                                        <ServiceIcon name={service.icon} className="h-6 w-6" />
                                     </div>
                                     <h2 className="font-headline text-3xl font-bold">{service.title}</h2>
                                 </div>

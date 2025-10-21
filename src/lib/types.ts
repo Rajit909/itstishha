@@ -5,7 +5,7 @@ export type Service = {
   title: string;
   description: string;
   longDescription: string;
-  icon: React.ComponentType<{ className?: string }>;
+  icon: string;
   image: string;
 };
 
