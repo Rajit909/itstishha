@@ -63,7 +63,7 @@ export default async function CareersPage() {
                 We're not actively hiring at the moment, but we're always interested in great talent.
               </p>
               <Button className="mt-6" asChild>
-                <Link href="/contact">Get in Touch</Link>
+                <Link href="https://careeraxisassociates.com">Get in Touch</Link>
               </Button>
             </div>
           )}

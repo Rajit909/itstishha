@@ -119,6 +119,24 @@
       "description": "Image for the Innovate Corp case study.",
       "imageUrl": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxkYXRhJTIwY2VudGVyfGVufDB8fHx8MTc2MDk4MDg1N3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "data center"
+    },
+    {
+      "id": "slider-1",
+      "description": "A doctor reviewing patient data on a tablet.",
+      "imageUrl": "https://images.unsplash.com/photo-1758691463610-3c2ecf5fb3fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxkb2N0b3IlMjB0YWJsZXR8ZW58MHx8fHwxNzYxMTA1NTg5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "doctor tablet"
+    },
+    {
+      "id": "slider-2",
+      "description": "A modern operating theater with advanced equipment.",
+      "imageUrl": "https://images.unsplash.com/photo-1640876777002-badf6aee5bcc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxvcGVyYXRpbmclMjByb29tfGVufDB8fHx8MTc2MTA2NTgzMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "operating room"
+    },
+    {
+      "id": "slider-3",
+      "description": "A team of researchers in a laboratory.",
+      "imageUrl": "https://images.unsplash.com/photo-1605781645799-c9c7d820b4ac?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxzY2llbmNlJTIwbGFib3JhdG9yeXxlbnwwfHx8fDE3NjEwNjQ3Mzl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "science laboratory"
     }
   ]
 }

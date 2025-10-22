@@ -23,7 +23,7 @@ export default async function HomePage() {
 
   return (
     <div className="flex flex-col">
-      <HeroSection />
+     
 
       {/* Featured Services Section */}
       <section id="services" className="py-16 md:py-24 bg-background">
@@ -319,6 +319,10 @@ export default async function HomePage() {
           </ScrollAnimation>
         </div>
       </section>
+
+      <HeroSection />
+
+      
     </div>
   );
 }
