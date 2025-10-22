@@ -313,11 +313,11 @@ export default async function HomePage() {
             <p className="mt-4 text-lg max-w-2xl mx-auto">
               Let's discuss how Tishha can help you achieve your goals. Schedule a free consultation with our experts today.
             </p>
-            <Button size="lg" variant="secondary" className="mt-8 transform hover:scale-105 transition-transform" asChild>
+            {/* <Button size="lg" variant="secondary" className="mt-8 transform hover:scale-105 transition-transform" asChild>
               <Link href="/contact">
                 Get in Touch
               </Link>
-            </Button>
+            </Button> */}
           </ScrollAnimation>
         </div>
       </section>
