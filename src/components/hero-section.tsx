@@ -52,23 +52,22 @@ export function HeroSection() {
         ]}
         className="w-full"
       >
-        <CarouselContent className="h-[60vh] md:h-[70vh] lg:h-[80vh]">
-          {slides.map((slide) => {
+        <CarouselContent>
+          {slides.map((slide, index) => {
             const slideImage = PlaceHolderImages.find((p) => p.id === slide.id);
             return (
-              <CarouselItem key={slide.id} className="h-full">
-                <div className="relative h-full w-full">
+              <CarouselItem key={slide.id}>
+                <div className="relative aspect-video">
                   {slideImage && (
                     <Image
                       src={slideImage.imageUrl}
                       alt={slideImage.description}
                       fill
                       className="object-cover"
-                      priority={slide.id === 'slider-1'}
+                      priority={index === 0}
                       data-ai-hint={slideImage.imageHint}
                     />
                   )}
-                  <div className="absolute inset-0 bg-black/20"></div>
                 </div>
               </CarouselItem>
             );

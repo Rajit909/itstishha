@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-r from-primary to-accent text-primary-foreground">
+    <footer className="bg-gradient-to-r from-primary to-primary/40 text-primary-foreground">
       <div className="container py-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8">
           <div className="flex flex-col items-start space-y-4 md:col-span-2">
