@@ -1,18 +1,18 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, CheckCircle2, Building, HeartPulse, Code } from "lucide-react";
+import { ArrowRight, CheckCircle2, Building, HeartPulse, Code, CheckCircle } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import { getServices, getClients, getBlogPosts, getCaseStudies, getTeamMembers } from "@/lib/data";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
-import { HeroSection } from "@/components/hero-section";
 import { GetTouch } from "@/components/get-in-touch";
 import { ScrollAnimation } from "@/components/ui/scroll-animation";
 import { ClientLogoCarousel } from "@/components/client-logo-carousel";
 import { TestimonialsCarousel } from "@/components/testimonials-carousel";
 import { ServiceIcon } from "@/components/service-icon";
+import { HeroSection } from "@/components/hero-section";
 
 export default async function HomePage() {
   const services = (await getServices()).slice(0, 3);
@@ -27,6 +27,7 @@ export default async function HomePage() {
     <div className="flex flex-col">
      
       <HeroSection />
+
        {/* Why Choose Us Section */}
        <section className="py-16 md:py-24 bg-card">
         <div className="container grid md:grid-cols-2 gap-12 items-center">
@@ -46,21 +47,21 @@ export default async function HomePage() {
                 </p>
                 <ul className="mt-8 space-y-6">
                     <li className="flex items-start">
-                        <CheckCircle2 className="h-6 w-6 text-primary mr-4 mt-1 flex-shrink-0" />
+                        <CheckCircle className="h-6 w-6 text-primary mr-4 mt-1 flex-shrink-0" />
                         <div>
                             <h3 className="font-semibold text-lg">Expert Teams</h3>
                             <p className="text-muted-foreground mt-1">Access seasoned professionals with decades of combined experience in their respective fields.</p>
                         </div>
                     </li>
                     <li className="flex items-start">
-                        <CheckCircle2 className="h-6 w-6 text-primary mr-4 mt-1 flex-shrink-0" />
+                        <CheckCircle className="h-6 w-6 text-primary mr-4 mt-1 flex-shrink-0" />
                         <div>
                             <h3 className="font-semibold text-lg">Customized Strategies</h3>
                             <p className="text-muted-foreground mt-1">We don't believe in one-size-fits-all. Our solutions are tailored to your unique needs and goals.</p>
                         </div>
                     </li>
                     <li className="flex items-start">
-                        <CheckCircle2 className="h-6 w-6 text-primary mr-4 mt-1 flex-shrink-0" />
+                        <CheckCircle className="h-6 w-6 text-primary mr-4 mt-1 flex-shrink-0" />
                         <div>
                             <h3 className="font-semibold text-lg">Proven Results</h3>
                             <p className="text-muted-foreground mt-1">We have a track record of success, helping clients achieve accreditation, optimize operations, and innovate.</p>
