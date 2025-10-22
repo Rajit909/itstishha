@@ -160,7 +160,6 @@ export const projects: Project[] = [
     solution: 'Tishha deployed a team of accreditation specialists who conducted a thorough gap analysis. We developed a customized roadmap, implemented a digital quality management system, and provided hands-on training for all departments. Our team worked alongside HealthForward staff to streamline workflows and ensure every standard was met and documented correctly.',
     result: 'HealthForward passed their JCAHO survey with a 99.8% compliance score. The new digital systems reduced administrative overhead by 30%, and the streamlined processes led to a 15% improvement in patient throughput. The hospital is now recognized as a leader in quality and safety in their region.',
     services: ['Quality Accreditation', 'Healthcare Solutions'],
-    status: 'Latest',
     testimonial: {
       text: 'Tishha was the partner we needed. Their expertise and hands-on approach were instrumental in our success. We couldn’t have done it without them.',
       author: 'CEO, HealthForward'
@@ -177,7 +176,6 @@ export const projects: Project[] = [
     solution: 'Our IT consultation team designed and executed a phased cloud migration strategy. We selected the optimal cloud provider (AWS) and services, refactored critical applications for the cloud, and implemented a robust CI/CD pipeline for automated deployments. Security was a priority, with a multi-layered approach including identity and access management, network security, and continuous monitoring.',
     result: 'The migration was completed on time and 10% under budget. Innovate Corp achieved a 40% reduction in IT operational costs, a 3x improvement in application performance, and near-zero downtime. Their new scalable infrastructure allows them to innovate faster and more securely than ever before.',
     services: ['Digital Solution', 'IT Consultation'],
-    status: 'Previous',
     testimonial: {
       text: 'The cloud migration was a massive undertaking, but Tishha\'s team made it feel effortless. Their technical skill and project management were top-notch.',
       author: 'CTO, Innovate Corp'
@@ -194,7 +192,6 @@ export const projects: Project[] = [
     solution: 'Tishha conducted a detailed market analysis, financial projections, and site assessment. We then collaborated with architects and clinicians to design a patient-centric facility, incorporating modern healthcare design principles and scalable infrastructure to accommodate future growth.',
     result: 'The feasibility study secured board approval and initial funding. The architectural design is now the blueprint for a hospital poised to become a regional leader in specialized care, with workflows designed to reduce staff fatigue and improve patient outcomes.',
     services: ['Planning & Designing', 'Feasibility Study', 'Healthcare Solutions'],
-    status: 'Upcoming',
   },
 ];
 

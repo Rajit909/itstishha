@@ -1,13 +1,13 @@
 import { getProjects } from "@/lib/data";
+import { projectCategories } from "@/lib/project-categories";
 import { ProjectList } from "./components/project-list";
 
 export default async function ProjectsPage() {
   const projects = await getProjects();
+  
   const categories = [
     { slug: "all", title: "All" },
-    { slug: "latest", title: "Latest" },
-    { slug: "previous", title: "Previous" },
-    { slug: "upcoming", title: "Upcoming" },
+    ...projectCategories.map(c => ({ slug: c.slug, title: c.title })),
   ];
 
   return (

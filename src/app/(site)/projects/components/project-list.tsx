@@ -1,43 +1,43 @@
 
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { useSearchParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import { ArrowRight } from "lucide-react";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
-import { cn } from "@/lib/utils";
+import { projectCategories } from "@/lib/project-categories";
 import type { Project } from "@/lib/types";
 
-type ProjectCategory = {
+type ProjectCategoryFilter = {
     slug: string;
     title: string;
 }
 
 type ProjectListProps = {
   projects: Project[];
-  categories: ProjectCategory[];
+  categories: ProjectCategoryFilter[];
 };
 
 export function ProjectList({ projects, categories }: ProjectListProps) {
-  const searchParams = useSearchParams();
-  const initialStatus = searchParams.get("status") || "all";
-  const [activeCategory, setActiveCategory] = useState(initialStatus);
+  const [activeCategory, setActiveCategory] = useState("all");
 
-  useEffect(() => {
-    setActiveCategory(initialStatus);
-  }, [initialStatus]);
-
-  const filteredProjects =
-    activeCategory === "all"
-      ? projects
-      : projects.filter((project) =>
-          project.status.toLowerCase() === activeCategory
-        );
+  const getFilteredProjects = () => {
+    if (activeCategory === "all") {
+      return projects;
+    }
+    const category = projectCategories.find(c => c.slug === activeCategory);
+    if (!category) return projects;
+    
+    return projects.filter(project =>
+      project.services.some(service => category.services.includes(service))
+    );
+  };
+  
+  const filteredProjects = getFilteredProjects();
 
   return (
     <div>
