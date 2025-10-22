@@ -230,7 +230,7 @@ export default async function HomePage() {
                                   <div className="p-6">
                                     <h3 className="text-xl font-semibold">{member.name}</h3>
                                     <p className="text-primary font-medium">{member.title}</p>
-                                    <p className="mt-2 text-sm text-muted-foreground">{member.bio}</p>
+                                    <p className="mt-2 text-sm text-muted-foreground" style={{textAlign:'justify'}}>{member.bio}</p>
                                   </div>
                               </CardContent>
                           </Card>

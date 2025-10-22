@@ -9,20 +9,20 @@
     {
       "id": "service-healthcare",
       "description": "Icon representing healthcare solutions.",
-      "imageUrl": "https://images.unsplash.com/photo-1655993810480-c15dccf9b3a0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtZWRpY2FsJTIwdGVjaG5vbG9neXxlbnwwfHx8fDE3NjA5ODUxNDR8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "medical technology"
+      "imageUrl": "https://images.unsplash.com/photo-1618933352346-9507a7c504a5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxJbmRpYW4lMjBkb2N0b3J8ZW58MHx8fHwxNzYxMzk1NjU3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Indian doctor"
     },
     {
       "id": "service-accreditation",
       "description": "Icon representing project accreditation.",
-      "imageUrl": "https://images.unsplash.com/photo-1638636241638-aef5120c5153?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y2VydGlmaWNhdGUlMjBkb2N1bWVudHxlbnwwfHx8fDE3NjA5NjE3Njd8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "certificate document"
+      "imageUrl": "https://images.unsplash.com/photo-1590650046871-92c887180603?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxJbmRpYW4lMjBwcm9mZXNzaW9uYWwlMjBtZWV0aW5nfGVufDB8fHx8MTc2MTM5NTcyMXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Indian professionals meeting"
     },
     {
       "id": "service-it",
       "description": "Icon representing IT consultation.",
-      "imageUrl": "https://images.unsplash.com/photo-1667372459607-2cfe842fdc4b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzZXJ2ZXIlMjBjb2RlfGVufDB8fHx8MTc2MTAyMzgwN3ww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "server code"
+      "imageUrl": "https://images.unsplash.com/photo-1610689825946-dea202c3a352?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxJbmRpYW4lMjBpdCUyMHByb2Zlc3Npb25hbHxlbnwwfHx8fDE3NjEzOTU3NTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Indian IT professional"
     },
     {
       "id": "blog-post-1",
@@ -129,7 +129,7 @@
     {
       "id": "slider-1",
       "description": "A doctor reviewing patient data on a tablet.",
-      "imageUrl": "/carousel-img/sliderone.jpeg",
+      "imageUrl": "/carousel-img/slideone.jpeg",
       "imageHint": "doctor tablet"
     },
     {

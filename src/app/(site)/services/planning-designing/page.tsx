@@ -18,25 +18,24 @@ export default function PlanningDesigningPage() {
         <div className="container">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative h-96 rounded-lg overflow-hidden shadow-xl animate-fade-in-left">
-              <Image src="https://picsum.photos/seed/planning/800/600" alt="Planning and Designing" fill className="object-cover" data-ai-hint="architectural blueprint" />
+ <Image src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7" alt="online team discussion" fill className="object-cover" data-ai-hint="online team discussion" />
             </div>
             <div className="animate-fade-in-right">
               <h2 className="text-3xl font-bold mb-4">Strategic Frameworks for Lasting Infrastructure</h2>
               <p className="text-lg text-muted-foreground">
-                Our Planning & Designing services are tailored to create efficient, sustainable, and scalable environments. We work with you to translate your vision into a tangible plan, ensuring that every aspect of the design aligns with your strategic objectives, from architectural layouts to operational workflows.
-              </p>
+              A well-designed hospital not only optimizes functionality but also significantly enhances patient care, operational efficiency, and overall healthcare outcomes. At TISHHA Consultants LLP, we specialize in crafting environments that seamlessly integrate with the evolving needs of patients, healthcare professionals, and technology.              </p>
               <ul className="mt-8 space-y-4">
                 <li className="flex items-start">
                   <Layers className="h-6 w-6 text-primary mr-4 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="font-semibold">Master Planning</h3>
+                    <h3 className="font-semibold">Strategic Master Planning</h3>
                     <p className="text-muted-foreground">Developing long-term strategic plans for facility development and expansion.</p>
                   </div>
                 </li>
                 <li className="flex items-start">
                   <PencilRuler className="h-6 w-6 text-primary mr-4 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="font-semibold">Architectural & Interior Design</h3>
+                    <h3 className="font-semibold">Functional Space Planning</h3>
                     <p className="text-muted-foreground">Creating functional and aesthetic spaces that enhance user experience and efficiency.</p>
                   </div>
                 </li>
@@ -47,6 +46,7 @@ export default function PlanningDesigningPage() {
                     <p className="text-muted-foreground">Optimizing operational flows to improve productivity and reduce costs.</p>
                   </div>
                 </li>
+                
               </ul>
             </div>
           </div>
