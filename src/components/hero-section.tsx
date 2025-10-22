@@ -51,7 +51,7 @@ export function HeroSection() {
   }, [emblaApi, setScrollSnaps, onSelect]);
 
   return (
-    <section className="relative w-full h-[88vh] overflow-hidden">
+    <section className="relative w-full h-[80vh] overflow-hidden">
       <div className="overflow-hidden h-full" ref={emblaRef}>
         <div className="flex h-full">
           {slides.map((slide, index) => {
@@ -66,7 +66,7 @@ export function HeroSection() {
                     src={slideImage.imageUrl}
                     alt={slide.title}
                     fill
-                    className="object-cover"
+                    className="w-full h-full object-contain"
                     priority={index === 0}
                     data-ai-hint={slideImage.imageHint}
                   />
@@ -107,14 +107,14 @@ export function HeroSection() {
       </div>
 
       {/* Pagination Dots */}
-      <div className="absolute bottom-8 md:bottom-12 left-1/2 -translate-x-1/2 flex gap-3">
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-3">
         {scrollSnaps.map((_, index) => (
           <button
             key={index}
             onClick={() => scrollTo(index)}
             className={cn(
-              'h-2 w-2 sm:h-3 sm:w-3 rounded-full bg-white/50 transition-all duration-300',
-              index === selectedIndex ? 'w-4 sm:w-6 bg-white' : 'hover:bg-white/80'
+              'h-3 w-3 rounded-full bg-white/50 transition-all duration-300',
+              index === selectedIndex ? 'w-6 bg-white' : 'hover:bg-white/80'
             )}
           />
         ))}
