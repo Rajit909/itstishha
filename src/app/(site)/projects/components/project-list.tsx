@@ -1,9 +1,10 @@
 
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useSearchParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
@@ -11,23 +12,31 @@ import { ArrowRight } from "lucide-react";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { cn } from "@/lib/utils";
 import type { Project } from "@/lib/types";
-import type { ProjectCategory } from "@/lib/project-categories";
+
+type ProjectCategory = {
+    slug: string;
+    title: string;
+}
 
 type ProjectListProps = {
   projects: Project[];
-  categories: (ProjectCategory & { slug: string })[];
+  categories: ProjectCategory[];
 };
 
 export function ProjectList({ projects, categories }: ProjectListProps) {
-  const [activeCategory, setActiveCategory] = useState("all");
+  const searchParams = useSearchParams();
+  const initialStatus = searchParams.get("status") || "all";
+  const [activeCategory, setActiveCategory] = useState(initialStatus);
+
+  useEffect(() => {
+    setActiveCategory(initialStatus);
+  }, [initialStatus]);
 
   const filteredProjects =
     activeCategory === "all"
       ? projects
       : projects.filter((project) =>
-          categories
-            .find((c) => c.slug === activeCategory)
-            ?.services.some((s) => project.services.includes(s))
+          project.status.toLowerCase() === activeCategory
         );
 
   return (

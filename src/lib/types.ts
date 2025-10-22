@@ -54,6 +54,7 @@ export type Project = {
   solution: string;
   result: string;
   services: string[];
+  status: "Latest" | "Previous" | "Upcoming";
   testimonial?: {
     text: string;
     author: string;

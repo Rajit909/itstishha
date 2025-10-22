@@ -43,8 +43,9 @@ const servicesLinks = [
 ];
 
 const projectLinks = [
-    { href: "/projects", label: "Latest Projects" },
-    { href: "/projects", label: "Previous Projects" },
+    { href: "/projects?status=latest", label: "Latest Projects" },
+    { href: "/projects?status=previous", label: "Previous Projects" },
+    { href: "/projects?status=upcoming", label: "Upcoming Projects" },
 ];
 
 const blogLinks = [
