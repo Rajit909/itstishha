@@ -56,7 +56,7 @@ export function HeroSection() {
           {slides.map((slide) => {
             const slideImage = PlaceHolderImages.find((p) => p.id === slide.id);
             return (
-              <CarouselItem key={slide.id}>
+              <CarouselItem key={slide.id} className="h-full">
                 <div className="relative h-full w-full">
                   {slideImage && (
                     <Image
@@ -69,7 +69,7 @@ export function HeroSection() {
                     />
                   )}
                   <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-                    <div className="text-center text-white p-4 md:p-8 rounded-lg bg-black/30 backdrop-blur-sm">
+                    <div className="text-center text-white p-4 md:p-8 rounded-lg bg-black/30 backdrop-blur-sm max-w-xs md:max-w-md lg:max-w-2xl">
                       <h1 className="text-3xl md:text-5xl font-bold leading-tight">
                         {slide.title}
                       </h1>
@@ -89,3 +89,5 @@ export function HeroSection() {
     </section>
   );
 }
+
+    
