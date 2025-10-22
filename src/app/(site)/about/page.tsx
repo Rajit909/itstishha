@@ -59,8 +59,8 @@ export default async function AboutPage() {
           </div>
           <div className="relative h-96 md:h-full min-h-[400px] rounded-lg overflow-hidden shadow-xl animate-fade-in-left">
             <Image
-              src="https://picsum.photos/seed/aboutus/800/1000"
-              alt="Our Mission"
+              src="/carousel-img/sliderthree.jpeg"
+              alt="Tishha Office"
               fill
               className="object-cover"
               data-ai-hint="office whiteboard"
