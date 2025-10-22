@@ -184,10 +184,10 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 max-w-screen-2xl items-center justify-between">
+        <Link href="/" className="flex items-center space-x-2">
+          <Logo className="h-10 w-auto" />
+        </Link>
         <div className="flex items-center gap-6">
-          <Link href="/" className="flex items-center space-x-2">
-            <Logo className="h-10 w-auto" />
-          </Link>
           <nav className="hidden md:flex items-center gap-2 text-sm">
             {navLinks.map((link) => (
               <NavLink key={link.label} {...link} />
