@@ -63,7 +63,7 @@ export function HeroSection() {
                       src={slideImage.imageUrl}
                       alt={slideImage.description}
                       fill
-                      className="object-contain"
+                      className="object-cover"
                       priority={slide.id === 'slider-1'}
                       data-ai-hint={slideImage.imageHint}
                     />
@@ -89,5 +89,3 @@ export function HeroSection() {
     </section>
   );
 }
-
-    
