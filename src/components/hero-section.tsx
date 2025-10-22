@@ -66,7 +66,7 @@ export function HeroSection() {
                     src={slideImage.imageUrl}
                     alt={slide.title}
                     fill
-                    className="w-full h-full object-contain"
+                    className="w-full h-full object-cover"
                     priority={index === 0}
                     data-ai-hint={slideImage.imageHint}
                   />
