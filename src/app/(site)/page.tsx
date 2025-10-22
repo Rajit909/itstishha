@@ -8,6 +8,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/componen
 import { getServices, getClients, getBlogPosts, getCaseStudies, getTeamMembers } from "@/lib/data";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { HeroSection } from "@/components/hero-section";
+import { GetTouch } from "@/components/get-in-touch";
 import { ScrollAnimation } from "@/components/ui/scroll-animation";
 import { ClientLogoCarousel } from "@/components/client-logo-carousel";
 import { TestimonialsCarousel } from "@/components/testimonials-carousel";
@@ -321,10 +322,9 @@ export default async function HomePage() {
       </section>
 
       <HeroSection />
+      <GetTouch />
 
       
     </div>
   );
 }
-
-    

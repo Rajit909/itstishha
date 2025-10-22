@@ -24,7 +24,7 @@ const formSchema = z.object({
     message: z.string().min(10, { message: "Message must be at least 10 characters." }),
 });
 
-export function HeroSection() {
+export function GetTouch() {
     const { toast } = useToast();
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
@@ -55,12 +55,11 @@ export function HeroSection() {
   ];
   
   return (
-    <section className="relative w-full h-screen flex items-center text-foreground overflow-hidden">
-      <div className="absolute inset-0 bg-primary/80 -z-10" />
+    <section className="relative w-full py-16 md:py-24 flex items-center text-foreground overflow-hidden bg-background">
       <div className="container grid md:grid-cols-2 gap-16 items-center">
         {/* Left Column */}
-        <div className="animate-fade-in-up text-primary-foreground">
-          <span className="inline-block px-4 py-2 text-sm font-semibold rounded-full bg-background/20 mb-4">
+        <div className="animate-fade-in-up">
+          <span className="inline-block px-4 py-2 text-sm font-semibold rounded-full bg-primary/10 text-primary mb-4">
             We Help You Build World-Class Healthcare Facilities
           </span>
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground">
@@ -69,19 +68,19 @@ export function HeroSection() {
           <ul className="mt-8 space-y-3">
             {services.map((service, index) => (
               <li key={index} className="flex items-center gap-3">
-                <CheckCircle className="h-6 w-6 text-background" />
+                <CheckCircle className="h-6 w-6 text-primary" />
                 <span className="text-lg">{service}</span>
               </li>
             ))}
           </ul>
-          <p className="mt-8 text-lg text-foreground">
+          <p className="mt-8 text-lg text-muted-foreground">
             Build your dream hospital by making the right decisions at the right time.
           </p>
         </div>
 
         {/* Right Column */}
         <div className="animate-fade-in-up animation-delay-200">
-          <Card className="bg-background/80 backdrop-blur-sm border-border/50 text-card-foreground">
+          <Card className="bg-card/80 backdrop-blur-sm border-border/50 text-card-foreground">
             <CardHeader>
               <CardTitle className="text-3xl text-center">Get Consultation</CardTitle>
             </CardHeader>
