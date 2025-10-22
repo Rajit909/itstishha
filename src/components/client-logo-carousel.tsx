@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import { getClients } from "@/lib/data";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
@@ -25,13 +26,13 @@ export async function ClientLogoCarousel() {
           <div className="flex animate-marquee hover:[animation-play-state:paused]">
             {duplicatedLogos.map((logo, index) => (
               logo && (
-                <div key={index} className="flex-shrink-0 mx-8 flex items-center justify-center" style={{ width: '160px' }}>
+                <div key={index} className="flex-shrink-0 mx-8 flex items-center justify-center" style={{ width: '180px' }}>
                   <Image
                     src={logo.imageUrl}
                     alt={`Client logo ${index + 1}`}
-                    width={120}
-                    height={60}
-                    className="object-contain h-16 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                    width={150}
+                    height={75}
+                    className="object-contain h-20 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
                     data-ai-hint={logo.imageHint}
                   />
                 </div>

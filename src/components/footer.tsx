@@ -1,3 +1,4 @@
+
 import Link from "next/link";
 import { Facebook, Linkedin, Instagram, X } from "lucide-react";
 import { Logo } from "@/components/icons";
@@ -12,7 +13,7 @@ export default function Footer() {
             <div className=" p-2 rounded-lg">
                 <Logo className="h-14 w-auto" />
             </div>
-            <p className="text-sm text-primary-foreground/80 max-w-md">
+            <p className="text-sm text-primary-foreground/90 max-w-md">
               Tishha provides expert solutions in healthcare, project accreditation, and IT to propel your organization forward.
             </p>
             <div className="flex space-x-1">
@@ -31,34 +32,34 @@ export default function Footer() {
             </div>
           </div>
           <div>
-            <h3 className="font-semibold mb-4">Services</h3>
+            <h3 className="font-semibold mb-4 text-primary-foreground">Services</h3>
             <ul className="space-y-2">
-              <li><Link href="/services" className="text-sm text-primary-foreground/80 hover:text-primary-foreground">Healthcare Solutions</Link></li>
-              <li><Link href="/services" className="text-sm text-primary-foreground/80 hover:text-primary-foreground">Project Accreditation</Link></li>
-              <li><Link href="/services" className="text-sm text-primary-foreground/80 hover:text-primary-foreground">IT Consultation</Link></li>
+              <li><Link href="/services" className="text-sm text-primary-foreground/90 hover:text-primary-foreground hover:underline">Healthcare Solutions</Link></li>
+              <li><Link href="/services" className="text-sm text-primary-foreground/90 hover:text-primary-foreground hover:underline">Project Accreditation</Link></li>
+              <li><Link href="/services" className="text-sm text-primary-foreground/90 hover:text-primary-foreground hover:underline">IT Consultation</Link></li>
             </ul>
           </div>
           <div>
-            <h3 className="font-semibold mb-4">Company</h3>
+            <h3 className="font-semibold mb-4 text-primary-foreground">Company</h3>
             <ul className="space-y-2">
-              <li><Link href="/about" className="text-sm text-primary-foreground/80 hover:text-primary-foreground">About Us</Link></li>
-              <li><Link href="/case-studies" className="text-sm text-primary-foreground/80 hover:text-primary-foreground">Case Studies</Link></li>
-              <li><Link href="/blog" className="text-sm text-primary-foreground/80 hover:text-primary-foreground">Blog</Link></li>
-              <li><Link href="/careers" className="text-sm text-primary-foreground/80 hover:text-primary-foreground">Careers</Link></li>
-              <li><Link href="/contact" className="text-sm text-primary-foreground/80 hover:text-primary-foreground">Contact</Link></li>
+              <li><Link href="/about" className="text-sm text-primary-foreground/90 hover:text-primary-foreground hover:underline">About Us</Link></li>
+              <li><Link href="/case-studies" className="text-sm text-primary-foreground/90 hover:text-primary-foreground hover:underline">Case Studies</Link></li>
+              <li><Link href="/blog" className="text-sm text-primary-foreground/90 hover:text-primary-foreground hover:underline">Blog</Link></li>
+              <li><Link href="/careers" className="text-sm text-primary-foreground/90 hover:text-primary-foreground hover:underline">Careers</Link></li>
+              <li><Link href="/contact" className="text-sm text-primary-foreground/90 hover:text-primary-foreground hover:underline">Contact</Link></li>
             </ul>
           </div>
           <div>
-            <h3 className="font-semibold mb-4">Legal</h3>
+            <h3 className="font-semibold mb-4 text-primary-foreground">Legal</h3>
             <ul className="space-y-2">
-              <li><Link href="#" className="text-sm text-primary-foreground/80 hover:text-primary-foreground">Privacy Policy</Link></li>
-              <li><Link href="#" className="text-sm text-primary-foreground/80 hover:text-primary-foreground">Terms of Service</Link></li>
-               <li><Link href="/login" className="text-sm text-primary-foreground/80 hover:text-primary-foreground">Client Portal</Link></li>
+              <li><Link href="#" className="text-sm text-primary-foreground/90 hover:text-primary-foreground hover:underline">Privacy Policy</Link></li>
+              <li><Link href="#" className="text-sm text-primary-foreground/90 hover:text-primary-foreground hover:underline">Terms of Service</Link></li>
+               <li><Link href="/login" className="text-sm text-primary-foreground/90 hover:text-primary-foreground hover:underline">Client Portal</Link></li>
             </ul>
           </div>
         </div>
         <div className="mt-12 border-t border-primary-foreground/20 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-sm text-primary-foreground/80">
+          <p className="text-sm text-primary-foreground/90">
             &copy; {new Date().getFullYear()} Tishha Consultancy LLP. All rights reserved.
           </p>
         </div>

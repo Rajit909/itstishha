@@ -9,7 +9,7 @@ export default function TopNav() {
         <div className="flex items-center gap-6">
           <a href="tel:1234567890" className="flex items-center gap-2 hover:underline">
             <Phone className="h-4 w-4" />
-            <span className="hidden md:inline">(123) 456-7890</span>
+            <span className="hidden md:inline">(+91) 9690054444</span>
           </a>
           <a href="mailto:contact@tishha.com" className="hidden md:flex items-center gap-2 hover:underline">
             <Mail className="h-4 w-4" />
