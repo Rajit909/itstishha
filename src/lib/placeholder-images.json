@@ -129,25 +129,25 @@
     {
       "id": "slider-1",
       "description": "A doctor reviewing patient data on a tablet.",
-      "imageUrl": "/assets/carousel-img/slideone.jpeg",
+      "imageUrl": "/carousel-img/slideone.jpeg",
       "imageHint": "doctor tablet"
     },
     {
       "id": "slider-2",
       "description": "A modern operating theater with advanced equipment.",
-      "imageUrl": "/assets/carousel-img/slidetwo.jpeg",
+      "imageUrl": "/carousel-img/slidetwo.jpeg",
       "imageHint": "operating room"
     },
     {
       "id": "slider-3",
       "description": "A team of researchers in a laboratory.",
-      "imageUrl": "/assets/carousel-img/slidethree.jpeg",
+      "imageUrl": "/carousel-img/slidethree.jpeg",
       "imageHint": "science laboratory"
     },
     {
       "id": "slider-4",
       "description": "A team of researchers in a laboratory.",
-      "imageUrl": "/assets/carousel-img/slidefour.jpeg",
+      "imageUrl": "/carousel-img/sliderfour.jpeg",
       "imageHint": "science laboratory"
     }
   ]
