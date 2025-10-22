@@ -52,13 +52,13 @@ export function HeroSection() {
 
   return (
     <section className="relative w-full h-screen overflow-hidden">
-      <div className="overflow-hidden h-full w-full" ref={emblaRef}>
-        <div className="flex h-full w-full">
+      <div className="overflow-hidden h-full" ref={emblaRef}>
+        <div className="flex h-full">
           {slides.map((slide, index) => {
             const slideImage = PlaceHolderImages.find((p) => p.id === slide.id);
             return (
               <div
-                className="relative flex-[0_0_100%] h-full w-full transition-opacity duration-700"
+                className="relative flex-[0_0_100%] h-full w-full"
                 key={slide.id}
               >
                 {slideImage && (

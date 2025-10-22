@@ -8,9 +8,9 @@ export default function Footer() {
   return (
     <footer className="bg-gradient-to-r from-primary to-accent text-primary-foreground">
       <div className="container py-12">
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8">
           <div className="flex flex-col items-start space-y-4 md:col-span-2">
-            <div className=" p-2 rounded-lg">
+            <div className="p-2 rounded-lg">
                 <Logo className="h-14 w-auto" />
             </div>
             <p className="text-sm text-primary-foreground/90 max-w-md">
