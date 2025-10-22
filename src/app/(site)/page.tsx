@@ -21,6 +21,7 @@ export default async function HomePage() {
   const featuredStudy = (await getCaseStudies())[0];
   const featuredStudyImage = PlaceHolderImages.find(p => p.id === featuredStudy.image);
   const team = await getTeamMembers();
+  const teamMeetingImage = PlaceHolderImages.find(p => p.id === 'team-meeting');
 
   return (
     <div className="flex flex-col">
@@ -154,13 +155,13 @@ export default async function HomePage() {
       <section className="py-16 md:py-24 bg-card">
         <div className="container grid md:grid-cols-2 gap-12 items-center">
             <ScrollAnimation animation="slide-in-from-left" className="relative h-96 md:h-full rounded-lg overflow-hidden shadow-xl order-last md:order-first">
-                 <Image
-                    src="https://picsum.photos/seed/chooseus/800/600"
-                    alt="Team meeting"
+                 {teamMeetingImage && <Image
+                    src={teamMeetingImage.imageUrl}
+                    alt={teamMeetingImage.description}
                     fill
                     className="object-cover"
-                    data-ai-hint="team meeting"
-                />
+                    data-ai-hint={teamMeetingImage.imageHint}
+                />}
             </ScrollAnimation>
             <ScrollAnimation animation="slide-in-from-right">
                 <h2 className="text-3xl md:text-4xl font-bold">Why Partner with Tishha?</h2>
