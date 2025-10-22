@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState } from "react";
@@ -46,7 +47,7 @@ export function ProjectList({ projects, categories }: ProjectListProps) {
 
       <motion.div
         layout
-        className="grid gap-8 md:grid-cols-1 lg:grid-cols-2"
+        className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4"
       >
         <AnimatePresence>
           {filteredProjects.map((project, index) => {
