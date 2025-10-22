@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Mail, Phone, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import { Mail, Phone, Facebook, Linkedin, Instagram, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function TopNav() {
@@ -18,16 +18,16 @@ export default function TopNav() {
         </div>
         <div className="flex items-center gap-1">
             <Button variant="ghost" size="icon" asChild className="h-7 w-7 text-primary-foreground hover:bg-primary/80 hover:text-primary-foreground">
-                <Link href="#"><Twitter className="h-4 w-4" /></Link>
+                <Link href="https://x.com/TishhaServices"><X className="h-4 w-4" /></Link>
             </Button>
             <Button variant="ghost" size="icon" asChild className="h-7 w-7 text-primary-foreground hover:bg-primary/80 hover:text-primary-foreground">
-                <Link href="#"><Linkedin className="h-4 w-4" /></Link>
+                <Link href="https://www.linkedin.com/authwall?trk=gf&trkInfo=AQH9EL3wZevg9gAAAZoKSnCQ1qNCLYr30Xpmt4vIcKrqy01M7X9ZnPwAQ0qFwB11BxLDhxsmdJqXhClQvAfz2uYFMjRADEeEW3xoghP67Ld8NFc6k7535xYvI4H2-NwwPcAeKLU=&original_referer=https://tishha.com/&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Ftishha-consultants-llp-5977a2322%2F"><Linkedin className="h-4 w-4" /></Link>
             </Button>
             <Button variant="ghost" size="icon" asChild className="h-7 w-7 text-primary-foreground hover:bg-primary/80 hover:text-primary-foreground">
-                <Link href="#"><Facebook className="h-4 w-4" /></Link>
+                <Link href="https://www.facebook.com/people/TISHHA-Consultants-LLP/100064162719795/"><Facebook className="h-4 w-4" /></Link>
             </Button>
             <Button variant="ghost" size="icon" asChild className="h-7 w-7 text-primary-foreground hover:bg-primary/80 hover:text-primary-foreground">
-                <Link href="#"><Instagram className="h-4 w-4" /></Link>
+                <Link href="https://www.instagram.com/tishhaconsultantsllp/"><Instagram className="h-4 w-4" /></Link>
             </Button>
         </div>
       </div>

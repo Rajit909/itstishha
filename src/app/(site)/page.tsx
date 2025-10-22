@@ -27,6 +27,52 @@ export default async function HomePage() {
     <div className="flex flex-col">
      
       <HeroSection />
+       {/* Why Choose Us Section */}
+       <section className="py-16 md:py-24 bg-card">
+        <div className="container grid md:grid-cols-2 gap-12 items-center">
+            <ScrollAnimation animation="slide-in-from-left" className="relative h-96 md:h-full rounded-lg overflow-hidden shadow-xl order-last md:order-first">
+                 {teamMeetingImage && <Image
+                    src={teamMeetingImage.imageUrl}
+                    alt={teamMeetingImage.description}
+                    fill
+                    className="object-cover"
+                    data-ai-hint={teamMeetingImage.imageHint}
+                />}
+            </ScrollAnimation>
+            <ScrollAnimation animation="slide-in-from-right">
+                <h2 className="text-3xl md:text-4xl font-bold">Why Partner with Tishha?</h2>
+                <p className="mt-4 text-lg text-muted-foreground">
+                    Our approach is rooted in partnership, deep industry knowledge, and a commitment to delivering measurable results.
+                </p>
+                <ul className="mt-8 space-y-6">
+                    <li className="flex items-start">
+                        <CheckCircle2 className="h-6 w-6 text-primary mr-4 mt-1 flex-shrink-0" />
+                        <div>
+                            <h3 className="font-semibold text-lg">Expert Teams</h3>
+                            <p className="text-muted-foreground mt-1">Access seasoned professionals with decades of combined experience in their respective fields.</p>
+                        </div>
+                    </li>
+                    <li className="flex items-start">
+                        <CheckCircle2 className="h-6 w-6 text-primary mr-4 mt-1 flex-shrink-0" />
+                        <div>
+                            <h3 className="font-semibold text-lg">Customized Strategies</h3>
+                            <p className="text-muted-foreground mt-1">We don't believe in one-size-fits-all. Our solutions are tailored to your unique needs and goals.</p>
+                        </div>
+                    </li>
+                    <li className="flex items-start">
+                        <CheckCircle2 className="h-6 w-6 text-primary mr-4 mt-1 flex-shrink-0" />
+                        <div>
+                            <h3 className="font-semibold text-lg">Proven Results</h3>
+                            <p className="text-muted-foreground mt-1">We have a track record of success, helping clients achieve accreditation, optimize operations, and innovate.</p>
+                        </div>
+                    </li>
+                </ul>
+                <Button className="mt-8" asChild size="lg">
+                    <Link href="/about">Meet Our Team</Link>
+                </Button>
+            </ScrollAnimation>
+        </div>
+      </section>
       {/* Featured Services Section */}
       <section id="services" className="py-16 md:py-24 bg-background">
         <div className="container">
@@ -151,52 +197,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* Why Choose Us Section */}
-      <section className="py-16 md:py-24 bg-card">
-        <div className="container grid md:grid-cols-2 gap-12 items-center">
-            <ScrollAnimation animation="slide-in-from-left" className="relative h-96 md:h-full rounded-lg overflow-hidden shadow-xl order-last md:order-first">
-                 {teamMeetingImage && <Image
-                    src={teamMeetingImage.imageUrl}
-                    alt={teamMeetingImage.description}
-                    fill
-                    className="object-cover"
-                    data-ai-hint={teamMeetingImage.imageHint}
-                />}
-            </ScrollAnimation>
-            <ScrollAnimation animation="slide-in-from-right">
-                <h2 className="text-3xl md:text-4xl font-bold">Why Partner with Tishha?</h2>
-                <p className="mt-4 text-lg text-muted-foreground">
-                    Our approach is rooted in partnership, deep industry knowledge, and a commitment to delivering measurable results.
-                </p>
-                <ul className="mt-8 space-y-6">
-                    <li className="flex items-start">
-                        <CheckCircle2 className="h-6 w-6 text-primary mr-4 mt-1 flex-shrink-0" />
-                        <div>
-                            <h3 className="font-semibold text-lg">Expert Teams</h3>
-                            <p className="text-muted-foreground mt-1">Access seasoned professionals with decades of combined experience in their respective fields.</p>
-                        </div>
-                    </li>
-                    <li className="flex items-start">
-                        <CheckCircle2 className="h-6 w-6 text-primary mr-4 mt-1 flex-shrink-0" />
-                        <div>
-                            <h3 className="font-semibold text-lg">Customized Strategies</h3>
-                            <p className="text-muted-foreground mt-1">We don't believe in one-size-fits-all. Our solutions are tailored to your unique needs and goals.</p>
-                        </div>
-                    </li>
-                    <li className="flex items-start">
-                        <CheckCircle2 className="h-6 w-6 text-primary mr-4 mt-1 flex-shrink-0" />
-                        <div>
-                            <h3 className="font-semibold text-lg">Proven Results</h3>
-                            <p className="text-muted-foreground mt-1">We have a track record of success, helping clients achieve accreditation, optimize operations, and innovate.</p>
-                        </div>
-                    </li>
-                </ul>
-                <Button className="mt-8" asChild size="lg">
-                    <Link href="/about">Meet Our Team</Link>
-                </Button>
-            </ScrollAnimation>
-        </div>
-      </section>
+     
 
       {/* Team Section */}
       <section className="py-16 md:py_24 bg-background">
@@ -304,11 +305,8 @@ export default async function HomePage() {
           </div>
         </div>
       </section>
-      
-      <GetTouch />
-
-      {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-r from-primary to-accent text-primary-foreground">
+           {/* CTA Section */}
+           <section className="py-16 md:py-24 bg-gradient-to-r from-primary to-accent text-primary-foreground">
         <div className="container text-center">
           <ScrollAnimation animation="fade-in">
             <h2 className="text-3xl md:text-4xl font-bold">Ready to Transform Your Business?</h2>
@@ -323,6 +321,10 @@ export default async function HomePage() {
           </ScrollAnimation>
         </div>
       </section>
+
+      <GetTouch />
+
+ 
     </div>
   );
 }

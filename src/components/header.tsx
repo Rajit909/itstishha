@@ -109,7 +109,7 @@ export default function Header() {
       if (subLinks) {
         return (
           <Collapsible>
-            <CollapsibleTrigger className="flex w-full items-center justify-between py-2 text-lg font-medium">
+            <CollapsibleTrigger className="flex w-full items-right justify-between py-2 text-lg font-medium">
               {label}
               <ChevronDown className="h-4 w-4" />
             </CollapsibleTrigger>
@@ -183,27 +183,22 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 max-w-screen-2xl items-center">
-        <div className="mr-4 hidden md:flex">
-          <Link href="/" className="mr-6 flex items-center space-x-2">
+      <div className="container flex h-16 max-w-screen-2xl items-center justify-between">
+        <div className="flex items-center gap-6">
+          <Link href="/" className="flex items-center space-x-2">
             <Logo className="h-10 w-auto" />
           </Link>
-          <nav className="flex items-center gap-2 text-sm">
+          <nav className="hidden md:flex items-center gap-2 text-sm">
             {navLinks.map((link) => (
               <NavLink key={link.label} {...link} />
             ))}
           </nav>
         </div>
 
-        <div className="flex flex-1 items-center justify-between md:justify-end">
-          <Link href="/" className="flex items-center space-x-2 md:hidden">
-            <Logo className="h-8 w-auto" />
-          </Link>
-
-          <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 md:hidden">
             <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
               <SheetTrigger asChild>
-                <Button variant="ghost" className="md:hidden" size="icon">
+                <Button variant="ghost" size="icon">
                   <Menu className="h-5 w-5" />
                   <span className="sr-only">Toggle Menu</span>
                 </Button>
@@ -223,7 +218,6 @@ export default function Header() {
                 </div>
               </SheetContent>
             </Sheet>
-          </div>
         </div>
       </div>
     </header>
