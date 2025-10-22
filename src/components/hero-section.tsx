@@ -51,8 +51,8 @@ export function HeroSection() {
 
   return (
     <section className="relative w-full h-screen overflow-hidden">
-      <div className="overflow-hidden" ref={emblaRef}>
-        <div className="flex h-screen">
+      <div className="overflow-hidden h-full" ref={emblaRef}>
+        <div className="flex h-full">
           {slides.map((slide) => {
             const slideImage = PlaceHolderImages.find((p) => p.id === slide.id);
             return (
@@ -71,12 +71,12 @@ export function HeroSection() {
                   />
                 )}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent" />
-                <div className="absolute inset-0 flex flex-col justify-end items-start text-white p-6 sm:p-8 md:p-16">
+                <div className="absolute inset-0 flex flex-col justify-end items-start text-white p-4 sm:p-8 md:p-16">
                    <div className="max-w-3xl animate-fade-in-up">
-                    <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight drop-shadow-md">
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight drop-shadow-md">
                       {slide.title}
                     </h1>
-                    <p className="mt-4 text-base sm:text-lg md:text-2xl drop-shadow-sm">
+                    <p className="mt-4 text-base sm:text-lg md:text-xl drop-shadow-sm">
                       {slide.subtitle}
                     </p>
                   </div>
@@ -106,7 +106,7 @@ export function HeroSection() {
       </div>
 
       {/* Pagination Dots */}
-      <div className="absolute bottom-10 md:bottom-8 left-1/2 -translate-x-1/2 flex gap-3">
+      <div className="absolute bottom-8 md:bottom-12 left-1/2 -translate-x-1/2 flex gap-3">
         {scrollSnaps.map((_, index) => (
           <button
             key={index}
