@@ -1,149 +1,122 @@
 "use client";
 
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import * as z from "zod";
-import { Button } from "@/components/ui/button";
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { useToast } from "@/hooks/use-toast";
-import { CheckCircle } from "lucide-react";
+import React, { useState, useEffect, useCallback } from 'react';
+import Image from 'next/image';
+import useEmblaCarousel from 'embla-carousel-react';
+import Autoplay from 'embla-carousel-autoplay';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { ArrowLeft, ArrowRight } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
-const formSchema = z.object({
-    name: z.string().min(2, { message: "Name must be at least 2 characters." }),
-    email: z.string().email({ message: "Please enter a valid email address." }),
-    phone: z.string().min(10, { message: "Please enter a valid phone number." }),
-    message: z.string().min(10, { message: "Message must be at least 10 characters." }),
-});
+const slides = [
+  {
+    id: 'slider-1',
+    title: 'Pioneering Healthcare Solutions',
+    subtitle: 'Driving innovation in patient care and operational excellence.',
+  },
+  {
+    id: 'slider-2',
+    title: 'Excellence in Project Accreditation',
+    subtitle: 'Your trusted partner in achieving the highest standards of quality and safety.',
+  },
+  {
+    id: 'slider-3',
+    title: 'Transformative IT Consulting',
+    subtitle: 'Modernizing your infrastructure for a digital-first world.',
+  },
+];
 
 export function HeroSection() {
-    const { toast } = useToast();
-    const form = useForm<z.infer<typeof formSchema>>({
-        resolver: zodResolver(formSchema),
-        defaultValues: {
-            name: "",
-            email: "",
-            phone: "",
-            message: "",
-        },
-    });
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, duration: 50 }, [
+    Autoplay({ delay: 3000, stopOnInteraction: false }),
+  ]);
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
 
-    function onSubmit(values: z.infer<typeof formSchema>) {
-        console.log(values);
-        toast({
-          title: "Consultation Request Sent!",
-          description: "Thank you for your interest. We will be in touch shortly.",
-        });
-        form.reset();
-      }
+  const scrollTo = useCallback((index: number) => emblaApi && emblaApi.scrollTo(index), [emblaApi]);
+  const scrollPrev = useCallback(() => emblaApi && emblaApi.scrollPrev(), [emblaApi]);
+  const scrollNext = useCallback(() => emblaApi && emblaApi.scrollNext(), [emblaApi]);
 
-  const services = [
-    "Feasibility Study",
-    "Architectural Designing & Planning",
-    "Accreditation Support",
-    "Quality Assurance",
-    "Project Management",
-    "Equipment Planning",
-  ];
-  
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return;
+    setSelectedIndex(emblaApi.selectedScrollSnap());
+  }, [emblaApi, setSelectedIndex]);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    setScrollSnaps(emblaApi.scrollSnapList());
+    emblaApi.on('select', onSelect);
+    onSelect();
+  }, [emblaApi, setScrollSnaps, onSelect]);
+
   return (
-    <section className="relative w-full h-screen flex items-center text-foreground overflow-hidden">
-      <div className="absolute inset-0 bg-primary/80 -z-10" />
-      <div className="container grid md:grid-cols-2 gap-16 items-center">
-        {/* Left Column */}
-        <div className="animate-fade-in-up text-primary-foreground">
-          <span className="inline-block px-4 py-2 text-sm font-semibold rounded-full bg-background/20 mb-4">
-            We Help You Build World-Class Healthcare Facilities
-          </span>
-          <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground">
-            Why You Should Choose Tishha For Your World-Class Hospital
-          </h1>
-          <ul className="mt-8 space-y-3">
-            {services.map((service, index) => (
-              <li key={index} className="flex items-center gap-3">
-                <CheckCircle className="h-6 w-6 text-background" />
-                <span className="text-lg">{service}</span>
-              </li>
-            ))}
-          </ul>
-          <p className="mt-8 text-lg text-foreground">
-            Build your dream hospital by making the right decisions at the right time.
-          </p>
+    <section className="relative w-full h-screen overflow-hidden">
+      <div className="overflow-hidden" ref={emblaRef}>
+        <div className="flex h-screen">
+          {slides.map((slide) => {
+            const slideImage = PlaceHolderImages.find((p) => p.id === slide.id);
+            return (
+              <div
+                className="relative flex-[0_0_100%] h-full transition-opacity duration-700"
+                key={slide.id}
+              >
+                {slideImage && (
+                  <Image
+                    src={slideImage.imageUrl}
+                    alt={slide.title}
+                    fill
+                    className="object-cover"
+                    priority={slides.indexOf(slide) === 0}
+                    data-ai-hint={slideImage.imageHint}
+                  />
+                )}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent" />
+                <div className="absolute inset-0 flex flex-col justify-end items-start text-white p-8 md:p-16">
+                   <div className="max-w-3xl animate-fade-in-up">
+                    <h1 className="text-4xl md:text-6xl font-bold leading-tight drop-shadow-md">
+                      {slide.title}
+                    </h1>
+                    <p className="mt-4 text-lg md:text-2xl drop-shadow-sm">
+                      {slide.subtitle}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
+      </div>
 
-        {/* Right Column */}
-        <div className="animate-fade-in-up animation-delay-200">
-          <Card className="bg-background/80 backdrop-blur-sm border-border/50 text-card-foreground">
-            <CardHeader>
-              <CardTitle className="text-3xl text-center">Get Consultation</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-                  <FormField
-                    control={form.control}
-                    name="name"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormControl>
-                          <Input placeholder="Name" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <FormField
-                    control={form.control}
-                    name="email"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormControl>
-                          <Input type="email" placeholder="Email" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                   <FormField
-                    control={form.control}
-                    name="phone"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormControl>
-                          <Input placeholder="Phone" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <FormField
-                    control={form.control}
-                    name="message"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormControl>
-                          <Textarea placeholder="Message" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <Button type="submit" className="w-full" disabled={form.formState.isSubmitting}>
-                    {form.formState.isSubmitting ? "Submitting..." : "Submit"}
-                  </Button>
-                </form>
-              </Form>
-            </CardContent>
-          </Card>
-        </div>
+      {/* Navigation Arrows */}
+      <div className="absolute top-1/2 left-4 -translate-y-1/2 hidden md:block">
+        <button
+          onClick={scrollPrev}
+          className="h-12 w-12 rounded-full bg-white/20 text-white backdrop-blur-sm transition hover:bg-white/40"
+        >
+          <ArrowLeft className="h-6 w-6 mx-auto" />
+        </button>
+      </div>
+      <div className="absolute top-1/2 right-4 -translate-y-1/2 hidden md:block">
+        <button
+          onClick={scrollNext}
+          className="h-12 w-12 rounded-full bg-white/20 text-white backdrop-blur-sm transition hover:bg-white/40"
+        >
+          <ArrowRight className="h-6 w-6 mx-auto" />
+        </button>
+      </div>
+
+      {/* Pagination Dots */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-3">
+        {scrollSnaps.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => scrollTo(index)}
+            className={cn(
+              'h-3 w-3 rounded-full bg-white/50 transition-all duration-300',
+              index === selectedIndex ? 'w-6 bg-white' : 'hover:bg-white/80'
+            )}
+          />
+        ))}
       </div>
     </section>
   );
