@@ -1,8 +1,8 @@
 
 "use client";
 
+import React from "react";
 import Image from "next/image";
-import Autoplay from "embla-carousel-autoplay";
 import {
   Carousel,
   CarouselContent,
@@ -10,71 +10,64 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
+import useEmblaCarousel from "embla-carousel-react";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 const slides = [
   {
     id: "slider-1",
-    title: "Expert Guidance for Your Success",
-    subtitle: "Navigate complexity with our strategic consultancy.",
   },
   {
     id: "slider-2",
-    title: "Achieve Excellence in Healthcare",
-    subtitle: "Optimize operations and enhance patient care.",
   },
   {
     id: "slider-3",
-    title: "Drive Innovation with Technology",
-    subtitle: "Leverage IT solutions for a competitive edge.",
   },
   {
     id: "slider-4",
-    title: "Unlock Your Project's Potential",
-    subtitle: "Comprehensive support for accreditation and management.",
   },
 ];
 
 export function HeroSection() {
+  const [emblaRef] = useEmblaCarousel({ loop: true }, [
+    Autoplay({ delay: 4000, stopOnInteraction: false }),
+  ]);
+
   return (
-    <section className="w-full">
+    <section className="relative w-full overflow-hidden">
       <Carousel
+        ref={emblaRef}
+        className="w-full"
         opts={{
           align: "start",
           loop: true,
         }}
-        plugins={[
-          Autoplay({
-            delay: 5000,
-            stopOnInteraction: false,
-            stopOnMouseEnter: true,
-          }),
-        ]}
-        className="w-full"
       >
-        <CarouselContent>
+        <CarouselContent className="-ml-0">
           {slides.map((slide, index) => {
-            const slideImage = PlaceHolderImages.find((p) => p.id === slide.id);
+            const slideImage = PlaceHolderImages.find(
+              (p) => p.id === slide.id
+            );
+
             return (
-              <CarouselItem key={slide.id}>
-                <div className="relative aspect-video">
+              <CarouselItem key={slide.id} className="h-[60vh] md:h-[70vh] lg:h-[80vh] relative pl-0">
                   {slideImage && (
                     <Image
                       src={slideImage.imageUrl}
                       alt={slideImage.description}
                       fill
-                      className="object-cover"
                       priority={index === 0}
+                      className="object-cover"
                       data-ai-hint={slideImage.imageHint}
                     />
                   )}
-                </div>
               </CarouselItem>
             );
           })}
         </CarouselContent>
-        <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 z-10 hidden md:flex" />
-        <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 z-10 hidden md:flex" />
+        <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 z-10" />
+        <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 z-10" />
       </Carousel>
     </section>
   );
