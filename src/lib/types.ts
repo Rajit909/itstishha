@@ -43,7 +43,7 @@ export type Client = {
   logo: string;
 };
 
-export type CaseStudy = {
+export type Project = {
   id: string;
   slug: string;
   title: string;

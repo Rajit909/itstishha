@@ -5,7 +5,7 @@ import { ArrowRight, CheckCircle2, Building, HeartPulse, Code, CheckCircle } fro
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
-import { getServices, getClients, getBlogPosts, getCaseStudies, getTeamMembers } from "@/lib/data";
+import { getServices, getClients, getBlogPosts, getProjects, getTeamMembers } from "@/lib/data";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { GetTouch } from "@/components/get-in-touch";
 import { ScrollAnimation } from "@/components/ui/scroll-animation";
@@ -18,7 +18,7 @@ export default async function HomePage() {
   const services = (await getServices()).slice(0, 3);
   const clients = await getClients();
   const recentPosts = (await getBlogPosts()).slice(0, 2);
-  const featuredStudy = (await getCaseStudies())[0];
+  const featuredStudy = (await getProjects())[0];
   const featuredStudyImage = PlaceHolderImages.find(p => p.id === featuredStudy.image);
   const team = await getTeamMembers();
   const teamMeetingImage = PlaceHolderImages.find(p => p.id === 'team-meeting');
@@ -110,14 +110,14 @@ export default async function HomePage() {
         </div>
       </section>
       
-      {/* Featured Case Study */}
+      {/* Featured Project */}
       {featuredStudy && (
       <section className="py-16 md:py-24 bg-card">
         <div className="container">
             <ScrollAnimation animation="fade-in-up">
               <div className="text-center max-w-3xl mx-auto">
                   <h2 className="text-3xl md:text-4xl font-bold">Success Story</h2>
-                  <p className="mt-4 text-lg text-muted-foreground">See how we made a difference. Read our featured case study.</p>
+                  <p className="mt-4 text-lg text-muted-foreground">See how we made a difference. Read our featured project.</p>
               </div>
             </ScrollAnimation>
             <div className="mt-12 grid md:grid-cols-2 gap-12 items-center">
@@ -135,7 +135,7 @@ export default async function HomePage() {
                   <h3 className="mt-2 text-2xl md:text-3xl font-bold">{featuredStudy.title}</h3>
                   <p className="mt-4 text-lg text-muted-foreground">{featuredStudy.excerpt}</p>
                   <Button asChild className="mt-6" size="lg">
-                      <Link href={`/case-studies/${featuredStudy.slug}`}>Read The Full Story <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                      <Link href={`/projects/${featuredStudy.slug}`}>Read The Full Story <ArrowRight className="ml-2 h-4 w-4" /></Link>
                   </Button>
               </ScrollAnimation>
             </div>

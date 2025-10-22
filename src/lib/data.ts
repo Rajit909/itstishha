@@ -1,4 +1,4 @@
-import type { Service, BlogPost, JobOpening, TeamMember, Client, CaseStudy } from './types';
+import type { Service, BlogPost, JobOpening, TeamMember, Client, Project } from './types';
 
 // Using a mock async function to simulate fetching data
 const simulateFetch = <T,>(data: T): Promise<T> => 
@@ -148,7 +148,7 @@ export const clients: Client[] = [
   },
 ];
 
-export const caseStudies: CaseStudy[] = [
+export const projects: Project[] = [
   {
     id: '1',
     slug: 'healthforward-accreditation',
@@ -204,5 +204,5 @@ export const getBlogPostBySlug = async (slug: string) => simulateFetch(blogPosts
 export const getJobOpenings = async () => simulateFetch(jobOpenings);
 export const getTeamMembers = async () => simulateFetch(teamMembers);
 export const getClients = async () => simulateFetch(clients);
-export const getCaseStudies = async () => simulateFetch(caseStudies);
-export const getCaseStudyBySlug = async (slug: string) => simulateFetch(caseStudies.find(p => p.slug === slug));
+export const getProjects = async () => simulateFetch(projects);
+export const getProjectBySlug = async (slug: string) => simulateFetch(projects.find(p => p.slug === slug));

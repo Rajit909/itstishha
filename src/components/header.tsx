@@ -43,8 +43,8 @@ const servicesLinks = [
 ];
 
 const projectLinks = [
-    { href: "/case-studies", label: "Latest Projects" },
-    { href: "/case-studies", label: "Previous Projects" },
+    { href: "/projects", label: "Latest Projects" },
+    { href: "/projects", label: "Previous Projects" },
 ];
 
 const blogLinks = [
@@ -72,7 +72,7 @@ const navLinks = [
   },
   {
     label: "Projects",
-    href: "/case-studies",
+    href: "/projects",
     subLinks: projectLinks,
   },
   {

@@ -1,13 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
-import { getCaseStudies } from "@/lib/data";
+import { getProjects } from "@/lib/data";
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { ArrowRight } from "lucide-react";
 
-export default async function CaseStudiesPage() {
-  const caseStudies = await getCaseStudies();
+export default async function ProjectsPage() {
+  const projects = await getProjects();
 
   return (
     <>
@@ -23,7 +23,7 @@ export default async function CaseStudiesPage() {
       <section className="py-16 md:py-24">
         <div className="container">
           <div className="grid gap-8 md:grid-cols-1 lg:grid-cols-2">
-            {caseStudies.map((study, index) => {
+            {projects.map((study, index) => {
               const studyImage = PlaceHolderImages.find(p => p.id === study.image);
               return (
                 <div key={study.id} className="animate-fade-in-up" style={{ animationDelay: `${200 * index}ms`}}>
@@ -48,8 +48,8 @@ export default async function CaseStudiesPage() {
                       </CardContent>
                       <CardFooter>
                         <Button variant="link" asChild className="p-0 h-auto">
-                          <Link href={`/case-studies/${study.slug}`}>
-                            Read Case Study <ArrowRight className="ml-2 h-4 w-4" />
+                          <Link href={`/projects/${study.slug}`}>
+                            Read Project Details <ArrowRight className="ml-2 h-4 w-4" />
                           </Link>
                         </Button>
                       </CardFooter>

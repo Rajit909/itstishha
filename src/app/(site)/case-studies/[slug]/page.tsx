@@ -1,4 +1,4 @@
-import { getCaseStudyBySlug, getCaseStudies } from "@/lib/data";
+import { getProjectBySlug, getProjects } from "@/lib/data";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
@@ -6,21 +6,21 @@ import { CheckCircle, Target, Zap } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
-type CaseStudyPageProps = {
+type ProjectPageProps = {
   params: {
     slug: string;
   };
 };
 
 export async function generateStaticParams() {
-  const caseStudies = await getCaseStudies();
-  return caseStudies.map(study => ({
+  const projects = await getProjects();
+  return projects.map(study => ({
     slug: study.slug,
   }));
 }
 
-export default async function CaseStudyPage({ params: { slug } }: CaseStudyPageProps) {
-  const study = await getCaseStudyBySlug(slug);
+export default async function ProjectPage({ params: { slug } }: ProjectPageProps) {
+  const study = await getProjectBySlug(slug);
 
   if (!study) {
     notFound();
@@ -32,7 +32,7 @@ export default async function CaseStudyPage({ params: { slug } }: CaseStudyPageP
     <article className="py-16 md:py-24">
       <div className="container max-w-5xl">
         <header className="mb-12 text-center">
-          <p className="text-primary font-semibold mb-2">Case Study: {study.client}</p>
+          <p className="text-primary font-semibold mb-2">Project: {study.client}</p>
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
             {study.title}
           </h1>
