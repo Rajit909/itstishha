@@ -41,10 +41,10 @@ const servicesLinks = [
   { href: "/services/feasibility-study", label: "Feasibility Study" },
 ];
 
-const projectLinks = projectCategories.map(category => ({
-    href: `/case-studies/category/${category.slug}`,
-    label: category.title
-}));
+const projectLinks = [
+    { href: "/case-studies", label: "Latest Projects" },
+    { href: "/case-studies", label: "Previous Projects" },
+];
 
 const blogLinks = [
     { href: "/blog", label: "Latest Blogs" },
@@ -70,7 +70,7 @@ const navLinks = [
     subLinks: servicesLinks,
   },
   {
-    label: "Project",
+    label: "Projects",
     href: "/case-studies",
     subLinks: projectLinks,
   },
