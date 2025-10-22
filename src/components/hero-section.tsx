@@ -51,7 +51,7 @@ export function HeroSection() {
   }, [emblaApi, setScrollSnaps, onSelect]);
 
   return (
-    <section className="relative w-full h-[80vh] overflow-hidden">
+    <section className="relative w-full h-[88vh] overflow-hidden">
       <div className="overflow-hidden h-full" ref={emblaRef}>
         <div className="flex h-full">
           {slides.map((slide, index) => {
