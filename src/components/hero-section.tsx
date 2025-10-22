@@ -1,3 +1,4 @@
+
 "use client";
 
 import React, { useState, useEffect, useCallback } from 'react';
@@ -51,13 +52,13 @@ export function HeroSection() {
 
   return (
     <section className="relative w-full h-screen overflow-hidden">
-      <div className="overflow-hidden h-full" ref={emblaRef}>
-        <div className="flex h-full">
-          {slides.map((slide) => {
+      <div className="overflow-hidden h-full w-full" ref={emblaRef}>
+        <div className="flex h-full w-full">
+          {slides.map((slide, index) => {
             const slideImage = PlaceHolderImages.find((p) => p.id === slide.id);
             return (
               <div
-                className="relative flex-[0_0_100%] h-full transition-opacity duration-700"
+                className="relative flex-[0_0_100%] h-full w-full transition-opacity duration-700"
                 key={slide.id}
               >
                 {slideImage && (
@@ -66,7 +67,7 @@ export function HeroSection() {
                     alt={slide.title}
                     fill
                     className="object-cover"
-                    priority={slides.indexOf(slide) === 0}
+                    priority={index === 0}
                     data-ai-hint={slideImage.imageHint}
                   />
                 )}
