@@ -95,7 +95,7 @@ export default async function HomePage() {
                     <CardTitle className="mt-4">{service.title}</CardTitle>
                   </CardHeader>
                   <CardContent className="flex-grow">
-                    <p className="text-muted-foreground">{service.description}</p>
+                  <p className="text-muted-foreground text-justify">{service.description}</p>
                   </CardContent>
                   <CardFooter>
                     <Button variant="link" asChild>
