@@ -68,16 +68,7 @@ export function HeroSection() {
                       data-ai-hint={slideImage.imageHint}
                     />
                   )}
-                  <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-                    <div className="text-center text-white p-4 md:p-8 rounded-lg bg-black/30 backdrop-blur-sm max-w-xs md:max-w-md lg:max-w-2xl">
-                      <h1 className="text-3xl md:text-5xl font-bold leading-tight">
-                        {slide.title}
-                      </h1>
-                      <p className="mt-4 text-lg md:text-xl">
-                        {slide.subtitle}
-                      </p>
-                    </div>
-                  </div>
+                  <div className="absolute inset-0 bg-black/20"></div>
                 </div>
               </CarouselItem>
             );
