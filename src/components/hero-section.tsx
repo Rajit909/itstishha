@@ -26,6 +26,11 @@ const slides = [
     title: "Transformative IT Consulting",
     subtitle: "Modernizing your infrastructure for a digital-first world.",
   },
+  {
+    id: "slider-4",
+    title: "Strategic Financial Guidance",
+    subtitle: "Optimizing financial performance for sustainable growth.",
+  }
 ];
 
 export function HeroSection() {
@@ -62,7 +67,7 @@ export function HeroSection() {
   }, [emblaApi, onSelect]);
 
   return (
-    <section className="relative w-full h-[calc(100vh-80px)] sm:h-[87vh] overflow-hidden">
+    <section className="relative w-full h-[80vh] overflow-hidden">
       <div className="overflow-hidden h-full" ref={emblaRef}>
         <div className="flex h-full">
           {slides.map((slide, index) => {
@@ -93,12 +98,12 @@ export function HeroSection() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
 
                 {/* Text Content */}
-                <div className="absolute inset-0 flex flex-col justify-end items-start text-white px-6 sm:px-12 md:px-20 pb-16">
+                <div className="absolute inset-0 flex flex-col justify-end items-start text-white p-6 sm:p-12 md:p-20 pb-20">
                   <div className="max-w-3xl animate-fade-in-up">
-                    <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold leading-tight drop-shadow-lg">
+                    <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold leading-tight drop-shadow-lg">
                       {slide.title}
                     </h1>
-                    <p className="mt-4 text-base sm:text-lg md:text-xl drop-shadow-md">
+                    <p className="mt-4 text-sm sm:text-base md:text-lg drop-shadow-md">
                       {slide.subtitle}
                     </p>
                   </div>
@@ -128,7 +133,7 @@ export function HeroSection() {
       </div>
 
       {/* Pagination Dots */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-3 z-10">
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex gap-3 z-10">
         {scrollSnaps.map((_, index) => (
           <button
             key={index}
