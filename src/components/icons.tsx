@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export const Logo = (props: Omit<React.ComponentProps<typeof Image>, 'src' | 'alt'>) => (
     <Image 
-        src="/assets/logo-trans.png" 
+        src="/assets/logo.png" 
         alt="Tishha Consultants LLP Logo"
         width={40}
         height={40}
