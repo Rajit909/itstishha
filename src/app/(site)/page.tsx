@@ -1,7 +1,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, CheckCircle2, Building, HeartPulse, Code, CheckCircle } from "lucide-react";
+import { ArrowRight, CheckCircle, Building, HeartPulse, Code } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
@@ -329,5 +329,7 @@ export default async function HomePage() {
     </div>
   );
 }
+
+    
 
     
