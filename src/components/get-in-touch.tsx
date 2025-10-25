@@ -15,7 +15,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
-import { CheckCircle } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 
 const formSchema = z.object({
     name: z.string().min(2, { message: "Name must be at least 2 characters." }),
@@ -68,7 +68,7 @@ export function GetTouch() {
           <ul className="mt-8 space-y-3">
             {services.map((service, index) => (
               <li key={index} className="flex items-center gap-3">
-                <CheckCircle className="h-6 w-6 text-primary" />
+                <CheckCircle2 className="h-6 w-6 text-primary" />
                 <span className="text-lg">{service}</span>
               </li>
             ))}
