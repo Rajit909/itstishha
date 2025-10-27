@@ -16,8 +16,8 @@ export default function FinancialConsultancyPage() {
 
       <section className="py-16 md:py-24">
         <div className="container">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="relative h-96 rounded-lg overflow-hidden shadow-xl animate-fade-in-left">
+          <div className="grid md:grid-cols-2 gap-12">
+            <div className="relative h-96 md:h-[70vh] rounded-lg overflow-hidden shadow-xl animate-fade-in-left">
               <Image src="https://picsum.photos/seed/financial-chart/800/600" alt="Financial Consultancy" fill className="object-cover" data-ai-hint="financial chart" />
             </div>
             <div className="animate-fade-in-right">
