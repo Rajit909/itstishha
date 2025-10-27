@@ -16,15 +16,16 @@ const slides = [
       "Students and Faculty Shine Together — Lucknow 2025 | TISHHA",
   },
  
-  {
-    id: "slider-3",
-    title: "Transformative IT Solutions",
-    subtitle: "Modernizing your infrastructure for a digital-first world.",
-  },
+  
   {
     id: "slider-4",
     title: "National Nursing Conference 2025 – Lucknow",
     subtitle: "Glimpses of Inspiration, Innovation & Leadership — Lucknow Edition by TISHHA.",
+  },
+  {
+    id: "slider-3",
+    title: "Together We Inspire Change",
+    subtitle: "Celebrating the Passion and Commitment of the TISHHA Team.",
   },
 ];
 

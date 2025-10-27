@@ -2,12 +2,46 @@
 import Image from 'next/image';
 
 const galleryImages = [
-  { id: 1, src: 'https://picsum.photos/seed/gallery1/600/400', alt: 'Community health camp', hint: 'medical checkup' },
-  { id: 2, src: 'https://picsum.photos/seed/gallery2/600/400', alt: 'Team volunteering for a tree plantation drive', hint: 'team planting' },
-  { id: 3, src: 'https://picsum.photos/seed/gallery3/600/400', alt: 'Academic seminar with students', hint: 'university lecture' },
-  { id: 4, src: 'https://picsum.photos/seed/gallery4/600/400', alt: 'Annual company retreat', hint: 'team building' },
-  { id: 5, src: 'https://picsum.photos/seed/gallery5/600/400', alt: 'Celebrating a successful project launch', hint: 'office celebration' },
-  { id: 6, src: 'https://picsum.photos/seed/gallery6/600/400', alt: 'Workshop on digital innovation', hint: 'tech workshop' },
+  { id: 1, src: '/gallery/conf.jpg', alt: 'National Conference on Nursing Leadership & Excellence 2025', hint: 'competetion' },
+  { id: 2, src: '/gallery/confe.jpg', alt: 'National Conference on Nursing Leadership & Excellence 2025', hint: 'team planting' },
+  { id: 3, src: '/gallery/confel.jpg', alt: 'National Conference on Nursing Leadership & Excellence 2025' },
+  { id: 4, src: '/gallery/conff.jpg', alt: 'National Conference on Nursing Leadership & Excellence 2025', hint: 'team building' },
+  { id: 5, src: '/gallery/conffi.jpg', alt: 'National Conference on Nursing Leadership & Excellence 2025', hint: 'office celebration' },
+
+
+  { id: 7, src: '/gallery/confn.jpg', alt: 'National Conference on Nursing Leadership & Excellence 2025', hint: 'competetion' },
+  { id: 8, src: '/gallery/confo.jpg', alt: 'National Conference on Nursing Leadership & Excellence 2025', hint: 'team planting' },
+  { id: 9, src: '/gallery/confs.jpg', alt: 'National Conference on Nursing Leadership & Excellence 2025', hint: 'university lecture' },
+  { id: 10, src: '/gallery/confse.jpg', alt: 'National Conference on Nursing Leadership & Excellence 2025', hint: 'team building' },
+  { id: 11, src: '/gallery/confsixt.jpg', alt: 'National Conference on Nursing Leadership & Excellence 2025', hint: 'office celebration' },
+  { id: 12, src: '/gallery/conft.jpg', alt: 'National Conference on Nursing Leadership & Excellence 2025', hint: 'tech workshop' },
+
+
+  { id: 13, src: '/gallery/confth.jpg', alt: 'National Conference on Nursing Leadership & Excellence 2025', hint: 'competetion' },
+  { id: 14, src: '/gallery/confthr.jpg', alt: 'National Conference on Nursing Leadership & Excellence 2025', hint: 'team planting' },
+  { id: 15, src: '/gallery/conftw.jpg', alt: 'National Conference on Nursing Leadership & Excellence 2025', hint: 'university lecture' },
+  { id: 33, src: '/gallery/conte.jpg', alt: 'National Conference on Nursing Leadership & Excellence 2025', hint: 'team building' },
+  { id: 16, src: '/gallery/gallery-imgo.jpg', alt: 'Quiz Competition Certificate Distribution Ceremony', hint: 'office celebration' },
+  { id: 17, src: '/gallery/galleryei.jpeg', alt: 'Quiz Competition Certificate Distribution Ceremony', hint: 'tech workshop' },
+
+  
+  { id: 18, src: '/gallery/galleryf.jpeg', alt: 'Quiz Competition Certificate Distribution Ceremony', hint: 'office celebration' },
+  { id: 19, src: '/gallery/galleryel.jpeg', alt: 'Quiz Competition Certificate Distribution Ceremony', hint: 'tech workshop' },
+  { id: 20, src: '/gallery/galleryni.jpeg', alt: 'Quiz Competition Certificate Distribution Ceremony', hint: 'office celebration' },
+  { id: 21, src: '/gallery/galleryo.jpeg', alt: 'Quiz Competition Certificate Distribution Ceremony', hint: 'tech workshop' },
+  { id: 22, src: '/gallery/gallerys.jpeg', alt: 'Quiz Competition Certificate Distribution Ceremony', hint: 'office celebration' },
+  { id: 23, src: '/gallery/galleryse.jpeg', alt: 'Quiz Competition Certificate Distribution Ceremony', hint: 'tech workshop' },
+  { id: 24, src: '/gallery/galleryt.jpeg', alt: 'Quiz Competition Certificate Distribution Ceremony', hint: 'office celebration' },
+  { id: 25, src: '/gallery/galleryte.jpeg', alt: 'Quiz Competition Certificate Distribution Ceremony', hint: 'tech workshop' },
+
+
+  { id: 26, src: '/gallery/quizcomp.jpg', alt: 'Quiz Competition', hint: 'competetion' },
+  { id: 27, src: '/gallery/quizevent.jpg', alt: 'Quiz Competition', hint: 'team planting' },
+  { id: 28, src: '/gallery/quizz.jpg', alt: 'Academic seminar with students', hint: 'university lecture' },
+  { id: 29, src: '/gallery/scholar.png', alt: 'The Night In Gala Scholar Hunt', hint: 'team building' },
+  { id: 30, src: '/gallery/successp.jpg', alt: 'Nausarium- The Nursing Principal Submit', hint: 'office celebration' },
+  { id: 31, src: '/gallery/party.jpg', alt: 'The Nursing Principal Submit', hint: 'tech workshop' },
+  { id: 32, src: '/gallery/conffou.jpg', alt: 'The Nursing Principal Submit', hint: 'tech workshop' },
 ];
 
 export default function GalleryPage() {
