@@ -43,7 +43,7 @@ export default function BoardOfDirectorsPage() {
                 <div key={member.id} className="animate-fade-in-up" style={{ animationDelay: `${200 * index}ms`}}>
                     <Card className="overflow-hidden shadow-lg transition-shadow hover:shadow-xl">
                         <div className={`grid md:grid-cols-2 ${isReversed ? 'md:grid-flow-col-dense' : ''}`}>
-                            <div className={`h-80 md:h-full ${isReversed ? 'md:col-start-2' : ''}`}>
+                            <div className={`md:h-full ${isReversed ? 'md:col-start-2' : ''}`}>
                                 {memberImage && (
                                     <Image
                                         src={memberImage.imageUrl}

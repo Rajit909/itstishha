@@ -18,7 +18,7 @@ export default function FinancialConsultancyPage() {
         <div className="container">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative h-96 rounded-lg overflow-hidden shadow-xl animate-fade-in-left">
-              <Image src="https://picsum.photos/seed/finance/800/600" alt="Financial Consultancy" fill className="object-cover" data-ai-hint="financial chart" />
+              <Image src="https://picsum.photos/seed/financial-consultancy/800/600" alt="Financial Consultancy" fill className="object-cover" data-ai-hint="financial chart" />
             </div>
             <div className="animate-fade-in-right">
               <h2 className="text-3xl font-bold mb-4">Driving Profitability and Growth</h2>
