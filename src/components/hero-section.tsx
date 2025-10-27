@@ -11,9 +11,9 @@ import { cn } from "@/lib/utils";
 const slides = [
   {
     id: "slider-1",
-    title: "Pioneering Healthcare Solutions",
+    title: "Empowering Future Leaders in Nursing",
     subtitle:
-      "Driving innovation in patient care and operational excellence.",
+      "Students and Faculty Shine Together — Lucknow 2025 | TISHHA",
   },
  
   {
