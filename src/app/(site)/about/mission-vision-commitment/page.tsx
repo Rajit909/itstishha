@@ -1,8 +1,13 @@
 
 import { Eye, Rocket, CheckCircle } from "lucide-react";
 import Image from "next/image";
+import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 export default function MissionPage() {
+  const missionImage = PlaceHolderImages.find(p => p.id === 'mission-image');
+  const visionImage = PlaceHolderImages.find(p => p.id === 'vision-image');
+  const commitmentImage = PlaceHolderImages.find(p => p.id === 'commitment-image');
+
   return (
     <div className="bg-background text-foreground animate-fade-in">
        <section className="py-20 md:py-32 bg-card">
@@ -19,7 +24,7 @@ export default function MissionPage() {
           
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative h-80 rounded-lg overflow-hidden shadow-xl animate-fade-in-left">
-              <Image src="https://picsum.photos/seed/mission/800/600" alt="Our Mission" fill className="object-cover" data-ai-hint="business strategy" />
+              {missionImage && <Image src={missionImage.imageUrl} alt="Our Mission" fill className="object-cover" data-ai-hint={missionImage.imageHint} />}
             </div>
             <div className="animate-fade-in-right">
               <div className="flex items-center gap-4 mb-4">
@@ -36,7 +41,7 @@ export default function MissionPage() {
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative h-80 rounded-lg overflow-hidden shadow-xl md:order-last animate-fade-in-right">
-              <Image src="https://picsum.photos/seed/vision/800/600" alt="Our Vision" fill className="object-cover" data-ai-hint="future cityscape" />
+              {visionImage && <Image src={visionImage.imageUrl} alt="Our Vision" fill className="object-cover" data-ai-hint={visionImage.imageHint} />}
             </div>
             <div className="md:order-first animate-fade-in-left">
               <div className="flex items-center gap-4 mb-4">
@@ -53,7 +58,7 @@ export default function MissionPage() {
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative h-80 rounded-lg overflow-hidden shadow-xl animate-fade-in-left">
-              <Image src="https://picsum.photos/seed/commitment/800/600" alt="Our Commitment" fill className="object-cover" data-ai-hint="team handshake" />
+              {commitmentImage && <Image src={commitmentImage.imageUrl} alt="Our Commitment" fill className="object-cover" data-ai-hint={commitmentImage.imageHint} />}
             </div>
             <div className="animate-fade-in-right">
               <div className="flex items-center gap-4 mb-4">
