@@ -1,11 +1,28 @@
 
+"use client";
 import { getTeamMembers } from "@/lib/data";
 import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Card, CardContent } from "@/components/ui/card";
 
-export default async function BoardOfDirectorsPage() {
-  const team = await getTeamMembers();
+export default function BoardOfDirectorsPage() {
+  const team = [
+    {
+      id: '1',
+      name: 'Mr. Manish Kumar Vaishnav',
+      title: 'Founder & Chairman',
+      bio: 'A seasoned healthcare leader with over 18 years of experience in hospital management, strategic planning, and operations. An alumnus of IMS, DAVV Indore, and IIM Rohtak, bringing deep expertise in healthcare strategy and execution.',
+      image: 'team-member-1',
+    },
+    {
+      id: '2',
+      name: 'Mrs. Sugandh Khandelwal',
+      title: 'Co-Founder',
+      bio: 'A distinguished healthcare professional with degrees from BBD University, Amity University, Apollo Medvarsity, and Symbiosis International University. Brings extensive expertise in hospital administration, clinical research, and medical tourism.',
+      image: 'team-member-2',
+    },
+  ];
+
   return (
     <div className="bg-background text-foreground animate-fade-in">
         <section className="py-20 md:py-32 bg-card">
@@ -33,7 +50,7 @@ export default async function BoardOfDirectorsPage() {
                                         alt={member.name}
                                         fill
                                         className="object-cover object-top"
-                                        data-ai-hint={memberImage.imageHint}
+                                        data-ai-hint={memberImage.imageHint || 'professional portrait'}
                                     />
                                 )}
                             </div>
