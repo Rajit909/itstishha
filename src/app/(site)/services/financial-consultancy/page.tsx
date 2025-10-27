@@ -17,7 +17,7 @@ export default function FinancialConsultancyPage() {
       <section className="py-16 md:py-24">
         <div className="container">
           <div className="grid md:grid-cols-5 gap-12 items-center">
-            <div className="relative h-96 md:h-80 rounded-lg overflow-hidden shadow-xl animate-fade-in-left md:col-span-2">
+            <div className="relative h-96 md:h-72 rounded-lg overflow-hidden shadow-xl animate-fade-in-left md:col-span-2">
               <Image 
                 src="https://picsum.photos/seed/financial-planning/800/600" 
                 alt="Financial Consultancy" 
