@@ -25,10 +25,10 @@ export default function BoardOfDirectorsPage() {
 
   return (
     <div className="bg-background text-foreground animate-fade-in">
-        <section className="py-20 md:py-32 bg-card">
+        <section className="py-20 md:py-24 bg-card">
             <div className="container text-center">
-            <h1 className="text-4xl md:text-5xl font-bold animate-fade-in-up">Board of Directors</h1>
-            <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto animate-fade-in-up animation-delay-200">
+            <h1 className="text-3xl md:text-5xl font-bold animate-fade-in-up">Board of Directors</h1>
+            <p className="mt-4 text-md md:text-lg text-muted-foreground max-w-3xl mx-auto animate-fade-in-up animation-delay-200">
                 Meet the experienced leaders guiding our vision and strategy.
             </p>
             </div>
@@ -42,8 +42,8 @@ export default function BoardOfDirectorsPage() {
                 return (
                 <div key={member.id} className="animate-fade-in-up" style={{ animationDelay: `${200 * index}ms`}}>
                     <Card className="overflow-hidden shadow-lg transition-shadow hover:shadow-xl">
-                        <div className={`grid md:grid-cols-2 items-center ${isReversed ? 'md:grid-flow-col-dense' : ''}`}>
-                            <div className={`relative h-80 md:h-96 ${isReversed ? 'md:col-start-2' : ''}`}>
+                        <div className={`grid md:grid-cols-2 ${isReversed ? 'md:grid-flow-col-dense' : ''}`}>
+                            <div className={`relative h-80 md:h-full ${isReversed ? 'md:col-start-2' : ''}`}>
                                 {memberImage && (
                                     <Image 
                                         src={memberImage.imageUrl} 
