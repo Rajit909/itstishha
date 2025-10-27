@@ -18,7 +18,7 @@ export default function PlanningDesigningPage() {
         <div className="container">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative h-96 rounded-lg overflow-hidden shadow-xl animate-fade-in-left">
- <Image src="https://picsum.photos/seed/planning-designing/800/600" alt="online team discussion" fill className="object-cover" data-ai-hint="architecture blueprint" />
+ <Image src="/services/plannning.webp" alt="online team discussion" fill className="object-cover" data-ai-hint="architecture blueprint" />
             </div>
             <div className="animate-fade-in-right">
               <h2 className="text-3xl font-bold mb-4">Strategic Frameworks for Lasting Infrastructure</h2>

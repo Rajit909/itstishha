@@ -18,7 +18,7 @@ export default function DigitalSolutionPage() {
         <div className="container">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative h-96 rounded-lg overflow-hidden shadow-xl animate-fade-in-left">
-              <Image src="https://picsum.photos/seed/digital-solution/800/600" alt="Digital Solution" fill className="object-cover" data-ai-hint="data visualization" />
+              <Image src="/services/digital.jpg" alt="Digital Solution" fill className="object-cover" data-ai-hint="data visualization" />
             </div>
             <div className="animate-fade-in-right">
               <h2 className="text-3xl font-bold mb-4">Transforming Business with Technology</h2>
