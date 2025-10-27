@@ -62,6 +62,10 @@ const impactZoneLinks = [
 
 const navLinks = [
   {
+    label: "Home",
+    href: "/"
+  },
+  {
     label: "About Us",
     href: "/about",
     subLinks: aboutUsLinks,
