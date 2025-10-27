@@ -23,7 +23,7 @@ export const services: Service[] = [
   },
   {
     id: '3',
-    title: 'IT Consultation',
+    title: 'IT Solutions',
     description: 'Cutting-edge IT services to modernize your infrastructure and workflows.',
     longDescription: 'Our IT Consultation services cover everything from cloud strategy and cybersecurity to custom software development. We help you leverage technology to drive growth, enhance security, and streamline operations for a competitive edge.',
     icon: 'Cpu',

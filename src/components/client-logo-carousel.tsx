@@ -26,7 +26,7 @@ export async function ClientLogoCarousel() {
           <div className="flex animate-marquee hover:[animation-play-state:paused]">
             {duplicatedLogos.map((logo, index) => (
               logo && (
-                <div key={index} className="flex-shrink-0 mx-8 flex items-center justify-center" style={{ width: '180px' }}>
+                <div key={index} className="flex-shrink-0 mx-4 flex items-center justify-center" style={{ width: '180px' }}>
                   <Image
                     src={logo.imageUrl}
                     alt={`Client logo ${index + 1}`}

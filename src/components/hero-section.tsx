@@ -15,21 +15,16 @@ const slides = [
     subtitle:
       "Driving innovation in patient care and operational excellence.",
   },
-  {
-    id: "slider-2",
-    title: "Excellence in Project Accreditation",
-    subtitle:
-      "Your trusted partner in achieving the highest standards of quality and safety.",
-  },
+ 
   {
     id: "slider-3",
-    title: "Transformative IT Consulting",
+    title: "Transformative IT Solutions",
     subtitle: "Modernizing your infrastructure for a digital-first world.",
   },
   {
     id: "slider-4",
-    title: "Strategic Financial Guidance",
-    subtitle: "Optimizing financial performance for sustainable growth.",
+    title: "National Nursing Conference 2025 – Lucknow",
+    subtitle: "Glimpses of Inspiration, Innovation & Leadership — Lucknow Edition by TISHHA.",
   },
 ];
 
@@ -100,7 +95,7 @@ export function HeroSection() {
                 {/* Text Content */}
                 <div className="absolute inset-0 flex flex-col justify-end items-start text-white px-4 sm:px-8 md:px-20 pb-16 sm:pb-20">
                   <div className="max-w-2xl animate-fade-in-up">
-                    <h1 className="text-xl sm:text-3xl md:text-5xl font-bold leading-tight drop-shadow-lg">
+                    <h1 className="text-xl sm:text-2xl md:text-4xl font-bold leading-tight drop-shadow-lg">
                       {slide.title}
                     </h1>
                     <p className="mt-3 text-sm sm:text-base md:text-lg drop-shadow-md">

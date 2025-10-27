@@ -49,7 +49,7 @@ export default async function CareersPage() {
                     <AccordionContent className="p-6 pt-0">
                       <p className="mb-6">{job.description}</p>
                       <Button asChild>
-                        <Link href="/contact">Apply Now</Link>
+                        <Link href="https://careeraxisassociates.com/" target="_blank">Apply Now</Link>
                       </Button>
                     </AccordionContent>
                   </AccordionItem>
