@@ -113,6 +113,36 @@ export const stratergicPartners: StratergicPartner[] = [
   },
 ]
 
+export const Leaders: Leaders[] = [
+  {
+    id: '1',
+    name: 'Mr. Manish Kumar Vaishnav',
+    title: 'Founder & Chairman',
+    bio: 'A seasoned healthcare leader with over 18 years of experience in hospital management, strategic planning, and operations. An alumnus of IMS, DAVV Indore, and IIM Rohtak, bringing deep expertise in healthcare strategy and execution.',
+    image: 'team-member-1',
+  },
+  {
+    id: '2',
+    name: 'Mrs. Sugandh Khandelwal',
+    title: 'Co-Founder',
+    bio: 'A distinguished healthcare professional with degrees from BBD University, Amity University, Apollo Medvarsity, and Symbiosis International University. Brings extensive expertise in hospital administration, clinical research, and medical tourism.',
+    image: 'team-member-2',
+  },
+  {
+    id: '3',
+    name: 'Prof. (Dr.) Hem Chandra',
+    title: 'Honorary Advisor',
+    bio: 'Prof. (Dr.) Hem Chandra, a nationally acclaimed healthcare leader with over 40 years of experience, excels as an academician, administrator, and public health expert. An alumnus of top institutions, he has shaped medical education and healthcare policy, currently serving as Advisor to the Honerable President and Director of Hospital Services at Swami Ram Himalayan University.',
+    image: 'team-member-3',
+  },
+  {
+    id: '4',
+    name: 'Mr. Pramod Panigrahi',
+    title: 'Associate Director',
+    bio: 'An MICA Ahmedabad alumnus with 20 years of experience in strategic marketing, digital transformation, and healthcare consultancy. Combines academic expertise and practical insight to drive growth, innovation, and future-ready business models across media, technology, and healthcare sectors.',
+    image: 'team-member-4',
+  },
+]
 
 export const clients: Client[] = [
   {
@@ -201,6 +231,7 @@ export const projects: Project[] = [
 ];
 
 
+
 // Data fetching functions
 export const getServices = async () => simulateFetch(services);
 export const getServiceById = async (id: string) => simulateFetch(services.find(s => s.id === id));
@@ -209,6 +240,8 @@ export const getBlogPostBySlug = async (slug: string) => simulateFetch(blogPosts
 export const getJobOpenings = async () => simulateFetch(jobOpenings);
 export const getTeamMembers = async () => simulateFetch(teamMembers);
 export const getStratergicPartners= async()=>simulateFetch(stratergicPartners);
+export const getLeaders= async()=>simulateFetch(Leaders);
+
 export const getClients = async () => simulateFetch(clients);
 export const getProjects = async () => simulateFetch(projects);
 export const getProjectBySlug = async (slug: string) => simulateFetch(projects.find(p => p.slug === slug));

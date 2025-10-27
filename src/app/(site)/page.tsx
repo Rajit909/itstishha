@@ -5,7 +5,7 @@ import { ArrowRight, CheckCircle, Building, HeartPulse, Code } from "lucide-reac
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
-import { getServices, getClients, getBlogPosts, getProjects, getTeamMembers } from "@/lib/data";
+import { getServices, getClients, getBlogPosts, getProjects, getLeaders } from "@/lib/data";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { GetTouch } from "@/components/get-in-touch";
 import { ScrollAnimation } from "@/components/ui/scroll-animation";
@@ -20,7 +20,7 @@ export default async function HomePage() {
   const recentPosts = (await getBlogPosts()).slice(0, 2);
   const featuredStudy = (await getProjects())[0];
   const featuredStudyImage = PlaceHolderImages.find(p => p.id === featuredStudy.image);
-  const team = await getTeamMembers();
+  const Leaders = await getLeaders();
   const teamMeetingImage = PlaceHolderImages.find(p => p.id === 'team-meeting');
 
   return (
@@ -210,7 +210,7 @@ export default async function HomePage() {
                 </p>
             </div>
             <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-                {team.map((member, index) => {
+                {Leaders.map((member, index) => {
                     const memberImage = PlaceHolderImages.find(p => p.id === member.image);
                     return (
                         <div key={member.id} className="animate-fade-in-up" style={{ animationDelay: `${200 * index}ms`}}>

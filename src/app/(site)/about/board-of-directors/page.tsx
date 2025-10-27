@@ -35,7 +35,7 @@ export default function BoardOfDirectorsPage() {
         </section>
 
         <section className="py-16 md:py-24">
-            <div className="container space-y-16">
+            <div className="container space-y-12 md:space-y-16">
             {team.map((member, index) => {
                 const memberImage = PlaceHolderImages.find(p => p.id === member.image);
                 const isReversed = index % 2 !== 0;
@@ -50,14 +50,15 @@ export default function BoardOfDirectorsPage() {
                                         alt={member.name}
                                         fill
                                         className="object-cover object-top"
+                                        sizes="(max-width: 768px) 100vw, 50vw"
                                         data-ai-hint={memberImage.imageHint || 'professional portrait'}
                                     />
                                 )}
                             </div>
-                            <div className={`p-8 md:p-12 ${isReversed ? 'md:col-start-1' : ''}`}>
-                                <h2 className="text-3xl font-bold">{member.name}</h2>
-                                <p className="text-primary font-semibold text-lg mt-1">{member.title}</p>
-                                <p className="text-muted-foreground mt-4 text-base">{member.bio}</p>
+                            <div className={`p-6 sm:p-8 md:p-12 ${isReversed ? 'md:col-start-1' : ''}`}>
+                                <h2 className="text-2xl sm:text-3xl font-bold">{member.name}</h2>
+                                <p className="text-primary font-semibold text-md sm:text-lg mt-1">{member.title}</p>
+                                <p className="text-muted-foreground mt-4 text-sm sm:text-base">{member.bio}</p>
                             </div>
                         </div>
                     </Card>

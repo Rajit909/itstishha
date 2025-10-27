@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { getTeamMembers } from "@/lib/data";
+import { getLeaders } from "@/lib/data";
 import { Card, CardContent } from "@/components/ui/card";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Award, Target, Users } from 'lucide-react';
@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 export default async function AboutPage() {
-  const team = await getTeamMembers();
+  const leaders = await getLeaders();
 
   return (
     <>
@@ -78,7 +78,7 @@ export default async function AboutPage() {
                 </p>
             </div>
             <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-                {team.map((member, index) => {
+                {leaders.map((member, index) => {
                     const memberImage = PlaceHolderImages.find(p => p.id === member.image);
                     return (
                         <div key={member.id} className="animate-fade-in-up" style={{ animationDelay: `${200 * index}ms`}}>
