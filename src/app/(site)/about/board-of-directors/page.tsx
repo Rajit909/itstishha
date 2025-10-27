@@ -3,7 +3,7 @@
 import { getTeamMembers } from "@/lib/data";
 import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 
 export default function BoardOfDirectorsPage() {
   const team = [
@@ -43,13 +43,14 @@ export default function BoardOfDirectorsPage() {
                 <div key={member.id} className="animate-fade-in-up" style={{ animationDelay: `${200 * index}ms`}}>
                     <Card className="overflow-hidden shadow-lg transition-shadow hover:shadow-xl">
                         <div className={`grid md:grid-cols-2 ${isReversed ? 'md:grid-flow-col-dense' : ''}`}>
-                            <div className={`relative h-80 md:h-full ${isReversed ? 'md:col-start-2' : ''}`}>
+                            <div className={`h-80 md:h-full ${isReversed ? 'md:col-start-2' : ''}`}>
                                 {memberImage && (
-                                    <Image 
-                                        src={memberImage.imageUrl} 
+                                    <Image
+                                        src={memberImage.imageUrl}
                                         alt={member.name}
-                                        fill
-                                        className="object-cover object-top"
+                                        width={800}
+                                        height={600}
+                                        className="w-full h-auto object-cover object-top"
                                         sizes="(max-width: 768px) 100vw, 50vw"
                                         data-ai-hint={memberImage.imageHint || 'professional portrait'}
                                     />
