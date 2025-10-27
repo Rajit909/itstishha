@@ -147,19 +147,19 @@
     {
       "id": "mission-image",
       "description": "An image representing a business mission.",
-      "imageUrl": "https://images.unsplash.com/photo-1532619675605-1ede6c2ed2b0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxidXNpbmVzcyUyMHN0cmF0ZWd5fGVufDB8fHx8MTc2MTU0OTg1Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/about/mission.jpg",
       "imageHint": "business strategy"
     },
     {
       "id": "vision-image",
       "description": "An image representing a business vision.",
-      "imageUrl": "https://images.unsplash.com/photo-1509485087514-0ee54374c6c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxmdXR1cmUlMjBjaXR5c2NhcGV8ZW58MHx8fHwxNzYxNTQ5ODUyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/about/vission.jpg",
       "imageHint": "future cityscape"
     },
     {
       "id": "commitment-image",
       "description": "An image representing business commitment.",
-      "imageUrl": "https://images.unsplash.com/photo-1739285452621-59d92842fcc8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx0ZWFtJTIwaGFuZHNoYWtlfGVufDB8fHx8MTc2MTU0OTg1Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/about/commitment.jpg",
       "imageHint": "team handshake"
     }
   ]
