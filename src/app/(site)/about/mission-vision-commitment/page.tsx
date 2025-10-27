@@ -2,77 +2,74 @@
 import { Eye, Rocket, CheckCircle } from "lucide-react";
 import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
+import { Card, CardContent } from "@/components/ui/card";
 
 export default function MissionPage() {
   const missionImage = PlaceHolderImages.find(p => p.id === 'mission-image');
   const visionImage = PlaceHolderImages.find(p => p.id === 'vision-image');
   const commitmentImage = PlaceHolderImages.find(p => p.id === 'commitment-image');
 
+  const principles = [
+    {
+      title: "Our Mission",
+      description: "To empower organizations to navigate complexity and achieve sustainable growth by providing unparalleled expertise and fostering a culture of continuous improvement and innovation. We are dedicated to delivering measurable results that make a lasting impact.",
+      icon: <Rocket className="h-10 w-10" />,
+      image: missionImage
+    },
+    {
+      title: "Our Vision",
+      description: "To be the most trusted and sought-after consultancy partner, recognized for our strategic excellence, innovative solutions, and unwavering commitment to client success. We aspire to be at the forefront of industry transformation.",
+      icon: <Eye className="h-10 w-10" />,
+      image: visionImage
+    },
+    {
+      title: "Our Commitment",
+      description: "We are committed to excellence, integrity, and transparency in everything we do. Our clients' success is our ultimate measure of success, and we dedicate ourselves to building strong, lasting partnerships based on trust and mutual respect.",
+      icon: <CheckCircle className="h-10 w-10" />,
+      image: commitmentImage
+    }
+  ];
+
   return (
     <div className="bg-background text-foreground animate-fade-in">
-       <section className="py-20 md:py-32 bg-card">
+       <section className="py-20 md:py-24 bg-gradient-to-b from-card to-background">
         <div className="container text-center">
-          <h1 className="text-4xl md:text-5xl font-bold animate-fade-in-up">Mission, Vision & Commitment</h1>
+          <h1 className="text-4xl md:text-5xl font-bold animate-fade-in-up">Guiding Principles</h1>
           <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto animate-fade-in-up animation-delay-200">
-            Our guiding principles define our purpose and shape our every action.
+            The foundation of our purpose and the values that shape our every action.
           </p>
         </div>
       </section>
 
       <section className="py-16 md:py-24">
-        <div className="container space-y-20">
-          
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="relative h-80 rounded-lg overflow-hidden shadow-xl animate-fade-in-left">
-              {missionImage && <Image src={missionImage.imageUrl} alt="Our Mission" fill className="object-cover" data-ai-hint={missionImage.imageHint} />}
-            </div>
-            <div className="animate-fade-in-right">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
-                  <Rocket className="h-8 w-8" />
-                </div>
-                <h2 className="text-3xl md:text-4xl font-bold">Our Mission</h2>
+        <div className="container">
+          <div className="grid md:grid-cols-3 gap-8">
+            {principles.map((principle, index) => (
+              <div key={principle.title} className="animate-fade-in-up" style={{ animationDelay: `${index * 200}ms` }}>
+                <Card className="group relative overflow-hidden rounded-2xl shadow-lg h-[450px] transition-all duration-300 hover:shadow-2xl">
+                    {principle.image && (
+                        <Image
+                            src={principle.image.imageUrl}
+                            alt={principle.title}
+                            fill
+                            className="object-cover transition-transform duration-500 group-hover:scale-110"
+                            data-ai-hint={principle.image.imageHint}
+                        />
+                    )}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+                    <div className="absolute inset-0 flex flex-col justify-end p-6 text-white">
+                        <div className="mb-4 text-primary bg-background/20 backdrop-blur-sm rounded-full h-16 w-16 flex items-center justify-center border border-primary/30">
+                            {principle.icon}
+                        </div>
+                        <h2 className="text-3xl font-bold">{principle.title}</h2>
+                        <p className="mt-2 text-primary-foreground/90 max-h-0 opacity-0 group-hover:max-h-40 group-hover:opacity-100 transition-all duration-500">
+                            {principle.description}
+                        </p>
+                    </div>
+                </Card>
               </div>
-              <p className="text-lg text-muted-foreground">
-                To empower organizations to navigate complexity and achieve sustainable growth by providing unparalleled expertise and fostering a culture of continuous improvement and innovation. We are dedicated to delivering measurable results that make a lasting impact.
-              </p>
-            </div>
+            ))}
           </div>
-
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="relative h-80 rounded-lg overflow-hidden shadow-xl md:order-last animate-fade-in-right">
-              {visionImage && <Image src={visionImage.imageUrl} alt="Our Vision" fill className="object-cover" data-ai-hint={visionImage.imageHint} />}
-            </div>
-            <div className="md:order-first animate-fade-in-left">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
-                  <Eye className="h-8 w-8" />
-                </div>
-                <h2 className="text-3xl md:text-4xl font-bold">Our Vision</h2>
-              </div>
-              <p className="text-lg text-muted-foreground">
-                To be the most trusted and sought-after consultancy partner, recognized for our strategic excellence, innovative solutions, and unwavering commitment to client success. We aspire to be at the forefront of industry transformation.
-              </p>
-            </div>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="relative h-80 rounded-lg overflow-hidden shadow-xl animate-fade-in-left">
-              {commitmentImage && <Image src={commitmentImage.imageUrl} alt="Our Commitment" fill className="object-cover" data-ai-hint={commitmentImage.imageHint} />}
-            </div>
-            <div className="animate-fade-in-right">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
-                  <CheckCircle className="h-8 w-8" />
-                </div>
-                <h2 className="text-3xl md:text-4xl font-bold">Our Commitment</h2>
-              </div>
-              <p className="text-lg text-muted-foreground">
-                We are committed to excellence, integrity, and transparency in everything we do. Our clients' success is our ultimate measure of success, and we dedicate ourselves to building strong, lasting partnerships based on trust and mutual respect.
-              </p>
-            </div>
-          </div>
-
         </div>
       </section>
     </div>

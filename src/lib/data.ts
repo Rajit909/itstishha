@@ -93,21 +93,26 @@ export const teamMembers: TeamMember[] = [
     bio: 'A distinguished healthcare professional with degrees from BBD University, Amity University, Apollo Medvarsity, and Symbiosis International University. Brings extensive expertise in hospital administration, clinical research, and medical tourism.',
     image: 'team-member-2',
   },
+  
+];
+
+export const stratergicPartners: StratergicPartner[] = [
   {
-    id: '3',
+    id: '1',
     name: 'Prof. (Dr.) Hem Chandra',
     title: 'Honorary Advisor',
     bio: 'Prof. (Dr.) Hem Chandra, a nationally acclaimed healthcare leader with over 40 years of experience, excels as an academician, administrator, and public health expert. An alumnus of top institutions, he has shaped medical education and healthcare policy, currently serving as Advisor to the Honerable President and Director of Hospital Services at Swami Ram Himalayan University.',
     image: 'team-member-3',
   },
   {
-    id: '4',
+    id: '2',
     name: 'Mr. Pramod Panigrahi',
     title: 'Associate Director',
     bio: 'An MICA Ahmedabad alumnus with 20 years of experience in strategic marketing, digital transformation, and healthcare consultancy. Combines academic expertise and practical insight to drive growth, innovation, and future-ready business models across media, technology, and healthcare sectors.',
     image: 'team-member-4',
   },
-];
+]
+
 
 export const clients: Client[] = [
   {
@@ -203,6 +208,7 @@ export const getBlogPosts = async () => simulateFetch(blogPosts);
 export const getBlogPostBySlug = async (slug: string) => simulateFetch(blogPosts.find(p => p.slug === slug));
 export const getJobOpenings = async () => simulateFetch(jobOpenings);
 export const getTeamMembers = async () => simulateFetch(teamMembers);
+export const getStratergicPartners= async()=>simulateFetch(stratergicPartners);
 export const getClients = async () => simulateFetch(clients);
 export const getProjects = async () => simulateFetch(projects);
 export const getProjectBySlug = async (slug: string) => simulateFetch(projects.find(p => p.slug === slug));

@@ -1,15 +1,15 @@
-import { getTeamMembers } from "@/lib/data";
+import { getStratergicPartners } from "@/lib/data";
 import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Card, CardContent } from "@/components/ui/card";
 
 export default async function StrategicLeadershipPage() {
-  const team = await getTeamMembers();
+  const Partners = await getStratergicPartners();
   return (
     <div className="container py-16 animate-fade-in">
       <h1 className="text-4xl font-bold animate-fade-in-up">Strategic Leadership</h1>
         <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-        {team.map((member, index) => {
+        {Partners.map((member, index) => {
             const memberImage = PlaceHolderImages.find(p => p.id === member.image);
             return (
                 <div key={member.id} className="animate-fade-in-up" style={{ animationDelay: `${200 * index}ms`}}>
