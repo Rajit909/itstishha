@@ -70,8 +70,8 @@ export function TestimonialsCarousel({ clients }: TestimonialsCarouselProps) {
           );
         })}
       </CarouselContent>
-      <CarouselPrevious className="absolute left-0 top-1/2 -translate-y-1/2 z-10 md:-left-4" />
-      <CarouselNext className="absolute right-0 top-1/2 -translate-y-1/2 z-10 md:-right-4" />
+      <CarouselPrevious className="absolute left-[-50px] top-1/2 -translate-y-1/2 z-10 hidden md:flex" />
+      <CarouselNext className="absolute right-[-50px] top-1/2 -translate-y-1/2 z-10 hidden md:flex" />
     </Carousel>
   );
 }
