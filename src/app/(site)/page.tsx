@@ -114,14 +114,8 @@ export default async function HomePage() {
       {featuredStudy && (
       <section className="py-16 md:py-24 bg-lightgreenbg">
         <div className="container">
-            <ScrollAnimation animation="fade-in-up">
-              <div className="text-center max-w-3xl mx-auto">
-                  <h2 className="text-3xl md:text-4xl font-bold">Success Story</h2>
-                  <p className="mt-4 text-lg text-muted-foreground">See how we made a difference. Read our featured project.</p>
-              </div>
-            </ScrollAnimation>
-            <div className="mt-12 grid md:grid-cols-2 gap-12 items-center">
-              <ScrollAnimation animation="slide-in-from-left" className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <ScrollAnimation animation="slide-in-from-left" className="relative aspect-w-4 aspect-h-3 rounded-lg overflow-hidden shadow-xl">
                   {featuredStudyImage && <Image
                       src={featuredStudyImage.imageUrl}
                       alt={featuredStudy.title}
@@ -307,7 +301,7 @@ export default async function HomePage() {
         </div>
       </section>
            {/* CTA Section */}
-           <section className="py-16 md:py-24 bg-gradient-to-r from-primary to-accent text-primary-foreground">
+           <section className="py-16 md:py-24 bg-gradient-to-r from-darkbg to-accent text-primary-foreground">
         <div className="container text-center">
           <ScrollAnimation animation="fade-in">
             <h2 className="text-3xl md:text-4xl font-bold">Ready to Transform Your Business?</h2>
@@ -332,6 +326,7 @@ export default async function HomePage() {
     
 
     
+
 
 
 
