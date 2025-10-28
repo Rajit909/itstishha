@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import { getLeaders } from "@/lib/data";
 import { Card, CardContent } from "@/components/ui/card";
@@ -29,7 +30,7 @@ export default async function AboutPage() {
             </p>
             <ul className="mt-8 space-y-6">
               <li className="flex items-start">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary mr-6 mt-1 flex-shrink-0">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-darkbg mr-6 mt-1 flex-shrink-0">
                   <Award className="h-6 w-6" />
                 </div>
                 <div>
@@ -38,7 +39,7 @@ export default async function AboutPage() {
                 </div>
               </li>
               <li className="flex items-start">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary mr-6 mt-1 flex-shrink-0">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-darkbg mr-6 mt-1 flex-shrink-0">
                   <Users className="h-6 w-6" />
                 </div>
                 <div>
@@ -47,7 +48,7 @@ export default async function AboutPage() {
                 </div>
               </li>
               <li className="flex items-start">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary mr-6 mt-1 flex-shrink-0">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-darkbg mr-6 mt-1 flex-shrink-0">
                   <Target className="h-6 w-6" />
                 </div>
                 <div>
@@ -97,7 +98,7 @@ export default async function AboutPage() {
                                   )}
                                   <div className="p-6">
                                     <h3 className="text-xl font-semibold">{member.name}</h3>
-                                    <p className="text-primary font-medium">{member.title}</p>
+                                    <p className="text-darkbg font-medium">{member.title}</p>
                                     <p className="mt-2 text-sm text-muted-foreground">{member.bio}</p>
                                   </div>
                               </CardContent>

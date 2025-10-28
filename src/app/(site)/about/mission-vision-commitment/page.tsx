@@ -58,7 +58,7 @@ export default function MissionPage() {
                     )}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
                     <div className="absolute inset-0 flex flex-col justify-end p-6 text-white">
-                        <div className="mb-4 text-primary bg-background/20 backdrop-blur-sm rounded-full h-16 w-16 flex items-center justify-center border border-primary/30">
+                        <div className="mb-4 text-darkbg bg-background/20 backdrop-blur-sm rounded-full h-16 w-16 flex items-center justify-center border border-primary/30">
                             {principle.icon}
                         </div>
                         <h2 className="text-3xl font-bold">{principle.title}</h2>

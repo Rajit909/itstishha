@@ -135,7 +135,7 @@ export default async function HomePage() {
               )}
             </ScrollAnimation>
             <ScrollAnimation animation="slide-in-from-right" className="text-justify">
-              <p className="font-semibold text-primary">{featuredStudy.client}</p>
+              <p className="font-semibold text-darkbg">{featuredStudy.client}</p>
               <h3 className="mt-2 text-2xl md:text-3xl font-bold">{featuredStudy.title}</h3>
               <p className="mt-4 text-lg text-muted-foreground text-justify">{featuredStudy.excerpt}</p>
               <Button asChild className="mt-6" size="lg">
@@ -233,7 +233,7 @@ export default async function HomePage() {
                                   )}
                                   <div className="p-6">
                                     <h3 className="text-xl font-semibold">{member.name}</h3>
-                                    <p className="text-primary font-medium">{member.title}</p>
+                                    <p className="text-darkbg font-medium">{member.title}</p>
                                     <p className="mt-2 text-sm text-muted-foreground" style={{textAlign:'justify'}}>{member.bio}</p>
                                   </div>
                               </CardContent>

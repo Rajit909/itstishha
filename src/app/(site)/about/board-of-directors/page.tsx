@@ -58,7 +58,7 @@ export default function BoardOfDirectorsPage() {
                             </div>
                             <div className={`p-6 sm:p-8 md:p-12 ${isReversed ? 'md:col-start-1' : ''}`}>
                                 <h2 className="text-2xl sm:text-3xl font-bold">{member.name}</h2>
-                                <p className="text-primary font-semibold text-md sm:text-lg mt-1">{member.title}</p>
+                                <p className="text-darkbg font-semibold text-md sm:text-lg mt-1">{member.title}</p>
                                 <p className="text-muted-foreground mt-4 text-sm sm:text-base">{member.bio}</p>
                             </div>
                         </div>

@@ -27,21 +27,21 @@ export default function QualityAccreditationPage() {
               </p>
               <ul className="mt-8 space-y-4">
                 <li className="flex items-start">
-                  <CheckSquare className="h-6 w-6 text-primary mr-4 mt-1 flex-shrink-0" />
+                  <CheckSquare className="h-6 w-6 text-darkbg mr-4 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold">Gap Analysis & Readiness</h3>
                     <p className="text-muted-foreground">Assessing your current state and creating a clear roadmap to accreditation.</p>
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <ShieldCheck className="h-6 w-6 text-primary mr-4 mt-1 flex-shrink-0" />
+                  <ShieldCheck className="h-6 w-6 text-darkbg mr-4 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold">Process Implementation</h3>
                     <p className="text-muted-foreground">Helping you implement the required quality and safety protocols effectively.</p>
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <Award className="h-6 w-6 text-primary mr-4 mt-1 flex-shrink-0" />
+                  <Award className="h-6 w-6 text-darkbg mr-4 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold">Continuous Compliance</h3>
                     <p className="text-muted-foreground">Providing support for maintaining standards and preparing for re-accreditation.</p>

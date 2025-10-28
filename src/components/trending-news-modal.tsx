@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState, useEffect } from "react";
@@ -56,13 +57,13 @@ export function TrendingNewsModal() {
             </DialogDescription>
             </DialogHeader>
             <div className="space-y-4 my-4">
-            <div className="border-l-4 border-primary pl-4">
+            <div className="border-l-4 border-darkbg pl-4">
                 <h4 className="font-semibold">The Future of AI in Healthcare</h4>
                 <p className="text-sm text-muted-foreground">
                 Discover how artificial intelligence is revolutionizing patient diagnostics and treatment plans.
                 </p>
             </div>
-            <div className="border-l-4 border-primary pl-4">
+            <div className="border-l-4 border-darkbg pl-4">
                 <h4 className="font-semibold">Navigating New Accreditation Standards</h4>
                 <p className="text-sm text-muted-foreground">
                     Our latest guide helps you understand and prepare for the upcoming changes in industry accreditation.

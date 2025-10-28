@@ -32,7 +32,7 @@ export default function FinancialConsultancyPage() {
               </p>
               <ul className="mt-8 space-y-6">
                 <li className="flex items-start">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary mr-6 mt-1 flex-shrink-0">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-darkbg mr-6 mt-1 flex-shrink-0">
                     <LineChart className="h-8 w-8" />
                   </div>
                   <div>
@@ -41,7 +41,7 @@ export default function FinancialConsultancyPage() {
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary mr-6 mt-1 flex-shrink-0">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-darkbg mr-6 mt-1 flex-shrink-0">
                     <PiggyBank className="h-8 w-8" />
                   </div>
                   <div>
@@ -50,7 +50,7 @@ export default function FinancialConsultancyPage() {
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary mr-6 mt-1 flex-shrink-0">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-darkbg mr-6 mt-1 flex-shrink-0">
                     <Banknote className="h-8 w-8" />
                   </div>
                   <div>

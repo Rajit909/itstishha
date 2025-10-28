@@ -1,3 +1,4 @@
+
 import { getProjectBySlug, getProjects } from "@/lib/data";
 import { notFound } from "next/navigation";
 import Image from "next/image";
@@ -32,7 +33,7 @@ export default async function ProjectPage({ params: { slug } }: ProjectPageProps
     <article className="py-16 md:py-24">
       <div className="container max-w-5xl">
         <header className="mb-12 text-center">
-          <p className="text-primary font-semibold mb-2">Project: {study.client}</p>
+          <p className="text-darkbg font-semibold mb-2">Project: {study.client}</p>
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
             {study.title}
           </h1>
@@ -54,15 +55,15 @@ export default async function ProjectPage({ params: { slug } }: ProjectPageProps
         <div className="grid md:grid-cols-3 gap-8 md:gap-12">
           <div className="md:col-span-2 prose dark:prose-invert lg:prose-xl max-w-none">
             <div className="mb-12">
-              <h2 className="flex items-center gap-3"><Target className="h-8 w-8 text-primary" /> The Challenge</h2>
+              <h2 className="flex items-center gap-3"><Target className="h-8 w-8 text-darkbg" /> The Challenge</h2>
               <p>{study.challenge}</p>
             </div>
             <div className="mb-12">
-              <h2 className="flex items-center gap-3"><Zap className="h-8 w-8 text-primary" /> Our Solution</h2>
+              <h2 className="flex items-center gap-3"><Zap className="h-8 w-8 text-darkbg" /> Our Solution</h2>
               <p>{study.solution}</p>
             </div>
             <div>
-              <h2 className="flex items-center gap-3"><CheckCircle className="h-8 w-8 text-primary" /> The Result</h2>
+              <h2 className="flex items-center gap-3"><CheckCircle className="h-8 w-8 text-darkbg" /> The Result</h2>
               <p>{study.result}</p>
             </div>
           </div>

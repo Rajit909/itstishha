@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useForm } from "react-hook-form";
@@ -66,15 +67,15 @@ export default function ContactPage() {
               </div>
               <div className="space-y-4">
                 <div className="flex items-center gap-4">
-                  <Phone className="h-5 w-5 text-primary" />
+                  <Phone className="h-5 w-5 text-darkbg" />
                   <span className="text-muted-foreground">(123) 456-7890</span>
                 </div>
                 <div className="flex items-center gap-4">
-                  <Mail className="h-5 w-5 text-primary" />
+                  <Mail className="h-5 w-5 text-darkbg" />
                   <span className="text-muted-foreground">contact@tishha.com</span>
                 </div>
                 <div className="flex items-start gap-4">
-                  <MapPin className="h-5 w-5 text-primary mt-1" />
+                  <MapPin className="h-5 w-5 text-darkbg mt-1" />
                   <span className="text-muted-foreground">123 Tishha Way, Innovation City, 12345</span>
                 </div>
               </div>

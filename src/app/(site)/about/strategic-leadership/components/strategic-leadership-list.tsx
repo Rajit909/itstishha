@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from "next/image";
@@ -52,7 +53,7 @@ export function StrategicLeadershipList({ partners }: StrategicLeadershipListPro
                   <h2 className="text-2xl sm:text-3xl font-bold text-foreground">
                     {member.name}
                   </h2>
-                  <p className="text-primary font-semibold text-base sm:text-lg mt-2">
+                  <p className="text-darkbg font-semibold text-base sm:text-lg mt-2">
                     {member.title}
                   </p>
                   <p className="text-muted-foreground mt-4 text-sm sm:text-base leading-relaxed text-justify">

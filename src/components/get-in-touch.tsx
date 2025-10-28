@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useForm } from "react-hook-form";
@@ -59,7 +60,7 @@ export function GetTouch() {
       <div className="container grid md:grid-cols-2 gap-16 items-center">
         {/* Left Column */}
         <div className="animate-fade-in-up">
-          <span className="inline-block px-4 py-2 text-sm font-semibold rounded-full bg-primary/10 text-primary mb-4">
+          <span className="inline-block px-4 py-2 text-sm font-semibold rounded-full bg-primary/10 text-darkbg mb-4">
             We Help You Build World-Class Healthcare Facilities
           </span>
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground">
@@ -68,7 +69,7 @@ export function GetTouch() {
           <ul className="mt-8 space-y-3">
             {services.map((service, index) => (
               <li key={index} className="flex items-center gap-3">
-                <CheckCircle2 className="h-6 w-6 text-primary" />
+                <CheckCircle2 className="h-6 w-6 text-darkbg" />
                 <span className="text-lg">{service}</span>
               </li>
             ))}

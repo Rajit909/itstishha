@@ -18,7 +18,7 @@ export default function ObjectivesPage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 justify-center">
             
             <div className="p-8 flex flex-col items-center text-center border rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 animate-fade-in-up" style={{ animationDelay: '200ms' }}>
-              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary mb-6">
+              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-darkbg mb-6">
                 <TrendingUp className="h-8 w-8" />
               </div>
               <h3 className="text-2xl font-bold mb-3">Deliver Measurable Results</h3>
@@ -28,7 +28,7 @@ export default function ObjectivesPage() {
             </div>
             
             <div className="p-8 flex flex-col items-center text-center border rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 animate-fade-in-up" style={{ animationDelay: '400ms' }}>
-              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary mb-6">
+              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-darkbg mb-6">
                 <Users className="h-8 w-8" />
               </div>
               <h3 className="text-2xl font-bold mb-3">Foster Client Partnerships</h3>
@@ -38,7 +38,7 @@ export default function ObjectivesPage() {
             </div>
 
             <div className="p-8 flex flex-col items-center text-center border rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 animate-fade-in-up" style={{ animationDelay: '600ms' }}>
-              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary mb-6">
+              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-darkbg mb-6">
                 <ListChecks className="h-8 w-8" />
               </div>
               <h3 className="text-2xl font-bold mb-3">Uphold Unparalleled Expertise</h3>
@@ -48,7 +48,7 @@ export default function ObjectivesPage() {
             </div>
 
             <div className="p-8 flex flex-col items-center text-center border rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 animate-fade-in-up" style={{ animationDelay: '800ms' }}>
-              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary mb-6">
+              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-darkbg mb-6">
                 <ShieldCheck className="h-8 w-8" />
               </div>
               <h3 className="text-2xl font-bold mb-3">Ensure Integrity and Quality</h3>

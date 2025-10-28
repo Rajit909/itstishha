@@ -1,3 +1,4 @@
+
 "use client";
 
 import { HandHeart, Users, Leaf } from "lucide-react";
@@ -62,21 +63,21 @@ export default function CsrInitiativePage() {
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="p-6 rounded-2xl bg-card shadow-md">
-              <HandHeart className="h-10 w-10 text-primary mb-4" />
+              <HandHeart className="h-10 w-10 text-darkbg mb-4" />
               <h3 className="font-semibold text-xl mb-2">Skill Development Workshops</h3>
               <p className="text-muted-foreground">
                 Hands-on sessions to enhance clinical, technical, and leadership skills.
               </p>
             </div>
             <div className="p-6 rounded-2xl bg-card shadow-md">
-              <Users className="h-10 w-10 text-primary mb-4" />
+              <Users className="h-10 w-10 text-darkbg mb-4" />
               <h3 className="font-semibold text-xl mb-2">Leadership Bootcamps</h3>
               <p className="text-muted-foreground">
                 Encouraging teamwork, problem-solving, and compassionate healthcare leadership.
               </p>
             </div>
             <div className="p-6 rounded-2xl bg-card shadow-md">
-              <Leaf className="h-10 w-10 text-primary mb-4" />
+              <Leaf className="h-10 w-10 text-darkbg mb-4" />
               <h3 className="font-semibold text-xl mb-2">Academic Engagement</h3>
               <p className="text-muted-foreground">
                 Webinars, debates, quizzes, and recognition awards fostering innovation and merit.

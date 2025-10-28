@@ -27,21 +27,21 @@ export default function OperationalAcquisitionPage() {
               </p>
               <ul className="mt-8 space-y-4">
                 <li className="flex items-start">
-                  <Target className="h-6 w-6 text-primary mr-4 mt-1 flex-shrink-0" />
+                  <Target className="h-6 w-6 text-darkbg mr-4 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold">Due Diligence & Valuation</h3>
                     <p className="text-muted-foreground">Conducting comprehensive assessments to ensure informed investment decisions.</p>
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <Handshake className="h-6 w-6 text-primary mr-4 mt-1 flex-shrink-0" />
+                  <Handshake className="h-6 w-6 text-darkbg mr-4 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold">Integration & Transition Management</h3>
                     <p className="text-muted-foreground">Executing a detailed plan for seamless integration of operations and culture.</p>
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <Building2 className="h-6 w-6 text-primary mr-4 mt-1 flex-shrink-0" />
+                  <Building2 className="h-6 w-6 text-darkbg mr-4 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold">Post-Acquisition Operations</h3>
                     <p className="text-muted-foreground">Providing ongoing management to drive efficiency, growth, and profitability.</p>

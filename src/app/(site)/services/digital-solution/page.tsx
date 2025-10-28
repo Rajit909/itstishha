@@ -27,21 +27,21 @@ export default function DigitalSolutionPage() {
               </p>
               <ul className="mt-8 space-y-4">
                 <li className="flex items-start">
-                  <Code className="h-6 w-6 text-primary mr-4 mt-1 flex-shrink-0" />
+                  <Code className="h-6 w-6 text-darkbg mr-4 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold">Custom Software Development</h3>
                     <p className="text-muted-foreground">Building tailored applications to meet your unique business needs.</p>
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <Cloud className="h-6 w-6 text-primary mr-4 mt-1 flex-shrink-0" />
+                  <Cloud className="h-6 w-6 text-darkbg mr-4 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold">HIMS & ERP Implementation</h3>
                     <p className="text-muted-foreground">Deploying and customizing enterprise systems for streamlined management.</p>
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <Smartphone className="h-6 w-6 text-primary mr-4 mt-1 flex-shrink-0" />
+                  <Smartphone className="h-6 w-6 text-darkbg mr-4 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold">Mobile & Web Applications</h3>
                     <p className="text-muted-foreground">Creating engaging digital experiences for your customers and staff.</p>

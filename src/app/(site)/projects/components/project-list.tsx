@@ -83,7 +83,7 @@ export function ProjectList({ projects, categories }: ProjectListProps) {
                     </div>
                   )}
                   <CardHeader>
-                    <p className="text-sm font-semibold text-primary">{project.client}</p>
+                    <p className="text-sm font-semibold text-darkbg">{project.client}</p>
                     <CardTitle className="text-2xl leading-tight h-16">{project.title}</CardTitle>
                   </CardHeader>
                   <CardContent className="flex-grow">

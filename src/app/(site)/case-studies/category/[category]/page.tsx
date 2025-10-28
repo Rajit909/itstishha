@@ -74,7 +74,7 @@ export default async function ProjectCategoryPage({ params }: ProjectCategoryPag
                         </div>
                       )}
                       <CardHeader>
-                        <p className="text-sm font-semibold text-primary">{study.client}</p>
+                        <p className="text-sm font-semibold text-darkbg">{study.client}</p>
                         <CardTitle className="text-2xl leading-tight h-16">{study.title}</CardTitle>
                       </CardHeader>
                       <CardContent className="flex-grow">

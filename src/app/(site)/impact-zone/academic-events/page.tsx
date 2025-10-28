@@ -73,7 +73,7 @@ export default function AcademicEventsPage() {
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="p-6 bg-card rounded-2xl shadow-md hover:shadow-lg transition-all">
-              <Mic className="h-10 w-10 text-primary mb-4" />
+              <Mic className="h-10 w-10 text-darkbg mb-4" />
               <h3 className="font-semibold text-xl mb-2">
                 Quizzes & Debate Competitions
               </h3>
@@ -84,7 +84,7 @@ export default function AcademicEventsPage() {
             </div>
 
             <div className="p-6 bg-card rounded-2xl shadow-md hover:shadow-lg transition-all">
-              <BookOpen className="h-10 w-10 text-primary mb-4" />
+              <BookOpen className="h-10 w-10 text-darkbg mb-4" />
               <h3 className="font-semibold text-xl mb-2">
                 Poster & Research Paper Presentations
               </h3>
@@ -95,7 +95,7 @@ export default function AcademicEventsPage() {
             </div>
 
             <div className="p-6 bg-card rounded-2xl shadow-md hover:shadow-lg transition-all">
-              <School className="h-10 w-10 text-primary mb-4" />
+              <School className="h-10 w-10 text-darkbg mb-4" />
               <h3 className="font-semibold text-xl mb-2">Academic Programs</h3>
               <p className="text-muted-foreground">
                 Structured programs connecting theory to practice through

@@ -27,21 +27,21 @@ export default function RecruitmentConsultancyPage() {
               </p>
               <ul className="mt-8 space-y-4">
                 <li className="flex items-start">
-                  <UserSearch className="h-6 w-6 text-primary mr-4 mt-1 flex-shrink-0" />
+                  <UserSearch className="h-6 w-6 text-darkbg mr-4 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold">Executive Search</h3>
                     <p className="text-muted-foreground">Identifying and attracting high-impact leaders for your most critical roles.</p>
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <Users className="h-6 w-6 text-primary mr-4 mt-1 flex-shrink-0" />
+                  <Users className="h-6 w-6 text-darkbg mr-4 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold">Talent Sourcing & Acquisition</h3>
                     <p className="text-muted-foreground">Leveraging our extensive network to find skilled professionals for all levels.</p>
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <Briefcase className="h-6 w-6 text-primary mr-4 mt-1 flex-shrink-0" />
+                  <Briefcase className="h-6 w-6 text-darkbg mr-4 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold">Workforce Planning</h3>
                     <p className="text-muted-foreground">Developing strategic plans to meet your organization's future talent needs.</p>

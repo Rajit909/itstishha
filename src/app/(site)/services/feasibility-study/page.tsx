@@ -27,21 +27,21 @@ export default function FeasibilityStudyPage() {
               </p>
               <ul className="mt-8 space-y-4">
                 <li className="flex items-start">
-                  <BarChart className="h-6 w-6 text-primary mr-4 mt-1 flex-shrink-0" />
+                  <BarChart className="h-6 w-6 text-darkbg mr-4 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold">Market & Competitive Analysis</h3>
                     <p className="text-muted-foreground">Assessing market demand, competition, and positioning to identify opportunities.</p>
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <FileSearch className="h-6 w-6 text-primary mr-4 mt-1 flex-shrink-0" />
+                  <FileSearch className="h-6 w-6 text-darkbg mr-4 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold">Financial Viability Assessment</h3>
                     <p className="text-muted-foreground">Developing detailed financial models, including ROI and break-even analysis.</p>
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <Lightbulb className="h-6 w-6 text-primary mr-4 mt-1 flex-shrink-0" />
+                  <Lightbulb className="h-6 w-6 text-darkbg mr-4 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold">Operational & Technical Feasibility</h3>
                     <p className="text-muted-foreground">Evaluating the resources, technology, and expertise required for successful implementation.</p>

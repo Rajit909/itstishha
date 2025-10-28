@@ -27,21 +27,21 @@ export default function EquipmentConsultancyPage() {
               </p>
               <ul className="mt-8 space-y-4">
                 <li className="flex items-start">
-                  <Microscope className="h-6 w-6 text-primary mr-4 mt-1 flex-shrink-0" />
+                  <Microscope className="h-6 w-6 text-darkbg mr-4 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold">Technology Assessment & Selection</h3>
                     <p className="text-muted-foreground">Analyzing your needs to recommend the most suitable and advanced equipment.</p>
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <HardHat className="h-6 w-6 text-primary mr-4 mt-1 flex-shrink-0" />
+                  <HardHat className="h-6 w-6 text-darkbg mr-4 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold">Procurement & Installation Planning</h3>
                     <p className="text-muted-foreground">Managing the end-to-end procurement process, from vendor negotiation to installation.</p>
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <Wrench className="h-6 w-6 text-primary mr-4 mt-1 flex-shrink-0" />
+                  <Wrench className="h-6 w-6 text-darkbg mr-4 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold">Lifecycle Management</h3>
                     <p className="text-muted-foreground">Advising on maintenance, upgrades, and disposal to maximize your return on investment.</p>
