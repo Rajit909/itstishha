@@ -230,17 +230,19 @@ export default async function HomePage() {
       {/* Team Section */}
       <section className="py-16 md:py_24 bg-card">
         <div className="container">
-            <div className="text-center max-w-3xl mx-auto animate-fade-in-up">
-                <h2 className="text-3xl md:text-4xl font-bold">Meet Our Leadership</h2>
-                <p className="mt-4 text-lg text-muted-foreground">
-                    Our team's diverse expertise is the driving force behind our success and the success of our clients.
-                </p>
-            </div>
+            <ScrollAnimation animation="fade-in-up">
+                <div className="text-center max-w-3xl mx-auto">
+                    <h2 className="text-3xl md:text-4xl font-bold">Meet Our Leadership</h2>
+                    <p className="mt-4 text-lg text-muted-foreground">
+                        Our team's diverse expertise is the driving force behind our success and the success of our clients.
+                    </p>
+                </div>
+            </ScrollAnimation>
             <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
                 {Leaders.map((member, index) => {
                     const memberImage = PlaceHolderImages.find(p => p.id === member.image);
                     return (
-                        <div key={member.id} className="animate-fade-in-up" style={{ animationDelay: `${200 * index}ms`}}>
+                        <ScrollAnimation key={member.id} animation="fade-in-up" delay={200 * index}>
                           <Card className="text-center group overflow-hidden h-full">
                               <CardContent className="p-0">
                                   {memberImage && (
@@ -261,7 +263,7 @@ export default async function HomePage() {
                                   </div>
                               </CardContent>
                           </Card>
-                        </div>
+                        </ScrollAnimation>
                     )
                 })}
             </div>
@@ -360,5 +362,3 @@ export default async function HomePage() {
     </div>
   );
 }
-
-  
