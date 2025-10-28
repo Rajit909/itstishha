@@ -1,9 +1,12 @@
+
 "use client";
 
 import { School, Mic, BookOpen } from "lucide-react";
 import Image from "next/image";
+import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 export default function AcademicEventsPage() {
+    const academicEventImage = PlaceHolderImages.find(p => p.id === 'slider-1');
   return (
     <div className="bg-background text-foreground animate-fade-in">
       {/* Hero Section */}
@@ -26,12 +29,13 @@ export default function AcademicEventsPage() {
         <div className="container">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative h-96 rounded-lg overflow-hidden shadow-xl md:order-last animate-fade-in-right">
-              <Image
-                src="/carousel-img/sliderone.jpeg"
+              {academicEventImage && <Image
+                src={academicEventImage.imageUrl}
                 alt="Academic Event"
                 fill
                 className="object-cover"
-              />
+                data-ai-hint={academicEventImage.imageHint}
+              />}
             </div>
 
             <div className="md:order-first animate-fade-in-left">
