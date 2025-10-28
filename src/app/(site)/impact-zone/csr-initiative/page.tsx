@@ -26,7 +26,7 @@ export default function CsrInitiativePage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative h-96 rounded-lg overflow-hidden shadow-xl animate-fade-in-left">
               <Image
-                src="https://picsum.photos/seed/csr/800/600"
+                src="/assets/csr.jpg"
                 alt="CSR Initiative"
                 fill
                 className="object-cover"

@@ -18,7 +18,7 @@ export default function OperationalAcquisitionPage() {
         <div className="container">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative h-96 rounded-lg overflow-hidden shadow-xl animate-fade-in-left">
-              <Image src="https://picsum.photos/seed/operational-acquisition/800/600" alt="Operational Acquisition" fill className="object-cover" data-ai-hint="business handshake" />
+              <Image src="/services/operational.jpg" alt="Operational Acquisition" fill className="object-cover" data-ai-hint="business handshake" />
             </div>
             <div className="animate-fade-in-right">
               <h2 className="text-3xl font-bold mb-4">Seamless Transitions, Lasting Value</h2>
