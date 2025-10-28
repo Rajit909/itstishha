@@ -5,7 +5,6 @@ import { useState, useEffect, useCallback } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ChevronLeft, ChevronRight, ZoomIn, ZoomOut } from 'lucide-react';
-import { cn } from '@/lib/utils';
 import { Button } from './ui/button';
 
 type ImageItem = {
@@ -71,17 +70,13 @@ export function ImageLightbox({ images, startIndex, onClose }: ImageLightboxProp
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="fixed inset-0 z-50 flex items-center justify-center"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm"
+      onClick={onClose}
     >
-      {/* Background Overlay */}
-      <div
-        className="absolute inset-0 bg-black/80 backdrop-blur-sm"
-        onClick={onClose}
-      />
-
-      {/* Content Container - Prevents clicks from closing modal */}
-      <div
+      {/* Interactive Content Wrapper */}
+      <div 
         className="relative z-10 flex flex-col items-center justify-center w-full h-full"
+        onClick={(e) => e.stopPropagation()}
       >
         {/* Image transition container */}
         <AnimatePresence initial={false} custom={direction}>
