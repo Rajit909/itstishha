@@ -12,7 +12,7 @@ export async function ClientLogoCarousel() {
   const duplicatedLogos = [...logos, ...logos];
 
   return (
-    <section className="py-16 md:py-24 bg-background">
+    <section className="py-16 md:py-24 bg-lightbluebg">
       <div className="container">
         <ScrollAnimation animation="fade-in-up">
           <div className="text-center max-w-3xl mx-auto">
