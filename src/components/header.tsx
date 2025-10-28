@@ -162,7 +162,7 @@ export default function Header() {
               variant="ghost"
               className={cn(
                 "font-bold transition-colors text-sm text-white/90",
-                "hover:bg-why-partner-bg hover:text-darkbg"
+                "hover:bg-lightgreenbg hover:text-darkbg"
               )}
             >
               {label} <ChevronDown className="ml-2 h-4 w-4" />
@@ -187,7 +187,7 @@ export default function Header() {
           pathname === href || (href !== "/" && pathname.startsWith(href))
             ? "text-white"
             : "text-white/90",
-          'hover:bg-why-partner-bg hover:text-darkbg'
+          'hover:bg-lightgreenbg hover:text-darkbg'
         )}
       >
         {label}
