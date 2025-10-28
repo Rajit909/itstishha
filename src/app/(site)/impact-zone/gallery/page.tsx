@@ -1,17 +1,10 @@
 
 "use client";
 
+import React, { useState } from 'react';
 import Image from 'next/image';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
-import Autoplay from "embla-carousel-autoplay";
-import React from 'react';
+import { GalleryLightbox } from '@/components/gallery-lightbox';
 
 const galleryImages = [
   { id: 1, src: '/gallery/conf.jpg', alt: 'National Conference on Nursing Leadership & Excellence 2025', hint: 'competetion' },
@@ -49,9 +42,7 @@ const galleryImages = [
 ];
 
 export default function GalleryPage() {
-  const plugin = React.useRef(
-    Autoplay({ delay: 3000, stopOnInteraction: true })
-  );
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
     <div className="bg-background text-foreground animate-fade-in">
@@ -65,43 +56,42 @@ export default function GalleryPage() {
       </section>
 
       <section className="py-16 md:py-24">
-        <div className="container max-w-6xl">
-          <Carousel
-            className="w-full"
-            opts={{
-              align: "start",
-              loop: true,
-            }}
-             plugins={[plugin.current]}
-          >
-            <CarouselContent>
-              {galleryImages.map((image) => (
-                <CarouselItem key={image.id} className="md:basis-1/2 lg:basis-1/3">
-                  <div className="p-1">
-                    <Card className="overflow-hidden">
-                      <CardContent className="flex flex-col aspect-video items-center justify-center p-0 relative">
-                        <Image
-                          src={image.src}
-                          alt={image.alt}
-                          fill
-                          className="object-cover rounded-lg"
-                          data-ai-hint={image.hint}
-                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        />
-                         <div className="absolute inset-x-0 bottom-0 p-4 bg-black/50 text-white rounded-b-lg">
-                            <p className="text-sm font-semibold truncate">{image.alt}</p>
-                          </div>
-                      </CardContent>
-                    </Card>
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="absolute left-0 top-1/2 -translate-y-1/2 z-10 -translate-x-8 hidden md:flex" />
-            <CarouselNext className="absolute right-0 top-1/2 -translate-y-1/2 z-10 translate-x-8 hidden md:flex" />
-          </Carousel>
+        <div className="container">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {galleryImages.map((image, index) => (
+              <div
+                key={image.id}
+                className="animate-fade-in-up group"
+                style={{ animationDelay: `${index * 50}ms` }}
+                onClick={() => setSelectedImage(image.src)}
+              >
+                <Card className="overflow-hidden cursor-pointer">
+                  <CardContent className="flex aspect-video items-center justify-center p-0 relative">
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                      fill
+                      className="object-cover rounded-lg transition-transform duration-300 group-hover:scale-110"
+                      data-ai-hint={image.hint}
+                      sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                    />
+                    <div className="absolute inset-x-0 bottom-0 p-2 bg-black/50 text-white rounded-b-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <p className="text-xs font-semibold truncate">{image.alt}</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
+
+      {selectedImage && (
+        <GalleryLightbox
+          imageUrl={selectedImage}
+          onClose={() => setSelectedImage(null)}
+        />
+      )}
     </div>
   );
 }
