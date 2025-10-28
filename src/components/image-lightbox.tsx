@@ -102,18 +102,18 @@ export function ImageLightbox({ images, startIndex, onClose }: ImageLightboxProp
       </AnimatePresence>
 
       {/* Top Controls: Close, Zoom */}
-      <div className="absolute top-4 right-4 flex items-center gap-2" onClick={(e) => e.stopPropagation()}>
-        <Button variant="ghost" size="icon" className="text-white hover:bg-white/20 hover:text-white" onClick={handleZoomIn}><ZoomIn /></Button>
-        <Button variant="ghost" size="icon" className="text-white hover:bg-white/20 hover:text-white" onClick={handleZoomOut}><ZoomOut /></Button>
-        <Button variant="ghost" size="icon" className="text-white hover:bg-white/20 hover:text-white" onClick={onClose}><X /></Button>
+      <div className="absolute top-4 right-4 flex items-center gap-2">
+        <Button variant="ghost" size="icon" className="text-white hover:bg-white/20 hover:text-white" onClick={(e) => { e.stopPropagation(); handleZoomIn(); }}><ZoomIn /></Button>
+        <Button variant="ghost" size="icon" className="text-white hover:bg-white/20 hover:text-white" onClick={(e) => { e.stopPropagation(); handleZoomOut(); }}><ZoomOut /></Button>
+        <Button variant="ghost" size="icon" className="text-white hover:bg-white/20 hover:text-white" onClick={(e) => { e.stopPropagation(); onClose(); }}><X /></Button>
       </div>
 
       {/* Side Navigation */}
-      <div className="absolute left-4 top-1/2 -translate-y-1/2" onClick={(e) => e.stopPropagation()}>
-        <Button variant="ghost" size="icon" className="text-white h-12 w-12 hover:bg-white/20 hover:text-white" onClick={handlePrev}><ChevronLeft size={32} /></Button>
+      <div className="absolute left-4 top-1/2 -translate-y-1/2">
+        <Button variant="ghost" size="icon" className="text-white h-12 w-12 hover:bg-white/20 hover:text-white" onClick={(e) => { e.stopPropagation(); handlePrev(); }}><ChevronLeft size={32} /></Button>
       </div>
-      <div className="absolute right-4 top-1/2 -translate-y-1/2" onClick={(e) => e.stopPropagation()}>
-        <Button variant="ghost" size="icon" className="text-white h-12 w-12 hover:bg-white/20 hover:text-white" onClick={handleNext}><ChevronRight size={32} /></Button>
+      <div className="absolute right-4 top-1/2 -translate-y-1/2">
+        <Button variant="ghost" size="icon" className="text-white h-12 w-12 hover:bg-white/20 hover:text-white" onClick={(e) => { e.stopPropagation(); handleNext(); }}><ChevronRight size={32} /></Button>
       </div>
 
        {/* Image Caption */}
