@@ -113,18 +113,19 @@ export default async function HomePage() {
       {/* Featured Project */}
       {featuredStudy && (
       <section className="py-16 md:py-24 bg-lightgreenbg">
-        <div className="container">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <ScrollAnimation animation="slide-in-from-left" className="relative aspect-w-4 aspect-h-3 rounded-lg overflow-hidden shadow-xl">
-                  {featuredStudyImage && <Image
+        <div className="container grid md:grid-cols-2 gap-12 items-center">
+              <ScrollAnimation animation="slide-in-from-left" className="relative aspect-video rounded-lg overflow-hidden shadow-xl">
+                  {featuredStudyImage && (
+                    <Image
                       src={featuredStudyImage.imageUrl}
                       alt={featuredStudy.title}
                       fill
                       className="object-cover"
                       data-ai-hint={featuredStudyImage.imageHint}
-                  />}
+                    />
+                  )}
               </ScrollAnimation>
-              <ScrollAnimation animation="slide-in-from-right">
+              <ScrollAnimation animation="slide-in-from-right" className='text-justify'>
                   <p className="font-semibold text-primary">{featuredStudy.client}</p>
                   <h3 className="mt-2 text-2xl md:text-3xl font-bold">{featuredStudy.title}</h3>
                   <p className="mt-4 text-lg text-muted-foreground text-justify">{featuredStudy.excerpt}</p>
@@ -133,7 +134,6 @@ export default async function HomePage() {
                   </Button>
               </ScrollAnimation>
             </div>
-        </div>
       </section>
       )}
 
@@ -326,6 +326,7 @@ export default async function HomePage() {
     
 
     
+
 
 
 
