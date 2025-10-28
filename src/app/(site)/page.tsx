@@ -112,7 +112,7 @@ export default async function HomePage() {
       
       {/* Featured Project */}
       {featuredStudy && (
-      <section className="py-16 md:py-24  bg-lightgreenbg">
+      <section className="py-16 md:py-24 bg-lightgreenbg">
         <div className="container">
             <ScrollAnimation animation="fade-in-up">
               <div className="text-center max-w-3xl mx-auto">
@@ -121,7 +121,7 @@ export default async function HomePage() {
               </div>
             </ScrollAnimation>
             <div className="mt-12 grid md:grid-cols-2 gap-12 items-center">
-              <ScrollAnimation animation="slide-in-from-left" className="relative h-96 rounded-lg overflow-hidden shadow-xl">
+              <ScrollAnimation animation="slide-in-from-left" className="relative aspect-video rounded-lg overflow-hidden shadow-xl">
                   {featuredStudyImage && <Image
                       src={featuredStudyImage.imageUrl}
                       alt={featuredStudy.title}
@@ -133,7 +133,7 @@ export default async function HomePage() {
               <ScrollAnimation animation="slide-in-from-right">
                   <p className="font-semibold text-primary">{featuredStudy.client}</p>
                   <h3 className="mt-2 text-2xl md:text-3xl font-bold">{featuredStudy.title}</h3>
-                  <p className="mt-4 text-lg text-muted-foreground">{featuredStudy.excerpt}</p>
+                  <p className="mt-4 text-lg text-muted-foreground text-justify">{featuredStudy.excerpt}</p>
                   <Button asChild className="mt-6" size="lg">
                       <Link href={`/projects/${featuredStudy.slug}`}>Read The Full Story <ArrowRight className="ml-2 h-4 w-4" /></Link>
                   </Button>
@@ -333,6 +333,7 @@ export default async function HomePage() {
     
 
     
+
 
 
 
