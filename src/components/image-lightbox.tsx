@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState, useEffect, useCallback } from 'react';
@@ -65,13 +66,17 @@ export function ImageLightbox({ images, startIndex, onClose }: ImageLightboxProp
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm"
-      onClick={onClose}
+      className="fixed inset-0 z-50 flex items-center justify-center"
     >
-      {/* This container stops clicks from closing the modal */}
+      {/* Background overlay that closes the modal */}
+      <div 
+        className="absolute inset-0 bg-black/80 backdrop-blur-sm"
+        onClick={onClose}
+      />
+      
+      {/* This container holds all content and stops clicks from closing the modal */}
       <div
         className="relative z-10 flex h-full w-full flex-col items-center justify-center"
-        onClick={(e) => e.stopPropagation()}
       >
         <AnimatePresence initial={false} custom={direction}>
           <motion.div
