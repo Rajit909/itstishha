@@ -242,7 +242,7 @@ export default async function HomePage() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-16 md:py-24 bg-card">
+      <section className="py-16 md:py-24 bg-lightgreenbg">
         <div className="container">
           <ScrollAnimation animation="fade-in-up">
             <div className="text-center max-w-3xl mx-auto">
@@ -333,5 +333,6 @@ export default async function HomePage() {
     
 
     
+
 
 
