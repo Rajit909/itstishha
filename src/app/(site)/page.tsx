@@ -48,6 +48,8 @@ export default async function HomePage() {
   const featuredStudyImage = PlaceHolderImages.find(p => p.id === featuredStudy.image);
   const Leaders = await getLeaders();
   const teamMeetingImage = PlaceHolderImages.find(p => p.id === 'team-meeting');
+  const parallaxImage = PlaceHolderImages.find(p => p.id === 'parallax-bg');
+
 
   return (
     <div className="flex flex-col">
@@ -331,20 +333,32 @@ export default async function HomePage() {
           </div>
         </div>
       </section>
-           {/* CTA Section */}
-           <section className="py-16 md:py-24 bg-gradient-to-r from-primary to-accent text-primary-foreground">
-        <div className="container text-center">
-          <ScrollAnimation animation="fade-in">
-            <h2 className="text-3xl md:text-4xl font-bold">Ready to Transform Your Business?</h2>
-            <p className="mt-4 text-lg max-w-2xl mx-auto">
-              Let's discuss how Tishha can help you achieve your goals. Schedule a free consultation with our experts today.
-            </p>
-          </ScrollAnimation>
-        </div>
-      </section>
+
+      {/* Parallax Section */}
+      {parallaxImage && (
+        <section
+          className="py-32 md:py-48 bg-cover bg-fixed bg-center relative"
+          style={{ backgroundImage: `url(${parallaxImage.imageUrl})` }}
+        >
+          <div className="absolute inset-0 bg-black/50" />
+          <div className="container relative text-center text-white">
+            <ScrollAnimation animation="fade-in">
+              <h2 className="text-3xl md:text-4xl font-bold">Ready to Transform Your Business?</h2>
+              <p className="mt-4 text-lg max-w-2xl mx-auto">
+                Let's discuss how Tishha can help you achieve your goals. Schedule a free consultation with our experts today.
+              </p>
+              <Button asChild size="lg" className="mt-8">
+                <Link href="/contact">Get in Touch</Link>
+              </Button>
+            </ScrollAnimation>
+          </div>
+        </section>
+      )}
 
       <GetTouch />
  
     </div>
   );
 }
+
+  
