@@ -124,7 +124,7 @@ export default function Header() {
                 <Link
                   key={subLink.label}
                   href={subLink.href}
-                  className="block py-2 text-muted-foreground"
+                  className="block py-2 text-muted-foreground font-bold"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {subLink.label}
@@ -164,7 +164,7 @@ export default function Header() {
           <DropdownMenuContent className="w-56">
             {subLinks.map((subLink) => (
               <DropdownMenuItem key={subLink.label} asChild>
-                <Link href={subLink.href}>{subLink.label}</Link>
+                <Link href={subLink.href} className="font-bold">{subLink.label}</Link>
               </DropdownMenuItem>
             ))}
           </DropdownMenuContent>
@@ -177,9 +177,9 @@ export default function Header() {
         href={href}
         className={cn(
           "font-bold transition-colors hover:text-white text-sm",
-          pathname.startsWith(href)
+          pathname === href || (href !== "/" && pathname.startsWith(href))
             ? "text-white"
-            : "text-background"
+            : "text-white/90"
         )}
       >
         {label}
@@ -188,13 +188,13 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/90 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-darkbg backdrop-blur supports-[backdrop-filter]:bg-darkbg/60">
       <div className="container flex h-20 max-w-screen-2xl items-center justify-between">
         <Link href="/" className="flex items-center space-x-2">
           <Logo className="h-12 w-auto" />
         </Link>
         <div className="flex items-center gap-6">
-          <nav className="hidden md:flex items-center gap-2 text-sm">
+          <nav className="hidden md:flex items-center gap-6 text-sm">
             {navLinks.map((link) => (
               <NavLink key={link.label} {...link} />
             ))}
