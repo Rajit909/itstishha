@@ -5,8 +5,8 @@ export const Logo = (props: Omit<React.ComponentProps<typeof Image>, 'src' | 'al
     <Image 
         src="/assets/logo.png" 
         alt="Tishha Consultants LLP Logo"
-        width={40}
-        height={40}
+        width={70}
+        height={70}
         {...props}
     />
 );

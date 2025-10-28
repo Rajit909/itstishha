@@ -152,7 +152,7 @@ export default function Header() {
             <Button
               variant="ghost"
               className={cn(
-                "font-semibold transition-colors hover:text-primary text-sm",
+                "font-bold transition-colors hover:text-primary text-sm",
                 pathname.startsWith(href)
                   ? "text-primary"
                   : "text-muted-foreground"
@@ -163,7 +163,7 @@ export default function Header() {
           </DropdownMenuTrigger>
           <DropdownMenuContent className="w-56">
             {subLinks.map((subLink) => (
-              <DropdownMenuItem key={subLink.label} asChild>
+              <DropdownMenuItem key={subLink.label} asChild className="font-bold">
                 <Link href={subLink.href}>{subLink.label}</Link>
               </DropdownMenuItem>
             ))}
@@ -176,7 +176,7 @@ export default function Header() {
       <Link
         href={href}
         className={cn(
-          "font-semibold transition-colors hover:text-primary text-sm",
+          "font-bold transition-colors hover:text-primary text-sm",
           pathname.startsWith(href)
             ? "text-primary"
             : "text-muted-foreground"
