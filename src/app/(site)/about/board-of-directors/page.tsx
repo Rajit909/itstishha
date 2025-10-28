@@ -41,7 +41,7 @@ export default function BoardOfDirectorsPage() {
                 const isReversed = index % 2 !== 0;
                 return (
                 <div key={member.id} className="animate-fade-in-up" style={{ animationDelay: `${200 * index}ms`}}>
-                    <Card className="overflow-hidden shadow-lg transition-shadow hover:shadow-xl">
+                    <Card className="overflow-hidden shadow-lg transition-shadow hover:shadow-xl rounded-2xl">
                         <div className={`flex flex-col md:flex-row  ${isReversed ? 'md:flex-row-reverse' : ''}`}>
                             <div className={`h-80 h-full w-5xl ${isReversed ? 'md:col-start-2' : ''}`}>
                                 {memberImage && (
