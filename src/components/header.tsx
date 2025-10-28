@@ -154,16 +154,18 @@ export default function Header() {
       );
     }
 
+    const navLinkClasses = cn(
+        "font-bold transition-colors text-sm text-white/90 hover:bg-lightgreenbg hover:text-darkbg",
+        "inline-flex items-center justify-center px-4 py-2 rounded-md"
+    );
+
     if (subLinks) {
       return (
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button
               variant="ghost"
-              className={cn(
-                "font-bold transition-colors text-sm text-white/90",
-                "hover:bg-lightgreenbg hover:text-darkbg"
-              )}
+              className={navLinkClasses}
             >
               {label} <ChevronDown className="ml-2 h-4 w-4" />
             </Button>
@@ -183,11 +185,10 @@ export default function Header() {
       <Link
         href={href}
         className={cn(
-          "font-bold transition-colors text-sm",
-          pathname === href || (href !== "/" && pathname.startsWith(href))
-            ? "text-white"
-            : "text-white/90",
-          'hover:bg-lightgreenbg hover:text-darkbg'
+            navLinkClasses,
+            pathname === href || (href !== "/" && pathname.startsWith(href))
+                ? "text-white bg-black/10"
+                : "text-white/90"
         )}
       >
         {label}
@@ -202,7 +203,7 @@ export default function Header() {
           <Logo className="h-12 w-auto" />
         </Link>
         <div className="flex items-center gap-6">
-          <nav className="hidden md:flex items-center gap-6 text-sm">
+          <nav className="hidden md:flex items-center gap-1">
             {navLinks.map((link) => (
               <NavLink key={link.label} {...link} />
             ))}
