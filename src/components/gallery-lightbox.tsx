@@ -123,26 +123,25 @@ export function GalleryLightbox({ images, selectedIndex, onClose, onPrev, onNext
         </Button>
 
         {/* Image Content */}
-        <motion.div
-          key={selectedIndex}
-          initial={{ scale: 0.95, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          exit={{ scale: 0.95, opacity: 0 }}
-          transition={{ duration: 0.2 }}
+        <div
           className={cn("relative w-full max-w-4xl h-full max-h-[90vh] p-4 flex items-center justify-center", scale > 1 ? 'cursor-grab' : 'cursor-auto', isDragging ? 'cursor-grabbing' : '')}
           onClick={(e) => e.stopPropagation()}
           onMouseDown={onMouseDown}
           onDoubleClick={(e) => { e.stopPropagation(); handleResetZoom(e); }}
         >
-          <div className="relative w-full h-full overflow-hidden">
+          <AnimatePresence initial={false}>
             <motion.div
               ref={imageRef}
+              key={selectedIndex}
               className="relative w-full h-full"
               style={{
                 scale: scale,
                 translateX: position.x,
                 translateY: position.y,
               }}
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 0.2, ease: "easeInOut" }}
             >
               <Image
@@ -152,10 +151,11 @@ export function GalleryLightbox({ images, selectedIndex, onClose, onPrev, onNext
                 className="object-contain"
                 sizes="(max-width: 768px) 100vw, 80vw"
                 draggable={false}
+                priority
               />
             </motion.div>
-          </div>
-        </motion.div>
+          </AnimatePresence>
+        </div>
 
         <Button variant="ghost" size="icon" onClick={(e) => { e.stopPropagation(); onNext(); }} className="absolute right-2 sm:right-4 z-10 h-12 w-12 rounded-full bg-white/10 text-white hover:bg-white/20" aria-label="Next image">
           <ArrowRight className="h-6 w-6" />
