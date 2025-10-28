@@ -152,10 +152,10 @@ export default function Header() {
             <Button
               variant="ghost"
               className={cn(
-                "font-medium transition-colors hover:text-primary text-sm",
+                "font-bold transition-colors hover:text-white text-sm ",
                 pathname.startsWith(href)
-                  ? "text-primary"
-                  : "text-muted-foreground"
+                  ? "background"
+                  : "text-white/90"
               )}
             >
               {label} <ChevronDown className="ml-2 h-4 w-4" />
@@ -176,10 +176,10 @@ export default function Header() {
       <Link
         href={href}
         className={cn(
-          "font-medium transition-colors hover:text-primary text-sm",
+          "font-bold transition-colors hover:text-white text-sm",
           pathname.startsWith(href)
-            ? "text-primary"
-            : "text-muted-foreground"
+            ? "text-white"
+            : "text-background"
         )}
       >
         {label}
