@@ -22,8 +22,10 @@ export default {
       colors: {
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
+        mybg: 'hsl(var(--mybg))',
         darkbg: 'hsl(var(--darkbg))',
         'whyp-bg': 'hsl(var(--whyp-bg))',
+        lightgreen: 'hsl(var(--lightgreen))',
         card: {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))',
