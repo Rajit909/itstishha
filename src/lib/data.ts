@@ -139,17 +139,17 @@ export const projects: Project[] = [
   {
     id: '1',
     slug: 'healthforward-accreditation',
-    title: 'Achieving JCAHO Accreditation for HealthForward',
-    client: 'HealthForward',
+    title: 'TISHHA Consultants LLP – Empowering Healthcare, Inspiring Change',
+    client: 'National Nursing Conference 2025',
     image: 'case-study-1',
-    excerpt: 'How we guided a leading hospital through a complex accreditation process, resulting in a 99.8% compliance score and enhanced operational efficiency.',
+    excerpt: 'TISHHA Consultants LLP, a visionary organization dedicated to the hospital and healthcare industry in India, was established with the mission to make hospital administration a globally recognized and indispensable part of the healthcare system. Through initiatives like the TISHHA National Nursing Conference 2025 | Transforming Nursing Leadership in India, TISHHA continues to empower healthcare professionals, foster leadership, and elevate quality standards across the sector. Team TISHHA also proudly congratulates the Quality and Accreditation Institute (QAI) on completing 8 remarkable years of excellence, applauding their drive to #ChangeAdaptImprove and uphold the highest standards in #HealthcareQuality and #Accreditation. Together, we celebrate a shared commitment to excellence, teamwork, and transformative impact in healthcare.',
     challenge: 'HealthForward, a major regional hospital, was facing a critical JCAHO accreditation survey. Their internal team was overwhelmed with the documentation requirements, process standardization, and staff training needed to meet the rigorous standards. They needed expert guidance to ensure a successful outcome without disrupting patient care.',
     solution: 'Tishha deployed a team of accreditation specialists who conducted a thorough gap analysis. We developed a customized roadmap, implemented a digital quality management system, and provided hands-on training for all departments. Our team worked alongside HealthForward staff to streamline workflows and ensure every standard was met and documented correctly.',
     result: 'HealthForward passed their JCAHO survey with a 99.8% compliance score. The new digital systems reduced administrative overhead by 30%, and the streamlined processes led to a 15% improvement in patient throughput. The hospital is now recognized as a leader in quality and safety in their region.',
     services: ['Quality Accreditation', 'Healthcare Solutions'],
     testimonial: {
       text: 'Tishha was the partner we needed. Their expertise and hands-on approach were instrumental in our success. We couldn’t have done it without them.',
-      author: 'CEO, HealthForward'
+      author: ''
     }
   },
   {

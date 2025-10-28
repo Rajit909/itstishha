@@ -68,9 +68,9 @@ export default async function HomePage() {
                         </div>
                     </li>
                 </ul>
-                <Button className="mt-8" asChild size="lg">
+                {/* <Button className="mt-8" asChild size="lg">
                     <Link href="/about">Meet Our Team</Link>
-                </Button>
+                </Button> */}
             </ScrollAnimation>
         </div>
       </section>
@@ -144,7 +144,7 @@ export default async function HomePage() {
       )}
 
       {/* Industries We Serve Section */}
-      <section className="py-16 md:py-24 bg-background">
+      {/* <section className="py-16 md:py-24 bg-background">
         <div className="container">
           <ScrollAnimation animation="fade-in-up">
             <div className="text-center max-w-3xl mx-auto">
@@ -196,7 +196,7 @@ export default async function HomePage() {
             </ScrollAnimation>
           </div>
         </div>
-      </section>
+      </section> */}
 
      
 

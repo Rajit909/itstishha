@@ -19,7 +19,7 @@ export default function FinancialConsultancyPage() {
           <div className="flex flex-col md:flex-row gap-12 items-center">
             <div className="relative w-full h-96 md:h-72 rounded-lg overflow-hidden shadow-xl animate-fade-in-left md:basis-2/5">
               <Image 
-                src="https://picsum.photos/seed/finance/800/600" 
+                src="/services/financial.jpg" 
                 alt="Financial Consultancy" 
                 fill 
                 className="object-cover" 

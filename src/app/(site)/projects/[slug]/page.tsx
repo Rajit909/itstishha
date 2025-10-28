@@ -71,11 +71,11 @@ export default async function ProjectPage({ params: { slug } }: ProjectPageProps
               <Card className="bg-card">
                 <CardContent className="p-6">
                   <p className="text-lg italic">"{study.testimonial.text}"</p>
-                  <p className="mt-4 font-semibold text-right">- {study.testimonial.author}</p>
+                  {/* <p className="mt-4 font-semibold text-right">- {study.testimonial.author}</p> */}
                 </CardContent>
               </Card>
             )}
-            <Card>
+            {/* <Card>
               <CardHeader>
                 <CardTitle>Project Details</CardTitle>
               </CardHeader>
@@ -93,7 +93,7 @@ export default async function ProjectPage({ params: { slug } }: ProjectPageProps
                   </div>
                  </div>
               </CardContent>
-            </Card>
+            </Card> */}
           </aside>
         </div>
       </div>
