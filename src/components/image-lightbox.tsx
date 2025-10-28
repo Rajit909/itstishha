@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState, useEffect, useCallback } from 'react';
@@ -50,17 +49,13 @@ export function ImageLightbox({ images, startIndex, onClose }: ImageLightboxProp
 
   const variants = {
     enter: (direction: number) => ({
-      x: direction > 0 ? '1000px' : '-1000px',
+      x: direction > 0 ? '100vw' : '-100vw',
       opacity: 0,
     }),
-    center: {
-      zIndex: 1,
-      x: 0,
-      opacity: 1,
-    },
+    center: { zIndex: 1, x: 0, opacity: 1 },
     exit: (direction: number) => ({
       zIndex: 0,
-      x: direction < 0 ? '1000px' : '-1000px',
+      x: direction < 0 ? '100vw' : '-100vw',
       opacity: 0,
     }),
   };
@@ -73,12 +68,11 @@ export function ImageLightbox({ images, startIndex, onClose }: ImageLightboxProp
       className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm"
       onClick={onClose}
     >
-      {/* Interactive Content Wrapper */}
-      <div 
-        className="relative z-10 flex flex-col items-center justify-center w-full h-full"
+      {/* This container stops clicks from closing the modal */}
+      <div
+        className="relative z-10 flex h-full w-full flex-col items-center justify-center"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Image transition container */}
         <AnimatePresence initial={false} custom={direction}>
           <motion.div
             key={currentIndex}
@@ -91,7 +85,7 @@ export function ImageLightbox({ images, startIndex, onClose }: ImageLightboxProp
               x: { type: 'spring', stiffness: 300, damping: 30 },
               opacity: { duration: 0.2 },
             }}
-            className="relative w-full h-full flex items-center justify-center"
+            className="absolute flex h-full w-full items-center justify-center"
           >
             <Image
               src={images[currentIndex].src}
@@ -104,7 +98,7 @@ export function ImageLightbox({ images, startIndex, onClose }: ImageLightboxProp
           </motion.div>
         </AnimatePresence>
 
-        {/* Controls */}
+        {/* Top Controls */}
         <div className="absolute top-4 right-4 flex items-center gap-2">
           <Button
             variant="ghost"
@@ -132,7 +126,7 @@ export function ImageLightbox({ images, startIndex, onClose }: ImageLightboxProp
           </Button>
         </div>
 
-        {/* Navigation */}
+        {/* Side Navigation */}
         <div className="absolute left-4 top-1/2 -translate-y-1/2">
           <Button
             variant="ghost"
