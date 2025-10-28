@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
 import Autoplay from "embla-carousel-autoplay";
+import React from 'react';
 
 const galleryImages = [
   { id: 1, src: '/gallery/conf.jpg', alt: 'National Conference on Nursing Leadership & Excellence 2025', hint: 'competetion' },
@@ -48,6 +49,9 @@ const galleryImages = [
 ];
 
 export default function GalleryPage() {
+  const plugin = React.useRef(
+    Autoplay({ delay: 3000, stopOnInteraction: true })
+  );
 
   return (
     <div className="bg-background text-foreground animate-fade-in">
@@ -68,12 +72,7 @@ export default function GalleryPage() {
               align: "start",
               loop: true,
             }}
-             plugins={[
-              Autoplay({
-                delay: 3000,
-                stopOnInteraction: true,
-              }),
-            ]}
+             plugins={[plugin.current]}
           >
             <CarouselContent>
               {galleryImages.map((image) => (
