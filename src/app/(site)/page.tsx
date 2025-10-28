@@ -75,7 +75,7 @@ export default async function HomePage() {
         </div>
       </section>
       {/* Featured Services Section */}
-      <section id="services" className="py-16 md:py-24 bg-background">
+      <section id="services" className="py-16 md:py-24 bg-[#F0F8FF]">
         <div className="container">
           <ScrollAnimation animation="fade-in-up">
             <div className="text-center max-w-3xl mx-auto">
