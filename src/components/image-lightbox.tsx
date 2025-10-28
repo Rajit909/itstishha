@@ -117,7 +117,7 @@ export function ImageLightbox({ images, startIndex, onClose }: ImageLightboxProp
       </div>
 
        {/* Image Caption */}
-       <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white text-center bg-black/30 px-4 py-2 rounded-lg">
+       <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white text-center bg-black/30 px-4 py-2 rounded-lg" onClick={(e) => e.stopPropagation()}>
           <p>{images[currentIndex].alt}</p>
           <p className="text-sm opacity-80">{currentIndex + 1} / {images.length}</p>
         </div>
