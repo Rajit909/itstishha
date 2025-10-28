@@ -121,7 +121,7 @@ export default async function HomePage() {
               </div>
             </ScrollAnimation>
             <div className="mt-12 grid md:grid-cols-2 gap-12 items-center">
-              <ScrollAnimation animation="slide-in-from-left" className="relative aspect-video rounded-lg overflow-hidden shadow-xl">
+              <ScrollAnimation animation="slide-in-from-left" className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
                   {featuredStudyImage && <Image
                       src={featuredStudyImage.imageUrl}
                       alt={featuredStudy.title}
@@ -324,7 +324,6 @@ export default async function HomePage() {
       </section>
 
       <GetTouch />
-
  
     </div>
   );
@@ -333,6 +332,7 @@ export default async function HomePage() {
     
 
     
+
 
 
 
