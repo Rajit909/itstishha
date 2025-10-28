@@ -41,7 +41,7 @@ export default async function HomePage() {
                 />}
             </ScrollAnimation>
             <ScrollAnimation animation="slide-in-from-right">
-                <h2 className="text-3xl md:text-4xl font-bold">Why Partner with Tishha?</h2>
+                <h2 className="text-3xl md:text-4xl font-bold text-darkbg">Why Partner with Tishha?</h2>
                 <p className="mt-4 text-lg text-muted-foreground">
                     Our approach is rooted in partnership, deep industry knowledge, and a commitment to delivering measurable results.
                 </p>
@@ -333,4 +333,5 @@ export default async function HomePage() {
     
 
     
+
 

@@ -23,6 +23,7 @@ export default {
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         darkbg: 'hsl(var(--darkbg))',
+        'whyp-bg': 'hsl(var(--whyp-bg))',
         card: {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))',

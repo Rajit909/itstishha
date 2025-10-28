@@ -152,7 +152,7 @@ export default function Header() {
             <Button
               variant="ghost"
               className={cn(
-                "font-bold transition-colors hover:text-white text-sm ",
+                "font-bold transition-colors text-sm hover:text-darkbg hover:bg-whyp-bg",
                 pathname.startsWith(href)
                   ? "background"
                   : "text-white/90"
@@ -176,7 +176,7 @@ export default function Header() {
       <Link
         href={href}
         className={cn(
-          "font-bold transition-colors hover:text-white text-sm",
+          "font-bold transition-colors text-sm hover:text-darkbg hover:bg-whyp-bg",
           pathname === href || (href !== "/" && pathname.startsWith(href))
             ? "text-white"
             : "text-white/90"
