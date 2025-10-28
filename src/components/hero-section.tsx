@@ -82,9 +82,9 @@ export function HeroSection() {
         })}
       </div>
         
-      <div className="absolute inset-0 bg-black/50" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20" />
 
-      <div className="relative z-10 container h-full flex flex-col justify-center items-center text-center text-white">
+      <div className="relative z-10 container h-full flex flex-col justify-end items-start text-left text-white pb-16 md:pb-24">
         <div className="max-w-3xl overflow-hidden">
           <AnimatePresence mode="wait">
             <motion.h1
@@ -103,7 +103,7 @@ export function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut", delay: 0.5 } }}
               exit={{ opacity: 0, y: -20, transition: { duration: 0.3, ease: "easeIn" } }}
-              className="mt-4 md:text-xl max-w-2xl mx-auto drop-shadow-lg"
+              className="mt-4 md:text-xl max-w-2xl drop-shadow-lg"
             >
               {slides[selectedIndex].subtitle}
             </motion.p>
