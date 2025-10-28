@@ -56,7 +56,7 @@ export default async function BlogPostPage({ params: { slug } }: BlogPostPagePro
         </header>
 
         {postImage && (
-          <div className="relative h-64 md:h-96 w-full rounded-lg overflow-hidden shadow-lg mb-12">
+          <div className="relative h-64 md:h-96 w-full rounded-2xl overflow-hidden shadow-lg mb-12">
             <Image
               src={postImage}
               alt={post.title}
@@ -70,7 +70,7 @@ export default async function BlogPostPage({ params: { slug } }: BlogPostPagePro
 
         {isPdf ? (
           <div className="aspect-video">
-            <iframe src={post.content} className="w-full h-full" title={post.title} />
+            <iframe src={post.content} className="w-full h-full rounded-2xl" title={post.title} />
           </div>
         ) : (
           <div

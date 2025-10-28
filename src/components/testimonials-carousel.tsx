@@ -42,7 +42,7 @@ export function TestimonialsCarousel({ clients }: TestimonialsCarouselProps) {
           return (
             <CarouselItem key={client.id} className="md:basis-1/2 lg:basis-1/3">
               <div className="p-4 h-full">
-                <Card className="h-full flex flex-col justify-between hover:shadow-xl transition-shadow duration-300 bg-background">
+                <Card className="h-full flex flex-col justify-between hover:shadow-xl transition-shadow duration-300 bg-background rounded-2xl">
                   <CardContent className="p-6 flex-grow">
                     <p className="italic">"{client.testimonial}"</p>
                   </CardContent>

@@ -29,7 +29,7 @@ export default async function BlogPage() {
               const imageHint = PlaceHolderImages.find(p => p.id === post.image)?.imageHint;
               return (
                 <div key={post.id} className="animate-fade-in-up" style={{ animationDelay: `${200 * index}ms`}}>
-                    <Card className="group flex flex-col overflow-hidden hover:shadow-xl transition-shadow duration-300 h-full">
+                    <Card className="group flex flex-col overflow-hidden hover:shadow-xl transition-shadow duration-300 h-full rounded-2xl">
                       {postImageSrc && (
                         <div className="relative h-56 w-full overflow-hidden">
                           <Image
@@ -74,5 +74,3 @@ export default async function BlogPage() {
     </>
   );
 }
-
-    

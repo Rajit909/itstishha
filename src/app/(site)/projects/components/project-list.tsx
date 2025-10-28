@@ -70,7 +70,7 @@ export function ProjectList({ projects, categories }: ProjectListProps) {
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.3, delay: index * 0.05 }}
               >
-                <Card className="group flex flex-col overflow-hidden hover:shadow-xl transition-shadow duration-300 h-full">
+                <Card className="group flex flex-col overflow-hidden hover:shadow-xl transition-shadow duration-300 h-full rounded-2xl">
                   {projectImage && (
                     <div className="relative h-64 w-full overflow-hidden">
                       <Image

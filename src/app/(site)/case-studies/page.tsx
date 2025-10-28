@@ -1,3 +1,4 @@
+
 import Link from "next/link";
 import Image from "next/image";
 import { getProjects } from "@/lib/data";
@@ -27,7 +28,7 @@ export default async function ProjectsPage() {
               const studyImage = PlaceHolderImages.find(p => p.id === study.image);
               return (
                 <div key={study.id} className="animate-fade-in-up" style={{ animationDelay: `${200 * index}ms`}}>
-                    <Card className="group flex flex-col overflow-hidden hover:shadow-xl transition-shadow duration-300 h-full">
+                    <Card className="group flex flex-col overflow-hidden hover:shadow-xl transition-shadow duration-300 h-full rounded-2xl">
                       {studyImage && (
                         <div className="relative h-64 w-full overflow-hidden">
                           <Image

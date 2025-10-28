@@ -1,3 +1,4 @@
+
 import { getProjectBySlug, getProjects } from "@/lib/data";
 import { notFound } from "next/navigation";
 import Image from "next/image";
@@ -39,7 +40,7 @@ export default async function ProjectPage({ params: { slug } }: ProjectPageProps
         </header>
 
         {studyImage && (
-          <div className="relative h-64 md:h-96 w-full rounded-lg overflow-hidden shadow-lg mb-12">
+          <div className="relative h-64 md:h-96 w-full rounded-2xl overflow-hidden shadow-lg mb-12">
             <Image
               src={studyImage.imageUrl}
               alt={study.title}
@@ -68,14 +69,14 @@ export default async function ProjectPage({ params: { slug } }: ProjectPageProps
           </div>
           <aside className="md:col-span-1 space-y-8">
             {study.testimonial && (
-              <Card className="bg-card">
+              <Card className="bg-card rounded-2xl">
                 <CardContent className="p-6">
                   <p className="text-lg italic">"{study.testimonial.text}"</p>
                   <p className="mt-4 font-semibold text-right">- {study.testimonial.author}</p>
                 </CardContent>
               </Card>
             )}
-            <Card>
+            <Card className="rounded-2xl">
               <CardHeader>
                 <CardTitle>Project Details</CardTitle>
               </CardHeader>

@@ -75,7 +75,7 @@ export default async function HomePage() {
        {/* Why Choose Us Section */}
        <section className="py-16 md:py-24 bg-card">
         <div className="container grid md:grid-cols-2 gap-12 items-center">
-            <ScrollAnimation animation="slide-in-from-left" className="relative h-96 md:h-full rounded-lg overflow-hidden shadow-xl order-last md:order-first">
+            <ScrollAnimation animation="slide-in-from-left" className="relative h-96 md:h-full rounded-2xl overflow-hidden shadow-xl order-last md:order-first">
                  {teamMeetingImage && <Image
                     src={teamMeetingImage.imageUrl}
                     alt={teamMeetingImage.description}
@@ -140,7 +140,7 @@ export default async function HomePage() {
           <div className="mt-12 grid gap-8 md:grid-cols-3">
             {services.map((service, index) => (
               <ScrollAnimation key={service.id} animation="zoom-in" delay={index * 150}>
-                <Card className="group overflow-hidden flex flex-col text-center items-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 h-full">
+                <Card className="group overflow-hidden flex flex-col text-center items-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 h-full rounded-2xl">
                   <CardHeader>
                     <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
                       <ServiceIcon name={service.icon} className="h-8 w-8" />
@@ -173,7 +173,7 @@ export default async function HomePage() {
               </div>
             </ScrollAnimation>
             <div className="mt-12 grid md:grid-cols-2 gap-12 items-center">
-              <ScrollAnimation animation="slide-in-from-left" className="relative h-96 rounded-lg overflow-hidden shadow-xl">
+              <ScrollAnimation animation="slide-in-from-left" className="relative h-96 rounded-2xl overflow-hidden shadow-xl">
                   {featuredStudyImage && <Image
                       src={featuredStudyImage.imageUrl}
                       alt={featuredStudy.title}
@@ -210,7 +210,7 @@ export default async function HomePage() {
           <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {industries.map((industry, index) => (
                 <ScrollAnimation key={index} animation="zoom-in" delay={index * 150}>
-                    <Card className="text-center hover:shadow-lg transition-shadow duration-300">
+                    <Card className="text-center hover:shadow-lg transition-shadow duration-300 rounded-2xl">
                         <CardHeader>
                         <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
                             {industry.icon}
@@ -243,7 +243,7 @@ export default async function HomePage() {
                     const memberImage = PlaceHolderImages.find(p => p.id === member.image);
                     return (
                         <ScrollAnimation key={member.id} animation="fade-in-up" delay={200 * index}>
-                          <Card className="text-center group overflow-hidden h-full">
+                          <Card className="text-center group overflow-hidden h-full rounded-2xl">
                               <CardContent className="p-0">
                                   {memberImage && (
                                   <div className="relative h-64 w-full">
@@ -304,7 +304,7 @@ export default async function HomePage() {
                 const imageHint = PlaceHolderImages.find(p => p.id === post.image)?.imageHint;
                 return (
                   <ScrollAnimation key={post.id} animation="fade-in-up" delay={index * 150}>
-                    <Card className="group overflow-hidden flex flex-col hover:shadow-xl transition-shadow duration-300 h-full bg-background">
+                    <Card className="group overflow-hidden flex flex-col hover:shadow-xl transition-shadow duration-300 h-full bg-background rounded-2xl">
                         {postImageSrc && <div className="relative h-56 w-full overflow-hidden">
                           <Image src={postImageSrc} alt={post.title} fill className="object-cover group-hover:scale-105 transition-transform duration-300" data-ai-hint={imageHint || 'blog post'} />
                         </div>}

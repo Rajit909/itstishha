@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from "next/image";
@@ -22,7 +23,7 @@ export function StrategicLeadershipList({ partners }: StrategicLeadershipListPro
             className="animate-fade-in-up"
             style={{ animationDelay: `${200 * index}ms` }}
           >
-            <Card className="overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+            <Card className="overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 rounded-2xl">
               <div
                 className={`flex flex-col md:flex-row ${
                   isReversed ? "md:flex-row-reverse" : ""

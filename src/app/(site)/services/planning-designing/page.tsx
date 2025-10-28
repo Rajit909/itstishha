@@ -17,7 +17,7 @@ export default function PlanningDesigningPage() {
       <section className="py-16 md:py-24">
         <div className="container">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="relative h-96 rounded-lg overflow-hidden shadow-xl animate-fade-in-left">
+            <div className="relative h-96 rounded-2xl overflow-hidden shadow-xl animate-fade-in-left">
               <Image src="/services/plannning.webp" alt="online team discussion" fill className="object-cover" data-ai-hint="architecture blueprint" />
               <div className="absolute inset-0 bg-black/30"></div>
             </div>

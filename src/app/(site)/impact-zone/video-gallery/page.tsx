@@ -25,7 +25,7 @@ export default function VideoGalleryPage() {
         <div className="container">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
             {videos.map((video, index) => (
-              <div key={video.id} className="group relative h-72 rounded-lg overflow-hidden shadow-lg cursor-pointer animate-fade-in-up" style={{ animationDelay: `${200 * index}ms`}}>
+              <div key={video.id} className="group relative h-72 rounded-2xl overflow-hidden shadow-lg cursor-pointer animate-fade-in-up" style={{ animationDelay: `${200 * index}ms`}}>
                 <Image
                   src={video.thumbnail}
                   alt={video.title}

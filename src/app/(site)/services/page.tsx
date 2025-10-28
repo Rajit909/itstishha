@@ -1,3 +1,4 @@
+
 import Link from "next/link";
 import Image from "next/image";
 import { getServices } from "@/lib/data";
@@ -28,7 +29,7 @@ export default async function ServicesPage() {
               const isReversed = index % 2 !== 0;
               return (
                 <div className="animate-fade-in-up" style={{ animationDelay: `${200 * index}ms`}} key={service.id}>
-                    <Card className="overflow-hidden shadow-lg transition-shadow hover:shadow-xl">
+                    <Card className="overflow-hidden shadow-lg transition-shadow hover:shadow-xl rounded-2xl">
                         <div className={`grid md:grid-cols-2 items-center ${isReversed ? 'md:grid-flow-col-dense' : ''}`}>
                             <div className={`relative h-64 md:h-full ${isReversed ? 'md:col-start-2' : ''}`}>
                                 {serviceImage && (

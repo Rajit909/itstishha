@@ -59,7 +59,7 @@ export default async function AboutPage() {
               </li>
             </ul>
           </ScrollAnimation>
-          <ScrollAnimation animation="slide-in-from-left" className="relative h-96 md:h-full min-h-[400px] rounded-lg overflow-hidden shadow-xl">
+          <ScrollAnimation animation="slide-in-from-left" className="relative h-96 md:h-full min-h-[400px] rounded-2xl overflow-hidden shadow-xl">
             <Image
               src="/carousel-img/sliderthree.jpeg"
               alt="Tishha Office"
@@ -85,7 +85,7 @@ export default async function AboutPage() {
                     const memberImage = PlaceHolderImages.find(p => p.id === member.image);
                     return (
                         <div key={member.id} className="animate-fade-in-up" style={{ animationDelay: `${200 * index}ms`}}>
-                          <Card className="text-center group overflow-hidden h-full">
+                          <Card className="text-center group overflow-hidden h-full rounded-2xl">
                               <CardContent className="p-0">
                                   {memberImage && (
                                   <div className="relative h-64 w-full">

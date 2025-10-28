@@ -26,7 +26,7 @@ export default function AcademicEventsPage() {
       <section className="py-16 md:py-24">
         <div className="container">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="relative h-96 rounded-lg overflow-hidden shadow-xl md:order-last animate-fade-in-right">
+            <div className="relative h-96 rounded-2xl overflow-hidden shadow-xl md:order-last animate-fade-in-right">
               <Image
                 src="/carousel-img/sliderone.jpeg"
                 alt="Academic Event"

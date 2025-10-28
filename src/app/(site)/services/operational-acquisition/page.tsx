@@ -17,7 +17,7 @@ export default function OperationalAcquisitionPage() {
       <section className="py-16 md:py-24">
         <div className="container">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="relative h-96 rounded-lg overflow-hidden shadow-xl animate-fade-in-left">
+            <div className="relative h-96 rounded-2xl overflow-hidden shadow-xl animate-fade-in-left">
               <Image src="/services/operational.jpg" alt="Operational Acquisition" fill className="object-cover" data-ai-hint="business handshake" />
               <div className="absolute inset-0 bg-black/30"></div>
             </div>
