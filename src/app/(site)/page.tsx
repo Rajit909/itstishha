@@ -29,7 +29,7 @@ export default async function HomePage() {
       <HeroSection />
 
        {/* Why Choose Us Section */}
-       <section className="py-16 md:py-24 bg-card">
+       <section className="py-16 md:py-24 bg-[#dceeef]">
         <div className="container grid md:grid-cols-2 gap-12 items-center">
             <ScrollAnimation animation="slide-in-from-left" className="relative h-96 md:h-full rounded-lg overflow-hidden shadow-xl order-last md:order-first">
                  {teamMeetingImage && <Image
@@ -333,3 +333,4 @@ export default async function HomePage() {
     
 
     
+
