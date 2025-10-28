@@ -90,7 +90,7 @@ export default async function HomePage() {
               <ScrollAnimation key={service.id} animation="zoom-in" delay={index * 150}>
                 <Card className="group overflow-hidden flex flex-col text-center items-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 h-full">
                   <CardHeader>
-                    <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
+                    <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-darkbg/10 text-darkbg group-hover:bg-darkbg group-hover:text-primary-foreground transition-colors duration-300">
                       <ServiceIcon name={service.icon} className="h-8 w-8" />
                     </div>
                     <CardTitle className="mt-4">{service.title}</CardTitle>
@@ -152,7 +152,7 @@ export default async function HomePage() {
             <ScrollAnimation animation="zoom-in" delay={0}>
               <Card className="text-center">
                 <CardHeader>
-                  <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
+                  <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-darkbg/10 text-darkbg">
                     <HeartPulse className="h-8 w-8" />
                   </div>
                   <CardTitle>Healthcare</CardTitle>
@@ -165,7 +165,7 @@ export default async function HomePage() {
             <ScrollAnimation animation="zoom-in" delay={150}>
               <Card className="text-center">
                 <CardHeader>
-                  <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
+                  <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-darkbg/10 text-darkbg">
                     <Code className="h-8 w-8" />
                   </div>
                   <CardTitle>Technology</CardTitle>
@@ -178,7 +178,7 @@ export default async function HomePage() {
             <ScrollAnimation animation="zoom-in" delay={300}>
               <Card className="text-center">
                 <CardHeader>
-                  <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
+                  <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-darkbg/10 text-darkbg">
                     <Building className="h-8 w-8" />
                   </div>
                   <CardTitle>Public Sector</CardTitle>
@@ -326,6 +326,7 @@ export default async function HomePage() {
     
 
     
+
 
 
 
