@@ -1,7 +1,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, CheckCircle, Building, HeartPulse, Code } from "lucide-react";
+import { ArrowRight, CheckCircle, Building, HeartPulse, Code, Briefcase, Handshake, Target } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
@@ -13,6 +13,32 @@ import { ClientLogoCarousel } from "@/components/client-logo-carousel";
 import { TestimonialsCarousel } from "@/components/testimonials-carousel";
 import { ServiceIcon } from "@/components/service-icon";
 import { HeroSection } from "@/components/hero-section";
+
+const stats = [
+  { value: "18+", label: "Years of Experience" },
+  { value: "50+", label: "Projects Completed" },
+  { value: "99%", label: "Client Satisfaction" },
+  { value: "100+", label: "Happy Clients" },
+];
+
+const industries = [
+  {
+    icon: <HeartPulse className="h-8 w-8" />,
+    title: "Healthcare",
+    description: "Optimizing patient care, streamlining operations, and ensuring regulatory compliance for healthcare providers."
+  },
+  {
+    icon: <Code className="h-8 w-8" />,
+    title: "Technology",
+    description: "Driving innovation and growth with cutting-edge IT strategies, cloud solutions, and cybersecurity."
+  },
+  {
+    icon: <Building className="h-8 w-8" />,
+    title: "Public Sector",
+    description: "Enhancing efficiency and public trust through project accreditation and IT modernization for government agencies."
+  }
+];
+
 
 export default async function HomePage() {
   const services = (await getServices()).slice(0, 3);
@@ -27,6 +53,22 @@ export default async function HomePage() {
     <div className="flex flex-col">
      
       <HeroSection />
+
+      {/* Key Metrics Section */}
+      <section className="bg-background">
+        <div className="container py-12 md:py-16">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                {stats.map((stat, index) => (
+                    <ScrollAnimation key={index} animation="fade-in-up" delay={index * 150}>
+                        <div className="p-4">
+                            <h3 className="text-4xl md:text-5xl font-bold text-primary">{stat.value}</h3>
+                            <p className="mt-2 text-sm md:text-base text-muted-foreground">{stat.label}</p>
+                        </div>
+                    </ScrollAnimation>
+                ))}
+            </div>
+        </div>
+      </section>
 
        {/* Why Choose Us Section */}
        <section className="py-16 md:py-24 bg-card">
@@ -47,33 +89,40 @@ export default async function HomePage() {
                 </p>
                 <ul className="mt-8 space-y-6">
                     <li className="flex items-start">
-                        <CheckCircle className="h-6 w-6 text-primary mr-4 mt-1 flex-shrink-0" />
+                        <div className="flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-primary/10 text-primary mr-4">
+                            <Handshake className="h-6 w-6" />
+                        </div>
                         <div>
                             <h3 className="font-semibold text-lg">Expert Teams</h3>
                             <p className="text-muted-foreground mt-1">Access seasoned professionals with decades of combined experience in their respective fields.</p>
                         </div>
                     </li>
                     <li className="flex items-start">
-                        <CheckCircle className="h-6 w-6 text-primary mr-4 mt-1 flex-shrink-0" />
+                        <div className="flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-primary/10 text-primary mr-4">
+                            <Target className="h-6 w-6" />
+                        </div>
                         <div>
                             <h3 className="font-semibold text-lg">Customized Strategies</h3>
                             <p className="text-muted-foreground mt-1">We don't believe in one-size-fits-all. Our solutions are tailored to your unique needs and goals.</p>
                         </div>
                     </li>
                     <li className="flex items-start">
-                        <CheckCircle className="h-6 w-6 text-primary mr-4 mt-1 flex-shrink-0" />
+                        <div className="flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-primary/10 text-primary mr-4">
+                             <Briefcase className="h-6 w-6" />
+                        </div>
                         <div>
                             <h3 className="font-semibold text-lg">Proven Results</h3>
                             <p className="text-muted-foreground mt-1">We have a track record of success, helping clients achieve accreditation, optimize operations, and innovate.</p>
                         </div>
                     </li>
                 </ul>
-                {/* <Button className="mt-8" asChild size="lg">
+                <Button className="mt-8" asChild size="lg">
                     <Link href="/about">Meet Our Team</Link>
-                </Button> */}
+                </Button>
             </ScrollAnimation>
         </div>
       </section>
+
       {/* Featured Services Section */}
       <section id="services" className="py-16 md:py-24 bg-background">
         <div className="container">
@@ -144,7 +193,7 @@ export default async function HomePage() {
       )}
 
       {/* Industries We Serve Section */}
-      {/* <section className="py-16 md:py-24 bg-background">
+      <section className="py-16 md:py-24 bg-background">
         <div className="container">
           <ScrollAnimation animation="fade-in-up">
             <div className="text-center max-w-3xl mx-auto">
@@ -155,53 +204,27 @@ export default async function HomePage() {
             </div>
           </ScrollAnimation>
           <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            <ScrollAnimation animation="zoom-in" delay={0}>
-              <Card className="text-center">
-                <CardHeader>
-                  <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
-                    <HeartPulse className="h-8 w-8" />
-                  </div>
-                  <CardTitle>Healthcare</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">Optimizing patient care, streamlining operations, and ensuring regulatory compliance for healthcare providers.</p>
-                </CardContent>
-              </Card>
-            </ScrollAnimation>
-            <ScrollAnimation animation="zoom-in" delay={150}>
-              <Card className="text-center">
-                <CardHeader>
-                  <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
-                    <Code className="h-8 w-8" />
-                  </div>
-                  <CardTitle>Technology</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">Driving innovation and growth with cutting-edge IT strategies, cloud solutions, and cybersecurity.</p>
-                </CardContent>
-              </Card>
-            </ScrollAnimation>
-            <ScrollAnimation animation="zoom-in" delay={300}>
-              <Card className="text-center">
-                <CardHeader>
-                  <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
-                    <Building className="h-8 w-8" />
-                  </div>
-                  <CardTitle>Public Sector</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">Enhancing efficiency and public trust through project accreditation and IT modernization for government agencies.</p>
-                </CardContent>
-              </Card>
-            </ScrollAnimation>
+            {industries.map((industry, index) => (
+                <ScrollAnimation key={index} animation="zoom-in" delay={index * 150}>
+                    <Card className="text-center hover:shadow-lg transition-shadow duration-300">
+                        <CardHeader>
+                        <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
+                            {industry.icon}
+                        </div>
+                        <CardTitle>{industry.title}</CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                        <p className="text-muted-foreground">{industry.description}</p>
+                        </CardContent>
+                    </Card>
+                </ScrollAnimation>
+            ))}
           </div>
         </div>
-      </section> */}
-
-     
+      </section>
 
       {/* Team Section */}
-      <section className="py-16 md:py_24 bg-background">
+      <section className="py-16 md:py_24 bg-card">
         <div className="container">
             <div className="text-center max-w-3xl mx-auto animate-fade-in-up">
                 <h2 className="text-3xl md:text-4xl font-bold">Meet Our Leadership</h2>
@@ -242,7 +265,7 @@ export default async function HomePage() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-16 md:py-24 bg-card">
+      <section className="py-16 md:py-24 bg-background">
         <div className="container">
           <ScrollAnimation animation="fade-in-up">
             <div className="text-center max-w-3xl mx-auto">
@@ -314,22 +337,14 @@ export default async function HomePage() {
             <p className="mt-4 text-lg max-w-2xl mx-auto">
               Let's discuss how Tishha can help you achieve your goals. Schedule a free consultation with our experts today.
             </p>
-            {/* <Button size="lg" variant="secondary" className="mt-8 transform hover:scale-105 transition-transform" asChild>
-              <Link href="/contact">
-                Get in Touch
-              </Link>
-            </Button> */}
           </ScrollAnimation>
         </div>
       </section>
 
       <GetTouch />
-
  
     </div>
   );
 }
-
-    
 
     
