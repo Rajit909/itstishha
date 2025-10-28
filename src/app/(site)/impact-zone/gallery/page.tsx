@@ -1,7 +1,7 @@
 
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import Image from 'next/image';
 import { Card, CardContent } from "@/components/ui/card";
 import { GalleryLightbox } from '@/components/gallery-lightbox';
@@ -42,7 +42,26 @@ const galleryImages = [
 ];
 
 export default function GalleryPage() {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+
+  const openLightbox = (index: number) => setSelectedIndex(index);
+  const closeLightbox = () => setSelectedIndex(null);
+  
+  const handlePrev = useCallback(() => {
+    if (selectedIndex !== null) {
+      setSelectedIndex((prevIndex) => 
+        prevIndex === 0 ? galleryImages.length - 1 : (prevIndex as number) - 1
+      );
+    }
+  }, [selectedIndex]);
+
+  const handleNext = useCallback(() => {
+    if (selectedIndex !== null) {
+      setSelectedIndex((prevIndex) => 
+        prevIndex === galleryImages.length - 1 ? 0 : (prevIndex as number) + 1
+      );
+    }
+  }, [selectedIndex]);
 
   return (
     <div className="bg-background text-foreground animate-fade-in">
@@ -63,7 +82,7 @@ export default function GalleryPage() {
                 key={image.id}
                 className="animate-fade-in-up group"
                 style={{ animationDelay: `${index * 50}ms` }}
-                onClick={() => setSelectedImage(image.src)}
+                onClick={() => openLightbox(index)}
               >
                 <Card className="overflow-hidden cursor-pointer">
                   <CardContent className="flex aspect-video items-center justify-center p-0 relative">
@@ -86,10 +105,13 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      {selectedImage && (
+      {selectedIndex !== null && (
         <GalleryLightbox
-          imageUrl={selectedImage}
-          onClose={() => setSelectedImage(null)}
+          images={galleryImages}
+          selectedIndex={selectedIndex}
+          onClose={closeLightbox}
+          onPrev={handlePrev}
+          onNext={handleNext}
         />
       )}
     </div>
