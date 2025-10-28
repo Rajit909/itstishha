@@ -26,14 +26,13 @@ export function StrategicLeadershipList({ partners }: StrategicLeadershipListPro
             style={{ animationDelay: `${200 * index}ms` }}
           >
             <Card className="overflow-hidden shadow-lg transition-shadow hover:shadow-xl">
-              {/* Flex layout replacing grid */}
               <div
                 className={`flex flex-col md:flex-row ${
                   isReversed ? "md:flex-row-reverse" : ""
                 } items-center`}
               >
                 {/* Image Section */}
-                <div className="relative md:w-1/2 h-80 md:h-full">
+                <div className="relative w-full md:w-1/2 h-80 md:h-auto md:self-stretch">
                   {memberImage && (
                     <Image
                       src={memberImage.imageUrl}
