@@ -152,7 +152,7 @@ export default function Header() {
             <Button
               variant="ghost"
               className={cn(
-                "font-medium transition-colors hover:text-primary text-sm",
+                "font-semibold transition-colors hover:text-primary text-sm",
                 pathname.startsWith(href)
                   ? "text-primary"
                   : "text-muted-foreground"
@@ -176,7 +176,7 @@ export default function Header() {
       <Link
         href={href}
         className={cn(
-          "font-medium transition-colors hover:text-primary text-sm",
+          "font-semibold transition-colors hover:text-primary text-sm",
           pathname.startsWith(href)
             ? "text-primary"
             : "text-muted-foreground"
@@ -194,7 +194,7 @@ export default function Header() {
           <Logo className="h-12 w-auto" />
         </Link>
         <div className="flex items-center gap-6">
-          <nav className="hidden md:flex items-center gap-2 text-sm">
+          <nav className="hidden md:flex items-center gap-6 text-sm">
             {navLinks.map((link) => (
               <NavLink key={link.label} {...link} />
             ))}
