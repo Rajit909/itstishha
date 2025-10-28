@@ -16,16 +16,16 @@ export default function FinancialConsultancyPage() {
 
       <section className="py-16 md:py-24">
         <div className="container">
-          <div className="grid md:grid-cols-5 gap-12 items-center">
-            <div className="relative h-96 md:h-72 rounded-lg overflow-hidden shadow-xl animate-fade-in-left md:col-span-2">
+          <div className="flex flex-col md:flex-row gap-12 items-center">
+            <div className="relative w-full h-96 md:h-72 rounded-lg overflow-hidden shadow-xl animate-fade-in-left md:basis-2/5">
               <Image 
-                src="/services/financial.jpg" 
+                src="https://picsum.photos/seed/finance/800/600" 
                 alt="Financial Consultancy" 
                 fill 
                 className="object-cover" 
                 data-ai-hint="financial chart" />
             </div>
-            <div className="animate-fade-in-right md:col-span-3">
+            <div className="animate-fade-in-right w-full md:basis-3/5">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Driving Profitability and Growth</h2>
               <p className="text-lg text-muted-foreground">
                 Our financial consultancy services provide the strategic insights you need to optimize financial performance, manage risk, and make sound investment decisions. We partner with you to build a resilient financial future for your organization.

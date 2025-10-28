@@ -59,3 +59,19 @@ export type Project = {
     author: string;
   };
 };
+
+export type StratergicPartner = {
+  id: string;
+  name: string;
+  title: string;
+  bio: string;
+  image: string;
+};
+
+export type Leaders = {
+  id: string;
+  name: string;
+  title: string;
+  bio: string;
+  image: string;
+};
