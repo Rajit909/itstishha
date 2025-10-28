@@ -55,7 +55,7 @@ export function GetTouch() {
   ];
   
   return (
-    <section className="relative w-full py-16 md:py-24 flex items-center text-foreground overflow-hidden bg-">
+    <section className="relative w-full py-16 md:py-24 flex items-center text-foreground overflow-hidden bg-lightbluebg">
       <div className="container grid md:grid-cols-2 gap-16 items-center">
         {/* Left Column */}
         <div className="animate-fade-in-up">
