@@ -82,7 +82,6 @@ export function ImageLightbox({ images, startIndex, onClose }: ImageLightboxProp
       {/* Content Container - Prevents clicks from closing modal */}
       <div
         className="relative z-10 flex flex-col items-center justify-center w-full h-full"
-        onClick={(e) => e.stopPropagation()}
       >
         {/* Image transition container */}
         <AnimatePresence initial={false} custom={direction}>
