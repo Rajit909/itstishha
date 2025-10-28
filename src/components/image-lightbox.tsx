@@ -51,7 +51,7 @@ export function ImageLightbox({ images, startIndex, onClose }: ImageLightboxProp
 
   const variants = {
     enter: (direction: number) => ({
-      x: direction > 0 ? 1000 : -1000,
+      x: direction > 0 ? '1000px' : '-1000px',
       opacity: 0,
     }),
     center: {
@@ -61,7 +61,7 @@ export function ImageLightbox({ images, startIndex, onClose }: ImageLightboxProp
     },
     exit: (direction: number) => ({
       zIndex: 0,
-      x: direction < 0 ? 1000 : -1000,
+      x: direction < 0 ? '1000px' : '-1000px',
       opacity: 0,
     }),
   };
@@ -103,9 +103,9 @@ export function ImageLightbox({ images, startIndex, onClose }: ImageLightboxProp
 
       {/* Top Controls: Close, Zoom */}
       <div className="absolute top-4 right-4 flex items-center gap-2" onClick={(e) => e.stopPropagation()}>
-        <Button variant="ghost" size="icon" className="text-white hover:bg-white/20 hover:text-white" onClick={handleZoomIn}><ZoomIn /></Button>
-        <Button variant="ghost" size="icon" className="text-white hover:bg-white/20 hover:text-white" onClick={handleZoomOut}><ZoomOut /></Button>
-        <Button variant="ghost" size="icon" className="text-white hover:bg-white/20 hover:text-white" onClick={onClose}><X /></Button>
+        <Button variant="ghost" size="icon" className="text-white hover:bg-white/20 hover:text-white" onClick={(e) => { e.stopPropagation(); handleZoomIn(); }}><ZoomIn /></Button>
+        <Button variant="ghost" size="icon" className="text-white hover:bg-white/20 hover:text-white" onClick={(e) => { e.stopPropagation(); handleZoomOut(); }}><ZoomOut /></Button>
+        <Button variant="ghost" size="icon" className="text-white hover:bg-white/20 hover:text-white" onClick={(e) => { e.stopPropagation(); onClose(); }}><X /></Button>
       </div>
 
       {/* Side Navigation */}
