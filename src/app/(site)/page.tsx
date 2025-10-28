@@ -113,26 +113,36 @@ export default async function HomePage() {
       {/* Featured Project */}
       {featuredStudy && (
       <section className="py-16 md:py-24 bg-lightgreenbg">
-        <div className="container grid md:grid-cols-2 gap-12 items-center">
-              <ScrollAnimation animation="slide-in-from-left" className="relative aspect-video rounded-lg overflow-hidden shadow-xl">
-                  {featuredStudyImage && (
-                    <Image
-                      src={featuredStudyImage.imageUrl}
-                      alt={featuredStudy.title}
-                      fill
-                      className="object-cover"
-                      data-ai-hint={featuredStudyImage.imageHint}
-                    />
-                  )}
-              </ScrollAnimation>
-              <ScrollAnimation animation="slide-in-from-right" className='text-justify'>
-                  <p className="font-semibold text-primary">{featuredStudy.client}</p>
-                  <h3 className="mt-2 text-2xl md:text-3xl font-bold">{featuredStudy.title}</h3>
-                  <p className="mt-4 text-lg text-muted-foreground text-justify">{featuredStudy.excerpt}</p>
-                  <Button asChild className="mt-6" size="lg">
-                      <Link href={`/projects/${featuredStudy.slug}`}>Read The Full Story <ArrowRight className="ml-2 h-4 w-4" /></Link>
-                  </Button>
-              </ScrollAnimation>
+        <div className="container">
+          <ScrollAnimation animation="fade-in-up" className="mb-12">
+            <div className="text-center max-w-3xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold">Our Success Story</h2>
+              <p className="mt-4 text-lg text-muted-foreground">
+                Explore a showcase of our impactful client collaborations and transformative results.
+              </p>
+            </div>
+          </ScrollAnimation>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+                <ScrollAnimation animation="slide-in-from-left" className="relative aspect-video rounded-lg overflow-hidden shadow-xl">
+                    {featuredStudyImage && (
+                      <Image
+                        src={featuredStudyImage.imageUrl}
+                        alt={featuredStudy.title}
+                        fill
+                        className="object-cover"
+                        data-ai-hint={featuredStudyImage.imageHint}
+                      />
+                    )}
+                </ScrollAnimation>
+                <ScrollAnimation animation="slide-in-from-right" className='text-justify'>
+                    <p className="font-semibold text-primary">{featuredStudy.client}</p>
+                    <h3 className="mt-2 text-2xl md:text-3xl font-bold">{featuredStudy.title}</h3>
+                    <p className="mt-4 text-lg text-muted-foreground text-justify">{featuredStudy.excerpt}</p>
+                    <Button asChild className="mt-6" size="lg">
+                        <Link href={`/projects/${featuredStudy.slug}`}>Read The Full Story <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                    </Button>
+                </ScrollAnimation>
+              </div>
             </div>
       </section>
       )}
@@ -326,6 +336,7 @@ export default async function HomePage() {
     
 
     
+
 
 
 
