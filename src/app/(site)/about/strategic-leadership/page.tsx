@@ -1,27 +1,22 @@
 
 "use client";
+import { useState, useEffect } from "react";
 import { getStratergicPartners } from "@/lib/data";
 import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Card } from "@/components/ui/card";
+import type { StratergicPartner } from "@/lib/types";
 
 export default function StrategicLeadershipPage() {
-  const Partners = [
-    {
-      id: '1',
-      name: 'Prof. (Dr.) Hem Chandra',
-      title: 'Honorary Advisor',
-      bio: 'Prof. (Dr.) Hem Chandra, a nationally acclaimed healthcare leader with over 40 years of experience, excels as an academician, administrator, and public health expert. An alumnus of top institutions, he has shaped medical education and healthcare policy, currently serving as Advisor to the Honerable President and Director of Hospital Services at Swami Ram Himalayan University.',
-      image: 'team-member-3',
-    },
-    {
-      id: '2',
-      name: 'Mr. Pramod Panigrahi',
-      title: 'Associate Director',
-      bio: 'An MICA Ahmedabad alumnus with 20 years of experience in strategic marketing, digital transformation, and healthcare consultancy. Combines academic expertise and practical insight to drive growth, innovation, and future-ready business models across media, technology, and healthcare sectors.',
-      image: 'team-member-4',
-    },
-  ];
+  const [partners, setPartners] = useState<StratergicPartner[]>([]);
+
+  useEffect(() => {
+    async function loadPartners() {
+      const fetchedPartners = await getStratergicPartners();
+      setPartners(fetchedPartners);
+    }
+    loadPartners();
+  }, []);
 
   return (
     <div className="bg-background text-foreground animate-fade-in">
@@ -40,7 +35,7 @@ export default function StrategicLeadershipPage() {
       {/* Partners Section */}
       <section className="py-16 md:py-24">
         <div className="container px-4 mx-auto space-y-16">
-          {Partners.map((member, index) => {
+          {partners.map((member, index) => {
             const memberImage = PlaceHolderImages.find(
               (p) => p.id === member.image
             );
