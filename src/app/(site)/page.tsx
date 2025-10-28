@@ -81,6 +81,7 @@ export default async function HomePage() {
                     className="object-cover"
                     data-ai-hint={teamMeetingImage.imageHint}
                 />}
+                <div className="absolute inset-0 bg-black/30"></div>
             </ScrollAnimation>
             <ScrollAnimation animation="slide-in-from-right">
                 <h2 className="text-3xl md:text-4xl font-bold">Why Partner with Tishha?</h2>
@@ -178,6 +179,7 @@ export default async function HomePage() {
                       className="object-cover"
                       data-ai-hint={featuredStudyImage.imageHint}
                   />}
+                  <div className="absolute inset-0 bg-black/30"></div>
               </ScrollAnimation>
               <ScrollAnimation animation="slide-in-from-right">
                   <p className="font-semibold text-primary">{featuredStudy.client}</p>

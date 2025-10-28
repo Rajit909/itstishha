@@ -32,6 +32,7 @@ export default function AcademicEventsPage() {
                 fill
                 className="object-cover"
               />
+              <div className="absolute inset-0 bg-black/30"></div>
             </div>
 
             <div className="md:order-first animate-fade-in-left">

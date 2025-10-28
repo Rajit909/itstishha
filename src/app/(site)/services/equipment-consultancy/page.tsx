@@ -19,6 +19,7 @@ export default function EquipmentConsultancyPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative h-96 rounded-lg overflow-hidden shadow-xl animate-fade-in-left">
               <Image src="/services/equipment.jpg" alt="Medical Equipment" fill className="object-cover" data-ai-hint="medical equipment" />
+              <div className="absolute inset-0 bg-black/30"></div>
             </div>
             <div className="animate-fade-in-right">
               <h2 className="text-3xl font-bold mb-4">Equipping Your Vision for Success</h2>

@@ -24,6 +24,7 @@ export default function FinancialConsultancyPage() {
                 fill 
                 className="object-cover" 
                 data-ai-hint="financial chart" />
+                <div className="absolute inset-0 bg-black/30"></div>
             </div>
             <div className="animate-fade-in-right w-full md:basis-3/5">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Driving Profitability and Growth</h2>

@@ -31,6 +31,7 @@ export default function CsrInitiativePage() {
                 fill
                 className="object-cover"
               />
+              <div className="absolute inset-0 bg-black/30"></div>
             </div>
             <div className="animate-fade-in-right">
               <h2 className="text-3xl font-bold mb-4">Empowering Healthcare, Inspiring Change</h2>

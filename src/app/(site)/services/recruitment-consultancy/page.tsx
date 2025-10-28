@@ -19,6 +19,7 @@ export default function RecruitmentConsultancyPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative h-96 rounded-lg overflow-hidden shadow-xl animate-fade-in-left">
               <Image src="/services/recruit.jpg" alt='recruitment-image' fill className="object-cover" data-ai-hint="job interview" />
+              <div className="absolute inset-0 bg-black/30"></div>
             </div>
             <div className="animate-fade-in-right">
               <h2 className="text-3xl font-bold mb-4">Building Your Most Valuable Asset</h2>
