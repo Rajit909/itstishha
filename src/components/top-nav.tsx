@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 export default function TopNav() {
   return (
-    <div className="text-darkbg">
+    <div className="bg- text-darkbg">
       <div className="container flex h-8 items-center justify-between text-sm">
         <div className="flex items-center gap-6">
           <a href="tel:1234567890" className="flex items-center gap-2 text-darkbg hover:underline">
