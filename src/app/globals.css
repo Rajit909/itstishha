@@ -5,7 +5,7 @@
 
 @layer base {
   :root {
-    --mybg:206 28% 22%;
+    --mybg: 205, 36%, 25%;
     --lightbluebg: 208 100% 97%;
     --lightgreenbg: 187 36% 91%;
     --background: 0 0% 100%;;
@@ -42,7 +42,7 @@
     --sidebar-accent-foreground: 222.2 47.4% 11.2%;
     --sidebar-border: 214.3 31.8% 91.4%;
     --sidebar-ring: 222.2 84% 4.9%;
-    --darkbg: 206 28% 22%;
+    --darkbg:  205, 36%, 25%;
     --why-partner-bg: 184 35% 87%;
     --lightgreen: 120 60% 90%;
   }
