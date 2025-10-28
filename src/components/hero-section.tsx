@@ -108,23 +108,6 @@ export function HeroSection() {
               {slides[selectedIndex].subtitle}
             </motion.p>
           </AnimatePresence>
-          <motion.div
-            key={`buttons-${selectedIndex}`}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut", delay: 0.7 } }}
-            className="mt-8 flex flex-wrap gap-4 justify-center"
-          >
-            <Button size="lg" asChild>
-              <Link href="/services">
-                Explore Our Services
-              </Link>
-            </Button>
-            <Button size="lg" variant="secondary" asChild>
-              <Link href="/contact">
-                Get In Touch
-              </Link>
-            </Button>
-          </motion.div>
         </div>
       </div>
     </section>
