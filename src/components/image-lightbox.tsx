@@ -67,6 +67,8 @@ export function ImageLightbox({ images, startIndex, onClose }: ImageLightboxProp
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       className="fixed inset-0 z-50 flex items-center justify-center"
+      role="dialog"
+      aria-modal="true"
     >
       {/* Background overlay that closes the modal */}
       <div 
@@ -74,9 +76,10 @@ export function ImageLightbox({ images, startIndex, onClose }: ImageLightboxProp
         onClick={onClose}
       />
       
-      {/* This container holds all content and stops clicks from closing the modal */}
+      {/* This container holds all interactive content and stops clicks from closing the modal */}
       <div
         className="relative z-10 flex h-full w-full flex-col items-center justify-center"
+        onClick={(e) => e.stopPropagation()} // Stop clicks inside this container from closing the modal
       >
         <AnimatePresence initial={false} custom={direction}>
           <motion.div
@@ -110,6 +113,7 @@ export function ImageLightbox({ images, startIndex, onClose }: ImageLightboxProp
             size="icon"
             className="text-white hover:bg-white/20 hover:text-white"
             onClick={handleZoomIn}
+            aria-label="Zoom in"
           >
             <ZoomIn />
           </Button>
@@ -118,6 +122,7 @@ export function ImageLightbox({ images, startIndex, onClose }: ImageLightboxProp
             size="icon"
             className="text-white hover:bg-white/20 hover:text-white"
             onClick={handleZoomOut}
+            aria-label="Zoom out"
           >
             <ZoomOut />
           </Button>
@@ -126,6 +131,7 @@ export function ImageLightbox({ images, startIndex, onClose }: ImageLightboxProp
             size="icon"
             className="text-white hover:bg-white/20 hover:text-white"
             onClick={onClose}
+            aria-label="Close lightbox"
           >
             <X />
           </Button>
@@ -138,6 +144,7 @@ export function ImageLightbox({ images, startIndex, onClose }: ImageLightboxProp
             size="icon"
             className="text-white h-12 w-12 hover:bg-white/20 hover:text-white"
             onClick={handlePrev}
+            aria-label="Previous image"
           >
             <ChevronLeft size={32} />
           </Button>
@@ -148,6 +155,7 @@ export function ImageLightbox({ images, startIndex, onClose }: ImageLightboxProp
             size="icon"
             className="text-white h-12 w-12 hover:bg-white/20 hover:text-white"
             onClick={handleNext}
+            aria-label="Next image"
           >
             <ChevronRight size={32} />
           </Button>
