@@ -161,12 +161,8 @@ export default function Header() {
             <Button
               variant="ghost"
               className={cn(
-                "font-bold transition-colors text-sm",
-                pathname.startsWith(href)
-                  ? "text-white"
-                  : "text-white/90",
-                  !isScrolled && pathname ==='/' ? 'text-darkbg' : 'text-white/90',
-                  'hover:bg-why-partner-bg hover:text-darkbg'
+                "font-bold transition-colors text-sm text-white/90",
+                "hover:bg-why-partner-bg hover:text-darkbg"
               )}
             >
               {label} <ChevronDown className="ml-2 h-4 w-4" />
@@ -191,7 +187,6 @@ export default function Header() {
           pathname === href || (href !== "/" && pathname.startsWith(href))
             ? "text-white"
             : "text-white/90",
-          !isScrolled && pathname ==='/' ? 'text-darkbg' : 'text-white/90',
           'hover:bg-why-partner-bg hover:text-darkbg'
         )}
       >
@@ -201,9 +196,7 @@ export default function Header() {
   };
 
   return (
-    <header className={cn("sticky top-0 z-50 w-full border-b border-border/40 transition-colors duration-300", 
-        isScrolled || pathname !== '/' ? 'bg-darkbg' : 'bg-transparent'
-    )}>
+    <header className={cn("sticky top-0 z-50 w-full border-b border-border/40 bg-darkbg transition-colors duration-300")}>
       <div className="container flex h-20 max-w-screen-2xl items-center justify-between">
         <Link href="/" className="flex items-center space-x-2">
           <Logo className="h-12 w-auto" />
@@ -220,7 +213,7 @@ export default function Header() {
             <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon">
-                  <Menu className={cn('h-5 w-5', !isScrolled && pathname ==='/' ? 'text-darkbg' : 'text-white')} />
+                  <Menu className={cn('h-5 w-5 text-white')} />
                   <span className="sr-only">Toggle Menu</span>
                 </Button>
               </SheetTrigger>
