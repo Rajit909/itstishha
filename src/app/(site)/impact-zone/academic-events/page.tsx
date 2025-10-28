@@ -1,3 +1,4 @@
+
 "use client";
 
 import { School, Mic, BookOpen } from "lucide-react";

@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import { getLeaders } from "@/lib/data";
 import { Card, CardContent } from "@/components/ui/card";
@@ -5,6 +6,7 @@ import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Award, Target, Users } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { ScrollAnimation } from "@/components/ui/scroll-animation";
 
 export default async function AboutPage() {
   const leaders = await getLeaders();
@@ -22,7 +24,7 @@ export default async function AboutPage() {
 
       <section className="py-16 md:py-24">
         <div className="container grid md:grid-cols-2 gap-12 items-center">
-          <div className="animate-fade-in-right">
+          <ScrollAnimation animation="slide-in-from-right">
             <h2 className="text-3xl md:text-4xl font-bold">Our Mission & Vision</h2>
             <p className="mt-4 text-lg text-muted-foreground">
               To empower organizations to navigate complexity and achieve sustainable growth by providing unparalleled expertise and fostering a culture of continuous improvement.
@@ -56,8 +58,8 @@ export default async function AboutPage() {
                 </div>
               </li>
             </ul>
-          </div>
-          <div className="relative h-96 md:h-full min-h-[400px] rounded-lg overflow-hidden shadow-xl animate-fade-in-left">
+          </ScrollAnimation>
+          <ScrollAnimation animation="slide-in-from-left" className="relative h-96 md:h-full min-h-[400px] rounded-lg overflow-hidden shadow-xl">
             <Image
               src="/carousel-img/sliderthree.jpeg"
               alt="Tishha Office"
@@ -66,7 +68,7 @@ export default async function AboutPage() {
               data-ai-hint="office whiteboard"
             />
             <div className="absolute inset-0 bg-black/30"></div>
-          </div>
+          </ScrollAnimation>
         </div>
       </section>
 
