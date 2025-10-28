@@ -2,8 +2,15 @@
 "use client";
 
 import Image from 'next/image';
-import { useState } from 'react';
-import { ImageLightbox } from '@/components/image-lightbox';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import { Card, CardContent } from "@/components/ui/card";
+import Autoplay from "embla-carousel-autoplay";
 
 const galleryImages = [
   { id: 1, src: '/gallery/conf.jpg', alt: 'National Conference on Nursing Leadership & Excellence 2025', hint: 'competetion' },
@@ -13,13 +20,13 @@ const galleryImages = [
   { id: 5, src: '/gallery/conffi.jpg', alt: 'National Conference on Nursing Leadership & Excellence 2025', hint: 'office celebration' },
   { id: 7, src: '/gallery/confn.jpg', alt: 'National Conference on Nursing Leadership & Excellence 2025', hint: 'competetion' },
   { id: 8, src: '/gallery/confo.jpg', alt: 'National Conference on Nursing Leadership & Excellence 2025', hint: 'team planting' },
-  { id: 9, src: '/gallery/confs.jpg', alt: 'National Conference on Nursing Leadership & Excellence 2025', hint: 'university lecture' },
+  { id: 9, src: '/gallery/confs.jpg', alt: 'Academic seminar with students', hint: 'university lecture' },
   { id: 10, src: '/gallery/confse.jpg', alt: 'National Conference on Nursing Leadership & Excellence 2025', hint: 'team building' },
   { id: 11, src: '/gallery/confsixt.jpg', alt: 'National Conference on Nursing Leadership & Excellence 2025', hint: 'office celebration' },
   { id: 12, src: '/gallery/conft.jpg', alt: 'National Conference on Nursing Leadership & Excellence 2025', hint: 'tech workshop' },
   { id: 13, src: '/gallery/confth.jpg', alt: 'National Conference on Nursing Leadership & Excellence 2025', hint: 'competetion' },
   { id: 14, src: '/gallery/confthr.jpg', alt: 'National Conference on Nursing Leadership & Excellence 2025', hint: 'team planting' },
-  { id: 15, src: '/gallery/conftw.jpg', alt: 'National Conference on Nursing Leadership & Excellence 2025', hint: 'university lecture' },
+  { id: 15, src: '/gallery/conftw.jpg', alt: 'Academic seminar with students', hint: 'university lecture' },
   { id: 33, src: '/gallery/conte.jpg', alt: 'National Conference on Nursing Leadership & Excellence 2025', hint: 'team building' },
   { id: 16, src: '/gallery/gallery-imgo.jpg', alt: 'Quiz Competition Certificate Distribution Ceremony', hint: 'office celebration' },
   { id: 17, src: '/gallery/galleryei.jpeg', alt: 'Quiz Competition Certificate Distribution Ceremony', hint: 'tech workshop' },
@@ -41,7 +48,6 @@ const galleryImages = [
 ];
 
 export default function GalleryPage() {
-  const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
   return (
     <div className="bg-background text-foreground animate-fade-in">
@@ -55,39 +61,48 @@ export default function GalleryPage() {
       </section>
 
       <section className="py-16 md:py-24">
-        <div className="container">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {galleryImages.map((image, index) => (
-              <div 
-                key={image.id} 
-                className="group relative h-72 rounded-lg overflow-hidden shadow-lg animate-fade-in-up cursor-pointer" 
-                style={{ animationDelay: `${100 * index}ms`}}
-                onClick={() => setSelectedImage(index)}
-              >
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  fill
-                  className="object-cover transition-transform duration-300 group-hover:scale-110"
-                  data-ai-hint={image.hint}
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                />
-                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                  <p className="text-white text-lg font-semibold">{image.alt}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+        <div className="container max-w-6xl">
+          <Carousel
+            className="w-full"
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+             plugins={[
+              Autoplay({
+                delay: 3000,
+                stopOnInteraction: true,
+              }),
+            ]}
+          >
+            <CarouselContent>
+              {galleryImages.map((image) => (
+                <CarouselItem key={image.id} className="md:basis-1/2 lg:basis-1/3">
+                  <div className="p-1">
+                    <Card className="overflow-hidden">
+                      <CardContent className="flex flex-col aspect-video items-center justify-center p-0 relative">
+                        <Image
+                          src={image.src}
+                          alt={image.alt}
+                          fill
+                          className="object-cover rounded-lg"
+                          data-ai-hint={image.hint}
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        />
+                         <div className="absolute inset-x-0 bottom-0 p-4 bg-black/50 text-white rounded-b-lg">
+                            <p className="text-sm font-semibold truncate">{image.alt}</p>
+                          </div>
+                      </CardContent>
+                    </Card>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="absolute left-0 top-1/2 -translate-y-1/2 z-10 -translate-x-8 hidden md:flex" />
+            <CarouselNext className="absolute right-0 top-1/2 -translate-y-1/2 z-10 translate-x-8 hidden md:flex" />
+          </Carousel>
         </div>
       </section>
-
-      {selectedImage !== null && (
-        <ImageLightbox
-          images={galleryImages}
-          startIndex={selectedImage}
-          onClose={() => setSelectedImage(null)}
-        />
-      )}
     </div>
   );
 }
