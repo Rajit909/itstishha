@@ -5,9 +5,10 @@
 
 @layer base {
   :root {
-    --mybg:206, 28%, 22%;
-    --lightbluebg:208, 100%, 97%;
-    --background: 0, 0%, 100%;;
+    --mybg: 206 28% 22%;
+    --lightbluebg: 208 100% 97%;
+    --lightgreenbg: 187 36% 91%;
+    --background: 0 0% 100%;;
     --foreground: 222.2 84% 4.9%;
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
@@ -41,7 +42,7 @@
     --sidebar-accent-foreground: 222.2 47.4% 11.2%;
     --sidebar-border: 214.3 31.8% 91.4%;
     --sidebar-ring: 222.2 84% 4.9%;
-    --darkbg: 206, 28%, 22%;
+    --darkbg: 206 28% 22%;
     --why-partner-bg: 184 35% 87%;
     --lightgreen: 120 60% 90%;
   }
@@ -79,7 +80,7 @@
     --sidebar-accent-foreground: 210 40% 98%;
     --sidebar-border: 217.2 32.6% 17.5%;
     --sidebar-ring: 202 30% 52%;
-    --darkbg: 206, 28%, 22%;
+    --darkbg: 206 28% 22%;
     --why-partner-bg: 184 35% 87%;
     --lightgreen: 120 60% 90%;
   }

@@ -29,7 +29,7 @@ export default async function HomePage() {
       <HeroSection />
 
        {/* Why Choose Us Section */}
-       <section className="py-16 md:py-24 bg-[#dceeef]">
+       <section className="py-16 md:py-24 bg-lightgreenbg">
         <div className="container grid md:grid-cols-2 gap-12 items-center">
             <ScrollAnimation animation="slide-in-from-left" className="relative h-96 md:h-full rounded-lg overflow-hidden shadow-xl order-last md:order-first">
                  {teamMeetingImage && <Image
@@ -75,7 +75,7 @@ export default async function HomePage() {
         </div>
       </section>
       {/* Featured Services Section */}
-      <section id="services" className="py-16 md:py-24 bg-[#F0F8FF]">
+      <section id="services" className="py-16 md:py-24 bg-lightbluebg">
         <div className="container">
           <ScrollAnimation animation="fade-in-up">
             <div className="text-center max-w-3xl mx-auto">
@@ -112,7 +112,7 @@ export default async function HomePage() {
       
       {/* Featured Project */}
       {featuredStudy && (
-      <section className="py-16 md:py-24  bg-[#dceeef]">
+      <section className="py-16 md:py-24  bg-lightgreenbg">
         <div className="container">
             <ScrollAnimation animation="fade-in-up">
               <div className="text-center max-w-3xl mx-auto">
@@ -201,7 +201,7 @@ export default async function HomePage() {
      
 
       {/* Team Section */}
-      <section className="py-16 md:py_24 bg-[#F0F8FF]">
+      <section className="py-16 md:py_24 bg-lightbluebg">
         <div className="container">
             <div className="text-center max-w-3xl mx-auto animate-fade-in-up">
                 <h2 className="text-3xl md:text-4xl font-bold">Meet Our Leadership</h2>
