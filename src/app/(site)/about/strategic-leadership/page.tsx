@@ -20,7 +20,7 @@ export default async function StrategicLeadershipPage() {
       </section>
 
       {/* Partners Section */}
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24 bg-lightbluebg">
         <div className="container px-4 mx-auto space-y-16">
           <StrategicLeadershipList partners={partners} />
         </div>
