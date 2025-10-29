@@ -79,7 +79,7 @@ export default async function HomePage() {
         <div className="container">
           <ScrollAnimation animation="fade-in-up">
             <div className="text-center max-w-3xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold">Our Core Expertise</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-darkbg">Our Core Expertise</h2>
               <p className="mt-4 text-lg text-muted-foreground">
                 We deliver tailored solutions across key industries to meet your most critical challenges.
               </p>
@@ -93,7 +93,7 @@ export default async function HomePage() {
                     <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-darkbg/10 text-darkbg group-hover:bg-darkbg group-hover:text-primary-foreground transition-colors duration-300">
                       <ServiceIcon name={service.icon} className="h-8 w-8" />
                     </div>
-                    <CardTitle className="mt-4">{service.title}</CardTitle>
+                    <CardTitle className="mt-4 text-darkbg">{service.title}</CardTitle>
                   </CardHeader>
                   <CardContent className="flex-grow">
                   <p className="text-muted-foreground text-justify">{service.description}</p>
@@ -116,7 +116,7 @@ export default async function HomePage() {
         <div className="container">
           <ScrollAnimation animation="fade-in-up" className="mb-12">
             <div className="text-center max-w-3xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold">Our Success Story</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-darkbg">Our Success Story</h2>
               <p className="mt-4 text-lg text-muted-foreground">
                 Explore a showcase of our impactful client collaborations and transformative results.
               </p>
@@ -136,7 +136,7 @@ export default async function HomePage() {
             </ScrollAnimation>
             <ScrollAnimation animation="slide-in-from-right" className="text-justify">
               <p className="font-semibold text-darkbg">{featuredStudy.client}</p>
-              <h3 className="mt-2 text-2xl md:text-3xl font-bold">{featuredStudy.title}</h3>
+              <h3 className="mt-2 text-2xl md:text-3xl font-bold text-darkbg">{featuredStudy.title}</h3>
               <p className="mt-4 text-lg text-muted-foreground text-justify">{featuredStudy.excerpt}</p>
               <Button asChild className="mt-6" size="lg">
                 <Link href={`/projects/${featuredStudy.slug}`}>Read The Full Story <ArrowRight className="ml-2 h-4 w-4" /></Link>
@@ -208,7 +208,7 @@ export default async function HomePage() {
       <section className="py-16 md:py_24 bg-lightbluebg">
         <div className="container">
             <div className="text-center max-w-3xl mx-auto animate-fade-in-up">
-                <h2 className="text-3xl md:text-4xl font-bold">Meet Our Leadership</h2>
+                <h2 className="text-3xl md:text-4xl font-bold text-darkbg">Meet Our Leadership</h2>
                 <p className="mt-4 text-lg text-muted-foreground">
                     Our team's diverse expertise is the driving force behind our success and the success of our clients.
                 </p>
@@ -250,7 +250,7 @@ export default async function HomePage() {
         <div className="container">
           <ScrollAnimation animation="fade-in-up">
             <div className="text-center max-w-3xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold">What Our Clients Say</h2>
+              <h2 className="text-darkbg text-3xl md:text-4xl font-bold">What Our Clients Say</h2>
               <p className="mt-4 text-lg text-muted-foreground">
                 We are proud to build lasting partnerships with our clients.
               </p>
@@ -267,7 +267,7 @@ export default async function HomePage() {
         <div className="container">
           <ScrollAnimation animation="fade-in-up">
             <div className="text-center max-w-3xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold">Latest Insights</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-darkbg">Latest Insights</h2>
               <p className="mt-4 text-lg text-muted-foreground">
                 Explore the latest trends and expert analysis from our team.
               </p>
@@ -284,7 +284,7 @@ export default async function HomePage() {
                           <Image src={postImageSrc} alt={post.title} fill className="object-cover group-hover:scale-105 transition-transform duration-300" data-ai-hint={imageHint || 'blog post'} />
                         </div>}
                         <CardHeader>
-                            <CardTitle className="text-xl h-14 leading-tight">{post.title}</CardTitle>
+                            <CardTitle className="text-xl h-14 leading-tight text-darkbg">{post.title}</CardTitle>
                         </CardHeader>
                         <CardContent className="flex-grow">
                             <p className="text-muted-foreground line-clamp-2">{post.excerpt}</p>

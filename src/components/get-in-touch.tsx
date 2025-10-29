@@ -62,7 +62,7 @@ export function GetTouch() {
           <span className="inline-block px-4 py-2 text-sm font-semibold rounded-full bg-primary/10 text-primary mb-4">
             We Help You Build World-Class Healthcare Facilities
           </span>
-          <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground">
+          <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-darkbg">
             Why You Should Choose Tishha For Your World-Class Hospital
           </h1>
           <ul className="mt-8 space-y-3">
@@ -82,7 +82,7 @@ export function GetTouch() {
         <div className="animate-fade-in-up animation-delay-200">
           <Card className="bg-card/80 backdrop-blur-sm border-border/50 text-card-foreground">
             <CardHeader>
-              <CardTitle className="text-3xl text-center">Get Consultation</CardTitle>
+              <CardTitle className="text-3xl text-center text-darkbg">Get Consultation</CardTitle>
             </CardHeader>
             <CardContent>
               <Form {...form}>
