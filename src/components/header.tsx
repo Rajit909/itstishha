@@ -135,7 +135,7 @@ export default function Header() {
                 <Link
                   key={subLink.label}
                   href={subLink.href}
-                  className="block py-2 text-muted-foreground font-medium"
+                  className="block py-2 text-muted-foreground font-medium font-serif"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {subLink.label}
@@ -157,7 +157,7 @@ export default function Header() {
     }
 
     const navLinkClasses = cn(
-        "font-semibold text-sm transition-colors text-white/90 hover:text-white",
+        "font-semibold text-sm transition-colors text-white/90 hover:bg-white/90 hover:text-darkbg",
         "inline-flex items-center justify-center px-3 py-2 rounded-md",
         isActive ? "bg-white/10 text-white" : ""
     );
@@ -178,7 +178,7 @@ export default function Header() {
             sideOffset={15}
           >
             {subLinks.map((subLink) => (
-              <DropdownMenuItem key={subLink.label} asChild className="focus:bg-darkbg/80 focus:text-primary-foreground">
+              <DropdownMenuItem key={subLink.label} asChild className="focus:bg-accent focus:text-accent-foreground">
                 <Link href={subLink.href} className="font-serif font-medium">{subLink.label}</Link>
               </DropdownMenuItem>
             ))}
