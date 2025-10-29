@@ -135,9 +135,9 @@ export default async function HomePage() {
               )}
             </ScrollAnimation>
             <ScrollAnimation animation="slide-in-from-right" className="text-justify">
-              <p className="font-semibold text-darkbg">{featuredStudy.client}</p>
+              <p className="font-semibold text-lg text-darkbg">{featuredStudy.client}</p>
               <h3 className="mt-2 text-2xl md:text-3xl font-bold text-darkbg">{featuredStudy.title}</h3>
-              <p className="mt-4 text-lg text-muted-foreground text-justify">{featuredStudy.excerpt}</p>
+              <p className="mt-4 text-muted-foreground">{featuredStudy.excerpt}</p>
               <Button asChild className="mt-6" size="lg">
                 <Link href={`/projects/${featuredStudy.slug}`}>Read The Full Story <ArrowRight className="ml-2 h-4 w-4" /></Link>
               </Button>
