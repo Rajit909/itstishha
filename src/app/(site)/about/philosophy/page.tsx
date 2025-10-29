@@ -6,7 +6,7 @@ export default function PhilosophyPage() {
     <div className="bg-background text-foreground animate-fade-in">
       <section className="py-20 md:py-32 bg-card">
         <div className="container text-center">
-          <h1 className="text-4xl md:text-5xl font-bold animate-fade-in-up">Our Philosophy</h1>
+          <h1 className="text-4xl md:text-5xl font-bold animate-fade-in-up text-darkbg">Our Philosophy</h1>
           <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto animate-fade-in-up animation-delay-200">
             Our approach is built on a foundation of collaboration, strategic insight, and a relentless pursuit of innovation to drive transformative results for our clients.
           </p>
