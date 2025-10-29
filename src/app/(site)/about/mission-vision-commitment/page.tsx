@@ -41,7 +41,7 @@ export default function MissionPage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24 bg-lightbluebg">
         <div className="container">
           <div className="grid md:grid-cols-3 gap-8">
             {principles.map((principle, index) => (
