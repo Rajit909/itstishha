@@ -25,7 +25,7 @@ export default function AcademicEventsPage() {
       </section>
 
       {/* Introduction Section */}
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24 bg-lightbluebg">
         <div className="container">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative h-96 rounded-lg overflow-hidden shadow-xl md:order-last animate-fade-in-right">
@@ -39,7 +39,7 @@ export default function AcademicEventsPage() {
             </div>
 
             <div className="md:order-first animate-fade-in-left">
-              <h2 className="text-3xl font-bold mb-4">
+              <h2 className="text-3xl font-bold mb-4 text-darkbg">
                 Building a Resilient Healthcare Future
               </h2>
               <p className="text-lg text-muted-foreground text-justify">
@@ -59,7 +59,7 @@ export default function AcademicEventsPage() {
       {/* Key Offerings */}
       <section className="py-20 bg-muted/20">
         <div className="container">
-          <h2 className="text-3xl font-bold text-center mb-12">
+          <h2 className="text-3xl font-bold text-center mb-12 text-darkbg">
             Key Offerings
           </h2>
 
@@ -74,7 +74,7 @@ export default function AcademicEventsPage() {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="p-6 bg-card rounded-2xl shadow-md hover:shadow-lg transition-all">
               <Mic className="h-10 w-10 text-darkbg mb-4" />
-              <h3 className="font-semibold text-xl mb-2">
+              <h3 className="font-semibold text-xl mb-2 text-darkbg">
                 Quizzes & Debate Competitions
               </h3>
               <p className="text-muted-foreground">
@@ -85,7 +85,7 @@ export default function AcademicEventsPage() {
 
             <div className="p-6 bg-card rounded-2xl shadow-md hover:shadow-lg transition-all">
               <BookOpen className="h-10 w-10 text-darkbg mb-4" />
-              <h3 className="font-semibold text-xl mb-2">
+              <h3 className="font-semibold text-xl mb-2 text-darkbg">
                 Poster & Research Paper Presentations
               </h3>
               <p className="text-muted-foreground">
@@ -96,7 +96,7 @@ export default function AcademicEventsPage() {
 
             <div className="p-6 bg-card rounded-2xl shadow-md hover:shadow-lg transition-all">
               <School className="h-10 w-10 text-darkbg mb-4" />
-              <h3 className="font-semibold text-xl mb-2">Academic Programs</h3>
+              <h3 className="font-semibold text-xl mb-2 text-darkbg">Academic Programs</h3>
               <p className="text-muted-foreground">
                 Structured programs connecting theory to practice through
                 webinars, workshops, and symposiums.
@@ -107,15 +107,15 @@ export default function AcademicEventsPage() {
       </section>
 
       {/* Academic Programs Section */}
-      <section className="py-20">
+      <section className="py-20 bg-lightbluebg">
         <div className="container">
-          <h2 className="text-3xl font-bold text-center mb-12">
+          <h2 className="text-3xl font-bold text-center mb-12 text-darkbg">
             Academic Programs
           </h2>
 
           <div className="grid md:grid-cols-2 gap-8">
             <div className="p-6 bg-card rounded-2xl shadow-md">
-              <h3 className="text-xl font-semibold mb-2">
+              <h3 className="text-xl font-semibold mb-2 text-darkbg">
                 Webinars, Seminars & Symposiums
               </h3>
               <p className="text-muted-foreground">
@@ -125,7 +125,7 @@ export default function AcademicEventsPage() {
             </div>
 
             <div className="p-6 bg-card rounded-2xl shadow-md">
-              <h3 className="text-xl font-semibold mb-2">
+              <h3 className="text-xl font-semibold mb-2 text-darkbg">
                 Workshops & Hands-On Training
               </h3>
               <p className="text-muted-foreground">
@@ -135,7 +135,7 @@ export default function AcademicEventsPage() {
             </div>
 
             <div className="p-6 bg-card rounded-2xl shadow-md">
-              <h3 className="text-xl font-semibold mb-2">
+              <h3 className="text-xl font-semibold mb-2 text-darkbg">
                 State & National Conferences
               </h3>
               <p className="text-muted-foreground">
@@ -145,7 +145,7 @@ export default function AcademicEventsPage() {
             </div>
 
             <div className="p-6 bg-card rounded-2xl shadow-md">
-              <h3 className="text-xl font-semibold mb-2">
+              <h3 className="text-xl font-semibold mb-2 text-darkbg">
                 AI-Proctored Exams & Scholar Hunt Tests
               </h3>
               <p className="text-muted-foreground">
@@ -160,7 +160,7 @@ export default function AcademicEventsPage() {
       {/* Our Approach Section */}
       <section className="py-20 bg-muted/30">
         <div className="container text-center">
-          <h2 className="text-3xl font-bold mb-8">Our Approach</h2>
+          <h2 className="text-3xl font-bold mb-8 text-darkbg">Our Approach</h2>
           <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
             All events under <strong>TISHHA CARES</strong> are conducted either
             free or at a highly subsidized cost, making them accessible to

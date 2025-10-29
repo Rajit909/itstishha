@@ -21,14 +21,14 @@ export default async function BlogPage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24 bg-lightbluebg">
         <div className="container">
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {posts.map((post, index) => {
               const postImageSrc = PlaceHolderImages.find(p => p.id === post.image)?.imageUrl || post.image;
               const imageHint = PlaceHolderImages.find(p => p.id === post.image)?.imageHint;
               return (
-                <div key={post.id} className="animate-fade-in-up" style={{ animationDelay: `${200 * index}ms`}}>
+                <div key={post.id} className="animate-fade-in-up" style={{ animationDelay: `${150 * index}ms`}}>
                     <Card className="group flex flex-col overflow-hidden hover:shadow-xl transition-shadow duration-300 h-full">
                       {postImageSrc && (
                         <div className="relative h-56 w-full overflow-hidden">
@@ -42,7 +42,7 @@ export default async function BlogPage() {
                         </div>
                       )}
                       <CardHeader>
-                        <CardTitle className="text-xl h-14 leading-tight">{post.title}</CardTitle>
+                        <CardTitle className="text-xl h-14 leading-tight text-darkbg">{post.title}</CardTitle>
                         <div className="text-sm text-muted-foreground pt-2 flex items-center gap-4">
                           <div className="flex items-center gap-2">
                             <User className="h-4 w-4" />

@@ -22,7 +22,7 @@ export default function CsrInitiativePage() {
       </section>
 
       {/* Overview Section */}
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24 bg-lightbluebg">
         <div className="container">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative h-96 rounded-lg overflow-hidden shadow-xl animate-fade-in-left">
@@ -34,7 +34,7 @@ export default function CsrInitiativePage() {
               />
             </div>
             <div className="animate-fade-in-right">
-              <h2 className="text-3xl font-bold mb-4">Empowering Healthcare, Inspiring Change</h2>
+              <h2 className="text-3xl font-bold mb-4 text-darkbg">Empowering Healthcare, Inspiring Change</h2>
               <p className="text-lg text-muted-foreground mb-4">
                 We believe in nurturing the next generation of healthcare leaders through CSR-driven
                 academic and professional initiatives that reach across rural and urban India.
@@ -52,7 +52,7 @@ export default function CsrInitiativePage() {
       {/* For Students & Aspiring Professionals */}
       <section className="py-16 md:py-24 bg-muted/30">
         <div className="container">
-          <h2 className="text-3xl font-bold mb-6 text-center">
+          <h2 className="text-3xl font-bold mb-6 text-center text-darkbg">
             For Students & Aspiring Professionals
           </h2>
           <p className="text-lg text-muted-foreground max-w-4xl mx-auto text-center mb-10">
@@ -64,21 +64,21 @@ export default function CsrInitiativePage() {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="p-6 rounded-2xl bg-card shadow-md">
               <HandHeart className="h-10 w-10 text-darkbg mb-4" />
-              <h3 className="font-semibold text-xl mb-2">Skill Development Workshops</h3>
+              <h3 className="font-semibold text-xl mb-2 text-darkbg">Skill Development Workshops</h3>
               <p className="text-muted-foreground">
                 Hands-on sessions to enhance clinical, technical, and leadership skills.
               </p>
             </div>
             <div className="p-6 rounded-2xl bg-card shadow-md">
               <Users className="h-10 w-10 text-darkbg mb-4" />
-              <h3 className="font-semibold text-xl mb-2">Leadership Bootcamps</h3>
+              <h3 className="font-semibold text-xl mb-2 text-darkbg">Leadership Bootcamps</h3>
               <p className="text-muted-foreground">
                 Encouraging teamwork, problem-solving, and compassionate healthcare leadership.
               </p>
             </div>
             <div className="p-6 rounded-2xl bg-card shadow-md">
               <Leaf className="h-10 w-10 text-darkbg mb-4" />
-              <h3 className="font-semibold text-xl mb-2">Academic Engagement</h3>
+              <h3 className="font-semibold text-xl mb-2 text-darkbg">Academic Engagement</h3>
               <p className="text-muted-foreground">
                 Webinars, debates, quizzes, and recognition awards fostering innovation and merit.
               </p>
@@ -88,9 +88,9 @@ export default function CsrInitiativePage() {
       </section>
 
       {/* For Working Professionals */}
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24 bg-lightbluebg">
         <div className="container">
-          <h2 className="text-3xl font-bold mb-6 text-center">
+          <h2 className="text-3xl font-bold mb-6 text-center text-darkbg">
             For Working Professionals & Support Staff
           </h2>
           <p className="text-lg text-muted-foreground max-w-4xl mx-auto text-center mb-10">
@@ -101,13 +101,13 @@ export default function CsrInitiativePage() {
 
           <ul className="space-y-6 max-w-4xl mx-auto">
             <li>
-              <h3 className="font-semibold text-xl">Continuing Professional Education (CPE)</h3>
+              <h3 className="font-semibold text-xl text-darkbg">Continuing Professional Education (CPE)</h3>
               <p className="text-muted-foreground">
                 Enhancing knowledge and clinical excellence across healthcare roles.
               </p>
             </li>
             <li>
-              <h3 className="font-semibold text-xl">
+              <h3 className="font-semibold text-xl text-darkbg">
                 Healthcare Quality & NABH/NABL Sensitization Programs
               </h3>
               <p className="text-muted-foreground">
@@ -115,7 +115,7 @@ export default function CsrInitiativePage() {
               </p>
             </li>
             <li>
-              <h3 className="font-semibold text-xl">
+              <h3 className="font-semibold text-xl text-darkbg">
                 Leadership Development in Nursing & Non-Medical Roles
               </h3>
               <p className="text-muted-foreground">
@@ -123,7 +123,7 @@ export default function CsrInitiativePage() {
               </p>
             </li>
             <li>
-              <h3 className="font-semibold text-xl">
+              <h3 className="font-semibold text-xl text-darkbg">
                 Interdisciplinary Conferences & Clinical Case Discussions
               </h3>
               <p className="text-muted-foreground">
@@ -131,7 +131,7 @@ export default function CsrInitiativePage() {
               </p>
             </li>
             <li>
-              <h3 className="font-semibold text-xl">Community Health Awareness Drives</h3>
+              <h3 className="font-semibold text-xl text-darkbg">Community Health Awareness Drives</h3>
               <p className="text-muted-foreground">
                 Empowering communities through first-aid education and preventive health programs.
               </p>
@@ -143,7 +143,7 @@ export default function CsrInitiativePage() {
       {/* Partnerships Section */}
       <section className="py-16 md:py-24 bg-muted/30">
         <div className="container text-center max-w-5xl">
-          <h2 className="text-3xl font-bold mb-6">
+          <h2 className="text-3xl font-bold mb-6 text-darkbg">
             Transforming Healthcare, One Step at a Time
           </h2>
           <p className="text-lg text-muted-foreground mb-6">
