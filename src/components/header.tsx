@@ -157,9 +157,9 @@ export default function Header() {
     }
 
     const navLinkClasses = cn(
-        "font-semibold text-sm transition-colors text-white/90 hover:bg-white/90 hover:text-darkbg",
+        "font-semibold text-sm transition-colors text-darkbg hover:bg-darkbg/10 hover:text-darkbg",
         "inline-flex items-center justify-center px-3 py-2 rounded-md",
-        isActive ? "bg-white/10 text-white" : ""
+        isActive ? "bg-darkbg/10 text-darkbg" : ""
     );
 
     if (subLinks) {
@@ -198,7 +198,7 @@ export default function Header() {
   };
 
   return (
-    <header className={cn("sticky top-0 z-50 w-full border-b border-border/40 bg-darkbg transition-all duration-300")}>
+    <header className={cn("sticky top-0 z-50 w-full border-b border-border/40 bg-lightgreenbg transition-all duration-300")}>
       <div className="container flex h-20 max-w-screen-2xl items-center justify-between">
         <Link href="/" className="flex items-center space-x-2">
           <Logo className="h-12 w-auto" />
@@ -215,7 +215,7 @@ export default function Header() {
             <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon">
-                  <Menu className={cn('h-5 w-5 text-white')} />
+                  <Menu className={cn('h-5 w-5 text-darkbg')} />
                   <span className="sr-only">Toggle Menu</span>
                 </Button>
               </SheetTrigger>
