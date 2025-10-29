@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useForm } from "react-hook-form";
@@ -68,8 +69,8 @@ export function GetTouch() {
           <ul className="mt-8 space-y-3">
             {services.map((service, index) => (
               <li key={index} className="flex items-center gap-3">
-                <CheckCircle2 className="h-6 w-6 text-primary" />
-                <span className="text-lg">{service}</span>
+                <CheckCircle2 className="h-6 w-6 text-darkbg" />
+                <span className="text-lg font-bold text-darkbg">{service}</span>
               </li>
             ))}
           </ul>
