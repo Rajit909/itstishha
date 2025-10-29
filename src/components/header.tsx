@@ -120,20 +120,22 @@ export default function Header() {
     subLinks?: { href: string; label: string }[];
     isMobile?: boolean;
   }) => {
+    const isActive = pathname === href || (href !== "/" && pathname.startsWith(href));
+
     if (isMobile) {
       if (subLinks) {
         return (
           <Collapsible>
-            <CollapsibleTrigger className="flex w-full items-right justify-between py-2 text-lg font-medium">
+            <CollapsibleTrigger className="flex w-full items-center justify-between py-2 text-lg font-medium">
               {label}
-              <ChevronDown className="h-4 w-4" />
+              <ChevronDown className="h-4 w-4 transition-transform data-[state=open]:rotate-180" />
             </CollapsibleTrigger>
-            <CollapsibleContent className="pl-4">
+            <CollapsibleContent className="pl-4 border-l-2 border-muted">
               {subLinks.map((subLink) => (
                 <Link
                   key={subLink.label}
                   href={subLink.href}
-                  className="block py-2 text-muted-foreground font-bold"
+                  className="block py-2 text-muted-foreground font-medium"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {subLink.label}
@@ -155,8 +157,9 @@ export default function Header() {
     }
 
     const navLinkClasses = cn(
-        "font-bold transition-colors text-sm text-white/90 hover:bg-lightgreenbg hover:text-darkbg",
-        "inline-flex items-center justify-center px-4 py-2 rounded-md"
+        "font-semibold text-sm transition-colors text-white/90 hover:text-white",
+        "inline-flex items-center justify-center px-3 py-2 rounded-md",
+        isActive ? "bg-white/10 text-white" : ""
     );
 
     if (subLinks) {
@@ -165,15 +168,18 @@ export default function Header() {
           <DropdownMenuTrigger asChild>
             <Button
               variant="ghost"
-              className={navLinkClasses}
+              className={cn(navLinkClasses, "group")}
             >
-              {label} <ChevronDown className="ml-2 h-4 w-4" />
+              {label} <ChevronDown className="ml-1 h-4 w-4 transition-transform group-data-[state=open]:rotate-180" />
             </Button>
           </DropdownMenuTrigger>
-          <DropdownMenuContent className="w-56">
+          <DropdownMenuContent 
+            className="w-56 bg-background/80 backdrop-blur-md border-white/20 text-foreground"
+            sideOffset={15}
+          >
             {subLinks.map((subLink) => (
-              <DropdownMenuItem key={subLink.label} asChild>
-                <Link href={subLink.href} className="font-bold">{subLink.label}</Link>
+              <DropdownMenuItem key={subLink.label} asChild className="focus:bg-darkbg/50 focus:text-primary-foreground">
+                <Link href={subLink.href} className="font-semibold">{subLink.label}</Link>
               </DropdownMenuItem>
             ))}
           </DropdownMenuContent>
@@ -184,12 +190,7 @@ export default function Header() {
     return (
       <Link
         href={href}
-        className={cn(
-            navLinkClasses,
-            pathname === href || (href !== "/" && pathname.startsWith(href))
-                ? "text-white bg-black/10"
-                : "text-white/90"
-        )}
+        className={navLinkClasses}
       >
         {label}
       </Link>
@@ -197,7 +198,7 @@ export default function Header() {
   };
 
   return (
-    <header className={cn("sticky top-0 z-50 w-full border-b border-border/40 bg-darkbg transition-colors duration-300")}>
+    <header className={cn("sticky top-0 z-50 w-full border-b border-border/40 bg-darkbg transition-all duration-300")}>
       <div className="container flex h-20 max-w-screen-2xl items-center justify-between">
         <Link href="/" className="flex items-center space-x-2">
           <Logo className="h-12 w-auto" />
@@ -218,7 +219,7 @@ export default function Header() {
                   <span className="sr-only">Toggle Menu</span>
                 </Button>
               </SheetTrigger>
-              <SheetContent side="left" className="pr-0">
+              <SheetContent side="left" className="pr-0 bg-background">
                 <Link
                   href="/"
                   className="mb-8 flex items-center"
@@ -226,7 +227,7 @@ export default function Header() {
                 >
                   <Logo className="h-10 w-auto" />
                 </Link>
-                <div className="flex flex-col space-y-3">
+                <div className="flex flex-col space-y-3 pr-6">
                   {navLinks.map((link) => (
                     <NavLink key={link.label} {...link} isMobile />
                   ))}
