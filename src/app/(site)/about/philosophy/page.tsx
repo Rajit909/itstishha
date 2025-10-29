@@ -16,24 +16,24 @@ export default function PhilosophyPage() {
       <section className="py-16 md:py-24">
         <div className="container">
           <div className="grid md:grid-cols-3 gap-10 text-center">
-            <div className="p-8 border rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 animate-fade-in-up" style={{ animationDelay: '200ms' }}>
+            <div className="p-8 border rounded-lg shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 animate-fade-in-up" style={{ animationDelay: '200ms' }}>
               <Handshake className="h-12 w-12 mx-auto text-darkbg mb-4" />
-              <h2 className="text-2xl font-bold mb-2">Collaboration</h2>
-              <p className="text-muted-foreground">
+              <h2 className="text-2xl font-bold mb-2 text-darkbg">Collaboration</h2>
+              <p className="text-muted-foreground text-justify">
                 We believe in the power of partnership. By working closely with our clients, we become an extension of their team, aligning our goals and strategies to achieve shared success. True breakthroughs come from collective effort.
               </p>
             </div>
-            <div className="p-8 border rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 animate-fade-in-up" style={{ animationDelay: '400ms' }}>
+            <div className="p-8 border rounded-lg shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 animate-fade-in-up" style={{ animationDelay: '400ms' }}>
               <BrainCircuit className="h-12 w-12 mx-auto text-darkbg mb-4" />
-              <h2 className="text-2xl font-bold mb-2">Strategic Insight</h2>
-              <p className="text-muted-foreground">
+              <h2 className="text-2xl font-bold mb-2 text-darkbg">Strategic Insight</h2>
+              <p className="text-muted-foreground text-justify">
                 Data drives our decisions. We combine deep industry knowledge with rigorous analysis to provide clear, actionable insights. Our strategic guidance empowers clients to navigate complexity with confidence and precision.
               </p>
             </div>
-            <div className="p-8 border rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 animate-fade-in-up" style={{ animationDelay: '600ms' }}>
+            <div className="p-8 border rounded-lg shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 animate-fade-in-up" style={{ animationDelay: '600ms' }}>
               <Lightbulb className="h-12 w-12 mx-auto text-darkbg mb-4" />
-              <h2 className="text-2xl font-bold mb-2">Innovation</h2>
-              <p className="text-muted-foreground">
+              <h2 className="text-2xl font-bold mb-2 text-darkbg">Innovation</h2>
+              <p className="text-muted-foreground text-justify">
                 The status quo is our starting point, not our destination. We constantly explore emerging trends and technologies to develop forward-thinking solutions that not only solve today’s challenges but also anticipate tomorrow’s opportunities.
               </p>
             </div>
