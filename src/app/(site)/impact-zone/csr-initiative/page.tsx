@@ -39,7 +39,7 @@ export default function CsrInitiativePage() {
                 We believe in nurturing the next generation of healthcare leaders through CSR-driven
                 academic and professional initiatives that reach across rural and urban India.
               </p>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-lg text-muted-foreground text-justify">
                 Whether it’s a village-level health awareness drive, a nursing leadership bootcamp, or
                 a national-level academic conclave — TISHHA Cares is transforming healthcare, one step
                 at a time.
@@ -146,11 +146,11 @@ export default function CsrInitiativePage() {
           <h2 className="text-3xl font-bold mb-6 text-darkbg">
             Transforming Healthcare, One Step at a Time
           </h2>
-          <p className="text-lg text-muted-foreground mb-6">
+          <p className="text-lg text-muted-foreground mb-6 text-justify">
             As a part of our vision, we collaborate with academic institutions, hospitals,
             government agencies, and NGOs to expand the reach and impact of our CSR programs.
           </p>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-lg text-muted-foreground text-justify">
             Whether it’s a village-level health awareness campaign, a state-level nursing quiz,
             or a national leadership conclave, <strong>TISHHA Cares</strong> is committed to building
             a healthier and more empowered India.
