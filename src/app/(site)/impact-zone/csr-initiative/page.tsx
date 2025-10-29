@@ -50,7 +50,7 @@ export default function CsrInitiativePage() {
       </section>
 
       {/* For Students & Aspiring Professionals */}
-      <section className="py-16 md:py-24 bg-muted/30">
+      <section className="py-16 md:py-24 bg-lightgreenbg">
         <div className="container">
           <h2 className="text-3xl font-bold mb-6 text-center text-darkbg">
             For Students & Aspiring Professionals
@@ -141,7 +141,7 @@ export default function CsrInitiativePage() {
       </section>
 
       {/* Partnerships Section */}
-      <section className="py-16 md:py-24 bg-muted/30">
+      <section className="py-16 md:py-24 bg-lightgreenbg">
         <div className="container text-center max-w-5xl">
           <h2 className="text-3xl font-bold mb-6 text-darkbg">
             Transforming Healthcare, One Step at a Time
