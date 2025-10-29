@@ -63,7 +63,7 @@ export default function AcademicEventsPage() {
             Key Offerings
           </h2>
 
-          <p className="text-muted-foreground text-lg text-center max-w-4xl mx-auto mb-12">
+          <p className="text-muted-foreground text-lg text-center max-w-4xl mx-auto mb-12 text-justify">
             Our academic events span across all healthcare disciplines for
             Students and Professionals with a special focus on Medical (both
             Allopathic & AYUSH), Nursing, Paramedical Sciences, Hospital
@@ -161,14 +161,14 @@ export default function AcademicEventsPage() {
       <section className="py-20 bg-lightgreenbg">
         <div className="container text-center">
           <h2 className="text-3xl font-bold mb-8 text-darkbg">Our Approach</h2>
-          <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed text-justify">
             All events under <strong>TISHHA CARES</strong> are conducted either
             free or at a highly subsidized cost, making them accessible to
             institutions and professionals in underserved areas. A structured
             annual academic calendar ensures consistency — with events organized
             at college, city, district, divisional, and state levels.
           </p>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto mt-6">
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto mt-6 text-justify">
             Participation is recognized through{" "}
             <strong>certificates, medals, cash prizes,</strong> and{" "}
             <strong>scholarships</strong>, celebrating excellence and inspiring
