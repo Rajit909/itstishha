@@ -5,9 +5,9 @@ import Image from 'next/image';
 export default function PlanningDesigningPage() {
   return (
     <div className="bg-background text-foreground animate-fade-in">
-      <section className="py-20 md:py-32 bg-card">
+      <section className="py-20 md:py-32 bg-gradient-to-br from-lightbluebg via-lightgreenbg to-blue-200">
         <div className="container text-center">
-          <h1 className="text-4xl md:text-5xl font-bold animate-fade-in-up">Planning & Designing</h1>
+          <h1 className="text-4xl md:text-5xl font-bold animate-fade-in-up text-darkbg">Planning & Designing</h1>
           <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto animate-fade-in-up animation-delay-200">
             From blueprint to reality, we provide expert planning and design services to build the foundation for your success.
           </p>

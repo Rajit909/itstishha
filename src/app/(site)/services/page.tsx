@@ -1,3 +1,4 @@
+
 import Link from "next/link";
 import Image from "next/image";
 import { getServices } from "@/lib/data";
@@ -11,9 +12,9 @@ export default async function ServicesPage() {
 
   return (
     <>
-      <section className="py-16 md:py-24 bg-card animate-fade-in">
+      <section className="py-16 md:py-24 bg-gradient-to-br from-lightbluebg via-lightgreenbg to-blue-200 animate-fade-in">
         <div className="container text-center">
-          <h1 className="font-headline text-4xl md:text-5xl font-bold animate-fade-in-up">Our Services</h1>
+          <h1 className="font-headline text-4xl md:text-5xl font-bold animate-fade-in-up text-darkbg">Our Services</h1>
           <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto animate-fade-in-up animation-delay-200">
             We provide strategic consulting across healthcare, accreditation, and technology to help your organization thrive.
           </p>

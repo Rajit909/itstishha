@@ -25,9 +25,9 @@ export default function BoardOfDirectorsPage() {
 
   return (
     <div className="bg-background text-foreground animate-fade-in">
-        <section className="py-20 md:py-24 bg-card">
+        <section className="py-20 md:py-24 bg-gradient-to-br from-lightbluebg via-lightgreenbg to-blue-200">
             <div className="container text-center">
-            <h1 className="text-3xl md:text-5xl font-bold animate-fade-in-up">Board of Directors</h1>
+            <h1 className="text-3xl md:text-5xl font-bold animate-fade-in-up text-darkbg">Board of Directors</h1>
             <p className="mt-4 text-md md:text-lg text-muted-foreground max-w-3xl mx-auto animate-fade-in-up animation-delay-200">
                 Meet the experienced leaders guiding our vision and strategy.
             </p>

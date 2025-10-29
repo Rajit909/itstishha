@@ -1,3 +1,4 @@
+
 "use client";
 
 import React, { useState, useEffect, useCallback } from "react";
@@ -32,7 +33,7 @@ const slides = [
 export function HeroSection() {
   const [emblaRef, emblaApi] = useEmblaCarousel(
     { loop: true, duration: 50 },
-    [Autoplay({ delay: 4000, stopOnInteraction: false })]
+    [Autoplay({ delay: 5000, stopOnInteraction: false })]
   );
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);

@@ -5,9 +5,9 @@ import Image from 'next/image';
 export default function QualityAccreditationPage() {
   return (
     <div className="bg-background text-foreground animate-fade-in">
-      <section className="py-20 md:py-32 bg-card">
+      <section className="py-20 md:py-32 bg-gradient-to-br from-lightbluebg via-lightgreenbg to-blue-200">
         <div className="container text-center">
-          <h1 className="text-4xl md:text-5xl font-bold animate-fade-in-up">Quality Accreditation</h1>
+          <h1 className="text-4xl md:text-5xl font-bold animate-fade-in-up text-darkbg">Quality Accreditation</h1>
           <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto animate-fade-in-up animation-delay-200">
             Achieve and maintain the highest standards of quality and excellence with our expert accreditation guidance.
           </p>

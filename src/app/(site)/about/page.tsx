@@ -12,9 +12,9 @@ export default async function AboutPage() {
 
   return (
     <>
-      <section className="py-20 md:py-32 bg-card animate-fade-in">
+      <section className="py-20 md:py-32 bg-gradient-to-br from-lightbluebg via-lightgreenbg to-blue-200 animate-fade-in">
         <div className="container text-center">
-          <h1 className="text-4xl md:text-5xl font-bold animate-fade-in-up">About Tishha</h1>
+          <h1 className="text-4xl md:text-5xl font-bold animate-fade-in-up text-darkbg">About Tishha</h1>
           <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto animate-fade-in-up animation-delay-200">
             We are a collective of industry experts passionate about delivering transformative results through collaboration, innovation, and strategic insight.
           </p>

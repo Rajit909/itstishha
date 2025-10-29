@@ -5,9 +5,9 @@ import Image from 'next/image';
 export default function DigitalSolutionPage() {
   return (
     <div className="bg-background text-foreground animate-fade-in">
-      <section className="py-20 md:py-32 bg-card">
+      <section className="py-20 md:py-32 bg-gradient-to-br from-lightbluebg via-lightgreenbg to-blue-200">
         <div className="container text-center">
-          <h1 className="text-4xl md:text-5xl font-bold animate-fade-in-up">Digital Solutions</h1>
+          <h1 className="text-4xl md:text-5xl font-bold animate-fade-in-up text-darkbg">Digital Solutions</h1>
           <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto animate-fade-in-up animation-delay-200">
             Leverage cutting-edge technology to drive innovation, efficiency, and growth with our bespoke digital solutions.
           </p>

@@ -4,9 +4,9 @@ import { ListChecks, TrendingUp, Users, ShieldCheck } from "lucide-react";
 export default function ObjectivesPage() {
   return (
     <div className="bg-background text-foreground animate-fade-in">
-      <section className="py-20 md:py-32 bg-card">
+      <section className="py-20 md:py-32 bg-gradient-to-br from-lightbluebg via-lightgreenbg to-blue-200">
         <div className="container text-center">
-          <h1 className="text-4xl md:text-5xl font-bold animate-fade-in-up">Our Objectives</h1>
+          <h1 className="text-4xl md:text-5xl font-bold animate-fade-in-up text-darkbg">Our Objectives</h1>
           <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto animate-fade-in-up animation-delay-200">
             Our objectives are designed to ensure we consistently deliver value and drive success for our clients, our team, and our community.
           </p>
