@@ -22,7 +22,7 @@ export default async function ProjectsPage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24 bg-lightbluebg">
         <div className="container">
           <ProjectList projects={projects} categories={categories} />
         </div>
