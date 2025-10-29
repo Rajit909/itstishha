@@ -26,35 +26,35 @@ export default function FinancialConsultancyPage() {
                 data-ai-hint="financial chart" />
             </div>
             <div className="animate-fade-in-right w-full md:basis-3/5">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Driving Profitability and Growth</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-darkbg">Driving Profitability and Growth</h2>
               <p className="text-lg text-muted-foreground">
                 Our financial consultancy services provide the strategic insights you need to optimize financial performance, manage risk, and make sound investment decisions. We partner with you to build a resilient financial future for your organization.
               </p>
               <ul className="mt-8 space-y-6">
                 <li className="flex items-start">
                   <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-darkbg mr-6 mt-1 flex-shrink-0">
-                    <LineChart className="h-8 w-8" />
+                    <LineChart className="h-6 w-6" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-lg">Financial Modeling & Analysis</h3>
+                    <h3 className="font-semibold text-lg text-darkbg">Financial Modeling & Analysis</h3>
                     <p className="text-muted-foreground mt-1">Providing data-driven forecasts and analysis to support strategic decision-making.</p>
                   </div>
                 </li>
                 <li className="flex items-start">
                   <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-darkbg mr-6 mt-1 flex-shrink-0">
-                    <PiggyBank className="h-8 w-8" />
+                    <PiggyBank className="h-6 w-6" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-lg">Capital Budgeting & Investment</h3>
+                    <h3 className="font-semibold text-lg text-darkbg">Capital Budgeting & Investment</h3>
                     <p className="text-muted-foreground mt-1">Assisting in the evaluation and selection of profitable investment opportunities.</p>
                   </div>
                 </li>
                 <li className="flex items-start">
                   <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-darkbg mr-6 mt-1 flex-shrink-0">
-                    <Banknote className="h-8 w-8" />
+                    <Banknote className="h-6 w-6" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-lg">Cost Management</h3>
+                    <h3 className="font-semibold text-lg text-darkbg">Cost Management</h3>
                     <p className="text-muted-foreground mt-1">Identifying opportunities for cost reduction and efficiency improvements.</p>
                   </div>
                 </li>
