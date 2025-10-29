@@ -1,3 +1,4 @@
+
 import { getProjects } from "@/lib/data";
 import { projectCategories } from "@/lib/project-categories";
 import { ProjectList } from "./components/project-list";
@@ -12,9 +13,9 @@ export default async function ProjectsPage() {
 
   return (
     <>
-      <section className="py-20 md:py-32 bg-card animate-fade-in">
+      <section className="py-20 md:py-32 bg-gradient-to-br from-lightbluebg via-lightgreenbg to-blue-200 animate-fade-in">
         <div className="container text-center">
-          <h1 className="text-4xl md:text-5xl font-bold animate-fade-in-up">Our Success Stories</h1>
+          <h1 className="text-4xl md:text-5xl font-bold animate-fade-in-up text-darkbg">Our Success Stories</h1>
           <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto animate-fade-in-up animation-delay-200">
             Explore how we've helped our clients overcome challenges and achieve their goals through strategic partnership and expert execution.
           </p>

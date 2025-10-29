@@ -12,9 +12,9 @@ export default async function BlogPage() {
 
   return (
     <>
-      <section className="py-20 md:py-32 bg-card animate-fade-in">
+      <section className="py-20 md:py-32 bg-gradient-to-br from-lightbluebg via-lightgreenbg to-blue-200 animate-fade-in">
         <div className="container text-center">
-          <h1 className="text-4xl md:text-5xl font-bold animate-fade-in-up">Our Insights</h1>
+          <h1 className="text-4xl md:text-5xl font-bold animate-fade-in-up text-darkbg">Our Insights</h1>
           <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto animate-fade-in-up animation-delay-200">
             Stay informed with the latest trends, analysis, and expert opinions from the Tishha team.
           </p>
@@ -74,5 +74,3 @@ export default async function BlogPage() {
     </>
   );
 }
-
-    

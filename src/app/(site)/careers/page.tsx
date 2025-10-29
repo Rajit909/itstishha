@@ -1,3 +1,4 @@
+
 import { getJobOpenings } from "@/lib/data";
 import {
   Accordion,
@@ -15,9 +16,9 @@ export default async function CareersPage() {
 
   return (
     <>
-      <section className="py-16 md:py-24 bg-card animate-fade-in">
+      <section className="py-16 md:py-24 bg-gradient-to-br from-lightbluebg via-lightgreenbg to-blue-200 animate-fade-in">
         <div className="container text-center">
-          <h1 className="font-headline text-4xl md:text-5xl font-bold animate-fade-in-up">Join Our Team</h1>
+          <h1 className="font-headline text-4xl md:text-5xl font-bold animate-fade-in-up text-darkbg">Join Our Team</h1>
           <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto animate-fade-in-up animation-delay-200">
             We're looking for passionate, talented individuals to help us drive innovation. Explore our open positions and find your future at Tishha.
           </p>
