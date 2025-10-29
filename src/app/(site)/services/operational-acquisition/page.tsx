@@ -14,14 +14,14 @@ export default function OperationalAcquisitionPage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24 bg-lightbluebg">
         <div className="container">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative h-96 rounded-lg overflow-hidden shadow-xl animate-fade-in-left">
               <Image src="/services/operational.jpg" alt="Operational Acquisition" fill className="object-cover" data-ai-hint="business handshake" />
             </div>
             <div className="animate-fade-in-right">
-              <h2 className="text-3xl font-bold mb-4">Seamless Transitions, Lasting Value</h2>
+              <h2 className="text-3xl font-bold mb-4 text-darkbg">Seamless Transitions, Lasting Value</h2>
               <p className="text-lg text-muted-foreground">
                 We specialize in managing the acquisition and operational takeover of healthcare facilities and other businesses. Our team ensures a smooth transition by handling everything from initial valuation and due diligence to post-acquisition management and optimization.
               </p>
@@ -29,21 +29,21 @@ export default function OperationalAcquisitionPage() {
                 <li className="flex items-start">
                   <Target className="h-6 w-6 text-darkbg mr-4 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="font-semibold">Due Diligence & Valuation</h3>
+                    <h3 className="font-semibold text-darkbg">Due Diligence & Valuation</h3>
                     <p className="text-muted-foreground">Conducting comprehensive assessments to ensure informed investment decisions.</p>
                   </div>
                 </li>
                 <li className="flex items-start">
                   <Handshake className="h-6 w-6 text-darkbg mr-4 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="font-semibold">Integration & Transition Management</h3>
+                    <h3 className="font-semibold text-darkbg">Integration & Transition Management</h3>
                     <p className="text-muted-foreground">Executing a detailed plan for seamless integration of operations and culture.</p>
                   </div>
                 </li>
                 <li className="flex items-start">
                   <Building2 className="h-6 w-6 text-darkbg mr-4 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="font-semibold">Post-Acquisition Operations</h3>
+                    <h3 className="font-semibold text-darkbg">Post-Acquisition Operations</h3>
                     <p className="text-muted-foreground">Providing ongoing management to drive efficiency, growth, and profitability.</p>
                   </div>
                 </li>
