@@ -14,14 +14,14 @@ export default function FeasibilityStudyPage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24 bg-lightbluebg">
         <div className="container">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative h-96 rounded-lg overflow-hidden shadow-xl animate-fade-in-left">
               <Image src="/services/study.jpg" alt="Feasibility Study" fill className="object-cover" data-ai-hint="market research" />
             </div>
             <div className="animate-fade-in-right">
-              <h2 className="text-3xl font-bold mb-4">Validating Your Vision</h2>
+              <h2 className="text-3xl font-bold mb-4 text-darkbg">Validating Your Vision</h2>
               <p className="text-lg text-muted-foreground">
                 Before you invest significant resources into a new project, our feasibility studies provide a comprehensive evaluation of its potential for success. We analyze market viability, financial projections, and operational requirements to give you a clear picture of the risks and rewards.
               </p>
@@ -29,21 +29,21 @@ export default function FeasibilityStudyPage() {
                 <li className="flex items-start">
                   <BarChart className="h-6 w-6 text-darkbg mr-4 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="font-semibold">Market & Competitive Analysis</h3>
+                    <h3 className="font-semibold text-darkbg">Market & Competitive Analysis</h3>
                     <p className="text-muted-foreground">Assessing market demand, competition, and positioning to identify opportunities.</p>
                   </div>
                 </li>
                 <li className="flex items-start">
                   <FileSearch className="h-6 w-6 text-darkbg mr-4 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="font-semibold">Financial Viability Assessment</h3>
+                    <h3 className="font-semibold text-darkbg">Financial Viability Assessment</h3>
                     <p className="text-muted-foreground">Developing detailed financial models, including ROI and break-even analysis.</p>
                   </div>
                 </li>
                 <li className="flex items-start">
                   <Lightbulb className="h-6 w-6 text-darkbg mr-4 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="font-semibold">Operational & Technical Feasibility</h3>
+                    <h3 className="font-semibold text-darkbg">Operational & Technical Feasibility</h3>
                     <p className="text-muted-foreground">Evaluating the resources, technology, and expertise required for successful implementation.</p>
                   </div>
                 </li>
