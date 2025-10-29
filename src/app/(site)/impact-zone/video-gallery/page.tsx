@@ -21,7 +21,7 @@ export default function VideoGalleryPage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24 bg-lightbluebg">
         <div className="container">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
             {videos.map((video, index) => (

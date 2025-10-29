@@ -25,7 +25,7 @@ export default async function CareersPage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24 bg-lightbluebg">
         <div className="container max-w-4xl">
           {jobs.length > 0 ? (
             <Accordion type="single" collapsible className="w-full space-y-4">
@@ -34,7 +34,7 @@ export default async function CareersPage() {
                   <AccordionItem value={job.id} className="border rounded-lg bg-card shadow-sm">
                     <AccordionTrigger className="p-6 text-left hover:no-underline">
                       <div className="flex-1">
-                        <h3 className="font-headline text-xl font-semibold">{job.title}</h3>
+                        <h3 className="font-headline text-xl font-semibold text-darkbg">{job.title}</h3>
                         <div className="flex items-center space-x-4 mt-2 text-sm text-muted-foreground">
                           <div className="flex items-center">
                             <Briefcase className="mr-2 h-4 w-4" />
@@ -59,7 +59,7 @@ export default async function CareersPage() {
             </Accordion>
           ) : (
             <div className="text-center py-12 border rounded-lg bg-card animate-fade-in-up">
-              <h3 className="font-headline text-2xl font-semibold">No Openings Currently</h3>
+              <h3 className="font-headline text-2xl font-semibold text-darkbg">No Openings Currently</h3>
               <p className="mt-2 text-muted-foreground">
                 We're not actively hiring at the moment, but we're always interested in great talent.
               </p>
