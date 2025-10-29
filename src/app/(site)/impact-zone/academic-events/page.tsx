@@ -57,7 +57,7 @@ export default function AcademicEventsPage() {
       </section>
 
       {/* Key Offerings */}
-      <section className="py-20 bg-muted/20">
+      <section className="py-20 bg-lightgreenbg">
         <div className="container">
           <h2 className="text-3xl font-bold text-center mb-12 text-darkbg">
             Key Offerings
@@ -158,7 +158,7 @@ export default function AcademicEventsPage() {
       </section>
 
       {/* Our Approach Section */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-20 bg-lightgreenbg">
         <div className="container text-center">
           <h2 className="text-3xl font-bold mb-8 text-darkbg">Our Approach</h2>
           <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
