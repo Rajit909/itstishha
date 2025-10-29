@@ -250,7 +250,7 @@ export default async function HomePage() {
         <div className="container">
           <ScrollAnimation animation="fade-in-up">
             <div className="text-center max-w-3xl mx-auto">
-              <h2 className="text-darkbg text-3xl md:text-4xl font-bold">What Our Clients Say</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-darkbg">What Our Clients Say</h2>
               <p className="mt-4 text-lg text-muted-foreground">
                 We are proud to build lasting partnerships with our clients.
               </p>
