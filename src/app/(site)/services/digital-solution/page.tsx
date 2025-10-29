@@ -14,14 +14,14 @@ export default function DigitalSolutionPage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24 bg-lightbluebg">
         <div className="container">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative h-96 rounded-lg overflow-hidden shadow-xl animate-fade-in-left">
               <Image src="/services/digital.jpg" alt="Digital Solution" fill className="object-cover" data-ai-hint="data visualization" />
             </div>
             <div className="animate-fade-in-right">
-              <h2 className="text-3xl font-bold mb-4">Transforming Business with Technology</h2>
+              <h2 className="text-3xl font-bold mb-4 text-darkbg">Transforming Business with Technology</h2>
               <p className="text-lg text-muted-foreground">
                 Our digital solutions are designed to modernize your operations and create new opportunities. From custom software to Hospital Information Management Systems (HIMS), we build and implement technology that delivers a competitive advantage.
               </p>
@@ -29,21 +29,21 @@ export default function DigitalSolutionPage() {
                 <li className="flex items-start">
                   <Code className="h-6 w-6 text-darkbg mr-4 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="font-semibold">Custom Software Development</h3>
+                    <h3 className="font-semibold text-darkbg">Custom Software Development</h3>
                     <p className="text-muted-foreground">Building tailored applications to meet your unique business needs.</p>
                   </div>
                 </li>
                 <li className="flex items-start">
                   <Cloud className="h-6 w-6 text-darkbg mr-4 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="font-semibold">HIMS & ERP Implementation</h3>
+                    <h3 className="font-semibold text-darkbg">HIMS & ERP Implementation</h3>
                     <p className="text-muted-foreground">Deploying and customizing enterprise systems for streamlined management.</p>
                   </div>
                 </li>
                 <li className="flex items-start">
                   <Smartphone className="h-6 w-6 text-darkbg mr-4 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="font-semibold">Mobile & Web Applications</h3>
+                    <h3 className="font-semibold text-darkbg">Mobile & Web Applications</h3>
                     <p className="text-muted-foreground">Creating engaging digital experiences for your customers and staff.</p>
                   </div>
                 </li>
