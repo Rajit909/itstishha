@@ -34,7 +34,7 @@ export default function BoardOfDirectorsPage() {
             </div>
         </section>
 
-        <section className="py-16 md:py-24">
+        <section className="py-16 md:py-24 bg-lightbluebg">
             <div className="container space-y-12 md:space-y-16">
             {team.map((member, index) => {
                 const memberImage = PlaceHolderImages.find(p => p.id === member.image);
