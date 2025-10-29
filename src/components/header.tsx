@@ -157,9 +157,9 @@ export default function Header() {
     }
 
     const navLinkClasses = cn(
-        "font-semibold text-sm transition-colors text-foreground hover:bg-accent hover:text-darkbg",
+        "font-semibold text-sm transition-colors text-primary-foreground hover:bg-primary-foreground/10",
         "inline-flex items-center justify-center px-3 py-2 rounded-md",
-        isActive ? "bg-accent text-darkbg" : ""
+        isActive ? "bg-primary-foreground/10" : ""
     );
 
     if (subLinks) {
@@ -198,7 +198,7 @@ export default function Header() {
   };
 
   return (
-    <header className={cn("sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur-sm transition-all duration-300", isScrolled && "shadow-md")}>
+    <header className={cn("sticky top-0 z-50 w-full border-b border-border/40 bg-darkbg backdrop-blur-sm transition-all duration-300", isScrolled && "shadow-md")}>
       <div className="container flex h-20 max-w-screen-2xl items-center justify-between">
         <Link href="/" className="flex items-center space-x-2">
           <Logo className="h-12 w-auto" />
@@ -214,8 +214,8 @@ export default function Header() {
         <div className="flex items-center gap-2 md:hidden">
             <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="icon">
-                  <Menu className={cn('h-5 w-5 text-foreground')} />
+                <Button variant="ghost" size="icon" className="text-primary-foreground hover:bg-primary-foreground/10">
+                  <Menu className={cn('h-5 w-5')} />
                   <span className="sr-only">Toggle Menu</span>
                 </Button>
               </SheetTrigger>
