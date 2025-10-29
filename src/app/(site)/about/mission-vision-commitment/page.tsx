@@ -43,7 +43,7 @@ export default function MissionPage() {
 
       <section className="py-16 md:py-24 bg-lightbluebg">
         <div className="container">
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-10">
             {principles.map((principle, index) => (
               <div key={principle.title} className="animate-fade-in-up" style={{ animationDelay: `${index * 200}ms` }}>
                 <Card className="group relative overflow-hidden rounded-2xl shadow-lg h-[450px] transition-all duration-300 hover:shadow-2xl">

@@ -21,28 +21,28 @@ export default function PlanningDesigningPage() {
  <Image src="/services/plannning.webp" alt="online team discussion" fill className="object-cover" data-ai-hint="architecture blueprint" />
             </div>
             <div className="animate-fade-in-right">
-              <h2 className="text-3xl font-bold mb-4">Strategic Frameworks for Lasting Infrastructure</h2>
+              <h2 className="text-3xl font-bold mb-4 text-darkbg">Strategic Frameworks for Lasting Infrastructure</h2>
               <p className="text-lg text-muted-foreground">
               A well-designed hospital not only optimizes functionality but also significantly enhances patient care, operational efficiency, and overall healthcare outcomes. At TISHHA Consultants LLP, we specialize in crafting environments that seamlessly integrate with the evolving needs of patients, healthcare professionals, and technology.              </p>
               <ul className="mt-8 space-y-4">
                 <li className="flex items-start">
                   <Layers className="h-6 w-6 text-darkbg mr-4 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="font-semibold">Strategic Master Planning</h3>
+                    <h3 className="font-semibold text-darkbg">Strategic Master Planning</h3>
                     <p className="text-muted-foreground">Developing long-term strategic plans for facility development and expansion.</p>
                   </div>
                 </li>
                 <li className="flex items-start">
                   <PencilRuler className="h-6 w-6 text-darkbg mr-4 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="font-semibold">Functional Space Planning</h3>
+                    <h3 className="font-semibold text-darkbg">Functional Space Planning</h3>
                     <p className="text-muted-foreground">Creating functional and aesthetic spaces that enhance user experience and efficiency.</p>
                   </div>
                 </li>
                 <li className="flex items-start">
                   <Workflow className="h-6 w-6 text-darkbg mr-4 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="font-semibold">Process Workflow Design</h3>
+                    <h3 className="font-semibold text-darkbg">Process Workflow Design</h3>
                     <p className="text-muted-foreground">Optimizing operational flows to improve productivity and reduce costs.</p>
                   </div>
                 </li>

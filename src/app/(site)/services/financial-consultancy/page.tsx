@@ -14,7 +14,7 @@ export default function FinancialConsultancyPage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24 bg-lightbluebg">
         <div className="container">
           <div className="flex flex-col md:flex-row gap-12 items-center">
             <div className="relative w-full h-96 md:h-72 rounded-lg overflow-hidden shadow-xl animate-fade-in-left md:basis-2/5">
