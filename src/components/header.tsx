@@ -174,7 +174,7 @@ export default function Header() {
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent 
-            className="w-56 bg-background/95 backdrop-blur-sm border-border/20 text-foreground shadow-lg"
+            className="w-56 bg-background text-foreground shadow-lg"
             sideOffset={15}
           >
             {subLinks.map((subLink) => (
