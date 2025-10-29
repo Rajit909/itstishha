@@ -14,14 +14,14 @@ export default function RecruitmentConsultancyPage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24 bg-lightbluebg">
         <div className="container">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="relative h-96 rounded-lg overflow-hidden shadow-xl animate-fade-in-left">
               <Image src="/services/recruit.jpg" alt='recruitment-image' fill className="object-cover" data-ai-hint="job interview" />
             </div>
             <div className="animate-fade-in-right">
-              <h2 className="text-3xl font-bold mb-4">Building Your Most Valuable Asset</h2>
+              <h2 className="text-3xl font-bold mb-4 text-darkbg">Building Your Most Valuable Asset</h2>
               <p className="text-lg text-muted-foreground">
                 Our recruitment consultancy is dedicated to sourcing top-tier talent that aligns with your company culture and strategic goals. We manage the entire recruitment lifecycle, from identifying needs to onboarding new hires, ensuring you build a workforce that drives success.
               </p>
@@ -29,21 +29,21 @@ export default function RecruitmentConsultancyPage() {
                 <li className="flex items-start">
                   <UserSearch className="h-6 w-6 text-darkbg mr-4 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="font-semibold">Executive Search</h3>
+                    <h3 className="font-semibold text-darkbg">Executive Search</h3>
                     <p className="text-muted-foreground">Identifying and attracting high-impact leaders for your most critical roles.</p>
                   </div>
                 </li>
                 <li className="flex items-start">
                   <Users className="h-6 w-6 text-darkbg mr-4 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="font-semibold">Talent Sourcing & Acquisition</h3>
+                    <h3 className="font-semibold text-darkbg">Talent Sourcing & Acquisition</h3>
                     <p className="text-muted-foreground">Leveraging our extensive network to find skilled professionals for all levels.</p>
                   </div>
                 </li>
                 <li className="flex items-start">
                   <Briefcase className="h-6 w-6 text-darkbg mr-4 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="font-semibold">Workforce Planning</h3>
+                    <h3 className="font-semibold text-darkbg">Workforce Planning</h3>
                     <p className="text-muted-foreground">Developing strategic plans to meet your organization's future talent needs.</p>
                   </div>
                 </li>
