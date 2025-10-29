@@ -14,14 +14,14 @@ export default function EquipmentConsultancyPage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24 bg-lightbluebg">
         <div className="container">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative h-96 rounded-lg overflow-hidden shadow-xl animate-fade-in-left">
               <Image src="/services/equipment.jpg" alt="Medical Equipment" fill className="object-cover" data-ai-hint="medical equipment" />
             </div>
             <div className="animate-fade-in-right">
-              <h2 className="text-3xl font-bold mb-4">Equipping Your Vision for Success</h2>
+              <h2 className="text-3xl font-bold mb-4 text-darkbg">Equipping Your Vision for Success</h2>
               <p className="text-lg text-muted-foreground">
                 Our equipment consultancy service provides strategic guidance for the procurement and management of medical and industrial equipment. We help you make cost-effective decisions that enhance your operational capabilities and support your long-term goals.
               </p>
@@ -29,21 +29,21 @@ export default function EquipmentConsultancyPage() {
                 <li className="flex items-start">
                   <Microscope className="h-6 w-6 text-darkbg mr-4 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="font-semibold">Technology Assessment & Selection</h3>
+                    <h3 className="font-semibold text-darkbg">Technology Assessment & Selection</h3>
                     <p className="text-muted-foreground">Analyzing your needs to recommend the most suitable and advanced equipment.</p>
                   </div>
                 </li>
                 <li className="flex items-start">
                   <HardHat className="h-6 w-6 text-darkbg mr-4 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="font-semibold">Procurement & Installation Planning</h3>
+                    <h3 className="font-semibold text-darkbg">Procurement & Installation Planning</h3>
                     <p className="text-muted-foreground">Managing the end-to-end procurement process, from vendor negotiation to installation.</p>
                   </div>
                 </li>
                 <li className="flex items-start">
                   <Wrench className="h-6 w-6 text-darkbg mr-4 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="font-semibold">Lifecycle Management</h3>
+                    <h3 className="font-semibold text-darkbg">Lifecycle Management</h3>
                     <p className="text-muted-foreground">Advising on maintenance, upgrades, and disposal to maximize your return on investment.</p>
                   </div>
                 </li>
