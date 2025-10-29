@@ -16,7 +16,7 @@ export async function ClientLogoCarousel() {
       <div className="container">
         <ScrollAnimation animation="fade-in-up">
           <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold">Our Valued Clients</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-darkbg">Our Valued Clients</h2>
             <p className="mt-4 text-lg text-muted-foreground">
               We are proud to have partnered with a diverse range of organizations.
             </p>
