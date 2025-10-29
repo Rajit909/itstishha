@@ -157,7 +157,7 @@ export default function Header() {
     }
 
     const navLinkClasses = cn(
-        "font-semibold text-sm transition-colors text-primary-foreground hover:bg-primary-foreground/10",
+        "font-semibold text-sm transition-colors text-primary-foreground hover:bg-lightgreenbg hover:text-darkbg",
         "inline-flex items-center justify-center px-3 py-2 rounded-md",
         isActive ? "bg-primary-foreground/10" : ""
     );
