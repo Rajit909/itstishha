@@ -1,10 +1,34 @@
 
 "use client";
 
-import { HandHeart, Users, Leaf } from "lucide-react";
+import { HandHeart, Users, Leaf, CheckCircle2 } from "lucide-react";
 import Image from "next/image";
 
 export default function CsrInitiativePage() {
+  const pointsForProfessionals = [
+    {
+      title: "Continuing Professional Education (CPE)",
+      description: "Enhancing knowledge and clinical excellence across healthcare roles.",
+    },
+    {
+      title: "Healthcare Quality & NABH/NABL Sensitization Programs",
+      description: "Promoting patient safety, accreditation readiness, and quality culture.",
+    },
+    {
+      title: "Leadership Development in Nursing & Non-Medical Roles",
+      description: "Building confidence and decision-making capabilities in healthcare managers.",
+    },
+    {
+      title: "Interdisciplinary Conferences & Clinical Case Discussions",
+      description: "Sharing real-world experiences and fostering collaborative problem-solving.",
+    },
+    {
+      title: "Community Health Awareness Drives",
+      description: "Empowering communities through first-aid education and preventive health programs.",
+    },
+  ];
+
+
   return (
     <div className="bg-background text-foreground animate-fade-in">
       {/* Hero Section */}
@@ -31,11 +55,12 @@ export default function CsrInitiativePage() {
                 alt="CSR Initiative"
                 fill
                 className="object-cover"
+                data-ai-hint="teamwork community"
               />
             </div>
             <div className="animate-fade-in-right">
               <h2 className="text-3xl font-bold mb-4 text-darkbg">Empowering Healthcare, Inspiring Change</h2>
-              <p className="text-lg text-muted-foreground mb-4">
+              <p className="text-lg text-muted-foreground mb-4 text-justify">
                 We believe in nurturing the next generation of healthcare leaders through CSR-driven
                 academic and professional initiatives that reach across rural and urban India.
               </p>
@@ -100,42 +125,17 @@ export default function CsrInitiativePage() {
           </p>
 
           <ul className="space-y-6 max-w-4xl mx-auto">
-            <li>
-              <h3 className="font-semibold text-xl text-darkbg">Continuing Professional Education (CPE)</h3>
-              <p className="text-muted-foreground">
-                Enhancing knowledge and clinical excellence across healthcare roles.
-              </p>
-            </li>
-            <li>
-              <h3 className="font-semibold text-xl text-darkbg">
-                Healthcare Quality & NABH/NABL Sensitization Programs
-              </h3>
-              <p className="text-muted-foreground">
-                Promoting patient safety, accreditation readiness, and quality culture.
-              </p>
-            </li>
-            <li>
-              <h3 className="font-semibold text-xl text-darkbg">
-                Leadership Development in Nursing & Non-Medical Roles
-              </h3>
-              <p className="text-muted-foreground">
-                Building confidence and decision-making capabilities in healthcare managers.
-              </p>
-            </li>
-            <li>
-              <h3 className="font-semibold text-xl text-darkbg">
-                Interdisciplinary Conferences & Clinical Case Discussions
-              </h3>
-              <p className="text-muted-foreground">
-                Sharing real-world experiences and fostering collaborative problem-solving.
-              </p>
-            </li>
-            <li>
-              <h3 className="font-semibold text-xl text-darkbg">Community Health Awareness Drives</h3>
-              <p className="text-muted-foreground">
-                Empowering communities through first-aid education and preventive health programs.
-              </p>
-            </li>
+              {pointsForProfessionals.map((point, index) => (
+                <li key={index} className="flex items-start gap-4">
+                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 text-darkbg mt-1 flex-shrink-0">
+                        <CheckCircle2 className="h-5 w-5" />
+                    </div>
+                    <div>
+                        <h3 className="font-semibold text-xl text-darkbg">{point.title}</h3>
+                        <p className="text-muted-foreground mt-1">{point.description}</p>
+                    </div>
+                </li>
+              ))}
           </ul>
         </div>
       </section>
