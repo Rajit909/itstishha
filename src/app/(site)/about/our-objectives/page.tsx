@@ -13,11 +13,11 @@ export default function ObjectivesPage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24 bg-lightbluebg">
         <div className="container">
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 justify-center">
             
-            <div className="p-8 flex flex-col items-center text-center border rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 animate-fade-in-up" style={{ animationDelay: '200ms' }}>
+            <div className="p-8 flex flex-col items-center text-center border rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 animate-fade-in-up bg-card" style={{ animationDelay: '200ms' }}>
               <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-darkbg mb-6">
                 <TrendingUp className="h-8 w-8" />
               </div>
@@ -27,7 +27,7 @@ export default function ObjectivesPage() {
               </p>
             </div>
             
-            <div className="p-8 flex flex-col items-center text-center border rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 animate-fade-in-up" style={{ animationDelay: '400ms' }}>
+            <div className="p-8 flex flex-col items-center text-center border rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 animate-fade-in-up bg-card" style={{ animationDelay: '400ms' }}>
               <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-darkbg mb-6">
                 <Users className="h-8 w-8" />
               </div>
@@ -37,7 +37,7 @@ export default function ObjectivesPage() {
               </p>
             </div>
 
-            <div className="p-8 flex flex-col items-center text-center border rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 animate-fade-in-up" style={{ animationDelay: '600ms' }}>
+            <div className="p-8 flex flex-col items-center text-center border rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 animate-fade-in-up bg-card" style={{ animationDelay: '600ms' }}>
               <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-darkbg mb-6">
                 <ListChecks className="h-8 w-8" />
               </div>
@@ -47,7 +47,7 @@ export default function ObjectivesPage() {
               </p>
             </div>
 
-            <div className="p-8 flex flex-col items-center text-center border rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 animate-fade-in-up" style={{ animationDelay: '800ms' }}>
+            <div className="p-8 flex flex-col items-center text-center border rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 animate-fade-in-up bg-card" style={{ animationDelay: '800ms' }}>
               <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-darkbg mb-6">
                 <ShieldCheck className="h-8 w-8" />
               </div>
