@@ -174,12 +174,12 @@ export default function Header() {
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent 
-            className="w-56 bg-background/80 backdrop-blur-md border-white/20 text-foreground"
+            className="w-56 bg-background/95 backdrop-blur-sm border-border/20 text-foreground shadow-lg"
             sideOffset={15}
           >
             {subLinks.map((subLink) => (
-              <DropdownMenuItem key={subLink.label} asChild className="focus:bg-darkbg/50 focus:text-primary-foreground">
-                <Link href={subLink.href} className="font-semibold">{subLink.label}</Link>
+              <DropdownMenuItem key={subLink.label} asChild className="focus:bg-darkbg/80 focus:text-primary-foreground">
+                <Link href={subLink.href} className="font-serif font-medium">{subLink.label}</Link>
               </DropdownMenuItem>
             ))}
           </DropdownMenuContent>

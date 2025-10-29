@@ -18,6 +18,7 @@ export default {
         body: ['var(--font-inter)', 'sans-serif'],
         headline: ['var(--font-poppins)', 'sans-serif'],
         code: ['monospace'],
+        serif: ['Times New Roman', 'serif'],
       },
       colors: {
         background: 'hsl(var(--background))',
