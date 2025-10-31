@@ -161,6 +161,12 @@
       "description": "An image representing business commitment.",
       "imageUrl": "/about/commitment.jpg",
       "imageHint": "team handshake"
+    },
+    {
+      "id": "parallax-bg",
+      "description": "A modern office interior for a parallax background effect.",
+      "imageUrl": "https://images.unsplash.com/photo-1507207611509-ec012433ff52?q=80&w=1974&auto=format&fit=crop",
+      "imageHint": "office building"
     }
   ]
 }
